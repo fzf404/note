@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[73],{700:function(n,r){n.exports="\x3c!-- \r\ntitle: 20-Centos配置\r\nsort: \r\n--\x3e \r\n# Centos配置\r\n\r\n## 程序\r\n\r\n```bash\r\nsuod nohup python3 temp_up.py > nohup.out  &\r\nps -ef | grep python3\r\nkill\r\n\r\nsudo nohup python3 Upload.py &\r\n\r\n```\r\n\r\n"}}]);
