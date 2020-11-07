@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[427],{1054:function(n,o){n.exports="\x3c!-- \r\ntitle: React\r\nsort: \r\n--\x3e \r\n"}}]);

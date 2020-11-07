@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[371],{998:function(n,r){n.exports="\x3c!-- \r\ntitle: MacOS\r\nsort: \r\n--\x3e \r\n# MacOS\r\n\r\n## 安装\r\n\r\n### 下载\r\n\r\n[黑果小兵](https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/)"}}]);
