@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[186],{813:function(n,o){n.exports="\x3c!-- \ntitle: Nginx\nsort: \n--\x3e \n# Nginx入门\n\n- 作为文件服务器使用\n\n```nginx\nlocation /app {\n    # 遍历目录\n    autoindex on;\n    # 文件大小显示\n    autoindex_exact_size off;\n    # 显示服务器时间\n    autoindex_localtime on;\n    # 中文文件夹转码\n    charset utf-8;\n}\n```\n\n"}}]);
