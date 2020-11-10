@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[150],{777:function(n,e){n.exports="\x3c!-- \ntitle: PicGo\nsort: \n--\x3e \n# PicGo\n\n> 下载：[Releases](https://github.com/Molunerfinn/picgo/releases)\n\n## Gitee\n\n1. 安装插件`Gitee`\n\n2. 只需填写`repo`及`token`\n\n   ![image-20200718213813253](https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200718213813.png)\n\n"}}]);
