@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[142],{769:function(n,o){n.exports="\x3c!-- \r\ntitle: 串口模块\r\nsort: \r\n--\x3e \r\n\r\n> 谁不想用硬件和手机通信呢？"}}]);
