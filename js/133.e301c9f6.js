@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[133],{760:function(n,t){n.exports="\x3c!-- \ntitle: 04-破解基础\nsort: \n--\x3e \n# 破解基础\n\n## 堆栈图\n\n1. Ctrl+D转到地址\n2. 在地址处按F2设置断点\n3. 遇到CALL按F7\n4. 遇到JMP按Enter\n\n## VC6\n\n1. 右键进入汇编窗口\n2. F11\t转到函数\n3. F10\t下一行\n\n## 变量\n\n> [ebp + 8] 向下 函数的参数\n>\n> [ebp - 4] 向上 函数的局部变量\n>\n> [00422c62] 内存 全局变量\n\n"}}]);
