@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[188],{815:function(n,w){n.exports="\x3c!-- \ntitle: 内网穿透\nsort: \n--\x3e \n\n> 推荐使用[Sakura](https://www.natfrp.com/)"}}]);
