@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[454],{1081:function(n,r){n.exports="\x3c!-- \r\ntitle: 10-Taro\r\nsort: \r\n--\x3e \r\n\r\n> 使用React开发微信小程序\r\n\r\n## 安装\r\n\r\n```bash\r\nnpm i -g @tarojs/cli\r\n# 创建新项目\r\ntaro init TaroTest\r\n```\r\n\r\n"}}]);

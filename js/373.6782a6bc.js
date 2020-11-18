@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[373],{1e3:function(n,e){n.exports="\x3c!-- \r\ntitle: 控制台\r\nsort: \r\n--\x3e \r\n\r\n> 会使用控制台工具可以节省Debug时间呦。"}}]);
