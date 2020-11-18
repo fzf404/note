@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[30],{657:function(n,r){n.exports='\x3c!-- \r\ntitle: 09-数据结构\r\nsort: \r\n--\x3e \r\n# 数据结构\r\n\r\n## 枚举\r\n\r\n```c\r\nenum COLOR {RED, GREEN, BLUE, colorNum};\r\nenum COLOR c = GREEN;\r\nprintf("%d %d %d", RED, colorNum, c);\r\n// 0 3 1\r\n```\r\n\r\n'}}]);

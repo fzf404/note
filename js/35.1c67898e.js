@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[35],{662:function(n,t){n.exports="\x3c!-- \ntitle: 13-Linux常用程序工具\nsort: \n--\x3e \n## 后台执行\n\n```bash\n./test &\n./test >> out.txt 2>&1 &\t# 将标准输出重定向到out.txt\njobs -l\t\t# 查看后台程序\nnohup ./test &\t# 不挂起\n```\n\n## 信息\n\n```bash\nfree -h\t\t# 内存信息\nps -ef | grep python3\n```\n\n"}}]);

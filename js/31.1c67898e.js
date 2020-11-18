@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[31],{658:function(n,o){n.exports="\x3c!--\ntitle: 04-权限\nsort:\n--\x3e \n\n> 没有获得权限,任何系统都无法使用\n\n## 基础命令\n\n- id\n\n  > 显示用户身份\n\n- \n\n"}}]);
