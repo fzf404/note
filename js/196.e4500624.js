@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[196],{823:function(n,o){n.exports="\x3c!-- \ntitle: Jupyter\nsort: \n--\x3e \n# Jupyter\n\n## 安装\n\n`sudo apt-get install jupyter`\n\n## 配置\n\n`jupyter notebook --ip=0.0.0.0`\n\n### conda\n\n`conda clean -i`\n\n`conda install xx`"}}]);
