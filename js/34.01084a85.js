@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[34],{661:function(n,p){n.exports="\x3c!--\ntitle: 05-进程\nsort:\n--\x3e \n\n> 了解系统正在忙些什么\n\n## ps\n\n- `ps x`\n\n  > TTY: 进程的控制终端\n  >\n  > STAT: 状态\n  >\n  > `Run-Sleep-Dot-sTop-Z`\n  >\n  > 运行-睡眠-不可中断睡眠(等待IO)-停止-终止\n  >\n  > `<` 高优先级进程`N`低优先级进程\n\n"}}]);
