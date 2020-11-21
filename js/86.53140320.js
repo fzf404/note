@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[86],{713:function(n,w){n.exports="\x3c!-- \ntitle: Ftp\nsort: \n--\x3e \n\n> 推荐使用[Filezilla](https://www.filezilla.cn/)\n\n## 问题\n\n>  Can't open that file: Permission denied\n\n```bash\nsudo chown -fR www ./*\nsudo chgrp -fR www ./*\n```\n\n"}}]);

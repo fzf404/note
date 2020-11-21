@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[45],{672:function(n,i){n.exports="\x3c!-- \ntitle: Linux\nsort: \n--\x3e \n\n> 具体可以参考我github上的linux_config"}}]);
