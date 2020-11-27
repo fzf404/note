@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{640:function(n,r){n.exports='\x3c!-- \r\ntitle: 09-其他\r\nsort: \r\n--\x3e \r\n\r\n## 定义宏\r\n\r\n> 详情请看单片机\r\n\r\n```c\r\n#define SQUARE(x) x*x\r\nprintf("%d",SQUARE(5));\r\n// 25\r\n```\r\n\r\n## 程序结构\r\n\r\n```h\r\n#ifndef _MAX_H_\r\n#define _MAX_H_\r\n\r\n// code\r\n\r\n#endif\r\n```\r\n\r\n'}}]);
