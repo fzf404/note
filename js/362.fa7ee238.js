@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[362],{989:function(n,o){n.exports="\x3c!-- \r\ntitle: Tech\r\nsort: \r\n--\x3e \r\n\r\n> 分享自己的知识~"}}]);
