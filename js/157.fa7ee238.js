@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[157],{784:function(n,r){n.exports="\x3c!-- \r\ntitle: Manjaro\r\nsort: \r\n--\x3e \r\n\r\n> Arch小弟"}}]);

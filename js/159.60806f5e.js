@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[159],{786:function(n,r){n.exports="\x3c!--\r\ntitle: 07-存储设备\r\nsort:\r\n--\x3e \r\n\r\n> Linux是基于文件的操作系统\r\n\r\n## dev\r\n\r\n> sd*：SCSI硬盘\r\n>\r\n> sr*：光盘\r\n\r\n`fsck`\r\n\r\n> 检测"}}]);
