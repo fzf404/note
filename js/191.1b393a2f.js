@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[191],{818:function(n,o){n.exports="\x3c!-- \ntitle: 08-Nginx+Tomcat\nsort: \n--\x3e \n\n> 配置文件列表\n>\n> `/etc/nginx/nginx.cong`\n>\n> `/opt/`\n\n## Nginx配置文件\n\n```nginx\n\n```\n\n"}}]);
