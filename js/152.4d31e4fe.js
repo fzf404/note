@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[152],{779:function(r,n){r.exports='\x3c!-- \r\ntitle: 新房昭之\r\nvisible: true\r\n--\x3e \r\n\r\n> 提到新房昭之\r\n>\r\n> 各位可能并不了解\r\n\r\n<iframe src="//player.bilibili.com/player.html?aid=23699218&bvid=BV1wp411o733&cid=39594666&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>'}}]);
