@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[237],{864:function(n,r){n.exports="\x3c!-- \r\ntitle: Redis\r\nsort: \r\n--\x3e \r\n\r\n> 以键值对方式存储数据\r\n\r\n```bash\r\nredis-cli\r\n127.0.0.1:6379\r\n```\r\n\r\n"}}]);

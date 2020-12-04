@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[103],{730:function(n,r){n.exports='\x3c!-- \r\ntitle: 02-C++基础\r\nsort: \r\n--\x3e \r\n# C++基础\r\n\r\n```c\r\nconst 类型 常量名 = 常量值;\r\n#define 宏名 值；\r\nString 字符串名称 = "字符串";\r\n/*注释*/\r\nswitch(表达式){\r\n    case 常量表达式1: 语句1; break;\r\n    case 常量表达式2: 语句2; break;\r\n    default : 语句n; break;\r\n\t...\r\n}\r\n```\r\n\r\n'}}]);
