@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[201],{828:function(n,o){n.exports="\x3c!-- \ntitle: Tech\nsort: \n--\x3e \n\n> 分享自己的知识~"}}]);

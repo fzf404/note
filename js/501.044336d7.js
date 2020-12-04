@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[501],{1128:function(n,r){n.exports="\x3c!-- \r\ntitle: 01-React配置\r\nsort: \r\n--\x3e \r\n\r\n## npm\r\n\r\n```bash\r\nnpm init\r\n# 保存到package.json\r\n# 下次直接install\r\nnpm install react --save\r\n```\r\n\r\n## yarn\r\n\r\n```bash\r\nvyarn init\r\nyarn add react --save\t# 添加新插件\r\nyarn install\t\t# 拉取旧插件\r\n```\r\n\r\n"}}]);
