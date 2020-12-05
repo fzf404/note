@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[118],{745:function(n,e){n.exports="\x3c!-- \ntitle: LaTeX\nsort: \n--\x3e \n# LaTeX数学"}}]);
