@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[47],{674:function(n,t){n.exports="\x3c!-- \ntitle: 02-常用函数\nsort: \n--\x3e \n\n### Softmax\n\n> `归一化指数函数`\n>\n> 过滤过大或过小的数据\n\n![image-20201205210918484](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20201205210925.png)"}}]);
