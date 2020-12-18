@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[240],{867:function(n,i){n.exports="\x3c!-- \ntitle: 15-CSS实战\nsort: \n--\x3e \n\n## 常用\n\n```css\ntext-align: justify;\nline-height: 1.3;\ntext-decoration: underline;\n\ndisplay:\nblock 块级元素\ninline 行内元素: !margin\ninline-block 行内块元素\nnone 隐藏\n```\n\n"}}]);
