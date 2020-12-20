@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[251],{878:function(n,e){n.exports="\x3c!-- \ntitle: 30-Window\nsort: \n--\x3e \n\n```js\nalert()\nresult = confirm('Are you boy?')\nresult = prompt('Input Your name') \n\n// 定时\nvar hello = setTimeout(\"sayhello()\", 5000); \n// 持续\nvar gtime= setInterval(\"time()\", 500);\n// 停止\nclearTimeout(gtime)\n```\n\n"}}]);
