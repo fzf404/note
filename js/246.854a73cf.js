@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[246],{873:function(n,o){n.exports="\x3c!-- \ntitle: JavaScript\nsort: \n--\x3e \n"}}]);

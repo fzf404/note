@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[239],{866:function(n,d){n.exports="\x3c!-- \ntitle: 25-JS闭包\nsort: \n--\x3e \n# JavaScript闭包\n\n## 闭包\n\n```js\nfunction makeAdder(a) {\n  return function(b) {\n    return a + b;\n  }\n}\nvar add5 = makeAdder(5);\nvar add20 = makeAdder(20);\nadd5(6); // 调用return的函数\nadd20(7);\n```\n\n"}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[255],{882:function(n,o){n.exports="\x3c!-- \ntitle: 00-环境搭建\nsort: \n--\x3e \n\n```js\nyarn config set registry https://registry.npm.taobao.org\nyarn add electron --save\n```\n\n\n\n"}}]);
