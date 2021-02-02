@@ -1,0 +1,13 @@
+{
+  "name": "fzf-note",
+  "version": "1.0.0",
+  "description": "fzf-note",
+  "scripts": {
+    "deploy": "rdoc --publish https://github.com/fzf404/note.git",
+    "build": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Java,Linux,Others,Python,Security,Tools,Web --clean --build",
+    "start": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Java,Linux,Others,Python,Security,Tools,Web --clean"
+  },
+  "dependencies": {
+    "rdoc": "1.12.x"
+  }
+}
