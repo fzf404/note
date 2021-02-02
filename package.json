@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "fzf-note",
   "scripts": {
-    "deploy": "rdoc --publish https://github.com/fzf404/note.git",
+    "deploy": "rdoc --publish git@github.com:fzf404/note.git",
     "build": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Java,Linux,Others,Python,Security,Tools,Web --clean --build",
     "start": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Java,Linux,Others,Python,Security,Tools,Web --clean"
   },
