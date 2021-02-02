@@ -96,7 +96,6 @@ jobs:
           ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_PRI }}
 
         run: |
-          sudo timedatectl set-timezone "Asia/Shanghai"
           mkdir -p ~/.ssh/
           echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
@@ -104,7 +103,6 @@ jobs:
           git config --global user.email $GIT_USER
           git config --global user.name $GIT_EMAIL
           npm install hexo-cli -g
-          npm install
       - name: Hexo deploy
         run: |
           hexo clean
@@ -165,7 +163,6 @@ jobs:
           ACTION_DEPLOY_KEY: ${{ secrets.NOTE_DEPLOY_PRI }}
 
         run: |
-          sudo timedatectl set-timezone "Asia/Shanghai"
           mkdir -p ~/.ssh/
           echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
@@ -180,6 +177,3 @@ jobs:
           npm run build
           npm run deploy
 ```
-
-
-
