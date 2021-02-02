@@ -5,34 +5,23 @@ visible: true
 --> 
 
 <style>
-    h3,h2{
-        color: rgb(73,88,75)
-    }
-    a:link{
-        color: rgb(117,92,38)
-    }
-    a:visited{
-        color: rgb(133,104,48)
-    }
-</style>
-
-<style>
   body,
   html {
     background: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   .markdown {
     padding: 0 20px;
   }
   .jumbotron {
     position: absolute;
-    background-color: #758b6e;
+    background-color: #588;
     top: 56px;
     left: 0;
     right: 0;
     padding-top: 80px;
     min-height: 380px;
-    color: #e1e1e1;
+    color: #eee;
   }
   .jumbotron-block {
     min-height: 400px;
@@ -52,12 +41,11 @@ visible: true
     line-height: 1.5;
     font-weight: 300;
     margin-bottom: 30px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   .jumbotron .jumbotron-btn {
     display: inline-block;
     color: #333;
-    font-weight: 400;
+    font-weight: 600;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -77,11 +65,20 @@ visible: true
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
   }
+  h3,h2{
+      color: rgb(84,92,63)
+  }
+  a:link{
+      color: rgb(84,92,63)
+  }
+  a:visited{
+      color: rgb(70,87,80)
+  }
 </style>
 <div class="jumbotron">
   <div class="jumbotron-warpper">
     <div class="jumbotron-title">欢迎来到本站~ </div>
-    <div class="jumbotron-des"><br />已经整理好的技术向笔记。<br />🚧首页美化施工中🚧</div>
+    <div class="jumbotron-des"><br />fzf全部的技术笔记。</div>
     <a class="jumbotron-btn" href="#/Home/About">关于我</a>
   </div>
 </div>
