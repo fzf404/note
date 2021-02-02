@@ -45,7 +45,7 @@ visible: true
   .jumbotron .jumbotron-btn {
     display: inline-block;
     color: #333;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -77,7 +77,7 @@ visible: true
 </style>
 <div class="jumbotron">
   <div class="jumbotron-warpper">
-    <div class="jumbotron-title">欢迎来到本站~ </div>
+    <div class="jumbotron-title">🚄欢迎来到本站~ </div>
     <div class="jumbotron-des">
       <br />
       整理好的技术笔记。
@@ -90,20 +90,22 @@ visible: true
 <div class="jumbotron-block"> </div>
 
 
-| [MS](#/C)                       | [Python](#/Python)                  | [前端](#/Web)            | [Linux](#/Linux)           | [硬件](#/HardWare/)            | 其他                               |
-| ------------------------------- | ----------------------------------- | ------------------------ | -------------------------- | ------------------------------ | ---------------------------------- |
-| [C](#/C)                        | [基础](#/Python/1.Basic)            | [Html](#/Web/1.HTML)     | [Manjaro](#/Linux/Manjaro) | [Arduino](#/HardWare/Arduino)  | [PowerShell](#/Command/PowerShell) |
-| [C++](#/C)                      | [进阶](#/Python/2.Advance)          | [CSS](#/Web/2.CSS)       | [Tools](#/Linux/Tools)     | [51单片机](#/HardWare/51MCU)   | [Dos](#/Command/Dos)               |
-| [C#](#/C/CSharp)                | [第三方库](#/Python/3.Package)      | [JS](#/Web/3.JS)         | [Server](#/Command/Server) | [STM32](#/STM32)               | [Go](#/Golang)                     |
-| [OpenCV](#/C/CPP/10-OpenCV配置) | [网络编程](#/Python/6.Network)      | [React](#/Web/React)     | 基础命令                   | [树莓派](#/HardWare/Raspberry) | [安全](#/Security/)                |
-|                                 | [机器学习](#/Python/8.Intelligence) | [Android](#/Web/Android) |                            | [各种模块](#/HardWare/EleMod)  | [神经网络](#/DeepLearn)            |
+| [PL](#/C)               | [Python](#/Python)                  | [前端](#/Web)                | [Linux](#/Linux)              | [硬件](#/HardWare/)            | [深度学习](#/DeepLearn) | 其他                               |
+| ----------------------- | ----------------------------------- | ---------------------------- | ----------------------------- | ------------------------------ | ----------------------- | ---------------------------------- |
+| [C](#/C)                | [基础](#/Python/1.Basic)            | [Html](#/Web/1.HTML)         | [Manjaro](#/Linux/Manjaro)    | [Arduino](#/HardWare/Arduino)  | Numpy                   | [PowerShell](#/Command/PowerShell) |
+| [C++](#/C)              | [进阶](#/Python/2.Advance)          | [CSS](#/Web/2.CSS)           | [Tools](#/Linux/Tools)        | [51单片机](#/HardWare/51MCU)   | TensorFlow              | [Dos](#/Command/Dos)               |
+| [C#](#/C/CSharp)        | [第三方库](#/Python/3.Package)      | [JS](#/Web/3.JS)             | [Server](#/Command/Server)    | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Java)                     |
+| [GoLang](#/C/Golang)    | [网络编程](#/Python/6.Network)      | [React](#/Web/5.React)       | [MiniSys](#/Linux/MakeSystem) | [树莓派](#/HardWare/Raspberry) | Paddle                  | [安全](#/Security/)                |
+| [Asm](#/Security/Crack) | [机器学习](#/Python/8.Intelligence) | [Vue](#/Web/4.Vue)           | [Shell](#/Linux)              | [各种模块](#/HardWare/EleMod)  |                         | [神经网络](#/DeepLearn)            |
+|                         |                                     | [Electron](#/Web/7.Electron) |                               |                                |                         |                                    |
 
 ## 工具
 
-| [建站](#/Others/Blog) | [代码工具](#/Tools/Code) | [控制台工具](#/Tools/Console) | [其他语言](#/Others/Language)     | [网络工具](#/Tools/Network) | [服务](#/Command/Server) | [Linux工具](#/linux/Tools) |
-| --------------------- | ------------------------ | ----------------------------- | --------------------------------- | --------------------------- | ------------------------ | -------------------------- |
-| Hexo                  | CodeServer               | ADB                           | Xpath                             | DevTools                    | Docker                   | i3wm                       |
-| 图床                  | Sublime                  | FFmpeg                        | MongoDB                           | Fiddler                     | Git                      | zsh                        |
-| 文档                  | Vscode                   | SSH                           | SQL                               | WireShark                   | LNMP                     | vim                        |
-|                       | Typora                   |                               | [JAVA](#/Web/Android/03-Java基础) |                             | NodeJS                   | ranger                     |
+| [建站](#/Others/Blog) | [代码工具](#/Tools/Code) | [控制台工具](#/Tools/Console) | [其他语言](#/Others/Language) | [网络工具](#/Tools/Network) | [服务](#/Command/Server) | [Linux工具](#/linux/Tools) |
+| --------------------- | ------------------------ | ----------------------------- | ----------------------------- | --------------------------- | ------------------------ | -------------------------- |
+| Hexo                  | CodeServer               | ADB                           | Xpath                         | DevTools                    | Docker                   | [推荐](#/Linux)            |
+| 图床                  | Sublime                  | FFmpeg                        | LaTex                         | Fiddler                     | Git                      | zsh                        |
+| 文档                  | Vscode                   | SSH                           | SQL                           | WireShark                   | LNMP                     | vim                        |
+|                       | Typora                   | Choco                         | Redis                         | BurpSuite                   | NodeJS                   | ranger                     |
+|                       |                          |                               |                               |                             |                          | i3wm                       |
 
