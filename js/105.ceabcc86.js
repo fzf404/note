@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[105],{732:function(n,o){n.exports="> MIT-Learning\n\n## 8.01SC\n\n> 经典力学`Classical Mechanics`conponent\n\n"}}]);

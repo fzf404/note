@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[171],{798:function(n,t){n.exports="\x3c!-- \ntitle: 52-YOLOv5\nsort: \n--\x3e \n# YOLOv5\n\n> [PyTorch](https://pytorch.org/)\n\n## Run\n\n```powershell\n# 摄像头\npython detect.py --source 0 --weights .\\weights\\yolov5s.pt\n\n# 视频\npython detect.py --source origin.mp4 --weights weights/yolov5x.pt --output.mp4\n```\n\n"}}]);
