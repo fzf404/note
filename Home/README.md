@@ -8,7 +8,6 @@ visible: true
   body,
   html {
     background: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   .markdown {
     padding: 0 20px;
@@ -41,6 +40,7 @@ visible: true
     line-height: 1.5;
     font-weight: 300;
     margin-bottom: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
   .jumbotron .jumbotron-btn {
     display: inline-block;
@@ -78,7 +78,12 @@ visible: true
 <div class="jumbotron">
   <div class="jumbotron-warpper">
     <div class="jumbotron-title">欢迎来到本站~ </div>
-    <div class="jumbotron-des"><br />fzf全部的技术笔记。</div>
+    <div class="jumbotron-des">
+      <br />
+      整理好的技术笔记。
+      <br />
+      🛴方便查阅~
+    </div>
     <a class="jumbotron-btn" href="#/Home/About">关于我</a>
   </div>
 </div>
