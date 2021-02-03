@@ -4,8 +4,8 @@
   "description": "fzf-note",
   "scripts": {
     "deploy": "rdoc --publish git@github.com:fzf404/note.git",
-    "start": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Linux,Others,Python,Security,Tools,Web --clean",
-    "build": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Linux,Others,Python,Security,Tools,Web --clean --build"
+    "start": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Linux,Others,Python,Security,Tech,Tools,Web --clean",
+    "build": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Linux,Others,Python,Security,Tech,Tools,Web --clean --build"
   },
   "rdoc": {
     "favicon": "./Home/favicon.ico",
