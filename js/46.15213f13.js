@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[46],{773:function(n,x){n.exports="\x3c!-- \ntitle: 00-数学基础\nsort: \n--\x3e \n\n导数: $f'(x_0) = \\lim_{\\Delta x\\to0}\\frac{f(x_0+\\Delta x)}{\\Delta x}$\n\n导数运算1: $(uv)' = uv'+v'u$\n\n导数运算2: $(\\frac uv)' = \\frac{uv'-v'u}{v^2}$\n\n切线方程: $y-y_0 = {f'(x_0)}(x-x_0)$\n\n法线方程: $y-y_0 = -\\frac{1}{f'(x_0)}(x-x_0)$"}}]);
