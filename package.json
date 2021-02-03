@@ -4,19 +4,14 @@
   "description": "fzf-note",
   "scripts": {
     "deploy": "rdoc --publish git@github.com:fzf404/note.git",
-    "build": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Java,Linux,Others,Python,Security,Tools,Web --clean --build",
-    "start": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Java,Linux,Others,Python,Security,Tools,Web --clean"
+    "start": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Linux,Others,Python,Security,Tools,Web --clean"
+    "build": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Linux,Others,Python,Security,Tools,Web --clean --build",
   },
   "rdoc": {
     "favicon": "./Home/favicon.ico",
-    "logo": "./Home/rdoc.logo.svg",
-    "react_modules": {
-      "Hotkeys": "react-hot-keys"
-    }
+    "logo": "./Home/rdoc.logo.svg"
   },
   "dependencies": {
-    "rdoc": "1.12.x",
-    "rdoc-theme-load-react": "^1.1.0",
-    "react-hot-keys": "^1.1.0"
+    "rdoc": "1.12.x"
   }
 }
