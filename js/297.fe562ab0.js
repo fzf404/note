@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[297],{924:function(n,e){n.exports="\x3c!-- \ntitle: 02-Vue脚手架\nsort: \n--\x3e \n\n> Vue2的脚手架`@vue-cli`\n\n```bash\ncnpm i -g @vue-cli\n# 建项目\nvue create <object_name>\n```\n\n"}}]);
