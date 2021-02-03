@@ -5,10 +5,6 @@ visible: true
 --> 
 
 <style>
-  body,
-  html {
-    background: #fff;
-  }
   .markdown {
     padding: 0 20px;
   }
@@ -65,15 +61,6 @@ visible: true
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
   }
-  h3,h2{
-      color: rgb(84,92,63)
-  }
-  a:link{
-      color: rgb(84,92,63)
-  }
-  a:visited{
-      color: rgb(70,87,80)
-  }
 </style>
 <div class="jumbotron">
   <div class="jumbotron-warpper">
@@ -94,7 +81,7 @@ visible: true
 | ----------------------- | ----------------------------------- | ---------------------------- | ----------------------------- | ------------------------------ | ----------------------- | ---------------------------------- |
 | [C](#/C)                | [基础](#/Python/1.Basic)            | [Html](#/Web/1.HTML)         | [Manjaro](#/Linux/Manjaro)    | [Arduino](#/HardWare/Arduino)  | Numpy                   | [PowerShell](#/Command/PowerShell) |
 | [C++](#/C)              | [进阶](#/Python/2.Advance)          | [CSS](#/Web/2.CSS)           | [Tools](#/Linux/Tools)        | [51单片机](#/HardWare/51MCU)   | TensorFlow              | [Dos](#/Command/Dos)               |
-| [C#](#/C/CSharp)        | [第三方库](#/Python/3.Package)      | [JS](#/Web/3.JS)             | [Server](#/Command/Server)    | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Java)                     |
+| [C#](#/C/CSharp)        | [第三方库](#/Python/3.Package)      | [JS](#/Web/3.JS)             | [Server](#/Command/Server)    | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Other/Java)               |
 | [GoLang](#/C/Golang)    | [网络编程](#/Python/6.Network)      | [React](#/Web/5.React)       | [MiniSys](#/Linux/MakeSystem) | [树莓派](#/HardWare/Raspberry) | Paddle                  | [安全](#/Security/)                |
 | [Asm](#/Security/Crack) | [机器学习](#/Python/8.Intelligence) | [Vue](#/Web/4.Vue)           | [Shell](#/Linux)              | [各种模块](#/HardWare/EleMod)  |                         | [神经网络](#/DeepLearn)            |
 |                         |                                     | [Electron](#/Web/7.Electron) |                               |                                |                         |                                    |

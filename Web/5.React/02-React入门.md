@@ -5,16 +5,16 @@ sort:
 
 ## 第一个程序
 
-2. 基础语法
+1. 基础语法
 
-   ```react
-   // 渲染Dom
-   ReactDOM.render(React Element, Element)
-   // 创建元素
-   React.createElement(label, attr, content)
-   // 继承组件
-   React.Component
-   ```
+```react
+// 渲染Dom
+ReactDOM.render(React Element, Element)
+// 创建元素
+React.createElement(label, attr, content)
+// 继承组件
+React.Component
+```
 
 2. HelloWorld
 
