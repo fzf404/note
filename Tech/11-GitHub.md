@@ -70,6 +70,19 @@ git reset --hard hi.txt
 .gitignore
 ```
 
-## GithubDesktop
+## VSC & GithubDesktop
 
 > 造福初学者
+
+## SSH
+
+> 何为SSH？
+
+```bash
+ssh-keygen
+# 添加密钥
+git remote rm origin
+git remote add origin git@github.com:xxx/xx.git
+```
+
+## 笔记
