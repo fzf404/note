@@ -9,9 +9,14 @@
   },
   "rdoc": {
     "favicon": "./Home/favicon.ico",
-    "logo": "./Home/rdoc.logo.svg"
+    "logo": "./Home/rdoc.logo.svg",
+    "react_modules": {
+      "Hotkeys": "react-hot-keys"
+    }
   },
   "dependencies": {
-    "rdoc": "1.12.x"
+    "rdoc": "1.12.x",
+    "rdoc-theme-load-react": "^1.1.0",
+    "react-hot-keys": "^1.1.0"
   }
 }
