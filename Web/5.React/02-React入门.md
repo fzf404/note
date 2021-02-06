@@ -73,6 +73,8 @@ React.Component
 ## 语法糖
 
 > babel6
+>
+> 属性要换成驼峰命名
 
 ```react
 var hello = React.createElement('h1', {

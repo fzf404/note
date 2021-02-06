@@ -63,3 +63,35 @@ console.log(fzf.studentGreet())
 // anime manjor's fzf say hi~.
 ```
 
+## 接口
+
+```tsx
+interface Todo {
+  content: string;
+  // 只读
+  readonly user: string;
+  // 可选
+  time?: string;
+  isCompleted: boolean;
+}
+```
+
+## 枚举
+
+```tsx
+enum UserId {
+  tuture,
+  mRcfps,
+  crxk,
+  pftom,
+  holy
+}
+interface Todo {
+  content: string;
+  // 设置枚举
+  user: UserId;
+  time: string;
+  isCompleted: boolean;
+}
+```
+

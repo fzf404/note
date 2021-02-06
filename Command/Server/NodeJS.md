@@ -49,6 +49,7 @@ yarn -v
 yarn init
 yarn install
 yarn add/remove # 添加依赖包
+yarn global add	# 全局安装
 yarn publish
 yarn run
   ```

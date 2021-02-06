@@ -46,6 +46,8 @@ ReactDOM.render(
 
 ![image-20201125152041383](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20201125152041.png)
 
+![img](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-8c0b915b0ef1289a.png)
+
 ```react
 // 组件名称必须大写
 class Hello extends React.Component {

@@ -205,7 +205,7 @@ render() {
     arr.map((item,index) => {
         // 添加索引key 
         let li = <li key = {index}>{item}</li>
-            listItem.push(li)
+        listItem.push(li)
     })
     return <div>
         <div>

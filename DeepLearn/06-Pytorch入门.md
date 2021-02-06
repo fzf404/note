@@ -105,6 +105,7 @@ a[:,1,...].shape
 torch.size([4,28,28])
 # 取值列号，取值行号
 a.index_select(0,torch.tensor([0,1])).shape
+torch.where(cond>0.5,a,b)		# cond>0.5则取a
 
 # 掩码取值
 x = torch.randn(3,4)
@@ -125,7 +126,11 @@ a.permute(2,3,1,0)	# 维度转换
 a = torch.rand(4,32,8)
 b = torch.rand(4,32,8)
 torch.cat([a,b],dim=0)		# torch.Size([8, 32, 8])
-torch.stack([a,b],dim=1)	# torch.Size([4, 2, 32, 8])
+c = torch.stack([a,b],dim=1)	# torch.Size([4, 2, 32, 8])
+aa,b = c.split(1,dim=1)		# [4, 1, 32, 8]
+
+# 相等		大于
+a.eq(a,b) gt(0)
 ```
 
 ### CUDA
@@ -159,21 +164,50 @@ tensor([[0.4783, 0.3188, 0.4842],
 ```python
 # 相加
 torch.add(x, y, out=result)
-# 相乘
+# 相乘相除
 torch.mul(x, y, out=result)
+torch.div(x, y, out=result)
 # 矩阵相乘
 torch.matmul(a,b)
+torch.mm(a,b)			# 2维简写
+a@b								# 简写
+
+# 平方与平方根
+a.pow(2)
+a.sqrt()
+a.rsqrt()		# 平方根倒数
+
+# 对数 e^x
+a = torch.exp(torch.ones(2,2))
+a.log()		# 取对数
+
+# 值
+a = torch.tensor(3.14)
+a.floor(),a.ceil(),a.trunc(),a.frac(),a.round()
+# (tensor(3.), tensor(4.), tensor(3.), tensor(0.1400)), tensor(3.)
+# 设置最大最小值
+a.clamp(10)		# 最大值
+a.clamp(1,10)	# 1-10之间
+# 最小	最大	平均		累乘		求和
+a.min() max() mean() prod()	sum()
+a.argmax() argmin()		# 最大最小值的索引
+# 取最大值及其对应的索引 取前三3个
+grad.topk(3,dim=1)
+grad.topk(3,dim=1,largest=False)	# 最小
+gard.kthvalue(4)	# 第四大的值
 
 # 求导
 x = torch.tensor(2.)	# 定义求导
 a = torch.tensor(1., requires_grad=True)
 b = torch.tensor(2., requires_grad=True)
 c = torch.tensor(5., requires_grad=True)
-
 y = a**2*x + b*x + c
-
 grads = torch.autograd.grad(y,[a,b,c])
 grads[0],grads[1],gard[2]
+
+# 范数
+a.norm(1)
+a.norm(2, dim=1)
 ```
 
 

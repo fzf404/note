@@ -60,3 +60,37 @@ adb shell input keyevent <keycode>
 | 224     | 点亮屏幕                       |
 | 231     | 打开语音助手                   |
 | 276     | 如果没有 wakelock 则让系统休眠 |
+
+## Scrcpy
+
+> 显示并控制通过 USB (或 TCP/IP) 连接的安卓设备
+
+```bash
+# 修改码率 默认2M
+scrcpy -b 2M
+# 限制帧率
+scrcpy --max-fps 15
+# 设置范围 0,0 为原点的1080x1440像素
+scrcpy --crop 1080:1440:0:0
+# 旋转
+scrcpy --lock-video-orientation 0   # 自然方向
+scrcpy --lock-video-orientation 1   # 逆时针旋转 90°
+scrcpy --lock-video-orientation 2   # 180°
+scrcpy --lock-video-orientation 3   # 顺时针旋转 90°
+# 录制
+scrcpy -r file.mkv
+scrcpy -Nr file.mkv		# 默认录制
+# 远程连接
+adb shell ip route		# ip地址
+adb tcpip 5555				# 开启端口
+adb connect 192.168.0.106:5555
+# 多设备
+adb devices
+scrcpy -s 0123456789abcdef	# 选择设备
+
+# 实用
+scrcpy --window-borderless	# 无边框
+scrcpy --always-on-top			# 保持最前
+scrcpy -f 									# 全屏
+```
+

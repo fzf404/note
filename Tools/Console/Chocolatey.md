@@ -12,7 +12,7 @@ choco install -y
 choco uninstall
 choco upgrade
 
-choco install -y googlechrome firefox ccleaner everything potplayer git mingw ojdkbuild anaconda3 nodejs yarn golang cmake arduino sdrsharp typora vim vscode sublimetext3 notion github-desktop rufus vmwareworkstation mobaxterm filezilla wget wireshark postman nmap fiddler burp-suite-free-edition tim wechat microsoft-windows-terminal dosbox powerToys texlive
+choco install -y googlechrome firefox ccleaner everything potplayer git mingw ojdkbuild anaconda3 nodejs yarn golang cmake arduino sdrsharp typora vim vscode sublimetext3 notion github-desktop rufus vmwareworkstation mobaxterm filezilla wget wireshark postman nmap fiddler burp-suite-free-edition tim wechat microsoft-windows-terminal dosbox powerToys texlive scrcpy adb
 ```
 
 ## 常用软件
