@@ -5,11 +5,17 @@ sort:
 
 # Docker入门
 
+## 安装
+
+> [清华安装源](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
+
 ## 基础操作
 
 > [官方安装文档](https://docs.docker.com/engine/install/)
 >
-> [阿里镜像源](https://developer.aliyun.com/mirror/docker-ce?spm=a2c6h.13651102.0.0.3e221b11Sit2oJ)
+> [阿里镜像源](https://developer.aliyun.com/mirror/docker-ce)
+>
+> 清华镜像
 >
 > 换源->阿里云->容器镜像服务->镜像加速器
 

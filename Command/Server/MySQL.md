@@ -98,6 +98,8 @@ select password('1234')；
 1 row in set (0.000 sec)
 # 重新修改
 set password='*E74858DB86EBA20BC33D0AECAE8A8108C56B17FA';
+# 更简单的方法
+
 
 flush privileges;  #立即生效
 ```
@@ -111,5 +113,15 @@ use mysql;
 select User from user;
 # 开启远程访问
 update user set host = '%' where user = 'root';		
+
+# 密码问题
+sudo service mysql stop
+sudo mysqld_safe --skip-grant-tables &
+sudo service mysql start
+mysql
+use mysql;
+update user set password=PASSWORD("NEW-ROOT-PASSWORD") where User='root';
+flush privileges;
+sudo service mysql restart
 ```
 

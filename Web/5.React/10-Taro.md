@@ -11,5 +11,8 @@ sort:
 npm i -g @tarojs/cli
 # 创建新项目
 taro init TaroTest
+
+# 运行
+yarn run dev:weapp
 ```
 
