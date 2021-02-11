@@ -61,6 +61,14 @@ visible: true
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
   }
+  .pre {
+    font-family:monospace;
+    margin-top: 8px;
+  }
+  #active {
+    color: #ffffb8;
+  }
+  
 </style>
 <div class="jumbotron">
   <div class="jumbotron-warpper">
@@ -68,29 +76,15 @@ visible: true
     <div class="jumbotron-des">
       <br />
       🛴整理好的技术笔记。
-      <div>
-        <pre>最近更新：<code id="active"></code></pre>
+      <br/> 
+      <div class="pre"> 
+      最近更新：<span id="active"></span>
       </div>
     </div>
     <a class="jumbotron-btn" href="#/Home/About">关于我</a>
-  </div>
+</div>
 </div>
 <div class="jumbotron-block"> </div>
-<script>
-  window.onload = function(
-  let xmlhttp = new XMLHttpRequest();
-  let gurl = 'https://api.github.com/repos/fzf404/Tech_Note/commits';
-  xmlhttp.open("GET", gurl, true);
-  xmlhttp.send();
-  // 解析响应数据
-  xmlhttp.onreadystatechange = () =>{
-    let data = xmlhttp.responseText;
-    let jsonData = JSON.parse(data);
-    console.log(jsonData[0].commit.message);
-    document.getElementById('active').innerHTML=jsonData[0].commit.message;
-  }
-  )
-</script>
 
 
 

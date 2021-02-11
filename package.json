@@ -8,15 +8,9 @@
     "build": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Linux,Others,Python,Security,Tech,Tools,Web --clean --build"
   },
   "rdoc": {
-    "favicon": "./Home/favicon.ico",
-    "logo": "./Home/rdoc.logo.svg",
     "footer": "Copyright © 2021 Powered by fzf404",
-    "react_modules": {
-      "Hotkeys": "react-hot-keys"
-    }
   },
   "dependencies": {
     "rdoc": "1.12.x",
-    "react-hot-keys": "^1.1.0"
   }
 }
