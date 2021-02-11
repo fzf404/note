@@ -77,6 +77,7 @@ visible: true
 </div>
 <div class="jumbotron-block"> </div>
 <script>
+  window.onload = function(
   let xmlhttp = new XMLHttpRequest();
   let gurl = 'https://api.github.com/repos/fzf404/Tech_Note/commits';
   xmlhttp.open("GET", gurl, true);
@@ -88,6 +89,7 @@ visible: true
     console.log(jsonData[0].commit.message);
     document.getElementById('active').innerHTML=jsonData[0].commit.message;
   }
+  )
 </script>
 
 
