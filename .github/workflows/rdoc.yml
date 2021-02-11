@@ -38,7 +38,7 @@ jobs:
       - name: Note Theme
         run: |
           git clone https://github.com/fzf404/rdoc-theme-fzf.git
-          mv rdoc-theme-fzf/* node_modules/node_modules/rdoc/theme/default/
+          mv rdoc-theme-fzf/* node_modules/rdoc/theme/default/
           
       - name: Note build
         run: |
