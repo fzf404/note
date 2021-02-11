@@ -253,5 +253,6 @@ services:
 > [DVWA](https://hub.docker.com/r/citizenstig/dvwa)
 >
 > [code-server](https://hub.docker.com/r/codercom/code-server)
+>
+> sqli-labs
 
-## Code-Server
