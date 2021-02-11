@@ -64,17 +64,32 @@ visible: true
 </style>
 <div class="jumbotron">
   <div class="jumbotron-warpper">
-    <div class="jumbotron-title">🚄欢迎来到本站~ </div>
+    <div class="jumbotron-title">🚄欢迎来到本站~</div>
     <div class="jumbotron-des">
       <br />
-      整理好的技术笔记。
-      <br />
-      🛴方便查阅~
+      🛴整理好的技术笔记。
+      <div>
+        <pre>最近更新：<code id="active"></code></pre>
+      </div>
     </div>
     <a class="jumbotron-btn" href="#/Home/About">关于我</a>
   </div>
 </div>
 <div class="jumbotron-block"> </div>
+<script>
+  let xmlhttp = new XMLHttpRequest();
+  let gurl = 'https://api.github.com/repos/fzf404/Tech_Note/commits';
+  xmlhttp.open("GET", gurl, true);
+  xmlhttp.send();
+  // 解析响应数据
+  xmlhttp.onreadystatechange = () =>{
+    let data = xmlhttp.responseText;
+    let jsonData = JSON.parse(data);
+    console.log(jsonData[0].commit.message);
+    document.getElementById('active').innerHTML=jsonData[0].commit.message;
+  }
+</script>
+
 
 
 | [PL](#/C)               | [Python](#/Python)                  | [前端](#/Web)                | [Linux](#/Linux)              | [硬件](#/HardWare/)            | [深度学习](#/DeepLearn) | 其他                               |
