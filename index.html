@@ -1,1 +1,13 @@
-<!DOCTYPE html><html xmlns=http://www.w3.org/1999/xhtml><head><title>Rdoc</title><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=favicon.ico><link href=css/2.css rel=stylesheet></head><body><div id=root></div><script type=text/javascript src=js/07adf955.js></script><script type=text/javascript src=js/vendor.07adf955.js></script><script type=text/javascript src=js/main.07adf955.js></script></body></html>
+<!DOCTYPE html><html xmlns=http://www.w3.org/1999/xhtml><head><title>Rdoc</title><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=favicon.ico><link href=css/2.css rel=stylesheet></head><body><div id=root></div><script>setTimeout(()=>{
+    let xmlhttp = new XMLHttpRequest();
+    let gurl = 'https://api.github.com/repos/fzf404/Tech_Note/commits';
+    xmlhttp.open("GET", gurl, true);
+    xmlhttp.send();
+    // 解析响应数据
+    xmlhttp.onreadystatechange = () =>{
+      let data = xmlhttp.responseText;
+      let jsonData = JSON.parse(data);
+      console.log(jsonData[0].commit.message);
+      document.getElementById('active').innerHTML=jsonData[0].commit.message;
+    }
+  },2000)</script><script type=text/javascript src=js/0b86f4fe.js></script><script type=text/javascript src=js/vendor.0b86f4fe.js></script><script type=text/javascript src=js/main.0b86f4fe.js></script></body></html>
