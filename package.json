@@ -8,9 +8,9 @@
     "build": "rdoc -d C,Command,DeepLearn,Golang,HardWare,Home,Linux,Others,Python,Security,Tech,Tools,Web --clean --build"
   },
   "rdoc": {
-    "footer": "Copyright © 2021 Powered by fzf404",
+    "footer": "Copyright © 2021 Powered by fzf404"
   },
   "dependencies": {
-    "rdoc": "1.12.x",
+    "rdoc": "1.12.x"
   }
 }
