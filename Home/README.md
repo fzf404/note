@@ -68,7 +68,7 @@ visible: true
   #active {
     color: #ffffb8;
   }
-  
+
 </style>
 <div class="jumbotron">
   <div class="jumbotron-warpper">

@@ -46,8 +46,12 @@ function getCurrentTime() {
 }
 
 // 导出函数
-module.exports.printProgramInfo = printProgramInfo;
-module.exports.getCurrentTime = getCurrentTime;      
+exports.printProgramInfo = printProgramInfo;
+exports.getCurrentTime = getCurrentTime;
+// 导出
+exports.sayHi = () => {
+	return 'Hello nodejs~'
+}
 ```
 
 - 导入模块
