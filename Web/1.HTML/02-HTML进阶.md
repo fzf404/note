@@ -194,6 +194,11 @@ sort:
   
   <input type="text" placeholder="this is placeholder text">
   <input type="submit" value="Submit">
+    
+  <select>
+  	<option>1</option>  
+    <option>2</option>  
+  </select>
   
   </form>
   

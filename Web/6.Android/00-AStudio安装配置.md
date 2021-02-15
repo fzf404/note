@@ -24,16 +24,6 @@ sort:
 
    > 官网：[developers](https://developer.android.google.cn/studio?hl=zh-cn)
 
-   - 安装SDk
-
-     > 重新配置Auto：https://mirrors.tuna.tsinghua.edu.cn/
-     >
-     > clear passwd
-     >
-     > 重新进入Android SDK
-     >
-     > 设置文件夹，开始下载
-     
 
 ## 遇到过的问题
 

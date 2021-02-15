@@ -9,15 +9,24 @@ sort:
 >
 > 将网页转为一个 JavaScript 对象，从而可以用脚本进行各种操作。
 
-## 节点
+## 常用
 
-- `Document`：整个文档树的顶层节点
-- `DocumentType`：`doctype`标签（比如`<!DOCTYPE html>`）
-- `Element`：网页的各种HTML标签（比如`<body>`、`<a>`等）
-- `Attr`：网页元素的属性（比如`class="right"`）
-- `Text`：标签之间或标签包含的文本
-- `Comment`：注释
-- `DocumentFragment`：文档的片段
+```js
+// 元素
+document.querySelector('.demo');
+document.createElement('canvas');
+
+// 操作
+let demo = document.createElement('#demo');
+// 末尾插入元素
+demo.insertAdjacentHTML('beforeend', `<option value="new">123</option>`);
+demo.value		// 获取元素的值
+demo.innerHTML = '<p>demo</p>';		// 增加内容
+demo.click()	// 模拟点击
+// class操作
+demo.classList.add('disable');			// 为元素增加类
+demo.classList.remove('disable');		// 为元素减少类
+```
 
 ## Document节点
 

@@ -5,8 +5,6 @@ sort:
 
 # HTML基础
 
-## 第一个HTML
-
 > 半角：`&ensp`;
 > 全角：`&emsp`;
 
