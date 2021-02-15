@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[248],{875:function(n,p){n.exports="\x3c!-- \ntitle: 10-练习\nsort: \n--\x3e \n\n> 练习自学课\n\n```bash\n# 自学如下命令\nfind\ngrep\ntar\ngzip\n```\n\n## 解压搜索\n\n1. 下载此网址的内容`http://dl.fzf404.top/work1.zip`\n2. tar命令解压`work1.zip`\n3. 文件夹内部有100个文件夹\n4. 使用find命令查找哪个文件夹中有文件\n5. 打印文件中的内容"}}]);
