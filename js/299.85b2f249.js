@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[299],{926:function(n,p){n.exports="\x3c!-- \ntitle: 32-TypeScript入门\nsort: \n--\x3e "}}]);
