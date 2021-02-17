@@ -30,6 +30,9 @@ w.grad
 x = torch.tensor([1,2,3],dtype=torch.float)
 softmax1 = nn.Softmax(dim=0)
 softmax1(x)
+
+# 链式法则
+
 ```
 
 

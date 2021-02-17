@@ -31,7 +31,7 @@ services:
 
 server {
 	listen 80;
-    server_name localhost;
+ server_name localhost;
 
 	location / {
 		root /var/www/html;

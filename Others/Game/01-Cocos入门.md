@@ -9,7 +9,7 @@ sort:
 
 > [node.on](https://docs.cocos.com/creator/api/zh/classes/Node.html#on)
 >
-> `node.on(cc.Node.EventType.TOUCH_START, callback, this);`
+> `this.node.on(cc.Node.EventType.TOUCH_START, callback, this);`
 
 ### 键盘事件
 
@@ -65,3 +65,40 @@ start() {
 },
 ```
 
+## 图像
+
+- plist
+- 位图字体
+
+## 软件
+
+- [粒子特效](http://www.effecthub.com/particle2dx)
+- Spine: 骨骼动画
+- Tiled: RPG地图编辑
+
+## Class
+
+```js
+let obj = cc.Class({
+  sayHi: () =>{
+    cc.log("hi~");
+  }
+})
+
+let obj2 = cc.Class({
+	extends: onj
+})
+
+let demo = new obj2();
+demo.sayHi();
+
+// 添加参数
+properties: {
+    player: {
+        default: null,
+        type: cc.Node,
+    }
+}
+// 获取绑定的节点
+let player = this.player;
+```
