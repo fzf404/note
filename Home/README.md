@@ -94,7 +94,7 @@ visible: true
 | [C++](#/C)              | [进阶](#/Python/2.Advance)          | [CSS](#/Web/2.CSS)           | [Tools](#/Linux/Tools)        | [51单片机](#/HardWare/51MCU)   | TensorFlow              | [Dos](#/Command/Dos)               |
 | [C#](#/C/CSharp)        | [第三方库](#/Python/3.Package)      | [JS](#/Web/3.JS)             | [Server](#/Command/Server)    | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Other/Java)               |
 | [GoLang](#/Golang)      | [网络编程](#/Python/6.Network)      | [React](#/Web/5.React)       | [MiniSys](#/Linux/MakeSystem) | [树莓派](#/HardWare/Raspberry) | Paddle                  | [安全](#/Security/)                |
-| [Asm](#/Security/Crack) | [机器学习](#/Python/8.Intelligence) | [Vue](#/Web/4.Vue)           | [Shell](#/Linux)              | [各种模块](#/HardWare/EleMod)  |                         | [神经网络](#/DeepLearn)            |
+| [Asm](#/Security/Crack) | [机器学习](#/Python/8.Intelligence) | [Vue](#/Web/4.Vue)           | [Shell](#/Linux)              | [各种模块](#/HardWare/EleMod)  |                         | [游戏开发](/#/Others/Game)         |
 |                         |                                     | [Electron](#/Web/7.Electron) |                               |                                |                         |                                    |
 
 ## 工具
