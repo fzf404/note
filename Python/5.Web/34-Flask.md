@@ -49,7 +49,7 @@ request.json['mess']
 ## 跨域请求
 
 ```python
-from flask import Flask,jsonify
+from flask_cors import *
 CORS(app, supports_credentials=True)
 ```
 

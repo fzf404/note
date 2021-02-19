@@ -79,7 +79,7 @@ new Vue({
 ```js
 Vue.component('balance', {
   template: '#vue-component-tpl',
-  methods: {
+methods: {
     showBalance: function (data) {
       this.show = true;
       console.log('data:', data)

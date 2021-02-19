@@ -58,11 +58,9 @@ wget -m url		# 站点镜像
 +------------------------- 分钟 (0 - 59)
 ```
 
-### 代码行数统计
-
-> `https://github.com/AlDanial/cloc`
+### 彻底卸载
 
 ```
-cloc <path>
+apt-get remove --purge
 ```
 

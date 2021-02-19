@@ -57,3 +57,34 @@ plt.title('image') 		# 图像题目
 plt.show()
 ```
 
+## 3D
+
+- 使用plt
+
+```python
+# 生成点
+def himmelblau(x):
+  return (x[0]**2+x[1]-11)**2+(x[0]+x[1]**2-7)**2
+x = np.arange(-6,6,0.1)
+y = np.arange(-6,6,0.1)
+# 转换为网格点坐标矩阵
+X, Y = np.meshgrid(x,y)
+Z = himmelblau([X,Y])
+
+# jupter鼠标旋转3d图
+%matplotlib notebook
+
+fig = plt.figure("Himmelblau",figsize=(8,8))
+ax = fig.gca(projection='3d')
+# 面图
+ax.plot_surface(X,Y,Z)
+# 线性图
+# ax.plot_wireframe(X,Y,Z)
+# 散点图
+# ax.scatter(X,Y,Z)
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+plt.show()
+```
+

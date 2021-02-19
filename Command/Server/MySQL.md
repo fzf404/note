@@ -11,6 +11,10 @@ sort:
 
 ```bash
 apt isntall mariadb-server
+
+# sqlmap问题解决
+sudo apt-get install libmariadb-dev
+pip isntall mysqlclient
 ```
 
 ### Ubuntu+WSL2
@@ -89,7 +93,7 @@ mysql -u root -p
 set password = '1234';
 # ERROR 1372 (HY000): Password hash should be a 41-digit hexadecimal number
 # 密码是明文，需要用十六进制码
-select password('1234')；
+select password('1234');
 +-------------------------------------------+
 | password('mysql')                         |
 +-------------------------------------------+
@@ -112,16 +116,6 @@ use mysql;
 # 查询用户
 select User from user;
 # 开启远程访问
-update user set host = '%' where user = 'root';		
-
-# 密码问题
-sudo service mysql stop
-sudo mysqld_safe --skip-grant-tables &
-sudo service mysql start
-mysql
-use mysql;
-update user set password=PASSWORD("NEW-ROOT-PASSWORD") where User='root';
-flush privileges;
-sudo service mysql restart
+update user set host = '%' where user = 'root';	
 ```
 
