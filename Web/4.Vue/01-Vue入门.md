@@ -79,7 +79,23 @@ sort:
 </script>
 ```
 
-## 指令
+## 判断与循环
+
+```vue
+// 使用v-if v-else 判断渲染哪个标签
+<span v-if="isEditing">Update Product</span>
+<span v-else>Add Product</span>
+
+<script>
+export default {
+  data: { isEditing: false },
+}
+</script>
+```
+
+## 双向绑定
+
+> 属性与data值同时改变
 
 ```js
 <input v-model="name">
@@ -89,6 +105,8 @@ v-model.number="name"		// 转换成数字
 ```
 
 ## 绑定
+
+> 绑定属性值
 
 ```js
 v-bind:href="url"

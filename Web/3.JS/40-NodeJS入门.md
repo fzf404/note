@@ -45,9 +45,10 @@ function getCurrentTime() {
 	return time.toLocaleString();
 }
 
-// 导出函数
-exports.printProgramInfo = printProgramInfo;
-exports.getCurrentTime = getCurrentTime;
+// 导出单个函数
+module.exports = printProgramInfo;
+// 导出多个
+module.exports = { printProgramInfo, printProgramInfo };
 // 导出
 exports.sayHi = () => {
 	return 'Hello nodejs~'
@@ -132,4 +133,3 @@ server.listen(port, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
 ```
-

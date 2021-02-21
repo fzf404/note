@@ -180,3 +180,33 @@ await page.goto('https://www.baidu.com/');
 
 ### 上传下载
 
+```js
+// 通过 CDP 会话设置下载路径
+const cdp = await page.target().createCDPSession();
+await cdp.send('Page.setDownloadBehavior', {
+    behavior: 'allow', 	// 允许所有下载请求
+    downloadPath: 'D:'  // 设置下载路径
+});
+await (await page.waitForSelector('#someButton')).click();
+
+// 使用node下载文件
+const http = require("http");
+const fs = require("fs");
+http.request(url, res => {
+  res.pipe(fs.createWriteStream(path.basename(url)))
+})
+
+// 上传文件
+await inputElement.uploadFile('/path/to/file');
+```
+
+### 模拟设备
+
+```js
+const devices = puppeteer.devices['iPad Pro'];
+await page.emulate(devices);
+
+// 获得支持设备json文件
+fs.writeFile('device.json',JSON.stringify(puppeteer.devices),err => {})
+```
+

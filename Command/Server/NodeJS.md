@@ -20,6 +20,7 @@ node	# 进入JS运行环境
 npm -v
 npm init
 npm install [-g]	# 全局安装
+		--save-dev		# 安装为开发依赖
 # 换源
 npm config set registry https://registry.npm.taobao.org
 # 发布包时换回原来的源

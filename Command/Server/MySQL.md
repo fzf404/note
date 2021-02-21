@@ -3,8 +3,6 @@ title: MySQL
 sort: 
 --> 
 
-# MySQL
-
 ## 安装
 
 ### Debian10

@@ -15,7 +15,7 @@ docker create \
   --name=code-server \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e TZ=EAsia/Shanghai \
+  -e TZ=Asia/Shanghai \
   -e PASSWORD=password `#登录密码` \
   -e SUDO_PASSWORD=password `#sudo密码` \
   -e PROXY_DOMAIN=code-server.my.domain `#optional` \

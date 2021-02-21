@@ -55,7 +55,7 @@ template:'#like-component-template-tpl'
 
 ## 父子通信
 
-> 父组件可以使用`props`把数据传给子组件。
+> 子组件可以使用`props`获得父组件数据。
 
 ```js
 Vue.component('alert', {
@@ -79,7 +79,7 @@ new Vue({
 ```js
 Vue.component('balance', {
   template: '#vue-component-tpl',
-methods: {
+	methods: {
     showBalance: function (data) {
       this.show = true;
       console.log('data:', data)
