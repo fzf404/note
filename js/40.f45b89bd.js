@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[40],{667:function(n,o){n.exports="\x3c!-- \ntitle: MongoDB\nsort: \n--\x3e \n\n## 安装\n\n```bash\nsudo apt install mongodb\n# 远程连接修改配置文件\nvim /etc/mongodb.conf\nip: 0.0.0.0 -> 127.0.0.1\n```\n\n"}}]);
