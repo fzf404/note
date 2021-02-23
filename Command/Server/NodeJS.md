@@ -7,7 +7,17 @@ sort:
 
 > `node.js`是基于chrome v8引擎的JS运行环境
 >
-> 前端开发环境、服务端编程语言
+> [包管理器安装](https://nodejs.org/zh-cn/download/package-manager/)
+
+```bash
+# Using Ubuntu
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
+apt-get install -y nodejs
+```
 
 ### Npm
 

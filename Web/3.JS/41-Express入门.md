@@ -101,6 +101,24 @@ const Product = model('Product', productSchema);
 module.exports = { Product, Manufacturer };
 ```
 
+- 使用官方库
+
+```js
+const MongoClient = require('mongodb').MongoClient;
+
+const uri = "mongodb://user:password@ip";
+
+async function someFunc() {
+  const client = new MongoClient(uri);
+  await client.connect();
+  const cmd = client.db("testm").collection("users");
+  let data = await cmd.find({}, { projection: { '_id': 0 } }).toArray();
+
+  client.close();
+  return data
+}
+```
+
 ## 允许跨域
 
 ```js
