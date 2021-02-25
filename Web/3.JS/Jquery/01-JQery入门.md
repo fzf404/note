@@ -40,7 +40,7 @@ jquery_test.slideUp(500)
 jquery_test.slideDown(500)
 
 // 内容
-jquery_test.text()
+    jquery_test.text()
 jquery_test.html()
 jquery_test.append('<p>test</p>')
 jquery_test.prepend('<p>test</p>')

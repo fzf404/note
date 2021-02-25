@@ -3,6 +3,8 @@ title: 09-Pytorch实战
 sort: 
 --> 
 
+## MNIST
+
 ```python
 import torch
 import numpy as np
@@ -57,6 +59,7 @@ test_loader = torch.utils.data.DataLoader(torchvision.datasets.MNIST('datasets/m
 # 优化器
 # 实现随机梯度下降算法
 optimizer = optim.SGD([w1, b1, w2, b2, w3, b3], lr=learning_rate)
+# 交叉熵-损失函数
 criteon = nn.CrossEntropyLoss()
 # 开始训练
 for epoch in range(epochs):
@@ -105,7 +108,63 @@ for data, target in test_loader:
 
 ## 高级API
 
+```python
+class MLP(nn.Module):
+
+    def __init__(self):
+        super(MLP, self).__init__()
+				# 定义连接层
+        self.model = nn.Sequential(
+            nn.Linear(784, 200),
+            nn.LeakyReLU(inplace=True),
+            nn.Linear(200, 200),
+            nn.LeakyReLU(inplace=True),
+            nn.Linear(200, 10),
+            nn.LeakyReLU(inplace=True),
+        )
+
+    def forward(self, x):
+        x = self.model(x)
+        return x
+      
+# GPU加速
+device = torch.device('cuda:0')
+net = MLP().to(device)
+# 重新定义优化器      
+optimizer = optim.SGD(net.parameters(), lr=learning_rate)   
+
++ data, target = data.to(device), target.to(device)
+- logits = forward(data)
++ logits = net(data)
 ```
 
+## 调整
+
+```python
+# 正则化
+optimizer = optim.SGD(net.parameters(), lr=learning_rate, weight_decay = 0.01)
+
+# 动量
+# 连续200次loss没有减少，就将学习率×70%
+from torch.optim.lr_scheduler import ReduceLROnPlateau
+scheduler = ReduceLROnPlateau(optimizer, mode="min", patience=200, factor=0.7)
+	scheduler.step(loss)
+# 每执行800次，就将学习率×90%
+scheduler = StepLR(optimizer, step_size=800, gamma=0.9)
+	scheduler.step()
+  
+# DropOut
+self.model = nn.Sequential(
+  nn.Linear(784, 200),
+  nn.Dropout(0.5),  # 以0.5的概率断开
+  nn.LeakyReLU(inplace=True),
+  nn.Linear(200, 200),
+  nn.Dropout(0.5),  # 以0.5的概率断开
+  nn.LeakyReLU(inplace=True),
+  nn.Linear(200, 10),
+  nn.LeakyReLU(inplace=True),
+)
+# 测试集取消DropOut
+	net.eval()
 ```
 

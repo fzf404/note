@@ -25,9 +25,13 @@ sort:
 systemctl start docker
 systemctl enable docker
 docker run hello-world
+# 将 docker 的权限移交给非 root 用户
+sudo usermod -aG docker $USER
 ```
 
 ### 基础命令
+
+![img](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/16f6e0a6b0e1ab95.png)
 
 ```bash
 # 拉取镜像
@@ -67,7 +71,8 @@ docker logs -f <cid>
 # 进入容器内
 docker exec -it <cid> bash
 # 停止/删除
-docker stop $(docker ps -qa)
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
 docker rm <cid>
 # 传文件
 docker cp <file> <cid>:<path>

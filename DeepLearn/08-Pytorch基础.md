@@ -73,3 +73,39 @@ a3 = torch.tensor([0.001,0.001,0.001,0.997])
 -(a3*torch.log2(a3)).sum()    # 0.03
 ```
 
+## 项数影响
+
+![image-20210225202252994](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-20210225202252994.png)
+
+## 欠拟合与过拟合
+
+![image-20210225204202533](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-20210225204202533.png)
+
+### 正则化
+
+>  Regularization / Weight Decay
+>
+> 降低模型复杂度防止过拟合
+
+`optimizer = optim.SGD( ..., weight_decay = 0.01)`
+
+## 动量
+
+> 动量-惯性
+>
+> momentum
+>
+> 在向后传播的过程中减去动量
+
+- ReduceLROnPlateau
+
+  > 训练过程中连续不下降，降低学习率
+
+## 动态学习率
+
+## DropOut
+
+> 忽略一部分w值
+>
+> `nn.Dropout(0.5)`
+

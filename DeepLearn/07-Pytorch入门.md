@@ -205,8 +205,10 @@ y = a**2*x + b*x + c
 grads = torch.autograd.grad(y,[a,b,c])
 grads[0],grads[1],gard[2]
 
-# 范数
+# 范数 -> 平方和开方
+# 1范数平方求和
 a.norm(1)
+# 2范数平方求和开根
 a.norm(2, dim=1)
 ```
 
