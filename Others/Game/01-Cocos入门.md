@@ -102,3 +102,4 @@ properties: {
 // 获取绑定的节点
 let player = this.player;
 ```
+

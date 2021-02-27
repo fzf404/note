@@ -41,9 +41,21 @@ sort:
 ## 节点组件
 
 ```js
+// 获取当前节点
+let node = this.node
+node.x = 100;		// 偏移
 // 获取子节点
 let child = this.node.children;
 let childByName = this.node.getChildByName(Name);
 let node = cc.log(childByName);
 ```
 
+## 加载切换场景
+
+```js
+cc.director.loadSence("Name")
+// 预加载-空间换时间
+cc.director.preloadSence("Name", ()=>{})
+```
+
+ 

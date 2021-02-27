@@ -4,15 +4,20 @@ sort:
 --> 
 # FFmpeg入门
 
+### 常用功能
+
+```bash
+# 合并m4s音频与视频
+ffmpeg -i .\video.m4s -i .\audio.m4s -codec copy out.mp4
+# 提取音频
+ffmpeg -i .\video.mp4 -acodec copy -vn output.aac
+```
+
 ## 安装
 
 [FFmpeg下载](https://ffmpeg.zeranoe.com/builds/)
 
-配置环境变量至bin目录
-
-提取视频音频：`ffmpeg -i .\*.mp4 -acodec copy -vn output.aac`
-
-> 设置声音解码器为默认，不处理视频并copy
+`choco install ffmpeg`
 
 ## 参数
 

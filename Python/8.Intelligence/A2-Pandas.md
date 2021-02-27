@@ -76,19 +76,14 @@ sort:
 
 ## 操作数据
 
-> 可以向 `Series` 应用 Python 的基本运算指令：
->
-> `人口 / 1000`
->
-> *pandas* `Series` 可用作大多数 NumPy 函数的参数。
->
-> `DataFrames` 的修改：
->
 > ```python
-> 城市信息['Area square miles'] = pd.Series([46.87, 176.53, 97.92])
+>城市信息['Area square miles'] = pd.Series([46.87, 176.53, 97.92])
 > 
-> 城市信息['人口'] = 城市信息['人口'] / 城市信息['Area square miles']
-> ```
+>城市信息['人口'] = 城市信息['人口'] / 城市信息['Area square miles']
+> 
+># 选择最大值
+> idxmax()
+>```
 
 `Series.apply` 以参数形式接受 [lambda 函数](https://docs.python.org/2/tutorial/controlflow.html#lambda-expressions)，而该函数会应用于每个值。
 
