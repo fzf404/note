@@ -31,37 +31,37 @@ this.updateTime = this.updateTime.bind(this)
 ```react
 // 获取button组件
 function Login() {
-    return <button>Login</button>
+  return <button>Login</button>
 }
 function Logout() {
-    return <button>Logout</button>
+  return <button>Logout</button>
 }
 // 组件类
 class App extends React.Component {
-    state = {
-        isLogin: false
-    }
+  state = {
+    isLogin: false
+  }
 	updateLog = () => {
     	console.log(this)
     	this.setState({
         	isLogin: true
     	})
 	}
-    render() {
-        const isLogin = this.state.isLogin;
-        let button;
-        if (isLogin) {
-            button = <Login />
-        } else {
-            button = <Logout />
-        }
-        // 三元运算符  {isLogin?<Login/>:<Logout/>}
-        return <div>
-            <h1>Hello,{this.props.name}</h1>
-            {button}
-            <button onClick={this.updateLog}>Update</button>
-        </div>
+  render() {
+    const isLogin = this.state.isLogin;
+    let button;
+    if (isLogin) {
+      button = <Login />
+    } else {
+      button = <Logout />
     }
+    // 三元运算符  {isLogin?<Login/>:<Logout/>}
+    return <div>
+      <h1>Hello,{this.props.name}</h1>
+      {button}
+      <button onClick={this.updateLog}>Update</button>
+    </div>
+  }
 }
 ```
 

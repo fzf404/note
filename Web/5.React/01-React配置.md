@@ -6,9 +6,7 @@ sort:
 ## npm
 
 ```bash
-npm init
-# 保存到package.json
-# 下次直接install
+npm init -y
 npm install react --save
 ```
 

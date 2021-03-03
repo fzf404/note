@@ -5,18 +5,7 @@ sort:
 
 ## 第一个程序
 
-1. 基础语法
-
-```react
-// 渲染Dom
-ReactDOM.render(React Element, Element)
-// 创建元素
-React.createElement(label, attr, content)
-// 继承组件
-React.Component
-```
-
-2. HelloWorld
+> HelloWorld
 
 ```html
 <html lang="en">
@@ -40,7 +29,7 @@ React.Component
 </html>
 ```
 
-> 运行不成功尝试`yarn add react react-dom --save`
+> babel6语法糖
 
 ```html
 <html lang="en">
@@ -59,8 +48,6 @@ React.Component
 <body>
     <div id="app"></div>
     <script type="text/babel">
-        // var hello = React.createElement('h1',{},"HelloWorld");
-        // babel6 语法糖
         ReactDOM.render(
         	<h1>HelloWorld</h1>
         	,document.getElementById('app'));
@@ -68,34 +55,6 @@ React.Component
 </body>
 
 </html>
-```
-
-## 语法糖
-
-> babel6
->
-> 属性要换成驼峰命名
-
-```react
-var hello = React.createElement('h1', {
-    className: 'red',
-    name: 'jack'
-}, "HelloWorld");
-ReactDOM.render(hello, document.getElementById('app'));
-
-// 替代品
-ReactDOM.render(
-    <h1 className="res" name="fzf">HelloWorld</h1>
-    , document.getElementById('app'));
-
-// 新写法
-<script type="text/babel">
-    var name = 'fzf';
-    var ele = <h1 className="red">Hello, {name}</h1>;
-    ReactDOM.render(
-    ele
-    , document.getElementById('app'));
-</script>
 ```
 
 ### 动态渲染
