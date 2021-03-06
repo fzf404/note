@@ -11,11 +11,11 @@ import React, { useState, useEffect } from "react";
 export default function App() {
   // 定义变量及它的修改者
   const [globalStats, setGlobalStats] = useState({});
-  // 但第二参数的值改变时执行
+  // 初始化时执行，但第二参数的值改变时执行
   useEffect(() => {
   	const response = await fetch('...');
   // ...
-	}, globalStats);
+	}, [globalStats]);
  
 ```
 

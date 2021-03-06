@@ -74,3 +74,11 @@ function tick() {
 }
 setInterval(tick, 1000);
 ```
+
+## 常用
+
+```js
+// 最外层空标签
+import Fragment from 'react'
+```
+

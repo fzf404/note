@@ -64,3 +64,14 @@ wget -m url		# 站点镜像
 apt-get remove --purge
 ```
 
+### 内核
+
+```bash
+# 正在使用的内核
+uname -a
+# 全部内核
+rpm -qa | grep kernel
+# 卸载
+yum remove kernel-x.xx.x
+```
+
