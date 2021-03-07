@@ -24,6 +24,11 @@ visible: true
 - [ ] 一键配置Manjaro
 - [ ] 一键配置Windows
 
+### 文档解析
+
+- [ ] md批量转换
+- [ ] 在线工具箱
+
 ### 当代年轻人自救手册
 
 > 很久之前就想搞这个系列
@@ -41,10 +46,9 @@ visible: true
 ### 正在学习
 
 - [x] React
-- [ ] C#
 - [ ] 逆向
 - [ ] Stm32
 - [x] 线代
-- [ ] Android
+- [x] Android
 - [ ] 卷积神经网络
-- [ ] electron
+- [x] electron

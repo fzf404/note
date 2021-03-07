@@ -5,9 +5,6 @@ sort:
 
 # HTML基础
 
-> 半角：`&ensp`;
-> 全角：`&emsp`;
-
 ```html
 <!DOCTYPE html>
 <html>

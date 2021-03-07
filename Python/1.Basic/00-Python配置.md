@@ -74,75 +74,12 @@ conda remove -n learn-pytorch --all
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```
 
-> ==cmd==
->
-> `脚本加载失败`
-
-## Python换源
-
-> `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple <name>`
->
-> `pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`
-
-### windows
-
-- 在user目录中创建一个pip目录，如：C:\Users\xx\pip
-- 然后新建文件pip.ini，即 %HOMEPATH%\pip\pip.ini
-
-- 在pip.ini中输入以下内容：
-
-  ```ini
-  [global]
-  index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-  
-  # 报错添加如下行
-  trusted-host=pypi.tuna.tsinghua.edu.cn
-  ```
-  
-
-### Linux
-
-#### **修改本用户**
-
-- 修改 ： ~/.pip/pip.conf
-
-  `注： 没有就创建一个文件夹及文件。文件夹要加“.”，表示是隐藏文件夹。`
-
-
-- 在pip.conf中输入以下内容：
-
-  ```ini
-  [global]
-  index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-  ```
-
-- 修改root账户：
-
-  ```bash
-  sudo pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-  ```
-  
-
-#### 系统修改
-
-- 修改`/etc/pip.conf`
-
-## 批量安装第三方库
-
-> `pip freeze > requirements.txt`生成当前配置文件
+## 批量
 
 ```python
-import os
-
-libs = []
-
-try:
-    for lib in libs:
-        os.system("pip install " + lib)
-    print("安装成功")
-except:
-    print("安装失败")
-
+# 生成当前配置
+pip freeze > requirements.txt
+pip install -r requirements.txt
 ```
 
 ## 虚拟环境
