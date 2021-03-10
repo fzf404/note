@@ -83,7 +83,7 @@ payload = {'key1': 'value1', 'key2': 'value2'}
    r = s.get('http://www.baidu.com')		# 获取cookie
    print(r.cookies)
    '''
-   <RequestsCookieJar[<Cookie BDORZ=27315 for .baidu.com/>]>
+   <RequestsCookieJar[<Cookie BDORZ=27[3]15 for .baidu.com/>]>
    '''
    ```
    

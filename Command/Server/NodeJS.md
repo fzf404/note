@@ -24,13 +24,14 @@ apt-get install -y nodejs
 > [npmjs](https://www.npmjs.com/)
 
 ```powershell
-node -v
-node	# 进入JS运行环境
+# 安装
+curl -L https://npmjs.org/install.sh |
 
-npm -v
+
+node	# 进入JS运行环境
 npm init
 npm install [-g]	# 全局安装
-		--save-dev		# 安装为开发依赖
+	-S	--save-dev	# 安装为开发依赖
 # 换源
 npm config set registry https://registry.npm.taobao.org
 # 发布包时换回原来的源
