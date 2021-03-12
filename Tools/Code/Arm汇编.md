@@ -3,16 +3,45 @@ title: Arm汇编
 sort: 
 --> 
 
-```bash
-as test.s -o test,o
-ld test.o -o test
+## 环境
+
+> 树莓派
+>
+> [gef](https://github.com/hugsy/gef)
+
+## HelloWorld
+
+```assembly
+# demo.s
+.data          /*.data段是动态创建的，无法预测 */
+var1: .word 3  /* 内存中的变量var1=3*/
+var2: .word 4  /* 内存中的变量var2=4*/
+
+.text          /* 代码段开始位置 */ 
+.global _start
+
+_start:
+    ldr r0, adr_var1  @ 通过标签adr_var1获得变量var1的地址，并加载到R0。
+    ldr r1, adr_var2  @ 通过标签adr_var2获得变量var2的地址，并加载到R1。
+    ldr r2, [r0]      @ 通过R0内的地址获取到该地址处的值（0x03)，加载到R2。
+    str r2, [r1]      @ 将R2内的值（0x03）存储到R1中的地址处。 
+    bkpt             
+
+adr_var1: .word var1  /* 变量var1的地址位置 */
+adr_var2: .word var2  /* 变量var2的地址位置 */
+
+# 编译运行
+as demo.s -o demo.o
+ld demo.o -o demo
+# gef调试
+gdb -f demo
 # 打断点
 gef> br _start
-# 运行
-gef> run
-gef> nexti 3			# 运行断点后三条指令
-gef> x/w 0x1009e 	# 查看地址的值
-gef> info register r1	r2	# 寄存器的值
+gef> run			# 运行
+gef> nexti 		# 运行下一条命令
+gef> info register r0	# 查看寄存器的值
+r0 = 0x20090 					# r0的值是var1的地址
+gef> x/w 0x20090			# 查看内存的值
 ```
 
 ## 数据类型
@@ -113,24 +142,6 @@ LDR R2, [R0, #12]		@ 相对寻址，R0+12的地址的值
 # R2的值存到R1内存地址
 STR R2, [R1]   @ [R1] - R1中保存的值是目标地址
 
-# 汇编程序的样子
-.data          /*.data段是动态创建的，无法预测 */
-var1: .word 3  /* 内存中的变量var1=3*/
-var2: .word 4  /* 内存中的变量var2=4*/
-
-.text          /* 代码段开始位置 */ 
-.global _start
-
-_start:
-    ldr r0, adr_var1  @ 通过标签adr_var1获得变量var1的地址，并加载到R0。
-    ldr r1, adr_var2  @ 通过标签adr_var2获得变量var2的地址，并加载到R1。
-    ldr r2, [r0]      @ 通过R0内的地址获取到该地址处的值（0x03)，加载到R2。
-    str r2, [r1]      @ 将R2内的值（0x03）存储到R1中的地址处。 
-    bkpt             
-
-adr_var1: .word var1  /* 变量var1的地址位置 */
-adr_var2: .word var2  /* 变量var2的地址位置 */
-
 str r2, [r1, #2]  @ R2值存到R1+2地址中，R1值不变。
 str r2, [r1, #4]! @ R2值存到R1+2地址中，R1值+4。
 ldr r3, [r1], #4  @ R1地址的值加载到R3，R1值+4。
@@ -142,8 +153,6 @@ ldr r3, [r1], r2  @ R1地址的值加载到R3，R1值+R2。
 str r2, [r1, r2, LSL#2]  @ R1+R2左移两位地址的值加载到R2，R1不变
 str r2, [r1, r2, LSL#2]! @ 同上上
 ldr r3, [r1], r2, LSL#2  @ R1地址的值加载到R3，R1值+R2左移2位。
-
-
 ```
 
 ### 批量操作
@@ -161,8 +170,6 @@ words:
 adr r0, words+12	@ 将word[3]的地址放到r0中
 ldm r0, {r4,r5}  	@ 批量加载r0地址的值到r4,r5
 ```
-
-
 
 ### 立即数
 

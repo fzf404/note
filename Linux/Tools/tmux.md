@@ -23,17 +23,18 @@ sort:
 
 > `ctrl+b`: Prefix键
 
-| 快捷键   | 功能        |
-| -------- | ----------- |
-| %        | 左右分屏    |
-| “        | 上下分屏    |
-| o/;      | 切换Pane    |
-| z        | 全屏Pane    |
-| x/Ctrl+D | 关闭Pane    |
-| c        | 新建Window  |
-| &        | 关闭Window  |
-| :        | 新建Session |
-| s/w      | 切换Session |
-| d        | 离开Session |
-| tmux a   | 进入Session |
+| 快捷键 | 功能               |
+| ------ | ------------------ |
+| %      | 左右分屏           |
+| “      | 上下分屏           |
+| o/;    | 切换Pane           |
+| z      | 全屏Pane           |
+| x      | 关闭Pane           |
+| [      | 翻页模式 PgUp/PgDn |
+| c      | 新建Window         |
+| &      | 关闭Window         |
+| :      | 新建Session        |
+| s/w    | 切换Session        |
+| d      | 离开Session        |
+| tmux a | 进入Session        |
 
