@@ -27,7 +27,7 @@ tar -zxvf frp_0.32.0_linux_amd64.tar.gz
 > 别忘记开端口!
 
 ```ini
-# vim frpc.ini
+# vim frps.ini
 [common]
 # 连接端口
 bind_port = 7000

@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
     // 返回一个Material风格的组件
     return MaterialApp(
       title: 'Welcome to Flutteraa',
+      // Scaffold: Material 布局结构
       home: Scaffold(
         // 创建一个Bar
         appBar: AppBar(
@@ -53,42 +54,3 @@ class MyApp extends StatelessWidget {
   }
 ```
 
-## 组件
-
-### 文本
-
-```dart
-import 'package:flutter/material.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Text widget',
-      home: Scaffold(
-        body: Center(
-            child: Text(
-          '测试~',
-          // 文本位置
-          textAlign: TextAlign.left,
-          // 超出长度的隐藏方式
-          overflow: TextOverflow.ellipsis,
-          // 最长行数
-          maxLines: 1,
-          // 样式 
-          style: TextStyle(
-            fontSize: 25.0,
-            color: Color.fromARGB(255, 255, 255, 150),
-            decoration: TextDecoration.underline,
-            decorationStyle: TextDecorationStyle.solid,
-          ),
-        )),
-      ),
-    );
-  }
-}
-```
-
-### 容器
