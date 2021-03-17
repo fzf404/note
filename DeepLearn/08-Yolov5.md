@@ -47,3 +47,12 @@ os.chdir('./yolov5')
 python detect.py --source 0 --weights .\best.pt
 ```
 
+### 参数详解
+
+- ##### Precision & Recall
+
+  > 准确率与召回率
+
+- ###### mAP
+
+  > 平均精准度
