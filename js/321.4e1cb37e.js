@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[321],{948:function(n,s){n.exports="\x3c!-- \ntitle: JavaScript\nsort: \n--\x3e \n\n## 常用功能\n\n```js\n// 对象转字符串\nJSON.stringify(obj)\n// 字符串转对象\nJSON.parse(str)\n// 深拷贝\nJSON.parse(JSON.stringify(obj))\n```\n"}}]);
