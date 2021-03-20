@@ -13,7 +13,7 @@ sort:
 
 > [官方安装文档](https://docs.docker.com/engine/install/)
 >
-> [阿里镜像源](https://developer.aliyun.com/mirror/docker-ce)
+> [阿里镜像源](https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors)
 >
 > 清华镜像
 >
@@ -85,6 +85,11 @@ docker rm $(docker ps -aq)
 docker rm <cid>
 # 传文件
 docker cp <file> <cid>:<path>
+# 容器转镜像
+docker commit <cid>:<img_name>
+
+# 上传镜像
+docker push fzf404/opus-go
 ```
 
 ### 数据卷
@@ -108,29 +113,29 @@ docker run -v <volume>:<c_path>
 
 ```dockerfile
 # 编辑Dockerfile
-from alpine
-workdir /app
-copy src/ /app
-run echo "Success!" > log.txt
-cmd cat log.txt
-arg bvar=401
-env var=404
-cmd echo $var
-onbuild env pvar=200
-# 说明
-from: 依赖的镜像
-workdir: 工作目录
-copy: 相对路径的内容复制到镜像中
-run: 构建时运行脚本
-cmd: 执行脚本
-env: 环境变量
-arg: 构建参数-运行时找不到
-- build 可通过 --build-arg bvar=403 重新赋值
-onbuild: 父镜像传入子镜像的命令
+FROM golang
+# 维护人
+MAINTAINER "nmdfzf404@163.com"
+# 环境变量
+ENV GO111MODULE=on \
+    CGO_ENABLED=0 \
+    GOOS=linux \
+    GOARCH=amd64 \
+    GOPROXY="https://goproxy.cn,direct"
+# 将此目录作为工作目录
+WORKDIR /opt/opus-go
+# 复制go文件
+COPY . /opt/opus-go 
+# 跑起来
+RUN go build .
+# 开放端口
+EXPOSE 8080
+# 运行命令
+CMD ["./Opus"]
 
 # 制作命令
 docker build -t <name>:<version> <path>
-docker build -t dftest:1.0 .
+docker build -t fzf404/opus-go:1.0 .
 # 自动在path中寻找Dockerfile
 ```
 
@@ -139,65 +144,57 @@ docker build -t dftest:1.0 .
 ```bash
 # 安装
 pip3 install docker-compose
+
 docker-compose version
-```
-
-### 配置文件`yml`
-
-> `docker-compose.yml`
-
-```yml
-version: '3.1'
-services:
-  mysql:			# 服务名称
-    restart: always	# 自启动
-    image: mysql	# 镜像
-    container_name: mysql_com	# 容器名称
-    ports:
-      - 3306:3306
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      TZ: Asia/Shanghai		# 时区
-    volumes:	# 数据卷
-      - /opt/docker-sql/data:/var/lib/mysql
-  tomcat:
-  	...
-  	volumes:	# 数据卷
-      - /opt/docker-tomcat/webapps:/usr/local/tomcat/webapps
-      - /opt/docker-tomcat/logs:/usr/local/tomcat/logs	#日志
-
-```
-
-#### 自定镜像
-
-> 父目录要有
-
-```yml
-  # 自定义镜像
-  self_img:	
-    restart: always
-    build:
-      context: ../	# Dockerfile路径
-      dockerfile: Dockerfile	# 指定文件名称
-    image: self_img:1.0.1	# 为镜像起名字
-    container_name: self_img	# 容器名称
-    ports:
-      8080:8080
-    environment:
-      TZ: Asia/Shanghai
-```
-
-### 启动
-
-```bash
 docker-compose up -d
 docker-compose down
 docker-compose start|stop|restart
 docker-compose ps
-docker
 ```
 
-## LNMP
+### 配置文件
+
+> `docker-compose.yml`
+
+```yml
+version: "3.1"
+services:
+
+  db:
+    image: mariadb
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ql2020kpi
+      MYSQL_DATABASE: Opus
+
+  go:
+    image: fzf404/opus-go
+    container_name: opus-go
+    ports:
+    - 8080
+    depends_on:
+    - db
+    links:
+    - db
+    volumes:
+    - /opt/images:/opt/images
+    - /opt/opus-go/config/config.toml:/opt/opus-go/config/config.toml
+
+  web:
+    image: nginx
+    restart: always
+    ports:
+    - 80:80
+    depends_on:
+    - go
+    links:
+    - go
+    volumes:
+    - /opt/opus-web:/opt/opus-web
+    - /opt/nginx/nginx.conf:/etc/nginx/nginx.conf
+    - /opt/images:/opt/images
+```
 
 > `nginx.conf`
 
@@ -205,68 +202,33 @@ docker
 worker_processes 1;
 
 events {
-    worker_connections  1024;
+  worker_connections  1024;
 }
+
 http {
-    include			mime.types;
-    default_type	application/octet-stream;
-    
-    sendfile		on;
-    keepalive_timeout 65;
-    
-    server {
-        listen 80;
-        server_name localhost;
-        
-        location / {
-            root /usr/share/nginx/html;
-            index index.html index.htm;
-        }
-        
-        error_page  500 502 503 504 /50x.html;
-        location = /50x.html {
-            root	/usr/share/nginx/html;
-        }
-        
-        location ~ \.php$ {
-            fastcgi_pass 	php:9000;
-            fastcgi_index 	index.php;
-            fastcgi_param 	SCRIPT_FILENAME	/var/www/html/$fastcgi_script_name;
-            include 		fastcgi_params;
-        }
+  include                       mime.types;
+  default_type  application/octet-stream;
+
+  sendfile              on;
+  keepalive_timeout 65;
+
+  server {
+    listen 80 ;
+    server_name localhost;
+
+    location / {
+      root /opt/opus-web;
     }
+
+    location /api/ {
+      proxy_pass http://opus-go:8080/;
+    }
+
+    location /images/ {
+      root /opt/;
+          }
+  }
+
 }
+
 ```
-
-> `docker-compose`
-
-```yml
-version: "3"
-services:
-  nginx:
-    image: nginx
-    ports:
-    - 8080:80
-    volumes:
-    - /root/html:/usr/share/nginx/html
-    - /root/conf/nginx.conf:/etc/nginx/nginx.conf
-  php:
-    image: bitnami/php-fpm
-    volumes:
-    - /root/html:/var/www/html
-  mysql:
-    image: mysql
-    environment:
-    - MYSQL_ROOT_PASSWORD=1234
-```
-
-## 配置修改
-
-## 常用镜像
-
-> [DVWA](https://hub.docker.com/r/citizenstig/dvwa)
->
-> [code-server](https://hub.docker.com/r/codercom/code-server)
->
-> sqli-labs
-

@@ -101,7 +101,7 @@ select password('1234');
 # 重新修改
 set password='*E74858DB86EBA20BC33D0AECAE8A8108C56B17FA';
 # 更简单的方法
-
+set password = password('ql2020kpi');
 
 flush privileges;  #立即生效
 ```
