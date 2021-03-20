@@ -24,6 +24,7 @@ sort:
 ```bash
 systemctl start docker
 systemctl enable docker
+
 docker run hello-world
 # 将 docker 的权限移交给非 root 用户
 sudo usermod -aG docker $USER
@@ -36,17 +37,25 @@ sudo usermod -aG docker $USER
 ```bash
 # 拉取镜像
 docker pull <image_name>
+
 # 查看所有镜像
 docker images
 # 删除镜像
 docker rmi <id>
+docker rmi (docker image -qa)
 # 删除容器
 docker rm <cid>
+docker rm (docker ps -qa)
+
 # 导出
 docker save -o <path> <id>
 # 导入
 docker load -i <path>
 docker tag <id> name:version
+
+# 构建容器 dockerfile
+docker build -t <name> .
+
 # 容器配置的位置
 /var/lib/docker/containers/xx/config.v2.json
 ```
@@ -58,8 +67,8 @@ docker tag <id> name:version
 docker run -d -p 主机端口:镜像端口 <镜像名称>
 # -d 后台运行
 # -p 端口
-docker run -dit --link <host_name>:<contain_name> image
-# 映射网络并增加至/etc/hosst文件
+# 运行并进入
+docker run -it <name/id>
 
 # 正在运行的容器
 docker ps [-qa]
