@@ -74,6 +74,14 @@ conda remove -n learn-pytorch --all
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```
 
+> `Crypto`
+
+```
+pip install pycryptodome
+```
+
+
+
 ## 批量
 
 ```python

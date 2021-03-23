@@ -21,7 +21,8 @@ git commit -m "添加了1.txt"	# 添加至归档区
 # git config --global https.proxy 127.0.0.1:port
 # 取消
 # git config --global --unset http.proxy
-git remote add origin https://github.com/fzf404/gitdemo.git	# 添加仓库地址
+git remote add origin https://github.com/fzf404/	# 添加仓库地址
+git remote add origin https://github.com.cnpmjs.org/fzf404/
 ```
 
 # SSH
@@ -60,6 +61,7 @@ git revert <>	# 抹除某次提交
 git remote -v	# 查看服务端地址
 git remote remove origin	# 删除重新添加
 git remote add origin git@github.com:fzf404/gitdemo.git
+git branch --set-upstream-to=origin/master master
 ```
 
 ## 创建分支
