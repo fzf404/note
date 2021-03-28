@@ -48,8 +48,8 @@ sort:
 
 ### 布局
 
-```js
-// 长款修改
+```html
+// 长宽修改
 <div class="chart-container">
 	<canvas id="myChart" width="400" height="400"></canvas>
 </div>

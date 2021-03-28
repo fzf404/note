@@ -52,35 +52,26 @@ struct student * p = &arr[0];
 p->score=75;
 ```
 
-## 面向对象
+## std
 
-```cpp
-#include <stdio.h>
+> 标准库中函数或对象，都是在std命名空间中定义的。
+>
+> 调用标准库需要写上std
 
-class ClassHi {
-public:
-  ClassHi() {
-    button = false;
-    f = stdout;
-  }
-  ClassHi(FILE *ff) {
-    button = false;
-    f = ff;
-  }
-  void print(char *s) { fprintf(f, "%s\n", s); }
-  void on() { button = true; }
-  void off() { button = false; }
+#### `::`
 
-private:
-  bool button;
-  FILE *f;
-};
+1. 标明类的变量、函数。
 
-int main(){
-  ClassHi hi;
-  hi.print((char*)"Hi~Class");
-  ClassHi hi2(stderr);
-  hi.print((char*)"Hi~Class");
-}
+   `Human::setName(char* name);`
+
+2. 命名空间作用域，注明命名空间。
+
+   `std::cout << "Hello World" << std::endl;`
+
+3. 全局作用域，名称一样时调用全局函数
+
+```c++
+// 命名空间::类::方法
+IR::Statement::toJSON(){}
 ```
 
