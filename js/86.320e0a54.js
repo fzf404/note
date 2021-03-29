@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[86],{713:function(n,o){n.exports="## 日本手遥控器\n\n| 通道 | 位置 | 作用   |\n| ---- | ---- | ------ |\n| 1    | 右横 | 副翼   |\n| 2    | 左竖 | 升降   |\n| 3    | 右竖 | 油门   |\n| 4    | 左横 | 垂尾   |\n| 5    |      | 起落架 |\n| 6    |      | 襟翼   |\n\n"}}]);
