@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[215],{842:function(n,o){n.exports="\x3c!-- \ntitle: GUI/IMG\nsort: \n--\x3e "}}]);
