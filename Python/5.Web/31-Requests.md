@@ -33,7 +33,7 @@ sort:
    r.encoding = 'utf-8'	# 改变编码
    r.content		# 二进制格式
    r.json()		# 解析json的方法
-   r.raw()			# 原数据
+   r.raw			# 原数据
    # 将原始数据保存到文件
    for i in r.iter_content():  # 迭代的content
        f.write(i)
@@ -55,7 +55,7 @@ sort:
 5. POST
 
    ```python
-payload = {'key1': 'value1', 'key2': 'value2'}
+   payload = {'key1': 'value1', 'key2': 'value2'}
    r = requests.post("http://httpbin.org/post", data=payload)
    r = requests.post(url, json=payload)	# 使用json
    r.headers	# 查看请求头
