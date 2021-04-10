@@ -6,6 +6,8 @@ sort:
 ## Vuex
 
 > 方便各个嵌套组件中参数的传递
+>
+> `yarn add vuex`
 
 - state 相当于 data属性
 

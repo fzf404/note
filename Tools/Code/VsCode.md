@@ -40,8 +40,6 @@ sort:
 2. [新建gist](https://gist.github.com/)
 3. 接下来粘贴进去~
 
-
-
 ## ==问题==
 
 > RemoteSSH
