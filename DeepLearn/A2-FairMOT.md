@@ -24,7 +24,7 @@ c!d FairMOT
 ```python
 conda create -n fairmot python=3.6
 conda activate fairmot
-conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0
+conda install pytorch==1.4.0 torchvision==0.4.0 cudatoolkit=10.0
 pip install cython
 pip install -r requirements.txt
 
