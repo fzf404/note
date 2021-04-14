@@ -3,7 +3,7 @@ title: SQLite
 sort: 
 --> 
 
-```bash
+```sqlite
 # 创建数据库
 $ sqlite3 <DBname.db>
 .open <DBname.db>
