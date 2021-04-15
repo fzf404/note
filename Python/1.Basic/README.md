@@ -5,9 +5,12 @@ sort:
 
 ## Python换源
 
-> `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple <name>`
->
-> `pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`
+```bash
+# 临时使用
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+# 换源
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 ### windows
 
