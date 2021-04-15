@@ -4,6 +4,13 @@ sort:
 --> 
 # Git教程
 
+## 问题
+
+```bash
+# ssl error
+git config --global http.sslBackend "openssl"
+```
+
 ## 创建目录
 
 ```bash
