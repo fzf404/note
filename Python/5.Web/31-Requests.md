@@ -6,27 +6,32 @@ sort:
 
 ## 发送请求
 
-1. `Respponse`对象
+1. `Get`请求
+
+```python
+payload = {'key1': 'value', 'key2': 'value2'}
+r = requests.get('https://www.bilibili.com', params=payload, timeout=5)	# 返回response对象
+```
+
+2. `Post`请求
 
    这是requests中最重要的对象
    
    ```python
-   r = requests.get('https://www.bilibili.com', timeout=5)	# 创建r对象
-    r2 = requests.post('https://passport.bilibili.com/login', data = {'user':'hack'})
+   payload = {'key1': 'value1', 'key2': 'value2'}
+   # x-www-form-urlencoded格式
+   r = requests.post("http://httpbin.org/post", data=payload)
+   # 使用json
+   r = requests.post(url, json=payload)
+   # form-data格式
+   payload = {'key1': 'value1', 'file': open('xx.jpg','rb')}
+   r = requests.post("http://httpbin.org/post", file=payload)
    ```
    
-2. 传参
-
-   ```python
-   payload = {'key1': 'value', 'key2': 'value2'}
-   r = requests.get('https://www.bilibili.com', params=payload)
-   r.url
-   # https://www.bilibili.com/?key1=value&key2=value2
-   ```
-
 3. 获得内容
 
    ```python
+   r.url			# 请求URL
    r.status_code	# 状态码
    r.status_code == requests.codes.ok	# 查询状态码
    r.text		# 自动解码并展示html
@@ -45,21 +50,9 @@ sort:
    ```python
    url = 'https://www.bilibili.com'
    header = {'user-agent': 'my-app/0.0.1'}
-   r = requests.get(url, headers=header)
-   # 真·请求头
+   # 只获得请求头
    r = requests.head(url)
    print(r.headers)
-   
-   ```
-   
-5. POST
-
-   ```python
-   payload = {'key1': 'value1', 'key2': 'value2'}
-   r = requests.post("http://httpbin.org/post", data=payload)
-   r = requests.post(url, json=payload)	# 使用json
-   r.headers	# 查看请求头
-   r.headers['Content-Type']
    ```
    
 6. 重定向
