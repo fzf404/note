@@ -10,7 +10,7 @@ sort:
 ### colab
 ```python
 !git clone https://github.com/ifzhang/FairMOT.git
-c!d FairMOT
+!cd FairMOT
 !pip install -U torch==1.4 torchvision==0.5 -f https://download.pytorch.org/whl/cu101/torch_stable.html
 !pip install -r requirements.txt
 
