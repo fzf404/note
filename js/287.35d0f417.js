@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[287],{914:function(n,o){n.exports="\x3c!-- \ntitle: PowerToys\nsort: \n--\x3e \n\n## 快捷键\n\n| 快捷键      | 功能     |\n| ----------- | -------- |\n| Win+Shift+C | 取色     |\n| Win+`       | 布局编辑 |\n|             |          |\n\n"}}]);
