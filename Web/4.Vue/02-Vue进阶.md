@@ -3,41 +3,82 @@ title: 02-Vue进阶
 sort: 
 --> 
 
-## 指令
+## 判断与循环
 
-> `v-model`
+```vue
+
+<span v-if="isEditing">Update Product</span>
+<span v-else>Add Product</span>
+
+<script>
+export default {
+  data: { isEditing: false },
+}
+</script>
+```
+
+## 双向绑定
+
+> 属性与data值同时改变
 
 ```js
-// 单选
-<label>
-  ♂ <input v-model="sex" value="male" type="radio">
-  ♀ <input v-model="sex" value="female" type="radio">
-</label>
+<input v-model="name">
+v-model.lazy="name"		// 惰性更新
+v-model.trim="name"		// 去空格
+v-model.number="name"		// 转换成数字
+```
 
-data:{
-  sex: "female",
-},
-  
-// 多选 类型修改，data变成数组
-type="checkbox"
-data:{
-  sex: []
-},
- 
-// 文本输入框
-<textarea v-model="article"></textarea>
-  
-// select
-<select v-model="from">
-  <option value="1">*黑龙江</option>
-  <option value="2">*吉林</option>
-  <option value="3">*辽宁</option>
-</select>
-<p>您来自：{{from}}号疫情区</p>
-  
-data:{
-  from:1
-}
+## 绑定
+
+> 绑定属性值
+
+```js
+v-bind:href="url"
+// 绑定a标签中的href至data
+:href="url"
+// 绑定class data中要定义isActive
+:class="{active: isActive}"
+// 实例 url要定义到data里
+<a :href="url" :class="{active: isActive}">Link</a>
+```
+
+## 事件
+
+```js
+v-on="{click: onClick, keyup: onKeyup}"
+// 绑定点击事件
+@click="onClick"
+// 保护刷新
+@submit.prevent="onSubmit()"
+// 键盘Enter抬起
+@keyup.enter="onKeyup">
+
+// 实例
+<button 
+  v-on="{mouseenter: onEnter, mouseout: onOut, click: onClick}"
+  :class="{active: changeColor}"
+>点我</button>
+
+var app = new Vue({
+  el: '#app',
+  data:{
+    changeColor: false,
+  },
+  // 定义事件
+  methods: {
+    onClick: () => {
+      console.log('click')
+      app.changeColor=true
+    },
+    onEnter: () => {
+      console.log('mouse in')
+    },
+    onOut: () => {
+      console.log('mouse out')
+      app.changeColor=false
+    },
+  }
+});
 ```
 
 ## 计算属性

@@ -30,5 +30,5 @@ curl 127.0.0.1:8080/new
 > HelloWorld
 
 1. 将war包放到tomcat文件夹下的webapp中。
-2. 打开浏览器`localhost: 8080/war_name`
+2. 打开浏览器`localhost:8080/war_name`
 

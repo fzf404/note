@@ -42,3 +42,10 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```bash
 sudo pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
+## 生成当前配置
+```bash
+pip freeze > requirements.txt
+pip install -r requirements.txt
+```
+

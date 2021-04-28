@@ -9,10 +9,24 @@ sort:
 >
 > `yarn add vuex`
 
-- state 相当于 data属性
+### 速查表
 
-- getters 相当于computed属性
-- mutations, actions就相当于vue中的方法
+```js
+// 获取store中state的值
+this.$store.state.data;
+// 触发mutations
+this.$store.commit('SET_DATA', { data })
+// 触发Action
+this.$store.dispatch('getData')
+
+// 辅助函数映射
+import { mapState, mapActions } from 'vuex'
+
+...mapState('userModule', {
+      username: state => state.username
+    })
+...mapActions('userModule', { login: 'login' , info: 'info'}),
+```
 
 ### 状态属性 (state)
 
@@ -94,11 +108,5 @@ export default {
     }
   },
 </script>
-```
-
-### 计算属性 (getter)
-
-```
-
 ```
 

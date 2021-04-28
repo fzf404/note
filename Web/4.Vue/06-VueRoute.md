@@ -3,65 +3,67 @@ title: 06-Vue路由
 sort: 
 --> 
 
+## 基础
+
 ```js
-// 定义路由
-var routes = [
+route: 路由信息对象
+// 绝对路径
+this.$route.path
+// 获得url传来的query
+this.$route.query(.artid)
+this.$route.params(.username)
+
+router: 访问路由实例
+this.$router.push({ name: 'Login' ,params: { username: 123 }})
+this.$router.push({ path: 'Info' ,query: { i: '123' }})
+// 其他方法
+<router-link to="{ name: '404'}">404</router-link>
+<router-link to="/404">404</router-link>
+// 动态绑定
+<router-link :to="url">404</router-link>
+```
+
+## 案例
+
+```js
+import Vue from 'vue'
+import Router from 'vue-router'
+import store from '@/store'
+import manageRoutes from './module/manage'
+import infoRoutes from './module/info'
+
+Vue.use(Router)
+
+const routes = [
   {
     path: '/',
-    component: {
-      template: '#home',
-    },
+    name: 'Home',
+    component: () => import('../views/Index.vue')
   },
+  ...manageRoutes,
+  ...infoRoutes,
   {
-    path: '/about',
-    component: {
-      template: '#about',
-    },
-  },
-  {
-    path: '/user/:name',
-    component: {
-      template: '#user',
-    },
-  },
-];
-// 绑定路由
-var router = new VueRouter({
-  routes: routes,
-});
+    path: '*',
+    name: '404',
+    component: () => import('../views/404.vue')
+  }
+]
+const router = new Router({
+  routes
+})
+router.beforeEach((to, from, next) => {
+  if (to.meta.auth) {
+    // 判断用户是否登录
+    if (store.state.userModule.token) {
+      next()
+    } else {
+      router.push({ name: 'Home' })
+    }
+  } else {
+    next()
+  }
+})
 
-new Vue({
-  el: '#app',
-  router: router,
-});
-
-// html
-<div id="app">
-  <div>
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/user/1">user·1</router-link>
-    <router-link to="/user/2">user·2</router-link>
-  </div>
-  <div>
-    <router-view></router-view>
-  </div>
-</div>
-<template id="home">
-  <div>
-    <h1>Home</h1>
-  </div>
-</template>
-<template id="about">
-  <div>
-    <h1>About</h1>
-  </div>
-</template>
-<template id="user">
-  <div>
-    <div>Name: {{$route.params.name}}</div>
-    <div>Age: {{$route.query.age}}</div>
-  </div>
-</template>
+export default router
 ```
 

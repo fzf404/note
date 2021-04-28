@@ -58,6 +58,7 @@ template:'#like-component-template-tpl'
 > 子组件可以使用`props`获得父组件数据。
 
 ```js
+// 子组件添加props
 Vue.component('alert', {
   template: `<a :href="\'/user/\'+username">{{username}}</a>`,
   props: ['username'],
@@ -68,51 +69,10 @@ new Vue({
   el: '#app',
 });
 
-// html
+// 父组件传入props
 <div id="app">
   <alert username="fzf404"></alert>
 </div>
-```
-
-> 子组件可以使用`$emit`触发父组件的自定义事件。
-
-```js
-Vue.component('balance', {
-  template: '#vue-component-tpl',
-	methods: {
-    showBalance: function (data) {
-      this.show = true;
-      console.log('data:', data)
-    }
-  },
-  data: function () {
-    return {
-      show: false,
-    }
-  }
-});
-
-Vue.component('show', {
-  template: '<button @click="on_click()">显示余额</button>',
-  methods: {
-    on_click() {
-      // 触发父组件get_balance事件
-      this.$emit('get_balance', { user: 'fzf', age: 18 });
-    }
-  }
-});
-
-// html
-<div id="app">
-  <balance></balance>
-</div>
-<template id="vue-component-tpl">
-  <div>
-  	// 绑定get_balance事件到showBlance方法
-  	<show @get_balance="showBalance"></show>
-		<p v-if="show">支付宝余额<pre v-if="show">43.72</pre></p>
-  </div>
-</template>
 ```
 
 ## 调度器

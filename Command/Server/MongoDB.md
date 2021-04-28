@@ -19,6 +19,5 @@ ip: 0.0.0.0 -> 127.0.0.1
 mongo "mongodb+srv://cluster0.11tv4.gcp.mongodb.net/myFirstDatabase" --username fzf404 
 # 导入数据
 mongoimport --uri="mongodb+srv://fzf404:<password>@cluster0.11tv4.gcp.mongodb.net/test"  -c product products.json
-
 ```
 

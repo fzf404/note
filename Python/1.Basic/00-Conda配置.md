@@ -1,5 +1,5 @@
 <!-- 
-title: 00-Python配置
+title: 00-Conda配置
 sort: 
 --> 
 
@@ -78,45 +78,4 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 ```
 pip install pycryptodome
-```
-
-
-
-## 批量
-
-```python
-# 生成当前配置
-pip freeze > requirements.txt
-pip install -r requirements.txt
-```
-
-## 虚拟环境
-
-> 创建一个与外界隔绝的python环境
->
-> `virtualenv`
-
-```bash
-pip install virtualenv
-virtualenv <env_name>
-cd <env_name>
-# 进入
-./bin/active
-```
-
-> `virtualenvwrapper`
->
-> 方便管理虚拟环境
-
-```bash
-pip install virtualenvwrapper
-mkvirtualenv --python=<python_path> <name>
-# 管理
-workon <name>	# 进入
-rmvirtualenv <name>	# 删除
-deactivate	# 退出
-# 列表
-lsvirtualenv <name>
-# 进入目录
-cdvirtualenv demo
 ```

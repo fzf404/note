@@ -9,5 +9,3 @@ sort:
 
 - [加载器](https://github.com/iTXTech/mirai-console-loader)
 - [HTTP_API](https://github.com/project-mirai/mirai-api-http)
-
-- 

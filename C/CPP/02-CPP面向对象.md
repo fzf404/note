@@ -82,6 +82,7 @@ public:
     this->m_B = b;
   }
   // 成员函数实现 + 号运算符重载
+  // 对象进行+操作时执行此函数
   Person operator+(const Person &p) {
     Person temp;
     temp.m_A = this->m_A + p.m_A;

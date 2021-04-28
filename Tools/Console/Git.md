@@ -76,6 +76,7 @@ git branch --set-upstream-to=origin/master master
 ```bash
 git branch -v	# 查看当前分支
 git checkout -b b1	# 新建分支并切换
+git checkout --orphan b2	# 新建无提交分支
 # 合并分支
 git checkout master	# 回到主分支
 git merge b1		# 合并但不删除

@@ -34,11 +34,9 @@ sort:
   >
   > 复制`id_rsa.pub`到Delpoy keys
 
-### Sync
+- 自己配置快捷键
 
-1. [Github生成token](https://github.com/settings/tokens)
-2. [新建gist](https://gist.github.com/)
-3. 接下来粘贴进去~
+  `Ctrl+K S`
 
 ## ==问题==
 

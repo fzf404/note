@@ -7,7 +7,7 @@ sort:
 
 > [OpenResty](http://openresty.org/cn/)
 
-## 安装
+## docker
 
 ```yml
 # docker-compose
@@ -31,7 +31,7 @@ services:
 
 server {
 	listen 80;
- server_name localhost;
+ 	server_name _;
 
 	location / {
 		root /var/www/html;
@@ -40,7 +40,7 @@ server {
 }
 include	<someconfig>
 
-nginx -s reload
+$ nginx -s reload
 ```
 
 ### 路径映射
@@ -61,6 +61,16 @@ location ~/xx {
 location ~* \. (git|jpg|png)$ {
     # 匹配大多数图片格式
 }
+
+# 带/ 与 不带/
+location /test/ {
+    proxy_pass http://127.0.0.1:8080/;
+}
+# 访问: http://127.0.0.1/test/01.html
+# proxy_pass + /
+# http://127.0.0.1:8080/01.html
+# proxy_pass - /
+# http://127.0.0.1:8080/test/01.html
 ```
 
 ## 实例
@@ -95,12 +105,6 @@ charset utf-8;
 ```
 
 ### 负载均衡
-
-> 轮询
->
-> 权重
->
-> iphash
 
 ```nginx
 # 负载均衡 权重

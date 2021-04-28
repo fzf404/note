@@ -3,25 +3,11 @@ title: 内网穿透
 sort: 
 --> 
 
-> 推荐使用[Sakura](https://www.natfrp.com/)
->
-> 咱学校ip好像被sakura给ban了
->
-> 自己用阿里云搭吧
-
 ## 自搭
 
 > [Release](https://github.com/fatedier/frp/releases)
 
-```bash
-wget https://github.com/fatedier/frp/releases/download/v0.32.0/frp_0.32.0_linux_amd64.tar.gz
-tar -zxvf frp_0.32.0_linux_amd64.tar.gz
-```
-
-### 编辑配置
-
-> frpc是客户端(client),frps是服务端(server)
->
+### 服务端配置
 
 ```ini
 # vim frps.ini
@@ -37,7 +23,7 @@ dashboard_user = name
 dashboard_pwd = passwd
 
 # 运行一下试试
-./frps -c ./frps.init
+./frps -c ./frps.ini
 ```
 
 ### 自启动
@@ -48,24 +34,10 @@ dashboard_pwd = passwd
 
 ```bash
 # 进入frp的systemd目录
-# cp frps.service /lib/systemd/system/
+cp ./systemd/frps.service /lib/systemd/system/
 # @的服务可自定义配置文件名
-# cp frps@.service /lib/systemd/system/
-# 下面是service中的内容
-[Unit]
-Description=Frp Server Service
-After=network.target
+cp ./systemd/frps@.service /lib/systemd/system/
 
-[Service]
-Type=simple
-User=nobody
-Restart=on-failure
-RestartSec=5s
-# 注意下面这行
-ExecStart=/usr/bin/frps -c /etc/frp/frps.ini
-
-[Install]
-WantedBy=multi-user.target
 
 # 把frps与配置文件拷贝到其应在的目录
 cp frps /usr/bin
@@ -104,24 +76,8 @@ remote_port = [make sure your server open this port on filrewall]
 
 ```bash
 # 进入frp的systemd目录
-# cp frpc.service /lib/systemd/system/
-# cp frpc@.service /lib/systemd/system/
-# 下面是其中的内容
-[Unit]
-Description=Frp Client Service
-After=network.target
-
-[Service]
-Type=simple
-User=nobody
-Restart=on-failure
-RestartSec=5s
-# 注意这行
-ExecStart=/usr/bin/frpc -c /etc/frp/frpc.ini
-ExecReload=/usr/bin/frpc reload -c /etc/frp/frpc.ini
-
-[Install]
-WantedBy=multi-user.target
+cp ./systemd/frpc.service /lib/systemd/system/
+cp ./systemd/frpc@.service /lib/systemd/system/
 
 # 把frpc与配置文件拷贝到其应在的目录
 cp frpc /usr/bin

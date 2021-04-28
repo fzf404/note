@@ -16,9 +16,17 @@ sort:
 
   ```powershell
   Get-Command -Verb Get
+  gcm -v get
   ```
 
 - `Get-Alias` cmdlet 显示别名的真实名称。
+
+  ```powershell
+  Get-Alias cp / gal cp
+  > cp -> Copy-Item
+  ```
+
+  
 
 ## 使用
 
