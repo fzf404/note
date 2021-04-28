@@ -4,9 +4,9 @@ sort:
 --> 
 
 ```bash
-apt install php-fpm
+apt install php-fpm nginx
 
-# q注释
+# nginx
 location ~ \.php$ {
 	include snippets/fastcgi-php.conf;
 	# With php-fpm (or other unix sockets):
@@ -15,5 +15,7 @@ location ~ \.php$ {
 	#       fastcgi_pass 127.0.0.1:9000;
 }
 
+# wecenter
+apt install php-gd php-mysql php-curl
 ```
 

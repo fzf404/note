@@ -26,3 +26,12 @@ echo 'id_rsa.pub' >> authorized_keys
 # 写入文件
 ```
 
+## sshd配置
+
+`vim /etc/ssh/sshd_config`
+
+```
+PermitRootLogin yes
+PasswordAuthentication yes
+```
+
