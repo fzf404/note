@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[365],{992:function(n,e){n.exports="\x3c!-- \ntitle: 09-实战\nsort: \n--\x3e \n\n## id锚点滚动\n\n```\nlet item = document.getElementById('demo')\nif (item) { item.scrollIntoView() }\n```\n\n"}}]);
