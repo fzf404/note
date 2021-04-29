@@ -19,15 +19,18 @@ curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get install -y nodejs
 ```
 
+### 工具
+
+```bash
+# 内网穿透
+npx localtunnel --port 8000
+```
+
 ### Npm
 
 > [npmjs](https://www.npmjs.com/)
 
 ```powershell
-# 安装
-curl -L https://npmjs.org/install.sh |
-
-
 node	# 进入JS运行环境
 npm init
 npm install [-g]	# 全局安装

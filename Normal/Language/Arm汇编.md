@@ -39,9 +39,10 @@ gdb -f demo
 gef> br _start
 gef> run			# 运行
 gef> nexti 		# 运行下一条命令
-gef> info register r0	# 查看寄存器的值
+gef> info register r0	r2	# 查看寄存器的值
 r0 = 0x20090 					# r0的值是var1的地址
 gef> x/w 0x20090			# 查看内存的值
+gef> x/4w 0x20090			# 查看4个内存的值
 ```
 
 ## 数据类型
@@ -109,7 +110,8 @@ Operand2     - 第二操作数. 立即数或者带有位移操作后缀（可选
   Rx, LSR n               - 寄存器x，逻辑右移n位 (1 = n = 32)。
   Rx, ROR n               - 寄存器x，循环右移n位 (1 = n = 31)。
   Rx, RRX                 - 寄存器x，扩展的循环位移，右移1位。
-
+  
+ADD   R0, R1,          	 - R0与R1的值相加，存储到R0。
 ADD   R0, R1, R2         - R1与R2的值相加，存储到R0。
 ADD   R0, R1, #2         - R1内的值加2，存储到R0。
 MOVLE R0, #5             - 仅当满足条件LE（R0<=5）时，将立即数5移动到R0（编译器会把它看作MOVLE R0, R0, #5）。
@@ -122,9 +124,10 @@ MOV   R0, R1, LSL #1     - 将寄存器R1的内容向左移动一位然后移动
 | :---------: | :--------------------- | :---------: | :---------------------------- |
 |     MOV     | 移动数据               |     EOR     | Bitwise XOR                   |
 |     MVN     | Move and negate        |     LDR     | 内存加载到寄存器              |
+|             |                        |     ADR     | 内存地址加载到服务器          |
 |     ADD     | Addition               |     STR     | 寄存器存到内存                |
 |     SUB     | Subtraction            |     LDM     | 批量加载                      |
-|     MUL     | Multiplication         |     STM     | Store Multiple                |
+|     MUL     | Multiplication         |     STM     | 批量保存                      |
 |     LSL     | Logical Shift Left     |    PUSH     | Push on Stack                 |
 |     LSR     | Logical Shift Right    |     POP     | Pop off Stack                 |
 |     ASR     | Arithmetic Shift Right |      B      | Branch                        |
@@ -169,6 +172,12 @@ words:
 
 adr r0, words+12	@ 将word[3]的地址放到r0中
 ldm r0, {r4,r5}  	@ 批量加载r0地址的值到r4,r5
+@ 正向加载
+ldmia r0, {r4-r6}	@ 将words[3]-[5]的值批量保存到r4-r6
+ldmib r0, {r4-r6}	@ 将words[4]-[6]的值批量保存到r4-r6
+@ 反向加载
+ldmda r0, {r4-r6}	@ 将words[3]-[1]的值批量保存到r4-r6
+ldmda r0, {r4-r6}	@ 将words[3]-[1]的值批量保存到r4-r6
 ```
 
 ### 立即数
@@ -180,3 +189,17 @@ ldm r0, {r4,r5}  	@ 批量加载r0地址的值到r4,r5
 1. 使用较小的值构造较大值`MOV r0, #256 `和`ADD r0, #255`
 
 2. 编译器处理: `LDR r1, = 511`
+
+### 堆栈
+
+```assembly
+push {r0, r1}
+pop {r2, r3}
+
+stmdb sp!, {r0, r1}
+ldmia sp!, {r4, r5}
+# 编译后也是堆栈操作
+push {r0, r1}
+pop {r4, r5}
+```
+

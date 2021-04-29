@@ -19,9 +19,6 @@ pip isntall mysqlclient
 
 ```bash
 sudo apt-get install mariadb-server
-sudo service mysql start
-sudo service mysql stop
-ps -ajx|grep mysql
 ```
 
 ### Docker
@@ -33,22 +30,12 @@ docker exec -it <name>/<cid> bash
 ```
 
 
-
 ### 更换密码
 
 ```bash
-set password = password('ql2020kpi');
+# 开启远程访问
+update user set host = '%' where user = 'root';
+
+set password = password('1234');
 flush privileges;  #立即生效
 ```
-
-### 其他
-
-```mysql
-# 选择要使用的数据库
-use mysql;
-# 查询用户
-select User from user;
-# 开启远程访问
-update user set host = '%' where user = 'root';	
-```
-

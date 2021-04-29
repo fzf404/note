@@ -25,7 +25,7 @@ git commit -m "添加了1.txt"	# 添加至归档区
 # 进入github新建仓库
 # 如果使用代理，执行如下两条
 # git config --global http.proxy 127.0.0.1:port
-# git config --global https.proxy 127.0.0.1:port
+#git config --global https.proxy 127.0.0.1:port
 # 取消
 # git config --global --unset http.proxy
 git remote add origin https://github.com/fzf404/	# 添加仓库地址
