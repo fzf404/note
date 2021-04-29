@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[134],{761:function(e,n){e.exports="\x3c!--\ntitle: 09-Systemd\nsort:\n--\x3e \n\n> 配置服务\n\n```bash\nsystemctl enable service\nsystemctl start service\nsystemctl stop service\nsystemcrl restart service\n# 重载services\nsystemctl daemon-reload \n# 查看日志\njournalctl -u service\n```\n\n"}}]);
