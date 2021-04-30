@@ -18,6 +18,8 @@ bind_port = 7000
 dashboard_port = 7800
 # 连接密码
 token = passswd_token
+# z
+max_pool_count = 5
 # 控制板登录用户名密码
 dashboard_user = name
 dashboard_pwd = passwd
