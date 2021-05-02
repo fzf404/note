@@ -93,3 +93,41 @@ end:
 >
 > BX、BLX用来切换ARM模式到Thumb模式。
 
+## 栈和函数
+
+### 栈
+
+```assembly
+.text
+.global _start
+
+_start:
+     mov   r0, #2  /* 设置R0的初始值*/
+     push  {r0}    /* 将R0的值保存到栈*/
+     mov   r0, #3  /* 覆盖R0的值 */
+     pop   {r0}    /* 恢复R0的初始值 */
+     bx    lr      /* 结束程序 */
+     
+as demo.s -o demo.o && ld demo.o -o demo && gdb -f demo
+
+gef> x/w $sp
+```
+
+### 函数
+
+```assembly
+@ 调用前准备
+push   {r11, lr}    /* 将lr和r11入栈 */
+add    r11, sp, #0  /* 保存栈底地址 */
+sub    sp, sp, #16  /* 栈指针减去16为局部变量分配缓存区 */
+
+@ 函数体
+mov    r0, #1       /* 设置局部变量(a=1). 同时也为函数max的第一个参数 */
+mov    r1, #2       /* 设置局部变量(b=2). 同时也为函数max的第二个参数 */
+bl     max          /* 调用函数max */
+
+@ 离开函数
+sub    sp, r11, #0  /* 重新调整栈指针 */
+pop    {r11, pc}    /* 恢复栈帧指针, 通过加载之前保存的LR到PC，程序跳转到之前LR保存位置。函数的栈帧被销毁 */
+```
+
