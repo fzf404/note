@@ -12,7 +12,7 @@ choco install -y
 choco uninstall
 choco upgrade
 
-choco install -y googlechrome firefox ccleaner everything potplayer git mingw python3 nodejs yarn golang cmake arduino sdrsharp typora vim vscode sublimetext3 notion github-desktop rufus vmwareworkstation mobaxterm filezilla wget wireshark postman fiddler tim wechat microsoft-windows-terminal dosbox powerToys adb choco install androidstudio nmap picgo x64dbg.portable nasm make vnc-viewer cheatengine
+choco install -y googlechrome firefox ccleaner everything potplayer git anaconda3 arduino sdrsharp typora vim vscode sublimetext3 github-desktop rufus vmwareworkstation mobaxterm filezilla wget wireshark postman fiddler tim wechat microsoft-windows-terminal dosbox powerToys adb nmap picgo x64dbg.portable nasm vnc-viewer cheatengine
 ```
 
 ## 常用软件
