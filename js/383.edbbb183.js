@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[383],{1010:function(n,e){n.exports="\x3c!-- \ntitle: Electron\nsort: \n--\x3e \n\n> 有多想少人想开发出一个属于自己的PC应用呢？\n\n```js\nyarn config set registry https://registry.npm.taobao.org\nyarn add electron --save\n// 运行\nelectron .\n```"}}]);
