@@ -26,4 +26,5 @@ template <typename T> T add(T a, T b) { return a + b; }
 
 ## STL
 
-![image-20210328210911422](C:\Users\fzf404\AppData\Roaming\Typora\typora-user-images\image-20210328210911422.png)
+> 标准模板库
+

@@ -28,7 +28,7 @@ git commit -m "添加了1.txt"	# 添加至归档区
 #git config --global https.proxy 127.0.0.1:port
 # 取消
 # git config --global --unset http.proxy
-git remote add origin https://github.com/fzf404/	# 添加仓库地址
+git remote remove origin	# 删除旧仓库地址
 git remote add origin https://github.com.cnpmjs.org/fzf404/
 ```
 
@@ -108,7 +108,7 @@ git pull			# 拉取远端仓库的最新版本并合并
 # 删除已关联名为origin的远程库
 git remote rm origin	
 # 关联 github 与 gitee
-git remote add github git@github.com:pu
+git remote add github git@github.com:
 git remote add gitee git@gitee.com:
 # 检查
 git remote -v
@@ -136,7 +136,6 @@ git branch -D master
 git branch -m master
 # 提交
 git push -f origin master
-
 ```
 
 ## 冲突

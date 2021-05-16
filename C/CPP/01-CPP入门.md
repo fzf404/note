@@ -51,6 +51,7 @@ struct student arr[3]=
 
 // 结构体指针
 struct student * p = &arr[0];
+(*p).score=75;
 p->score=75;
 ```
 
