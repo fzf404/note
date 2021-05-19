@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[118],{745:function(n,o){n.exports="\x3c!-- \ntitle: 01-STM32基础\nsort: \n--\x3e \n\n> 编程的过程中其实就是在操作地址\n\n## 地址空间\n\n> f1xx系列使用M3内核\n>\n> f4xx系列使用m4内核\n\n![存储器功能分类](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/2020031709560628.png)\n\n- Block0/1：用于片内的FLASH\n- Block2：分配给了片上外设，如GPIO、I2C、SPI"}}]);
