@@ -15,8 +15,8 @@ flutter doctor	# 环境验证
 set PUB_HOSTED_URL=https://pub.flutter-io.cn
 set FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 # 设置代理
-set http_proxy=http://127.0.0.1:7890
-set https_proxy=http://127.0.0.1:7890
+set http_proxy=http://127.0.0.1:10809
+set https_proxy=http://127.0.0.1:10809
 ```
 
 ## 问题

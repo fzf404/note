@@ -9,6 +9,9 @@ sort:
 ```bash
 # ssl error
 git config --global http.sslBackend "openssl"
+
+$ git config --global user.name "fzf404"
+$ git config --global user.email nmdfzf404@163.com
 ```
 
 ## 创建目录
@@ -22,12 +25,13 @@ echo 123456 > 1.txt	# 写入东西
 
 git add .\1.txt		# 添加至缓冲区
 git commit -m "添加了1.txt"	# 添加至归档区
-# 进入github新建仓库
-# 如果使用代理，执行如下两条
-# git config --global http.proxy 127.0.0.1:port
-#git config --global https.proxy 127.0.0.1:port
+
+# 使用代理，执行如下两条
+git config --global http.proxy 127.0.0.1:port
+git config --global https.proxy 127.0.0.1:port
 # 取消
-# git config --global --unset http.proxy
+git config --global --unset http.proxy
+
 git remote remove origin	# 删除旧仓库地址
 git remote add origin https://github.com.cnpmjs.org/fzf404/
 ```
