@@ -88,13 +88,14 @@ visible: true
 
 
 
-| [PL](#/C)               | [Python](#/Python)                  | [前端](#/Web)                | [Linux](#/Linux)              | [硬件](#/HardWare/)            | [深度学习](#/DeepLearn) | 其他                               |
+| [PL](#/Lang)               | [Python](#/Python)                  | [前端](#/Web)                | [Linux](#/Linux)              | [硬件](#/HardWare/)            | [深度学习](#/DeepLearn) | 其他                               |
 | ----------------------- | ----------------------------------- | ---------------------------- | ----------------------------- | ------------------------------ | ----------------------- | ---------------------------------- |
-| [C](#/C)                | [基础](#/Python/1.Basic)            | [Html](#/Web/1.HTML)         | [Manjaro](#/Linux/Manjaro)    | [Arduino](#/HardWare/Arduino)  | Numpy                   | [PowerShell](#/Command/PowerShell) |
-| [C++](#/C)              | [进阶](#/Python/2.Advance)          | [CSS](#/Web/2.CSS)           | [Tools](#/Linux/Tools)        | [51单片机](#/HardWare/51MCU)   | TensorFlow              | [Dos](#/Command/Dos)               |
-| [C#](#/C/CSharp)        | [第三方库](#/Python/3.Package)      | [JS/TS](#/Web/3.JS)          | [Server](#/Command/Server)    | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Other/Java)               |
-| [GoLang](#/Golang)      | [网络编程](#/Python/6.Network)      | [React](#/Web/5.React)       | [MiniSys](#/Linux/MakeSystem) | [树莓派](#/HardWare/Raspberry) | Paddle                  | [安全](#/Security/)                |
-| [Asm](#/Security/Crack) | [机器学习](#/Python/8.Intelligence) | [Vue](#/Web/4.Vue)           | [Shell](#/Linux)              | [各种模块](#/HardWare/EleMod)  |                         | [游戏开发](/#/Others/Game)         |
+| [C](#/Lang/C)              | [基础](#/Python/1.Basic)            | [Html](#/Web/1.HTML)         | [Manjaro](#/Linux/Manjaro)    | [Arduino](#/HardWare/Arduino)  | Numpy                   | [PowerShell](#/Command/PowerShell) |
+| [C++](#/Lang)           | [进阶](#/Python/2.Advance)          | [CSS](#/Web/2.CSS)           | [Tools](#/Linux/Tools)        | [51单片机](#/HardWare/51MCU)   | TensorFlow              | [Dos](#/Command/Dos)               |
+| [C#](#/Lang/CSharp)     | [第三方库](#/Python/3.Package)      | [JS/TS](#/Web/3.JS)          | [Server](#/Command/Server)    | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Other/Java)               |
+| [Rust](/Lang/Rust) | [CV](#/Python/7.Vision) | [Node](#/Web/3.JS) | [Shell](#/Linux) | [树莓派](#/HardWare/Raspberry) | Net | [Arm汇编](#/Normal/Language) |
+| [GoLang](#/Golang)      | [网络编程](#/Python/6.Network)      | [React](#/Web/5.React)       | [MiniSys](#/Linux/MakeSystem) | [ESP](#/HardWare/Esp8266) | Paddle                  | [安全](#/Security/)                |
+| [Asm](#/Security/Crack) | [机器学习](#/DeepLearn) | [Vue](#/Web/4.Vue)           |               | [各种模块](#/HardWare/EleMod)  |                         | [游戏开发](/#/Others/Game)         |
 |                         |                                     | [Electron](#/Web/7.Electron) |                               |                                |                         |                                    |
 
 ## 工具
@@ -104,6 +105,6 @@ visible: true
 | Hexo                  | CodeServer               | ADB                           | Xpath                         | DevTools                    | Docker                   | [推荐](#/Linux)            |
 | 图床                  | Sublime                  | FFmpeg                        | LaTex                         | Fiddler                     | Git                      | zsh                        |
 | 文档                  | Vscode                   | SSH                           | SQL                           | WireShark                   | LNMP                     | vim                        |
-|                       | Typora                   | Choco                         | Redis                         | BurpSuite                   | NodeJS                   | ranger                     |
-|                       |                          |                               |                               |                             |                          | i3wm                       |
+| Nginx                 | Typora                   | Choco                         | Redis                         | BurpSuite                   | NodeJS                   | ranger                     |
+|                       |                          |                               | MongoDB                       |                             | MQTT                     | i3wm                       |
 

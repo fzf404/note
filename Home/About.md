@@ -14,14 +14,12 @@ visible: true
 > 设计一个开关电源
 
 - [ ] 开关电源设计（第二版）
-- [ ] 立创EDA设计规范
 
 ### 自动配置
 
 > 写个自动配置脚本
 
 - [x] GithubAction自动部署网站
-- [ ] 一键配置Manjaro
 - [ ] 一键配置Windows
 
 ### 文档解析
@@ -46,9 +44,9 @@ visible: true
 ### 正在学习
 
 - [x] React
-- [ ] 逆向
+- [ ] Yolo解析
 - [ ] Stm32
-- [x] 线代
 - [x] Android
-- [ ] 卷积神经网络
-- [x] electron
+- [x] 卷积神经网络
+- [ ] Rust
+- [ ] Nest
