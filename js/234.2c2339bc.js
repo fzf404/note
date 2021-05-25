@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[234],{861:function(n,t){n.exports='\x3c!-- \ntitle: 33-XML\nsort: \n--\x3e \n\n# XML\n\n```python\nimport requesets\nfrom lxml import etree\n\nhtml = requetst.get(url, headers).text\ncontent = etree.HTML(html)\ndata = content.xpath("")\n```\n\n'}}]);

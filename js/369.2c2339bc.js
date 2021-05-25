@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[369],{996:function(n,t){n.exports="\x3c!-- \ntitle: 06-React-Antd\nsort: \n--\x3e \n\n## 使用\n\n> [官方文档](https://ant.design/)\n\n```bash\nnpm i antd -S\nyarn add antd\n```\n\n"}}]);
