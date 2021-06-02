@@ -8,10 +8,13 @@ sort:
 ## 安装
 
 ```bash
-npm i -g @tarojs/cli
+yarn global add @tarojs/cli
 # 创建新项目
 taro init taroTest
-# 建议使用TaroUI
+# 预览
+npm dev:weapp
+yarn dev:weapp
+yarn build:weapp
 ```
 
 ## 使用
@@ -19,51 +22,169 @@ taro init taroTest
 1. 建立Page
 
    ```jsx
-   import React, { Component } from 'react'
+   import { Component } from 'react'
    import { View } from '@tarojs/components'
-   import Taro from '@tarojs/taro'
    
-   export default class Msg extends Component {
-     
-   	// 设置state
-     componentWillMount() {
-       this.state = {
-         msgs: []
-       };
+   import { AtButton } from 'taro-ui'
+   
+   import './index.scss'
+   
+   export default class Index extends Component {
+     state = {
+         
      }
-     // 响应函数
-     getMessages = () => {
-       let that = this;
-       Taro.request({
-         url: 'https://www.baidu.com/release/chatRoom',
-         success: (res) => {
-           that.setState({ msgs: res.data.reverse() })
-         }
-       });
+   
+     onChange = () => {
+       this.setState({
+       })
      }
-     
+   
      render() {
-       const msgs = this.state.msgs
-       const msgsItem = []
-       msgs.map((item) => {
-         let msg = <AtCard
-           note={this.handleTime(item.time)}
-           title={item.name}
-           className='item'
-         >{item.msg}
-         </AtCard>
-         msgsItem.push(msg)
-       }
        return (
-         <View className='index'>
-           <AtButton openType='getUserInfo'>获取用户登录</AtButton>
-           {msgsItem}
-         </View>
+         <View className='container'>
+           <AtButton className='select-button' type='primary'>Hello</AtButton>
+         </View >
        )
      }
    }
    
-     
    ```
    
+2. 编写组件
+
+   ```jsx
+   import { Component } from 'react'
+   import Taro from '@tarojs/taro'
    
+   import { AtTabBar } from 'taro-ui'
+   
+   export default class Index extends Component {
+       
+     constructor() {
+       super(...arguments)
+       this.state = {
+         current: parseInt(this.props.current)
+       }
+     }
+       
+     handleClick(value) {
+       if (value == this.state.current) { return }
+       this.setState({
+         current: value
+       })
+         
+       switch (value) {
+         case 0:
+           Taro.navigateTo({
+             url: '/pages/index/index'
+           })
+           break;
+         case 1:
+           Taro.navigateTo({
+             url: '/pages/home/index'
+           })
+           break;
+         default:
+           break;
+       }
+     }
+       
+     render() {
+       return (
+         <AtTabBar
+           fixed
+           tabList={
+             [
+               { title: '首页', iconType: 'home' },
+               { title: '个人信息', iconType: 'user' },
+             ]}
+           onClick={this.handleClick.bind(this)}
+           current={this.state.current}
+         />
+       )
+     }
+   }
+   ```
+
+3. 路由
+
+   ```jsx
+   // 跳转到目的页面，打开新页面
+   Taro.navigateTo({
+     url: '/pages/page/path/name'
+   })
+   
+   // 跳转到目的页面，在当前页面打开
+   Taro.redirectTo({
+     url: '/pages/page/path/name'
+   })
+   
+   // 传入参数 id=2&type=test
+   Taro.navigateTo({
+     url: '/pages/page/path/name?id=2&type=test'
+   })
+   
+   // 获得参数
+   import { getCurrentInstance } from '@tarojs/taro'
+   getCurrentInstance().router.params
+   ```
+
+### 配置
+
+```js
+// 配置导航栏
+
+tabBar: {
+  color: "#454545",
+  selectedColor: "#E0620D",
+  list: [
+    {
+      pagePath: "pages/index/index",
+      text: "首页 ",
+      // 未点击时显示的图片
+      iconPath: "assets/index.png",
+      // 点击后显示的图片
+      selectedIconPath: "assets/index-select.png"
+    },
+    {
+      pagePath: "pages/home/index",
+      text: "个人中心",
+      iconPath: "assets/my.png",
+      selectedIconPath: "assets/my-select.png"
+    }
+  ]
+}
+
+// 头配置
+export default {
+  navigationStyle: 'default',
+  backgroundTextStyle: 'light',
+  navigationBarBackgroundColor: '#fff',
+  navigationBarTitleText: '选择日期',
+  navigationBarTextStyle: 'black'
+}
+
+// 无头配置
+export default {
+  navigationStyle: 'custom'
+}
+```
+
+### 修改默认样式
+
+```scss
+$at-button-bg                    : #FF971B;
+$at-button-border-color-secondary:#FF971B;
+$at-button-color                 : #CC7815;
+$color-brand                     :#FF971B;
+
+
+@import "~taro-ui/dist/style/index.scss";
+
+.at-button {
+  &--primary {
+    border: none;
+  }
+}
+```
+

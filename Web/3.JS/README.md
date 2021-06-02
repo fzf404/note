@@ -12,6 +12,9 @@ JSON.stringify(obj)
 JSON.parse(str)
 // 深拷贝
 JSON.parse(JSON.stringify(obj))
+// z
+parseInt()
+parseFloat()
 ```
 
 ## 文件列表

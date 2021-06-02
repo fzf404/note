@@ -39,3 +39,4 @@ update user set host = '%' where user = 'root';
 set password = password('1234');
 flush privileges;  #立即生效
 ```
+

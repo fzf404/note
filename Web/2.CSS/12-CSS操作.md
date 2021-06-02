@@ -34,7 +34,7 @@ p
 
 ### relative
 
-> 相对正常位置的移动
+> 不可层叠
 >
 > ![image-20200726100439709](https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200726100446.png)
 
@@ -53,7 +53,7 @@ h2
 
 ### absolute
 
-> 相对于已定位的父元素，假如没有，则相对于html
+> 绝对定位，可层叠
 >
 > `position:absolute;`
 

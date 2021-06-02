@@ -3,7 +3,7 @@ title: Webpack入门
 sort: 
 --> 
 
-> `npm install webpack webpack-cli --save-dev`
+> `yarn add webpack webpack-cli`
 >
 > 用于打包编译代码
 
@@ -32,6 +32,14 @@ module.exports = {
 2. 源代码`src`
 
 ```js
+// 目录树
+|- dist
+   |- index.html
+|- src
+   |- index.js
+   |- sayhi.js
+
+
 // sayhi.js
 export function sayHi() {
   return 'Hello Webpack~'
@@ -44,7 +52,18 @@ document.write(sayHi())
 3. 引用代码`dist/index.html`
 
 ```html
-<script src="./index.js" type="text/javascript"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+</html>
 ```
 
 4. 编译
@@ -60,7 +79,48 @@ npm run build
 
 ```
 
-## 引入css
+### 绑定处理函数
+
+```js
+function onClick(id, callback) {
+    document.querySelector(`#${id}`).addEventListener('click',callback)
+}
+
+onClick('move-to-left',function () {
+    moveToLeft()
+})
+```
+
+### 编译ES6
+
+```
+yarn add @babel/core @babel/preset-env babel-loader 
+```
+
+- `.babelrc`
+
+  ```json
+  {
+      "presets": [
+          "@babel/preset-env",
+      ]
+  }
+  ```
+
+- `webpack.config.js`
+
+  ```js
+  module: {
+          rules: [
+              {
+                  test: /.js$/,
+                  use: 'babel-loader'
+              },
+           ]
+        }
+  ```
+
+### 引入css
 
 > `npm i style-loader css-loader -D`
 
@@ -81,3 +141,9 @@ module: {
 ```
 
 2. 添加css文件，执行编译命令
+
+```js
+// 在js中引入css
+import './style.css'
+```
+
