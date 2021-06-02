@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{638:function(n,t){n.exports="\x3c!-- \ntitle: PowerShell\nsort: \n--\x3e \n\n> 对于这个新型的Windows控制台，大部分人都知之甚少呀~\n>\n> 当然我也是…\n\n### 代理\n\n```powershell\nnetsh winhttp set proxy 127.0.0.1:10809\nnetsh winhttp reset proxy\t# 取消\nnetsh winhttp show proxy\t# 展示\n```\n\n"}}]);
