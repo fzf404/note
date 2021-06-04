@@ -12,10 +12,23 @@ sort:
 ```bash
 yarn global add @nestjs/cli	# 安装脚手架
 nest new project-name		# 创建项目
+nest start --watch			# 运行
+
 # RESTful APIs
 yarn add @nestjs/swagger swagger-ui-express
+
 # MongoDB
 yarn add @nestjs/mongoose mongoose
-nest g mo db	# x模块名为db
+
+# Log4js
+yarn add @nestx-log4js/core
+
+# crypto
+yarn add crypto
+
+# token
+yarn add @nestjs/passport passport passport-local
+yarn add @types/passport-local -D
+
 ```
 

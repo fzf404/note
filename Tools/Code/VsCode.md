@@ -54,3 +54,10 @@ sort:
 >
 > `"code-runner.runInTerminal": true`
 
+## 插件推荐
+
+- `KoroFileHeader`
+
+  > `ctrl+alt+i`: 文件注释
+  >
+  > `ctrl+alt+t`: 函数注释

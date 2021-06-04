@@ -28,6 +28,7 @@ mongoimport --uri="mongodb+srv://fzf404:<password>@cluster0.11tv4.gcp.mongodb.ne
 use admin
 db.createUser({user: 'root', pwd: '123456', roles: ['root']})
 db.auth('root', '123456')	# 验证成功
+
 vim /etc/mongodb.conf
 auth: true
 systemctl restart mongodb
