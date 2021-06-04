@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[362],{989:function(n,o){n.exports="\x3c!-- \ntitle: 08-Axios\nsort: \n--\x3e \n\n```js\nimport axios from ''\naxios.post('/info', {\n    firstName: 'fzf',\n    lastName: '404'\n  })\n  .then(function (response) {\n    console.log(response);\n  })\n  .catch(function (error) {\n    console.log(error);\n  });\n```\n\n"}}]);

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[292],{919:function(n,e){n.exports="\x3c!-- \ntitle: Node-Red\nsort: \n--\x3e \n\n`npm i -g node-red`\n\n"}}]);
