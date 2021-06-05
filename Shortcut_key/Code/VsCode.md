@@ -35,6 +35,9 @@ sort:
 | 跳转行号           | Ctrl+G                 |
 | 列出函数名         | Ctrl+Shift+O           |
 | 返回               | Alt+←                  |
+| **折叠**           |                        |
+| 全部折叠/展开      | Ctrl+K Ctrl+0/J        |
+| 当前折叠/展开      | Ctrl+Shift+[/]         |
 
 ## 视图
 

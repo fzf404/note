@@ -19,15 +19,15 @@ yarn add @nestjs/swagger swagger-ui-express
 
 # MongoDB
 yarn add @nestjs/mongoose mongoose
-
-# Log4js
-yarn add @nestx-log4js/core
+# redis
+yarn add nestjs-redis
 
 # crypto
 yarn add crypto
 
 # token
-yarn add @nestjs/passport passport passport-local
+yarn add @nestjs/passport @nestjs/jwt passport passport-local passport-jwt
+
 yarn add @types/passport-local -D
 
 ```

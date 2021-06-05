@@ -6,6 +6,12 @@ sort:
 > 以键值对方式存储数据
 
 ```bash
+# 安装
+apt install redis
+
+# 开启服务
+#redis-server
+
 # 连接服务
 redis-cli -h host -p port -a password
 # 默认端口6379

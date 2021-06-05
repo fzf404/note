@@ -97,5 +97,17 @@ nest g d r
 nest g mo auth
 nest g service auth
 nest g co auth
+
+// 中间件注册
+
+export class AuthModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer
+      .apply(HashPasswordMiddleware)
+      .forRoutes('auth/regist')
+      .apply(HashPasswordMiddleware)
+      .forRoutes('auth/alter')
+  }
+}
 ```
 

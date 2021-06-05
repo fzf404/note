@@ -10,7 +10,7 @@ sort:
 # ssl error
 git config --global http.sslBackend "openssl"
 
-$git config --global user.name "fzf404"
+git config --global user.name "fzf404"
 $ git config --global user.email nmdfzf404@163.com
 ```
 
