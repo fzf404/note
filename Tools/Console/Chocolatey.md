@@ -12,10 +12,14 @@ choco install -y
 choco uninstall
 choco upgrade
 
-# s
+# 代理
 netsh winhttp set proxy 127.0.0.1:10809
 
+# all
 choco install -y googlechrome firefox ccleaner everything potplayer git anaconda3 arduino sdrsharp typora vim vscode sublimetext3 github-desktop rufus vmwareworkstation mobaxterm filezilla wget wireshark postman fiddler tim wechat microsoft-windows-terminal dosbox powerToys adb nmap picgo x64dbg.portable nasm vnc-viewer cheatengine screentogif
+
+# auto
+choco install -y googlechrome firefox ccleaner everything potplayer git typora vim vscode github-desktop rufus mobaxterm filezilla wget postman fiddler wechat  powerToys adb nmap picgo
 ```
 
 ## 常用软件
