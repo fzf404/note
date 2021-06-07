@@ -78,7 +78,7 @@ visible: true
       🛴整理好的技术笔记。
       <br/> 
       <div class="pre"> 
-      最近更新：<span id="active" onclick="window.location.href='https://github.com/fzf404/Tech_Note/commits/master'"></span>
+      <span id="active" onclick="window.location.href='https://github.com/fzf404/Tech_Note/commits/master'">更新记录</span>
       </div>
     </div>
     <a class="jumbotron-btn" href="#/Home/About">关于我</a>
