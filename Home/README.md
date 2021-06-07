@@ -78,7 +78,7 @@ visible: true
       🛴整理好的技术笔记。
       <br/> 
       <div class="pre"> 
-      <span id="active" onclick="window.location.href='https://github.com/fzf404/Tech_Note/commits/master'">更新记录</span>
+      <a id="active" href="window.location.href='https://github.com/fzf404/Tech_Note/commits/master'">>&emsp;更新记录</a>
       </div>
     </div>
     <a class="jumbotron-btn" href="#/Home/About">关于我</a>
@@ -88,15 +88,15 @@ visible: true
 
 
 
-| [PL](#/Lang)               | [Python](#/Python)                  | [前端](#/Web)                | [Linux](#/Linux)              | [硬件](#/HardWare/)            | [深度学习](#/DeepLearn) | 其他                               |
-| ----------------------- | ----------------------------------- | ---------------------------- | ----------------------------- | ------------------------------ | ----------------------- | ---------------------------------- |
-| [C](#/Lang/C)              | [基础](#/Python/1.Basic)            | [Html](#/Web/1.HTML)         | [Manjaro](#/Linux/Manjaro)    | [Arduino](#/HardWare/Arduino)  | Numpy                   | [PowerShell](#/Command/PowerShell) |
-| [C++](#/Lang)           | [进阶](#/Python/2.Advance)          | [CSS](#/Web/2.CSS)           | [Tools](#/Linux/Tools)        | [51单片机](#/HardWare/51MCU)   | TensorFlow              | [Dos](#/Command/Dos)               |
-| [C#](#/Lang/CSharp)     | [第三方库](#/Python/3.Package)      | [JS/TS](#/Web/3.JS)          | [Server](#/Command/Server)    | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Other/Java)               |
-| [Rust](/Lang/Rust) | [CV](#/Python/7.Vision) | [Node](#/Web/3.JS) | [Shell](#/Linux) | [树莓派](#/HardWare/Raspberry) | Net | [Arm汇编](#/Normal/Language) |
-| [GoLang](#/Golang)      | [网络编程](#/Python/6.Network)      | [React](#/Web/5.React)       | [MiniSys](#/Linux/MakeSystem) | [ESP](#/HardWare/Esp8266) | Paddle                  | [安全](#/Security/)                |
-| [Asm](#/Security/Crack) | [机器学习](#/DeepLearn) | [Vue](#/Web/4.Vue)           |               | [各种模块](#/HardWare/EleMod)  |                         | [游戏开发](/#/Others/Game)         |
-|                         |                                     | [Electron](#/Web/7.Electron) |                               |                                |                         |                                    |
+| [PL](#/Lang)            | [Python](#/Python)             | [前端](#/Web)                | [Linux](#/Linux)              | [硬件](#/HardWare/)            | [深度学习](#/DeepLearn) | 其他                               |
+| ----------------------- | ------------------------------ | ---------------------------- | ----------------------------- | ------------------------------ | ----------------------- | ---------------------------------- |
+| [C](#/Lang/C)           | [基础](#/Python/1.Basic)       | [Html](#/Web/1.HTML)         | [Manjaro](#/Linux/Manjaro)    | [Arduino](#/HardWare/Arduino)  | Numpy                   | [PowerShell](#/Command/PowerShell) |
+| [C++](#/Lang)           | [进阶](#/Python/2.Advance)     | [CSS](#/Web/2.CSS)           | [Tools](#/Linux/Tools)        | [51单片机](#/HardWare/51MCU)   | TensorFlow              | [Dos](#/Command/Dos)               |
+| [C#](#/Lang/CSharp)     | [第三方库](#/Python/3.Package) | [JS/TS](#/Web/3.JS)          | [Server](#/Command/Server)    | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Other/Java)               |
+| [Rust](/Lang/Rust)      | [CV](#/Python/7.Vision)        | [Node](#/Web/3.JS)           | [Shell](#/Linux)              | [树莓派](#/HardWare/Raspberry) | Net                     | [Arm汇编](#/Normal/Language)       |
+| [GoLang](#/Golang)      | [网络编程](#/Python/6.Network) | [React](#/Web/5.React)       | [MiniSys](#/Linux/MakeSystem) | [ESP](#/HardWare/Esp8266)      | Paddle                  | [安全](#/Security/)                |
+| [Asm](#/Security/Crack) | [机器学习](#/DeepLearn)        | [Vue](#/Web/4.Vue)           |                               | [各种模块](#/HardWare/EleMod)  |                         | [游戏开发](/#/Others/Game)         |
+|                         |                                | [Electron](#/Web/7.Electron) |                               |                                |                         |                                    |
 
 ## 工具
 

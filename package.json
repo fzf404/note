@@ -5,7 +5,7 @@
   "scripts": {
     "deploy": "rdoc --publish git@github.com:fzf404/note.git",
     "start": "rdoc -d Command,DeepLearn,Golang,HardWare,Home,Lang,Linux,Python,Security,Tools,Web,Normal --clean",
-    "build": "rdoc -d Command,DeepLearn,Golang,HardWare,Home,Lang,Linux,Python,Security,Tools,Web,Normal --clean --build"
+    "build": "rdoc -d Command,DeepLearn,Golang,HardWare,Home,Lang,Linux,Python,Security,Tools,Web,Normal --clean --build && node ./node_modules/rdoc/theme/default/search.js"
   },
   "rdoc": {
     "footer": "Copyright © 2021 Powered by fzf404"
