@@ -69,7 +69,6 @@ visible: true
     color: #ffffb8;
   }
 </style>
-
 <div class="jumbotron">
   <div class="jumbotron-warpper">
     <div class="jumbotron-title">🚄欢迎来到本站~</div>
