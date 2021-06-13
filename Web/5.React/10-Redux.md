@@ -1,5 +1,5 @@
 <!-- 
-title: 11-Redux
+title: 10-Redux
 sort: 
 --> 
 
@@ -9,6 +9,24 @@ sort:
 >
 > chrome插件`Redux Dev Tools`
 
+## 入门
+
+```react
+import { createStore } from 'redux'
+import reducer from './reducer'
+
+function reducer(state){
+    return {
+        count: 42
+    }
+}
+
+// 创建store
+const store = createStore(reducer)
+
+export default store
+```
+
 ## 使用
 
 1. 建立store文件夹：`store/index.js`
@@ -16,10 +34,10 @@ sort:
 ```jsx
 import { createStore } from 'redux'
 import reducer from './reducer'
+
 // 创建store
-const store = createStore(reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const store = createStore(reducer)
+
 export default store
 ```
 
@@ -44,6 +62,7 @@ const reducer = (state = defaultState, action = {}) => {
   }
   return state
 }
+
 export default reducer
 ```
 

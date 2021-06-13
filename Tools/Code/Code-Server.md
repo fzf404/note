@@ -29,6 +29,14 @@ docker create \
 docker start 0b428
 ```
 
+### 可执行
+
+```
+https://github.com/cdr/code-server/releases
+
+wget https://github.com.cnpmjs.org/cdr/code-server/releases/download/
+```
+
 ## 环境
 
 ```bash

@@ -34,9 +34,22 @@ docker exec -it <name>/<cid> bash
 
 ```bash
 # 开启远程访问
+use mysql;
 update user set host = '%' where user = 'root';
 
 set password = password('1234');
-flush privileges;  #立即生效
+set password for 'root'@'%' = password('1234');
+flush privileges;  # 立即生效
+```
+
+### 操作
+
+```sql
+# 导入数据库
+> use dbName;
+> source xx.sql;
+
+# 修改表名
+> alter table old_name rename as new_name;
 ```
 

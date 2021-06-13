@@ -1,5 +1,5 @@
 <!-- 
-title: 10-Taro
+title: 20-Taro
 sort: 
 --> 
 
@@ -132,7 +132,8 @@ yarn build:weapp
 ### 配置
 
 ```js
-// 配置导航栏
+// 配置导航栏 
+// app.config.js
 
 tabBar: {
   color: "#454545",
@@ -156,6 +157,7 @@ tabBar: {
 }
 
 // 头配置
+// index.config.js
 export default {
   navigationStyle: 'default',
   backgroundTextStyle: 'light',
@@ -171,6 +173,8 @@ export default {
 ```
 
 ### 修改默认样式
+
+> [主题色生成器](https://nervjs.github.io/taro-ui-theme-preview/)
 
 ```scss
 $at-button-bg                    : #FF971B;
