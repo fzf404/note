@@ -12,9 +12,13 @@ JSON.stringify(obj)
 JSON.parse(str)
 // 深拷贝
 JSON.parse(JSON.stringify(obj))
-// z
+
+// 字符串转数字
 parseInt()
 parseFloat()
+
+// 批量替换
+str.replace(/-/g, '')
 ```
 
 ## 文件列表
@@ -55,15 +59,6 @@ filesList = readFileList(pathName, false)
 fs.writeFile(jsonPath, JSON.stringify(filesList, '', '\t'), err => err);
 
 console.log('成功')));
-    }
-  });
-  return record ? { [dir.substr(dir.lastIndexOf('\\') + 1, dir.length)]: filesList } : filesList;
-}
 
-filesList = readFileList(pathName, false)
-
-fs.writeFile(jsonPath, JSON.stringify(filesList, '', '\t'), err => err);
-
-console.log('成功')
 ```
 
