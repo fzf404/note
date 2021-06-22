@@ -10,6 +10,9 @@ sort:
 > 嵌套
 
 ```scss
+// 所有子元素
+> * {color: }
+
 // 定义变量
 $highlight-color: #F90;
 // 引用

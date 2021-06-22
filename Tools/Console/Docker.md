@@ -206,14 +206,14 @@ events {
 }
 
 http {
-  include                       mime.types;
+  include		mime.types;
   default_type  application/octet-stream;
 
-  sendfile              on;
+  sendfile      on;
   keepalive_timeout 65;
 
   server {
-    listen 80 ;
+    listen 80 ;l,.
     server_name localhost;
 
     location / {
@@ -232,3 +232,20 @@ http {
 }
 
 ```
+
+### 常用镜像
+
+- Gitlab
+
+```
+sudo docker run --detach \
+  --hostname gitlab.example.com \
+  --publish 9980:80 --publish 9922:22 \
+  --name gitlab \
+  --restart always \
+  --volume /srv/gitlab/config:/etc/gitlab \
+  --volume /srv/gitlab/logs:/var/log/gitlab \
+  --volume /srv/gitlab/data:/var/opt/gitlab \
+  gitlab/gitlab-ce:latest
+```
+

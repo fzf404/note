@@ -17,10 +17,12 @@ Taro.redirectTo({
 Taro.navigateTo({
   url: '/pages/calendar/index'
 })
+
 // 向前一个页面写入数据
 Taro.getCurrentPages()[0].setData({
   data: this.state.,
 })
+
 // 跳回前一个页面
 Taro.navigateBack({
   delta: 1
@@ -35,13 +37,12 @@ Taro.setStorage({
   key: "userInfo",
   data: res.userInfo
 })
+
 // 读取
 Taro.getStorage({
   key: 'openId'
 })
 ```
-
-
 
 ## 云开发
 
@@ -73,15 +74,12 @@ exports.main = async (event, context) => {
 Taro.cloud
   .callFunction({
     name: "login",
-    data: {}
+    data: {
+      userName: 'fzf404'
+    }
   })
   .then(res => {
-    Taro.setStorage({
-      key: "openId",
-      data: res.result.openId
-    }).then(() => {
-      this.getDBUser(res.result.openId)
-    })
+      console.log(data: res.result.openId)
   })
 ```
 
@@ -89,23 +87,12 @@ Taro.cloud
 
 ```react
 // 小程序端调用数据库
-const userDB = Taro.cloud.database().collection('user
+const userDB = Taro.cloud.database().collection('user')
 await userDB.where({
   _openid: openId
 }).get({
   success: (res) => {
-    // 用户不存在则创建
-    if (res.data.length == 0) {
-      userDB.add({
-        data: {
-          point: 0,
-          nickName: this.state.nickName,
-        },
-      })
-      // 用户存在则获取积分
-    } else {
-      this.setState({ point: res.data[0].point })
-    }
+    console.log(res.data[0].openid)
   },
 })
 
@@ -121,5 +108,30 @@ exports.main = async (event, context) => {
     date: date,
   }).get()
 }
+```
+
+### 数据库API
+
+```js
+const _ = db.command
+
+// 查询date大于当前时间的数据
+const data = await scheduleDB.where({
+  date: _.gte(parseInt(dayjs().format('YYYYMMDD'))),
+}).get({})
+  
+// 删除date小于当前时间的数据
+await scheduleDB.where({
+  date: _.lte(parseInt(dayjs().format('YYYYMMDD')))
+}).remove({})  
+
+// 更新, point字段自增
+const userUpdate = await userDB.where({
+  _openid: OPENID
+}).update({
+  data: {
+    point: _.inc(1)
+  }
+})
 ```
 

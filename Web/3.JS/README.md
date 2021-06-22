@@ -16,9 +16,19 @@ JSON.parse(JSON.stringify(obj))
 // 字符串转数字
 parseInt()
 parseFloat()
+// 数字转字符串
+str.toString()
 
 // 批量替换
 str.replace(/-/g, '')
+
+// 切片
+str.slice(0, 4)
+
+// 排序
+itemList.sort((a,b)=>{
+  a.id-b.i
+})
 ```
 
 ## 文件列表
