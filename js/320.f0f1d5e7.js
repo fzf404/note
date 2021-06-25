@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[320],{947:function(n,e){n.exports='\x3c!-- \ntitle: HTML\nsort: \n--\x3e \n\n半角：`&ensp`;\n全角：`&emsp`;\n\n### 使用emoji作为网站ico\n\n```html\n<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">\n```\n\n'}}]);
