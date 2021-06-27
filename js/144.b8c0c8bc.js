@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[144],{771:function(n,s){n.exports="\x3c!--\ntitle: 07-存储设备\nsort:\n--\x3e \n\n> Linux是基于文件的操作系统\n\n## dev\n\n> sd*：SCSI硬盘\n>\n> sr*：光盘\n\n`fsck`\n\n> 检测\n\n`rsync`\n\n> `备份`"}}]);
