@@ -31,44 +31,22 @@ itemList.sort((a,b)=>{
 })
 ```
 
-## 文件列表
+## 递归
 
-```js
-const fs = require('fs');
-const path = require('path');
+```react
+// 对源数组进行操作
+people.forEach(function (dude) {
+  dude.pickUpSoap();
+});
 
-const pathName = './';  // 需遍历的文件夹路径
-const jsonPath = './files.json';  // 生成 json 的文件路径
+// 返回新数组
+var wallets = people.map(function (dude) {
+  return dude.wallet;
+});
 
-function readFileList(dir, record = true) {
-  let filesList = []
-  const files = fs.readdirSync(dir);
-  files.forEach((item, index) => {
-    let fullPath = path.join(dir, item);
-    let stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      filesList.push(readFileList(path.join(dir, item)));  // 递归读取文件
-    } else if (record && item.endsWith('.md')) {
-      filesList.push('/' + fullPath.replace(function readFileList(dir, record = true) {
-  let filesList = []
-  const files = fs.readdirSync(dir);
-  files.forEach((item, index) => {
-    let fullPath = path.join(dir, item);
-    let stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      filesList.push(readFileList(path.join(dir, item)));  // 递归读取文件
-    } else if (record && item.endsWith('.md')) {
-      filesList.push('/' + fullPath.replace(/\\/g, '/'));
-    }
-  });
-  return record ? { [dir.substr(dir.lastIndexOf('\\') + 1, dir.length)]: filesList } : filesList;
-}
-
-filesList = readFileList(pathName, false)
-
-fs.writeFile(jsonPath, JSON.stringify(filesList, '', '\t'), err => err);
-
-console.log('成功')));
-
+// 筛选
+var fatWallets = wallets.filter(function (wallet) {
+  return wallet.money > 100;
+});
 ```
 

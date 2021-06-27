@@ -21,7 +21,7 @@ yarn install		# 拉取旧插件
 ## 脚手架
 
 ```bash
-yarn add -g create-react-app
+yarn global add -gcreate-react-app
 create-react-app my-app
 # 预览
 yarn start
