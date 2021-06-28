@@ -24,6 +24,9 @@ apt-get install -y nodejs
 ```bash
 # 内网穿透
 npx localtunnel --port 8000
+# 开启文件服务
+npm install -g http-server
+http-server
 ```
 
 ### Npm
