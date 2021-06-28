@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[257],{884:function(n,i){n.exports="\x3c!-- \ntitle: Python\nsort: \n--\x3e \n\n> 常用的代码片段\n\n### for循环获取index\n\n```python\nlist = ['a','b','c'] \n    \nfor index ,v in enumerate(list):\n    print(index)\n    print(v)\n```"}}]);

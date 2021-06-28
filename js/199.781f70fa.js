@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[199],{826:function(n,o){n.exports='\x3c!-- \ntitle: AHK\nsort: \n--\x3e \n\n> 模拟热键\n\n## 模拟点击\n\n```vb\nstop := false\ns::\n  stop := true\nReturn\n\nr::\n  stop := false\n  Loop{\n    Click % "860,960"\n    Sleep, 1500\n    Click % "920,810"\n  }\n  Until stop\nReturn\n```\n\n'}}]);
