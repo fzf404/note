@@ -30,5 +30,7 @@ yarn add @nestjs/passport @nestjs/jwt passport passport-local passport-jwt
 
 yarn add @types/passport-local -D
 
+# 格式化代码
+yarn f
 ```
 

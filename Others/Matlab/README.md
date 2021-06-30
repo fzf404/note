@@ -1,8 +1,9 @@
 <!-- 
-title: 00-Matlab配置
+title: Matlab
 sort: 
 --> 
-# Matlab配置
+
+> 谁不想用高级计算机算物理公式呢
 
 ## 暗色模式
 
@@ -29,4 +30,3 @@ Editorhighlight-caret-row-boolean-color=C-2167080
 
 ColorsUseSystem=Bfalse
 ```
-

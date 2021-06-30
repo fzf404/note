@@ -9,6 +9,8 @@ sort:
 yarn create @vitejs/app
 # 插件
 yarn add vue-router@4
+# 启动 wsl
+yarn run dev --host
 ```
 
 ### Router
