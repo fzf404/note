@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[219],{846:function(n,u){n.exports="\x3c!-- \ntitle: 13-问题解决\nsort: \n--\x3e \n\n## ubuntu显卡驱动\n\n```\nubuntu-drivers devices\nsudo ubuntu-drivers autoinstall\nnvidia-settings\n```\n\n"}}]);
