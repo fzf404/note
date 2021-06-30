@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[173],{800:function(n,t){n.exports="\x3c!-- \ntitle: CPP\nsort: \n--\x3e \n\n### 编译命令\n\n```bash\ng++ demo.cpp \\\n\t-o demo \\\t\t# 输出文件名\n\t-O \\\t\t\t\t# 优化等级，0-3/s\n```\n\n"}}]);
