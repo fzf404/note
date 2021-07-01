@@ -48,6 +48,17 @@ SpriteRenderer renderer = this.GetComponent<SpriteRenderer>();
 // 获得其他渲染对象
 SpriteRenderer otherRender = otherObj.GetComponent<SpriteRenderer>();
 
+// 位置坐标
+transform.position =new Vector3(0, 1.0f, 0);
+// 相对父组件坐标
+transform.localPosition =new Vector3(0, 1.0f, 0);
+// 角度
+transform.eulerAngles = new Vector3(0,0,45);
+// 移动
+transform.Translate(x, y, z);
+// 沿当前c运动
+transform.Translate(x, y, z, Space.self);
+
 // 对象翻转
 renderer.flipY = true;
 otherRender.flipX = true;
