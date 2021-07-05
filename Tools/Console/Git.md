@@ -10,8 +10,12 @@ sort:
 # ssl error
 git config --global http.sslBackend "openssl"
 
+# name &
 git config --global user.name "fzf404"
-$git config --global user.email nmdfzf404@163.com
+git config --global user.email nmdfzf404@163.com
+
+# WARNING: UNPROTECTED PRIVATE KEY FILE! 
+chmod 700 ~/.ssh/*
 ```
 
 ## 创建目录

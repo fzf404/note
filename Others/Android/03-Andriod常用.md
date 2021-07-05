@@ -19,5 +19,12 @@ private void addText(SerialPort serialPort){
     };
     handler.post(runnable);
 }
+
+// kotlin
+Handler(Looper.getMainLooper()).postDelayed({
+    serialPort.sendData(
+        "EE130000000001"
+    )
+}, 500)
 ```
 

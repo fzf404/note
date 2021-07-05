@@ -2,9 +2,53 @@
 title: Code-Server
 sort: 
 --> 
-# code-server使用
 
 ## 安装
+
+### 可执行
+
+```bash
+# 安装
+curl -fsSL https://code-server.dev/install.sh | sh
+
+# 运行
+code-server
+
+# 配置
+vim ~/.config/code-server/config.yaml
+
+# https
+curl https://get.acme.sh | sh
+alias acme.sh=~/.acme.sh/acme.sh
+
+# 注册
+acme.sh --register-account -m xxx@qq.com
+# 验证所有权
+acme.sh --issue -d xxx.xxxxx.xxx --webroot /var/www/html
+
+# 安装证书
+acme.sh --install-cert -d code-server.fzf404.top \
+--key-file       /etc/nginx/key.pem  \
+--fullchain-file /etc/nginx/cert.pem \
+
+# nginx 配置文件
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+
+    ssl_certificate cert.pem;
+    ssl_certificate_key key.pem;
+    server_name code-server.fzf404.top;
+
+    location / {
+      proxy_pass http://localhost:8080/;
+      proxy_set_header Host $host;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection upgrade;
+      proxy_set_header Accept-Encoding gzip;
+    }
+}
+```
 
 ### docker
 
@@ -27,14 +71,6 @@ docker create \
 0b4289087f1643420556707388953a58efb653815cb5e63e0a185c6aca175e3a
 
 docker start 0b428
-```
-
-### 可执行
-
-```
-https://github.com/cdr/code-server/releases
-
-wget https://github.com.cnpmjs.org/cdr/code-server/releases/download/
 ```
 
 ## 环境
