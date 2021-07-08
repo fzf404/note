@@ -1,5 +1,5 @@
 <!-- 
-title: 05-CubeIDE
+title: 05-CubeIDE入门
 sort: 
 --> 
 
