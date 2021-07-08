@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[231],{858:function(n,s){n.exports='\x3c!-- \ntitle: Fish\nsort: \n--\x3e \n\n> 终端新秀\n\n```bash\n# 配置文件\nvim ~/.config/fish/config.fish\n# 配置\nsource /opt/env.fish\t# 载入配置文件\nset PATH = "/usr/local/xxx" $PATH\t\t# z\n```\n\n'}}]);

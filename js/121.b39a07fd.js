@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[121],{748:function(n,e){n.exports="\x3c!-- \ntitle: ZVS\nsort: \n--\x3e \n\n> 零电压开关\n\n- 经典ZVS\n\n![demo](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/demo.png)\n\n- 无中心抽头ZVS\n\n![image-20210706160846954](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/20210706160847.png)\n\n"}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[198],{825:function(n,o){n.exports="\x3c!-- \ntitle: 05-Go微服务\nsort: \n--\x3e \n\n> 不断的开发代码总是向高耦合性发展，使用微服务框架使代码降低耦合性。\n>\n> 每个微服务对应独立运行的代码库，各库使用gRPC通信（二进制流，省去了字符串编解码的开销）\n>\n> [proto](https://github.com/protocolbuffers/protobuf/releases)\n\n## 初始工作\n\n```bash\n\n```\n\n"}}]);
