@@ -13,6 +13,9 @@ sort:
 git clone https://github.com/emscripten-core/emsdk.git
 ./emsdk install latest
 ./emsdk activate latest
+
+# h
+source /opt/emsdk/emsdk_env.fish 
 ```
 
 ## 例子

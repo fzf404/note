@@ -37,6 +37,7 @@ body {
   height: 100%;
   width: 100%;
 }
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ```
@@ -75,6 +76,16 @@ canvas.height = window.innerHeight;
   border-radius: 20px;
   width: 300px;
   height: 350px;
+}
+```
+
+### 移动端适配
+
+```css
+@media only screen and (max-width:1000px) {
+	.demo {
+		width: 80v
+	}
 }
 ```
 

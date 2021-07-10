@@ -9,3 +9,13 @@ sort:
 
 > Build->Generate Signed APK
 
+### 不显示ToolBar
+
+```kotlin
+// AppCompatActivity
+supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
+
+
+RequestWindowFeature(Window.FEATURE_NO_TITLE)
+```
+

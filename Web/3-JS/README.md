@@ -29,6 +29,9 @@ str.slice(0, 4)
 itemList.sort((a,b)=>{
   a.id-b.i
 })
+
+// 跳转
+window.location.href="www.baidu."
 ```
 
 ## 递归

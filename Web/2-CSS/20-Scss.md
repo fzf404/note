@@ -1,9 +1,11 @@
 <!-- 
-title: 17-Scss
+title: 20-Scss
 sort: 
 --> 
 
 > `npm i sass -g`
+>
+> `sass --watch index.scss:index.css`
 
 ## 基础
 
@@ -38,6 +40,7 @@ article > section { border: 1px solid #ccc }
 // 同层相邻组合选择器 紧跟|全体
 header + p { font-size: 1.1em }
 header ~ p { font-size: 1.1em }
+
 ```
 
 ## 引入
