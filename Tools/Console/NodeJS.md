@@ -48,15 +48,15 @@ npm adduser | npm publish
 npm unpublish --force
 ```
 
-  ### Yarn
+### Yarn
 
-  > `npm i yarn -g`
-  >
-  > 弥补了npm的一些缺陷
-  >
-  > [中文文档](https://yarn.bootcss.com/)
+> `npm i yarn -g`
+>
+> 弥补了npm的一些缺陷
+>
+> [中文文档](https://yarn.bootcss.com/)
 
-  ```powershell
+```powershell
 npm i yarn@1.22.0 -g 	# 安装特定版本
 npm upgrade yarn -g		# 更新
   
@@ -70,26 +70,26 @@ yarn add/remove # 添加依赖包
 yarn global add	# 全局安装
 yarn publish
 yarn run
-  ```
+```
 
-  > 搭建环境
+> 搭建环境
 
-  ```powershell
+```powershell
 yarn init
 yarn add xx --save	# 添加新插件
 yarn install		# 拉取旧插件
 
 yarn login			# 登录
 yarn logout			# 登出
-  ```
+```
 
-  > 编辑Package
+> 编辑Package
 
-  ```json
+```json
 "scripts": {
     "ver": "npm -v"
 },
-  ```
+```
 
 ## Nvm
 
