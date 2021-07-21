@@ -3,6 +3,8 @@ title: 11-Vite
 sort: 
 --> 
 
+[官方文档](https://vitejs.dev/guide/)
+
 ### 安装
 
 ```bash

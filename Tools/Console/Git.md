@@ -146,11 +146,16 @@ git branch -m master
 git push -f origin master
 ```
 
-## 冲突
+## 冲突及清理
 
 ```bash
 # 强制覆盖
 git fetch --all
 git reset --hard origin/master
+
+# 清除某次提交前的全部提交
+echo 'base' | git commit-tree 3b3edab^{tree}
+> fb27a3e558d45bf7725dbe3dd6a204ff74454472
+ git rebase --onto fb27a3 3b3edab		# Hash值前六位 目标Hash值
 ```
 
