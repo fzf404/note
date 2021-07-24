@@ -12,7 +12,7 @@ let i = 5;
 let mut s = String::from("Hello");
 s.push_str(" World");
 
-// 字符串引用 &st
+// 字符串引用 &str
 let str = "Hello World";
 
 // 复制Copy
@@ -30,7 +30,24 @@ let s2 = s.clone();
 let s1 = &s;
 let s2 = &mut s;	// 可变引用
 
-// 切片
+
+// 切片 &t
+// 对于字符串中某一长度数组的引用
 &s[..3]
+// 这也是切片
+let s = "Hello World!"
+
+// 例子
+fn first_word(s: &String) -> &str {
+  // 转换为&[u8]
+  let bytes = s.as_bytes();
+  // 遍历
+  for (i, &item) in bytes.iter().enumerate() {
+    if item == b' ' {
+      return &s[..i];
+    }
+  }
+  &s[..]
+}
 ```
 

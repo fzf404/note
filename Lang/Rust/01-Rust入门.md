@@ -13,6 +13,23 @@ rustc --version	# 版本
 rustup doc		# 本地文档
 ```
 
+## Cargo
+
+> [包管理器](https://crates.io/)
+>
+> [安装](https://doc.rust-lang.org/cargo/getting-started/installation.html)
+
+```bash
+cargo new hello_cargo
+cargo check	# 检查语法错误
+cargo build	# 编译
+cargo run		# 编译并执行
+cargo build --release	# 发布编译
+
+# 添加依赖
+Cargo.toml
+```
+
 ## 语法
 
 ### HelloWorld
@@ -33,7 +50,8 @@ rustc main.rs
 // 标量
 let demo: i16 = 40404;		// 有符号
 let demo = 40404u16;			// 无符号
-let mut demo = String12; 	// 可变变量
+// 可变变量 字符串切片 &str
+let mut demo = "String"; 	
 
 // 常量
 const MILLION = 1_000_000;
@@ -58,7 +76,7 @@ if x == 0 {
 for day in week.iter() {
     println!("{}", day)
 }
-// range, s
+// range, 翻转
 for number in (1..10).rev() {
     println!("{}", number)
 }
@@ -70,6 +88,11 @@ loop {
 
 while stop == true {
   
+}
+
+// 函数名(参数)->f
+fn get_lens(s: &String) -> usize {
+    s.len()
 }
 ```
 
@@ -103,22 +126,31 @@ let input = match input.trim().parse() {
 };
 ```
 
+### 结构体
 
+```rust
+struct User {
+    username: String,
+    email: String,
+    active: bool,
+}
 
-## Cargo
+struct Color(u8,u8,u8);
 
-> [包管理器](https://crates.io/)
->
-> [安装](https://doc.rust-lang.org/cargo/getting-started/installation.html)
-
-```bash
-cargo new hello_cargo
-cargo check	# 检查语法错误
-cargo build	# 编译
-cargo run		# 编译并执行
-cargo build --release	# 发布编译
-
-# 添加依赖
-Cargo.toml
+fn build_user(username: String, email: String) {
+    let mut a_user = User {
+        username: username,
+        email: email,
+        active: false,
+    };
+    a_user.active = true;
+    // 基于实例的更新语法
+    User{
+      username: String::from("fzf404"),
+      ..a_user
+    };
+    // Tuple Struct
+    let white = Color(255,255,255);
+}
 ```
 
