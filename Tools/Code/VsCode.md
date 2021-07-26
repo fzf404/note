@@ -40,16 +40,30 @@ sort:
 
 ## ==问题==
 
-> RemoteSSH
->
-> 连接报错
->
+### RemoteSSH
+
+- 连接报错
+
 > 在这写.ssh/config
 
 ![image-20201122222158054](https://gitee.com//nmdfzf404/Image-hosting/raw/master/2020/image-20201122222158054.png)
 
-> CodeRunner乱码
+- `get bad result from install script`
+
+> 原因是conda卸载后cmd AutoRun 指向空文件，CMD打不开
 >
+> 解决：
+>
+> 打开注册表编辑器
+>
+> `\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor`
+>
+> 将`AutoRun`设置为空
+
+### CodeRunner
+
+- 乱码
+
 > 进入setting.json，添加如下字段：
 >
 > `"code-runner.runInTerminal": true`

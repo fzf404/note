@@ -126,31 +126,3 @@ let input = match input.trim().parse() {
 };
 ```
 
-### 结构体
-
-```rust
-struct User {
-    username: String,
-    email: String,
-    active: bool,
-}
-
-struct Color(u8,u8,u8);
-
-fn build_user(username: String, email: String) {
-    let mut a_user = User {
-        username: username,
-        email: email,
-        active: false,
-    };
-    a_user.active = true;
-    // 基于实例的更新语法
-    User{
-      username: String::from("fzf404"),
-      ..a_user
-    };
-    // Tuple Struct
-    let white = Color(255,255,255);
-}
-```
-

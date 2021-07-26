@@ -75,4 +75,3 @@ git checkout .
 git checkuot -b new_branch
 git merge
 ```
-
