@@ -45,7 +45,7 @@ sort:
 
 ```bash
 # 安装docker与kubeadm
-./tools/ubuntu-install-docker.sh
+./tools/ubuntu-docker.sh
 ./tools/install-kubeadm.sh
 
 # 设置hostname，方便查看
@@ -76,7 +76,20 @@ sudo hostnamectl set-hostname slave-node
 
 ### minikube
 
-### Dashboard
+> [教程](https://minikube.sigs.k8s.io/docs/start/)
+
+```bash
+# 启动
+minikube start
+# 控制板
+minikube dashboard
+# 配置代理
+kubectl proxy --port=8080 --address='0.0.0.0' --accept-hosts='^.*'
+# 访问
+http://ip/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
+# 关闭
+minikube delete
+```
 
 ### 常用命令
 
@@ -96,9 +109,9 @@ kubeadm reset
 1. docker增加用户权限
 
    ```bash
-   sudo groupadd -g 999 docker 			# 新建docker组
-   sudo usermod -aG docker ubuntu		# 增加用户
-   sudo chmod a+rw /var/run/docker.sock	# 增加sock调用权限
+   # 将 docker 的权限移交给非 root 用户
+   sudo usermod -aG docker $USER
+   newgrp docker 	# 激活更改
    ```
 
 2. ` The recommended driver is "systemd"`

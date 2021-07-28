@@ -98,10 +98,17 @@ location /app {
     charset utf-8;
 }
 
-autoindex on;
-autoindex_exact_size off;
-autoindex_localtime on;
-charset utf-8;
+
+server {
+  listen 80;
+  root /www/website/x;
+  
+  autoindex on;
+  autoindex_exact_size off;
+  autoindex_localtime on;
+  charset utf-8;
+}
+
 ```
 
 ### 负载均衡

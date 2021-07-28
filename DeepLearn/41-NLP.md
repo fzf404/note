@@ -7,7 +7,7 @@ sort:
 
 ```python
 str.strip()		# 去除某个字符
-str.replace		# 替换全部
+str.replace()		# 替换全部
 str.find()		# 查找
 str.isxx()		# 判断
 str.splite()	# 分割为列表

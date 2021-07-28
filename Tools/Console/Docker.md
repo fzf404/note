@@ -26,8 +26,10 @@ systemctl start docker
 systemctl enable docker
 
 docker run hello-world
+
 # 将 docker 的权限移交给非 root 用户
 sudo usermod -aG docker $USER
+newgrp docker 	# 激活更改
 ```
 
 ### 基础命令
