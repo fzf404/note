@@ -1,5 +1,5 @@
 <!-- 
-title: 10-gRPC入门
+title: 10-Proto入门
 sort: 
 --> 
 
@@ -57,6 +57,8 @@ func NewPersonMessage() {
 ### 保存与写入
 
 > `google.golang.org/protobuf/proto`
+>
+> 将proto生成的结构体保存至文件
 
 ```go
 // 读取二进制文件
@@ -96,6 +98,8 @@ func writeToFile(fileName string, pb proto.Message) error {
 ### Json转换
 
 > `google.golang.org/protobuf/encoding/protojson`
+>
+> proto与json的互转
 
 ```go
 // 转为JSON
@@ -123,3 +127,6 @@ func fromJSON(in string, pb proto.Message) error {
 }
 ```
 
+### 枚举
+
+> 使用`Gender_xxx`来定义。

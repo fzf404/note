@@ -13,7 +13,7 @@ sort:
 ```powershell
 # 切换至wsl2
 wsl --set-version debian 2	
-# m
+# 访问
 \\wsl$
 ```
 

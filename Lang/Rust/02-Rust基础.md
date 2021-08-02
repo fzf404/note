@@ -88,3 +88,49 @@ let x: Option<i8> = None;
 let y = Some(5);
 ```
 
+### Match
+
+> 必须穷举所有可能性
+
+```rust
+// 枚举匹配
+enum UsState {
+    Alabama,
+    Alaska,
+}
+enum Coin {
+    Penny,
+    Nickel,
+    Quarter(UsState),
+}
+
+fn value_in_cent(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Quarter(state) => {
+            println!("Quarter {:?}", state);
+            25
+        }
+    }
+}
+
+fn main() {
+    let c = Coin::Quarter(UsState::Alabama);
+    println!("{}", value_in_cent(c));
+}
+
+// Option<T>匹配
+let y = Some(5);
+match y {
+  // None => None,
+  Some(i) => Some(i + 1),
+  _ => None,	// 匹配全部
+};
+
+// if let
+if let Some(5) = y {
+  println!("5")
+}
+```
+
