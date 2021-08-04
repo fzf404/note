@@ -59,6 +59,16 @@ const MILLION = 1_000_000;
 // 数据类型
 let byte = b'A'		// byte类型
 
+// 字符串
+let mut s = String::from("fzf");
+let s2 = String::from("404");
+s.push_str(&s2); // 向字符串添加字符串切片
+//  s.push_str("40");   // 直接添加
+s.push('4')         // 添加字符
+// 字符串拼接
+let s3 = s + &s2;
+format!("{}-{}",s,s2);
+
 // 元组
 let tup: (i32, f32, u8) = (404, 3.14, 1);
 // 数组

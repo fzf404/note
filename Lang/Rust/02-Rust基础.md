@@ -79,6 +79,8 @@ impl IPAddr{
 
 #### Option
 
+> 可选变量，两种状态，None或Some
+>
 > Rust中没有None类型，使用Option创建。
 >
 > 这样当变量不为`Option<T>`类型时，一定不为空。
@@ -132,5 +134,18 @@ match y {
 if let Some(5) = y {
   println!("5")
 }
+```
+
+### Vector
+
+```rust
+// 定义Vectro
+let mut v = vec![1, 2, 3];
+v[2] = 4;   // 修改值 
+v.push(4);  // 增加值
+// 可变引用
+let first =  &mut v[0];
+*first = 2; // 修改值
+println!("The Fisrt Element is {:?}", v);
 ```
 

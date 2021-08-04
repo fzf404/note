@@ -51,5 +51,37 @@ fn first_word(s: &String) -> &str {
 }
 ```
 
+### Module
 
+```rust
+// lib.rs
+mod eat {
+    pub struct Breakfast {
+        pub staple: String,
+        fruit: String,
+    }
+    impl Breakfast {
+        pub fn rice(fruit: &str) -> Breakfast {
+            Breakfast {
+                staple: String::from("rice"),
+                fruit: String::from(fruit),
+            }
+        }
+    }
+}
+
+pub fn eat_normal() {
+    let meal = eat::Breakfast::rice("apple");
+    println!("{}", meal.staple);
+}
+
+/
+use eat::Breakfast;
+
+// main.rs
+include!("lib.rs");
+fn main() {
+    eat_normal();
+}
+```
 
