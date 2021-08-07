@@ -29,10 +29,6 @@ fn build_user(username: String, email: String) {
     // Tuple Struct
     let white = Color(255,255,255);
 }
-
-// 打印结构体
-#[derive(Debug)]
-println!("{:#?}",a_user);
 ```
 
 #### 定义方法
@@ -147,5 +143,45 @@ v.push(4);  // 增加值
 let first =  &mut v[0];
 *first = 2; // 修改值
 println!("The Fisrt Element is {:?}", v);
+```
+
+### HashMap
+
+```rust
+use std::collections::HashMap;
+// 初始化一个HashMap
+let mut color: HashMap<String, Vec<u8>> = HashMap::new();
+// 插入
+color.insert(String::from("Blue"), vec![0,0,255]);
+
+// 结构体
+#[derive(Debug)]
+struct RGB {
+    r: u8,
+    g: u8,
+    b: u8,
+}
+let names = vec![
+  String::from("Blue"),
+  String::from("Green"),
+  String::from("Red"),
+];
+let rgbs = vec![RGB{r:0,g:0,b:255}, RGB{r:0,g:255,b:0}, RGB{r:255,g:0,b:0}];
+// 创建HashMap
+let colors: HashMap<_, _> = names.iter().zip(rgbs.iter()).collect();
+// 遍历
+println!("{:#?}",colors);
+for (key,value) in &colors {
+  println!("{}: {:#?}", key, value);
+}
+
+// 插入
+let mut new_colors:HashMap<_, _> = HashMap::new();
+new_colors.insert("white",RGB{r:0,g:0,b:0});
+// 创建空Map
+let e = new_colors.entry("white");
+// 不存在value则插入
+e.or_insert(RGB{r:255,g:255,b:255});
+println!("{:#?}",new_colors)
 ```
 

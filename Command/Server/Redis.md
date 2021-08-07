@@ -52,5 +52,8 @@ sadd set1 value1 value2
 flushall
 -- 换库
 select <index>
+
+-- 全部key
+keys 
 ```
 

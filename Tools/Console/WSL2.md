@@ -13,8 +13,16 @@ sort:
 ```powershell
 # 切换至wsl2
 wsl --set-version debian 2	
-# 访问
+# 文件服务地址
 \\wsl$
+```
+
+### 数据库安装
+
+```bash
+apt install mariadb-server redis -y
+service mysql start
+service redis-server start
 ```
 
 
