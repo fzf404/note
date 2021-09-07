@@ -56,3 +56,25 @@ export default function Detail() {
   </div>
 ```
 
+## 子组件调用
+
+```jsx
+// 子组件
+import { useImperativeHandle, forwardRef } from 'react'
+
+function Child(props,ref) {
+  useImperativeHandle(ref, () => ({
+    getValue: () => {
+      return 'somthing'
+    }
+  }))
+  
+export default forwardRef(Child);
+  
+// 父组件
+const childRef = useRef();
+  const getCode = () => {
+    childRef.current.getValue()
+  }  
+```
+

@@ -35,6 +35,11 @@ pm2 reload app_name
 pm2 stop app_name
 pm2 delete app_name
 
+# 开机自启
+pm2 startup
+pm2 save
+# 验证
+systemctl status pm2-x
 ```
 
 ### 实践

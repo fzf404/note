@@ -10,7 +10,7 @@ sort:
 # ssl error
 git config --global http.sslBackend "openssl"
 
-# name &
+# name & email
 git config --global user.name "fzf404"
 git config --global user.email nmdfzf404@163.com
 
@@ -18,29 +18,33 @@ git config --global user.email nmdfzf404@163.com
 chmod 700 ~/.ssh/*
 ```
 
-## 创建目录
+## 常用
 
 ```bash
-md git_study	
-cd .\git_sudy	# 新建文件夹并进入
-
-git init		# 初始化git仓库
-echo 123456 > 1.txt	# 写入东西
-
-git add .\1.txt		# 添加至缓冲区
-git commit -m "添加了1.txt"	# 添加至归档区
-
-# 使用代理，执行如下两条
+# 代理
 git config --global http.proxy 127.0.0.1:port
 git config --global https.proxy 127.0.0.1:port
-# 取消
 git config --global --unset http.proxy
 
-git remote remove origin	# 删除旧仓库地址
+# 更新远程地址
+git remote remove origin
 git remote add origin https://github.com.cnpmjs.org/fzf404/
+
+# 强制覆盖
+git fetch --all
+git reset --hard origin/master
+
+
+# 清除某次提交前的全部提交
+echo 'base' | git commit-tree 3b3edab^{tree}
+> fb27a3e558d45bf7725dbe3dd6a204ff74454472
+git rebase --onto fb27a3 3b3edab		# Hash值前六位 目标Hash值
+ 
+# 从所有提交中删除某个文件
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch xxx.xx' -
 ```
 
-# SSH
+## SSH
 
 ```bash
 ssh-keygen.exe
@@ -58,6 +62,11 @@ git remote add origin git@github.com:fzf404/Tech_Note.git
 ## 更多命令
 
 ```bash
+git init		# 初始化git仓库
+echo 123456 > 1.txt	# 写入东西
+git add .\1.txt		# 添加至缓冲区
+git commit -m "添加了1.txt"	# 添加至归档区
+
 git status		# 显示当前状态
 git add . 		# 添加所有文件
 git commit -m "two commit"
@@ -77,9 +86,41 @@ git remote -v	# 查看服务端地址
 git remote remove origin	# 删除重新添加
 git remote add origin git@github.com:fzf404/gitdemo.git
 git branch --set-upstream-to=origin/master master
+
+# 浅拷贝
+git clone xxx --depth=1
 ```
 
-## 创建分支
+### 操作
+
+```bash
+# 清理旧的提交
+git checkout --orphan latest_branch
+# 所有文件加到暂存区
+git add -A
+git commit -am "Clean old Commit"
+# 删掉旧分支
+git branch -D master
+# 新分支改名
+git branch -m master
+# 提交
+git push -f origin master
+
+# Github Gitee 同步更新
+git remote rm origin	
+# 关联 github 与 gitee
+git remote add github git@github.com:
+git remote add gitee git@gitee.com:
+# 检查
+git remote -v
+# 上传
+git push github master
+git push gitee master
+# 修改配置文件
+notepad .\.git\config
+```
+
+### 创建分支
 
 ```bash
 git branch -v	# 查看当前分支
@@ -94,7 +135,7 @@ git pull			# 拉取远端仓库的最新版本并合并
 # fetch/merge
 ```
 
-## 忽略文件
+### 忽略文件
 
 > 以斜杠`/`开头表示目录；
 > 以星号`*`通配多个字符；
@@ -102,60 +143,4 @@ git pull			# 拉取远端仓库的最新版本并合并
 > 以方括号`[]`包含单个字符的匹配列表；
 > 以叹号`!`表示不忽略(跟踪)匹配到的文件或目录；
 
-```
-/mtk/ 过滤整个文件夹
-*.zip 过滤所有.zip文件
-/mtk/do.c 过滤某个具体文件
-```
-
-## GItee
-
-> github 与 gitee 同步更新
-
-```bash
-# 删除已关联名为origin的远程库
-git remote rm origin	
-# 关联 github 与 gitee
-git remote add github git@github.com:
-git remote add gitee git@gitee.com:
-# 检查
-git remote -v
-# 上传
-git push github master
-git push gitee master
-# 修改配置文件
-notepad .\.git\config
-```
-
-## 清理库
-
-```bash
-# 浅拷贝
-git clone xxx --depth=1
-
-# 切换到新分支
-git checkout --orphan latest_branch
-# 所有文件加到暂存区
-git add -A
-git commit -am "Clean old Commit"
-# 删掉旧分支
-git branch -D master
-# 新分支改名
-git branch -m master
-# 提交
-git push -f origin master
-```
-
-## 冲突及清理
-
-```bash
-# 强制覆盖
-git fetch --all
-git reset --hard origin/master
-
-# 清除某次提交前的全部提交
-echo 'base' | git commit-tree 3b3edab^{tree}
-> fb27a3e558d45bf7725dbe3dd6a204ff74454472
- git rebase --onto fb27a3 3b3edab		# Hash值前六位 目标Hash值
-```
-
+> 

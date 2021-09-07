@@ -8,10 +8,10 @@ sort:
 
 1. `Get`请求
 
-```python
-payload = {'key1': 'value', 'key2': 'value2'}
-r = requests.get('https://www.bilibili.com', params=payload, timeout=5)	# 返回response对象
-```
+   ```python
+   payload = {'key1': 'value', 'key2': 'value2'}
+   r = requests.get('https://www.bilibili.com', params=payload, timeout=5)	# 返回response对象
+   ```
 
 2. `Post`请求
 

@@ -15,6 +15,7 @@ plt.figure(figsize=(16,5))		# 大小
 plt.title('title')
 plt.xlabel('index')
 plt.ylabel('count')
+# 需要在plot之后定义
 plt.legend(['sin','cos'])			# 图例
 
 x = np.arange(-10,10,0.1)

@@ -65,7 +65,7 @@ sort:
 | Ctrl+V                                                       | 随便选                           |
 | Ctrl+v 向下选 I[upper i] 输入 Esc                            | 同时编辑                         |
 | : normal i TEXT                                              | 选中文本后同时插入               |
-| %s/sStr/oStr/g<br />%: 指定要操作的行号,%代表所有<br />s: 查找并替换<br />g: 全局 | 全局替换 substitute / globe      |
+| %s/Str/Str/g<br />%: 指定要操作的行号,%代表所有<br />s: 查找并替换<br />g: 全局 | 全局替换 substitute / globe      |
 | :%s/s/o/gc                                                   | 每次替换提示                     |
 | qa [write] q 5@a                                             | 定义宏                           |
 | Ctrl+f/b                                                     | 下一页、上一页                   |

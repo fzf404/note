@@ -87,7 +87,7 @@ apt remove sl
    ![vi-vim-tutorial-2](http://www.runoob.com/wp-content/uploads/2015/10/vi-vim-tutorial-2.gif)
 
    ![img](https://www.runoob.com/wp-content/uploads/2015/10/vi-vim-tutorial-3.gif)
-   
+
    ![vi-vim-tutorial-4](https://www.runoob.com/wp-content/uploads/2015/10/vi-vim-tutorial-4.gif)
 
 ## HTML
