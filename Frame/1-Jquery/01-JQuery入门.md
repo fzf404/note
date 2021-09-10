@@ -149,7 +149,7 @@ $.getUrlParam = function (name) {
   if (r != null) return unescape(r[2]); return null;
 }
 
-var getname = $.getUrlParam('name');
+var name = $.getUrlParam('name');
 ```
 
 ## 事件
