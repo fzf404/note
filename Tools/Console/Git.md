@@ -99,11 +99,7 @@ git checkout --orphan latest_branch
 # 所有文件加到暂存区
 git add -A
 git commit -am "Clean old Commit"
-# 删掉旧分支
-git branch -D master
-# 新分支改名
-git branch -m master
-# 提交
+# 强制提交
 git push -f origin master
 
 # Github Gitee 同步更新
@@ -120,12 +116,14 @@ git push gitee master
 notepad .\.git\config
 ```
 
-### 创建分支
+### 分支
 
 ```bash
 git branch -v	# 查看当前分支
 git checkout -b b1	# 新建分支并切换
 git checkout --orphan b2	# 新建无提交分支
+git branch -D master	# 删掉旧分支
+git branch -m master	# 新分支改名
 # 合并分支
 git checkout master	# 回到主分支
 git merge b1		# 合并但不删除

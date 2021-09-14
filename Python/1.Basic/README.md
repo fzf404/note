@@ -12,9 +12,11 @@ pip install -i https://mirrors.aliyun.com/pypi/simple/ some-package
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 ```
 
-## 生成当前配置
+## Pip使用
 ```bash
 pip freeze > requirements.txt
 pip install -r requirements.txt
+# 忽略安装mo'g
+pip install xxx --ignore-installed xxx
 ```
 

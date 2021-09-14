@@ -46,8 +46,8 @@ conda activate <name>
 conda deactivate
 
 # 进入环境
-conda init
-conda deactivate
+activate paddle
+deactivate
 # 默认不启动/启动
 conda config --set auto_activate_base false
 conda config --set auto_activate_base true

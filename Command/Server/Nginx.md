@@ -63,14 +63,25 @@ location ~* \. (git|jpg|png)$ {
 }
 
 # 带/ 与 不带/
+location /test {
+    proxy_pass http://127.0.0.1:8080/;
+}
+# 访问: http://127.0.0.1/test/01.html
+# location - /
+# http://127.0.0.1:8080//01.html
+# location + /
+# http://127.0.0.1:8080/01.html
+
+
+# 带/ 与 不带/
 location /test/ {
     proxy_pass http://127.0.0.1:8080/;
 }
 # 访问: http://127.0.0.1/test/01.html
-# proxy_pass + /
-# http://127.0.0.1:8080/01.html
 # proxy_pass - /
 # http://127.0.0.1:8080/test/01.html
+# proxy_pass + /
+# http://127.0.0.1:8080/01.html
 ```
 
 ## 实例
