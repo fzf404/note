@@ -1,3 +1,9 @@
+<!--
+ * @Author: fzf404
+ * @Date: 2021-06-07 21:03:30
+ * @LastEditTime: 2021-09-22 21:32:41
+ * @Description: description
+-->
 <!-- 
 title: JavaScript
 sort: 
@@ -31,7 +37,7 @@ itemList.sort((a,b)=>{
 })
 
 // 跳转
-window.location.href="www.baidu."
+window.location.href="www.baidu.com"
 ```
 
 ## 递归

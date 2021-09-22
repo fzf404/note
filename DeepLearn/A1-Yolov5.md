@@ -38,13 +38,15 @@ os.chdir('./yolov5')
 
 !pip install -r requirements.txt
 
-!python .\train.py
-	--epochs 10
-	--cfg ./models/yolov5s.yaml
-	--weights ''
+!python train.py \
+  --img 320 \			# 图像大小
+  --batch 16 \		# 组大小
+  --epochs 100 \	# 次数
+  --data /content/DataSet/fire/data.yaml \	# 训练数据
+  --cfg models/yolov5s.yaml		# 预训练模型
     
 # 运行模型
-python detect.py --source 0 --weights .\best.pt
+python detect.py --weights .\best.pt --source <img/video/camera>
 ```
 
 ### 参数详解

@@ -41,7 +41,7 @@ echo 'base' | git commit-tree 3b3edab^{tree}
 git rebase --onto fb27a3 3b3edab		# Hash值前六位 目标Hash值
  
 # 从所有提交中删除某个文件
-git filter-branch --index-filter 'git rm --cached --ignore-unmatch xxx.xx' -
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch xxx.xx' -f
 ```
 
 ## SSH
@@ -141,4 +141,3 @@ git pull			# 拉取远端仓库的最新版本并合并
 > 以方括号`[]`包含单个字符的匹配列表；
 > 以叹号`!`表示不忽略(跟踪)匹配到的文件或目录；
 
-> 

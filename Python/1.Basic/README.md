@@ -16,7 +16,7 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 ```bash
 pip freeze > requirements.txt
 pip install -r requirements.txt
-# 忽略安装mo'g
+# 忽略安装某个库
 pip install xxx --ignore-installed xxx
 ```
 

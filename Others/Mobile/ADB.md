@@ -9,15 +9,23 @@ sort:
 ```powershell
 # 安装应用
 adb install *.apk
+
 # 屏幕截图
 adb shell screencap /sdcard/screen.png
+
 # 文件传送至电脑
 adb pull /sdcard/screen.png d:\test\
+
+# 进入shell
+adb shell
 # 点击屏幕 100,100像素
-adb shell input tap 100 100
+input tap 100 100
 # 滑动 开始坐标 结束坐标 延迟时间
-adb shell input swipe 500 1500 500 500 500
-# 设备信息 -s 
+input swipe 500 1500 500 500 500
+# 输入内容
+input text something
+
+# 设备信息
 adb devices
 ```
 
