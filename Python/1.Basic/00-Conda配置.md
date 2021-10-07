@@ -27,8 +27,8 @@ custom_channels:
 
 # 代理设置
 proxy_servers:
-  http: http://127.0.0.1:7890
-  https: https://127.0.0.1:7890
+  http: 127.0.0.1:10808
+  https: 127.0.0.1:1
 ssl_verify: false
 ```
 
@@ -79,3 +79,12 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```
 pip install pycryptodome
 ```
+
+> 卸载后无法使用cmd
+
+```bash
+# regedit
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor
+# AutoRun 设置为空
+```
+

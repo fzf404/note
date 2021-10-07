@@ -11,6 +11,9 @@ sort:
 ffmpeg -i .\video.m4s -i .\audio.m4s -codec copy out.mp4
 # 提取音频
 ffmpeg -i .\video.mp4 -acodec copy -vn output.aac
+
+# mkv转MP4
+ffmpeg -i "test.mkv" -vcodec copy -acodec aac 'test.mp4'
 ```
 
 ## 安装

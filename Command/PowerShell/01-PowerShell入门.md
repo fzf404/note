@@ -61,4 +61,3 @@ $loc = Get-Location		# 将命令输出传给变量
 Get-ChildItem -Path C:\windows\system32 | Out-Host -Paging
 # 分页显示
 ```
-

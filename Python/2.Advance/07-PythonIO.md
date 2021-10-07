@@ -56,7 +56,7 @@ sort:
 ```python
 import csv
 # 读取
-csv.reader(open(file_name,'r'))	# 返回一个二维列表
+data = csv.reader(open(file_name,'r'))	# 返回一个二维列表
 
 # 写入
 f = open(file_name, 'w', newline='')
@@ -94,34 +94,32 @@ f_csv.writerows(rows)					# 写入字典
   print(f.getvalue())			# b'\xe4\xb8……
   ```
 
-## 操作文件和目录
+## OS
 
-- os模块
-
-  ```python
-  import os
-  os.name()				# 系统类型
-  os.uname()				# 系统详细信息（windows不提供）
-  os.environ				# 系统环境变量
-  os.environ.get('PATH')	# 获取特定环境变量的值
-  # 文件和目录
-  os.path.abspath('')		# 文件绝对目录
-  path = os.path.join('path', new_folder)	# 准备工作
-  # 该函数会自动返回系统对应的目录结构
-  os.mkdir(path)			# 新建文件夹
-  os.path.spilt(path)		# 将路径拆分
-  os.path.spiltext(path)	# 直接得到文件扩展名
-  # 并不要求文件真实存在
-  os.rename(old, new)		# 重命名
-  os.remove(file)			# 删除
-  # 复制文件可以参考shutil函数
-  [x for x in os.listdir('.') if os.path.isdir(x)]
-  # 列出所有文件夹
-  # listdir(.)	当前目录的所有文件及文件夹 
-  # isdir()		判断是否为路径
-  [x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1]=='.py']
-  # 列出所有py文件
-  ```
+```python
+import os
+os.name()				# 系统类型
+os.uname()				# 系统详细信息（windows不提供）
+os.environ				# 系统环境变量
+os.environ.get('PATH')	# 获取特定环境变量的值
+# 文件和目录
+os.path.abspath('')		# 文件绝对目录
+path = os.path.join('path', new_folder)	# 准备工作
+# 该函数会自动返回系统对应的目录结构
+os.mkdir(path)			# 新建文件夹
+os.path.spilt(path)		# 将路径拆分
+os.path.spiltext(path)	# 直接得到文件扩展名
+# 并不要求文件真实存在
+os.rename(old, new)		# 重命名
+os.remove(file)			# 删除
+# 复制文件可以参考shutil函数
+[x for x in os.listdir('.') if os.path.isdir(x)]
+# 列出所有文件夹
+os.listdir('.')	当前目录的所有文件及文件夹 
+os.isdir()		判断是否为路径
+[x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1]=='.py']
+# 列出所有py文件
+```
 
 
 ## 序列化

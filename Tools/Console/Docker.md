@@ -92,6 +92,12 @@ docker commit <cid>:<img_name>
 
 # 上传镜像
 docker push fzf404/opus-go
+
+# 修改绑定域名
+docker stop xxx		# 停止容器
+vim /var/lib/docker/containers/xxx/hostconfig.json
+systemctl restart docker	# 重启docker
+docker start xxx	# 启动容器
 ```
 
 ### 数据卷

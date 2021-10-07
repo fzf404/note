@@ -21,6 +21,8 @@ server.run('127.0.0.1',port=8080)
 ## 上传文件
 
 ```python
+from flask import request
+
 @server.route('/upload', methods=['GET', 'POST'])
 def upload():
     keygen = request.form.get('keygen')

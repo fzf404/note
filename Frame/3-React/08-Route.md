@@ -7,23 +7,39 @@ sort:
 >
 > `yarn add react-route-dom`
 
-### Route.js
 
-```js
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+
+```jsx
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import React from 'react'
 
-import App from "./pages/App";
-import Result from "./pages/Result";
+import App from './pages/App'
+import NoMatch from './pages/NoMatch'
 
 export default function IRouter() {
   return <Router>
-    // Switch 精准匹配
     <Switch>
       <Route exact path="/" component={App}></Route>
-      <Route path="/result" component={Result}></Route>
-  		// 404匹配
-  		<Route path="*" component={NoMatch} />
+      <Route path="*" component={NoMatch} />
+    </Switch>
+  </Router>
+}
+```
+
+### Hash
+
+```jsx
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import React from 'react'
+
+import App from './pages/App'
+import NoMatch from './pages/NoMatch'
+
+export default function IRouter() {
+  return <Router>
+    <Switch>
+      <Route exact path="/" component={App}></Route>
+      <Route path="*" component={NoMatch} />
     </Switch>
   </Router>
 }
@@ -43,7 +59,7 @@ export default function IRouter() {
 >
 > 获取动态路由的params，跳转
 
-```js
+```jsx
 import React from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { Button } from 'antd'

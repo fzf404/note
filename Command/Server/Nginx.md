@@ -142,7 +142,22 @@ server{
 ### 关闭缓存
 
 ```nginx
-add_header         Pragma   no-cache;
-add_header         Expires  0;
-add_header         Cache-Control no-cache,no-store;
+add_header Pragma   no-cache;
+add_header Expires 0;
+add_header Cache-Control no-cache,no-store;
 ```
+
+### 请求头
+
+```nginx
+# 请求来源信息
+proxy_set_header Host $host;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+# 支持socket连接
+proxy_set_header Upgrade $http_upgrade;
+proxy_set_header Connection upgrade;
+proxy_set_header Accept-Encoding gzip;
+```
+
