@@ -15,19 +15,113 @@ acme.sh --register-account -m xxx@qq.com
 # 验证所有权
 acme.sh --issue -d xxx.fzf404.top --webroot /opt/xxx/
 # 自动nginx验证
-acme.sh --issue -d qlyw.fzf404.top --nginx
+acme.sh --issue -d xxx.fzf404.top --nginx
 
 # 安装证书
-acme.sh --install-cert -d code-server.fzf404.top \
+acme.sh --install-cert -d xxx.fzf404.top \
 --key-file       /etc/nginx/key.pem  \
 --fullchain-file /etc/nginx/cert.pem 
 
 # nginx配置文件
-# 注释掉8
+# 注释掉
 listen 443 ssl default_server;
 listen [::]:443 ssl default_server;
 
 ssl_certificate			cert.pem;
 ssl_certificate_key key.pem;
+```
+
+## 一键配置脚本
+
+### shell
+
+```bash
+#!/bin/bash
+
+git clone https://github.com.cnpmjs.org/acmesh-official/acme.sh.git /root/.acme.sh/acme.sh
+
+/root/.acme.sh/acme.sh --register-account -m xxx@163.com
+
+webList=("xxx.fzf404.top")
+
+# 批量为网站创建SSL证书
+for item in ${webList[*]}
+do
+/root/.acme.sh/acme.sh --issue -d $item --nginx
+
+mkdir -p /www/cert/$item
+
+/root/.acme.sh/acme.sh --install-cert -d $item \
+--key-file       /www/cert/$item/key.pem  \
+--fullchain-file /www/cert/$item/cert.pem 
+done
+
+# Nginx 
+ln -s /etc/nginx/sites-available/*.conf /etc/nginx/sites-enabled/
+```
+
+### 配置文件
+
+- web服务器
+
+```nginx
+server {
+    
+    listen 80;
+    listen 443 ssl;
+
+    server_name xxx.fzf404.top;
+
+    root /www/website/xxx.fzf404.top;
+    index index.html;
+
+    # ssl_certificate /www/cert/xxx.fzf404.top/cert.pem;
+    # ssl_certificate_key /www/cert/xxx.fzf404.top/key.pem;
+
+    location ~ ^/(\.git|LICENSE)
+    {
+        return 404;
+    }
+  
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    access_log /www/log/xxx.fzf404.top.log;
+    error_log /www/log/xxx.fzf404.top.error.log;
+
+}
+```
+
+- 反向代理
+
+```nginx
+server {
+    listen 80;
+    # listen 443 ssl;
+
+    server_name xxx.fzf404.top;
+
+    # ssl_certificate /www/cert/xxx.fzf404.top/cert.pem;
+    # ssl_certificate_key /www/cert/xxx.fzf404.top/key.pem;
+
+    location / {
+        proxy_pass http://xxx.fzf404.top:8080/;
+        proxy_set_header Host $host;
+        proxy_set_header Referer $http_referer;
+        proxy_set_header X-Real-Ip $remote_addr;
+        proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
+
+        proxy_http_version 1.1;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection upgrade;
+        proxy_set_header Accept-Encoding gzip;
+
+    }
+
+    access_log /www/log/xxx.fzf404.top.log;
+    error_log /www/log/xxx.fzf404.top.error.log;
+}
 ```
 

@@ -19,17 +19,35 @@ sort:
 >
 > 换源->阿里云->容器镜像服务->镜像加速器
 
-安装后测试
+### 安装
 
 ```bash
+# 官方一键安装
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+# 启动
 systemctl start docker
 systemctl enable docker
 
+# 测试
 docker run hello-world
+```
 
-# 将 docker 的权限移交给非 root 用户
+### 问题
+
+```bash
+# 新建docker组
+sudo groupadd docker
+# 权限移交给非 root 用户
 sudo usermod -aG docker $USER
-newgrp docker 	# 激活更改
+# 激活更改
+newgrp docker 	
+
+# snap docker 配置文件
+sudo vim /var/snap/docker/xxxx/config/daemon.json
+# 重启docker
+sudo snap restart docker
 ```
 
 ### 基础命令
@@ -93,7 +111,7 @@ docker commit <cid>:<img_name>
 # 上传镜像
 docker push fzf404/opus-go
 
-# 修改绑定域名
+# 修改绑定d
 docker stop xxx		# 停止容器
 vim /var/lib/docker/containers/xxx/hostconfig.json
 systemctl restart docker	# 重启docker
