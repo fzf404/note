@@ -1,40 +1,23 @@
 <!-- 
 title: VsCode
 sort: 
---> 
+-->
+
 # VsCode配置
 
 ## 基本
 
 - `.vscode`中存着配置文件
-
 - 正则表达式搜索
 
   > 搜索: `code.(.*).fzf`
   >
   > 替换:  `code.$1.fzf`
+  >
 
 ## 配置
 
-- **同步github**
-
-  > 在vs控制台输入：
-  >
-  > `git config --global user.name "fzf"`
-  >
-  > `git config --global user.email "nmdfzf404@163.com"`
-  >
-  > 接着初始化git：
-  >
-  > `git init`
-  >
-  > 新建密钥：
-  >
-  > `ssh-keygen.exe`
-  >
-  > 复制`id_rsa.pub`到Delpoy keys
-
-- 自己配置快捷键
+- 快捷键
 
   `Ctrl+K S`
 
@@ -58,7 +41,7 @@ sort:
 >
 > `\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor`
 >
-> 将`AutoRun`设置为空
+> 将 `AutoRun`设置为空
 
 ### CodeRunner
 
@@ -75,3 +58,4 @@ sort:
   > `ctrl+alt+i`: 文件注释
   >
   > `ctrl+alt+t`: 函数注释
+  >

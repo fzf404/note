@@ -1,7 +1,7 @@
 <!--
 title: 02-Ajax入门
 sort: 
---> 
+-->
 
 ## load
 
@@ -108,4 +108,3 @@ $.ajax(myinfoURL, {
   success: () => {},
 });
 ```
-

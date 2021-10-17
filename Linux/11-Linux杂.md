@@ -1,7 +1,7 @@
 <!-- 
 title: 11-Linux杂
 sort: 
---> 
+-->
 
 ## Curl
 
@@ -22,10 +22,18 @@ curl https://www.baidu.com/?name =='kiki' -H "A:B" -X POST -d "age = 22"
 ## 后台执行
 
 ```
- ./test &
- ./test >> out.txt 2>&1 &    # 将标准输出重定向到out.txt
- jobs -l     # 查看后台程序
- nohup ./test &  # 不挂起
+# 后台执行
+./test &
+# 后台执行，将标准输出重定向到out.txt
+./test >> out.txt 2>&1 &
+# 后台执行，输出至nohup.txt
+nohup ./test &
+
+# 查看后台程序
+jobs -l
+[1]+ 634 Running nohup ./test &
+# 停止
+kill 634
 ```
 
 ## 信息
@@ -74,4 +82,3 @@ rpm -qa | grep kernel
 # 卸载
 yum remove kernel-x.xx.x
 ```
-

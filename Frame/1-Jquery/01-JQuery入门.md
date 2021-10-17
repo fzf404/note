@@ -40,7 +40,7 @@ jquery_test.slideUp(500)
 jquery_test.slideDown(500)
 
 // 内容
-    jquery_test.text()
+jquery_test.text()
 jquery_test.html()
 jquery_test.append('<p>test</p>')
 jquery_test.prepend('<p>test</p>')
@@ -150,6 +150,11 @@ $.getUrlParam = function (name) {
 }
 
 var name = $.getUrlParam('name');
+
+// 最新方法
+const url_params = new URLSearchParams(window.location.search)
+url_params.has('id')	// 是否有此参数
+url_params.get('id')	// 获取参数
 ```
 
 ## 事件

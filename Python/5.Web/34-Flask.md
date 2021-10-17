@@ -1,7 +1,8 @@
 <!-- 
 title: 34-Flask
 sort: 
---> 
+-->
+
 # Flask入门
 
 ## HelloWorld
@@ -36,7 +37,7 @@ def upload():
         return '<h2>Please Select File!</h2>'
 ```
 
-## POST
+### 参数获取
 
 ```python
 # Get参数获取
@@ -63,7 +64,6 @@ from flask import jsonify
 def index():
     return jsonify({
     'code': 200,
-    'msg': '成功'     
+    'msg': '成功'   
     })
 ```
-

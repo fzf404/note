@@ -26,12 +26,12 @@ sort:
 /* 子类选择器 */
 /* div下所有p */
 div p { }
-.a ~ div { }
+
 /* 父标签是div的p */
 div > p { }
+
 /* a标签下面的div */
 .a + div { }
-
 ```
 
 ### 创建css

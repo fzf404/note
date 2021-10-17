@@ -1,10 +1,11 @@
+
+
 <!-- 
-title: 12-CSS操作
+title: 12-CSS基础布局
 sort: 
 --> 
-# CSS进阶
 
-## 定位`position`
+## 定位
 
 ### static
 
@@ -34,9 +35,10 @@ p
 
 ### relative
 
-> 不可层叠
+> 相对与当前位置的定位，不可层叠
 >
-> ![image-20200726100439709](https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200726100446.png)
+
+![image-20200726100439709](https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200726100446.png)
 
 ```css
 h2
@@ -53,7 +55,7 @@ h2
 
 ### absolute
 
-> 绝对定位，可层叠
+> 对于父元素的绝对定位，可层叠
 >
 > `position:absolute;`
 
@@ -92,13 +94,13 @@ div {
 >
 > 清除： `clear:both`
 
-## 布局
-
-### 对齐
+## 对齐
 
 > 元素居中：`margin: auto;`
 >
 > 文本居中：`text-align: center;`
+>
+> 垂直：`vertical-align: top`
 >
 > 定位对齐：`position: absolute; right: 0px;`
 >

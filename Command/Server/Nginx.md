@@ -1,7 +1,7 @@
 <!-- 
 title: Nginx
 sort: 
---> 
+-->
 
 # Nginx入门
 
@@ -27,6 +27,9 @@ services:
 ## 默认
 
 ```nginx
+# nginx替代品
+$ python3 -m http.server 80
+
 # /etc/nginx/sites-enable/default
 
 server {
@@ -160,4 +163,3 @@ proxy_set_header Upgrade $http_upgrade;
 proxy_set_header Connection upgrade;
 proxy_set_header Accept-Encoding gzip;
 ```
-

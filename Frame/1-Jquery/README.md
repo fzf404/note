@@ -1,7 +1,7 @@
 <!-- 
 title: JQuery
 sort: 
---> 
+-->
 
 > 初学JS
 
@@ -46,3 +46,17 @@ $('.owl-carousel').owlCarousel({
 })
 ```
 
+### 存储
+
+```js
+// 会话存储
+window.sessionStorage.setItem('data', data.data.token);
+window.sessionStorage.getItem('data')
+
+// 本地存储
+window.localStorage.setItem('data', data.data.token);
+window.localStorage.getItem('data')
+
+// object存储
+window.sessionStorage.setItem('data', JSON.stringify(data));
+```
