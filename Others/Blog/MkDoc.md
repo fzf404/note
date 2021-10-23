@@ -10,6 +10,8 @@ sort:
 pip install mkdocs-material		# 基础依赖
 pip install mkdocs-minify-plugin	# 压缩依赖
 
+# 运行
+python -m mkdoc serve
 # 创建
 mkdocs new .
 # 预览

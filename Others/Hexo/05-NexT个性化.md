@@ -2,6 +2,7 @@
 title: 05-NexT个性化
 sort: 
 --> 
+
 # NexT主题个性化配置
 
 ## 配置
@@ -181,3 +182,21 @@ sort:
      local_search:
        enable: true
      ```
+
+- gitalk
+
+```yml
+gitalk:
+  enable: true
+  github_id: fzf404 # GitHub repo owner
+  repo: blog-comment # Repository name to store issues
+  client_id: xxx # GitHub Application Client ID
+  client_secret: xxxxxx # GitHub Application Client Secret
+  admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  distraction_free_mode: true # Facebook-like distraction free mode
+  # Gitalk's display language depends on user's browser or system environment
+  # If you want everyone visiting your site to see a uniform language, you can set a force language value
+  # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
+  language: zh-CN
+```
+

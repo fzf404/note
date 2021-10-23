@@ -8,5 +8,7 @@ sort:
 ```bash
 # 带响应头的数据
 curl -i "http://www.baidu.com/"
+
+curl -X POST 
 ```
 

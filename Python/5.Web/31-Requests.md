@@ -245,4 +245,3 @@ PATCH一个issue
 >>> r.status_code
 200
 ```
-

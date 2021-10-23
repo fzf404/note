@@ -70,6 +70,9 @@ yarn add/remove # 添加依赖包
 yarn global add	# 全局安装
 yarn publish
 yarn run
+
+# 更多
+yarn upgrade-interactive --latest	# 手动选择更新
 ```
 
 > 搭建环境

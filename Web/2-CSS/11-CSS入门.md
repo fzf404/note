@@ -76,7 +76,6 @@ sort:
 >
 > `line-height`与`line-width`
 
-## ![Outline](https://www.runoob.com/images/box_outline.gif)
 
 ## 外边距margin
 

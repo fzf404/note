@@ -75,15 +75,15 @@ sort:
   
 - 字符集
 
-  ```
-  "[Tt]he" => The car parked in the garage.	# 匹配T/t
-  ```
 ```
+"[Tt]he" => The car parked in the garage.	# 匹配T/t
+```
+
 
 - 重复
 
 ```
-  "[a-z]*" => The car parked in the garage #21.	# car parked in the garage
+"[a-z]*" => The car parked in the garage #21.	# car parked in the garage
 ```
 
 ## 断言
@@ -97,11 +97,11 @@ sort:
   | ?<=  | 正向后行断言 |
   | ?<!  | 负向后行断言 |
 
-  ```python
-  "(T|t)he(?=\sfat)" 			# 匹配后方跟着fat的the
-  "(T|t)he(?!\sfat)"			# 匹配后方没有fat的the
-  "(?<=(T|t)he\s)(fat|mat)"	# 获取挨着the的所有fat/mat
-  "(?<!(T|t)he\s)(cat)"		# 获取不挨着the的所有cat
+```python
+"(T|t)he(?=\sfat)" 			# 匹配后方跟着fat的the
+"(T|t)he(?!\sfat)"			# 匹配后方没有fat的the
+"(?<=(T|t)he\s)(fat|mat)"	# 获取挨着the的所有fat/mat
+"(?<!(T|t)he\s)(cat)"		# 获取不挨着the的所有cat
 ```
 
 
@@ -166,7 +166,7 @@ sort:
       print('ok')
   else:
       print('failed')
-  ```
+```
 
 - **切分字符串**
 
