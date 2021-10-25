@@ -39,5 +39,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py &&
 # Unknown command: code
 > Shell Command: Install 'code'
 
+# 无法打开img
+sudo xattr -r -d com.apple.quarantine *.img
 ```
 

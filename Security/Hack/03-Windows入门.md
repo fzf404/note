@@ -3,7 +3,7 @@ title: 03-Windows入门
 sort: 
 --> 
 
-## WIndows
+## Windows
 
 > 提权
 >
@@ -26,7 +26,6 @@ hydra -l Administrator -P passlist.txt 192.168.252.128 smb
 net use \\192.168.252.128\ipc$ 1234 /user:Administrator
 # 映射
 net use x: "\\192.168.252.128\本地磁盘 (C)"
-
 
 ```
 

@@ -9,14 +9,14 @@ sort:
 # 编辑配置文件
 vim vpn.env
 
-VPN_IPSEC_PSK=qlstudio	# 密钥
-VPN_USER=qlstudio	# 用户名
-VPN_PASSWORD=jwcc312c312	# 密码
+VPN_IPSEC_PSK=	# 密钥
+VPN_USER=	# 用户名
+VPN_PASSWORD=	# 密码
 
-VPN_PUBLIC_IP=10.1.5.232	# 服务器地址
+VPN_PUBLIC_IP=	# 服务器地址
 
-VPN_ADDL_USERS=guest	# 更多用户名
-VPN_ADDL_PASSWORDS=jwcc312c312	# 更多密码
+VPN_ADDL_USERS=	# 更多用户名
+VPN_ADDL_PASSWORDS=	# 更多密码
 
 # docker搭建
 docker run \

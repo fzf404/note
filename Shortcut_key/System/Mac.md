@@ -10,6 +10,7 @@ sort:
 | Command + Control + F         | 全屏           |
 | Command + Shift + H           | 访达查看家目录 |
 | Command + Control + Shift + 4 | 截图存至剪贴板 |
+| Command + Alt + Esc           | 任务管理器     |
 
 ## Typora
 

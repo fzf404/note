@@ -10,6 +10,9 @@ sort:
 pip install -i https://mirrors.aliyun.com/pypi/simple/ some-package
 # 换源
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+
+# 中科大
+https://mirrors.utsc.edu.cn/pypi/web/simple/
 ```
 
 ## Pip使用

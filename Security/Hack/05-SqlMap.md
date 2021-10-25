@@ -5,7 +5,7 @@ sort:
 
 ## 基础使用
 
-- 查询数据库
+- get方法
 
 > `-Raw`: 文件
 >
@@ -14,6 +14,16 @@ sort:
 > `--dbs`: 全部数据库
 >
 > `sqlmap -r xxx -p pwd --dbs`
+
+- Post方法
+
+> `--form`：form表单
+>
+> `--method`：方法
+>
+> `--data`：数据
+>
+> `sqlmap -u http://xxx/xxx.php --method=POST --forms --data="username" --dbs`
 
 - 使用url
 
