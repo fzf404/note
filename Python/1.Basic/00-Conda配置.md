@@ -7,6 +7,8 @@ sort:
 
 ## Conda
 
+> [清华源下载](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
+
 ### 换源
 
 > 生成配置文件: `conda config --set show_channel_urls yes`
@@ -35,19 +37,22 @@ ssl_verify: false
 > 虚拟环境
 
 ```powershell
+# 初始化环境
+conda init <shell_name>
+# 取消初始化
+conda init <shell_name> --reverse
+
+# 全部环境列表
 conda env list
 
+# 创建环境
 conda create -n <name>
 conda remove -n <name> --all
-conda init <shell_name>
-# restart shell
 
+# 激活环境
 conda activate <name>
 conda deactivate
 
-# 进入环境
-activate paddle
-deactivate
 # 默认不启动/启动
 conda config --set auto_activate_base false
 conda config --set auto_activate_base true

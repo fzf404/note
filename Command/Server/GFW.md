@@ -13,6 +13,36 @@ sort:
 
 [安卓客户端](https://github.com/2dust/v2rayNG)
 
+## v2ray
+
+> [x-ui](https://github.com/vaxilu/x-ui)
+
+```bash
+# 自动安装
+su root # 切换到root用户
+bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+
+# 手动安装
+cd /root/
+wget https://github.com.cnpmjs.org/vaxilu/x-ui/releases/download/0.3.2/x-ui-linux-amd64.tar.gz
+
+rm x-ui/ /usr/local/x-ui/ /usr/bin/x-ui -rf
+tar zxvf x-ui-linux-amd64.tar.gz
+chmod +x x-ui/x-ui x-ui/bin/xray-linux-* x-ui/x-ui.sh
+cp x-ui/x-ui.sh /usr/bin/x-ui
+cp -f x-ui/x-ui.service /etc/systemd/system/
+mv x-ui/ /usr/local/
+systemctl daemon-reload
+systemctl enable x-ui
+systemctl restart x-ui
+
+# 默认用户名密码
+admin
+admin
+```
+
+
+
 ## ss客户端
 
 > ss-qt5

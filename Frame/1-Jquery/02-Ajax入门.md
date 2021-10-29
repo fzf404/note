@@ -40,11 +40,39 @@ trigger.click(() => {
 })
 ```
 
+## 其他方法
+
+```js
+// get方法
+$.get(
+  `${base_url}/total`, 
+  data => {
+    // 解析json
+    if (typeof (json) == 'string') {
+      json = JSON.parse(data)
+    }
+  }
+).fail(
+  () => {}
+)
+
+// post方法
+$.post(
+  `${base_url}/new`, 
+  data, 
+  (json) => {}
+).fail(
+  () => handle_fail()
+)
+```
+
 ## ajax
 
 ```js
-$.ajax('/login', {
-  method: 'POST',
+// form-data 格式
+$.ajax({
+  type: 'post',
+  url: `${base_url}/login`,
   data: {
     username: 'fzf',
     password: 'password'
@@ -53,16 +81,19 @@ $.ajax('/login', {
   error: () => {}
 })
 
-// get or post
-$.get('url',func);
-$.getJSON('url',func);
-$.post('url',{
-    data: '...',
-    data2: '...'.
-},func);
+// json格式
+$.ajax({
+  type: 'post',
+  url: `${base_url}/update`,
+  contentType: "application/json",
+  dataType:'json', 
+  data: JSON.stringify(data),
 
-// 重定向页面
-window.location.href = "/";
+  // 成功处理
+  success: data => {},
+  // 失败处理
+  error: () => {},
+})
 
 // 上传图片
 $('#uploadimg').on('change', (event) => {
@@ -91,6 +122,8 @@ $('#uploadimg').on('change', (event) => {
 ```
 
 ## Token
+
+> Bearer
 
 ```js
 // 存储Token
