@@ -8,6 +8,16 @@ sort:
 ```bash
 # 判断命令是否存在
 type tmux > /dev/null 2>&1 || { echo '安装tmux中...' ; apt install tmux -y}
+
+# 变量展开
+echo 1+1=$((1+1))
+echo Number_{0..9}{Z..A}
+echo $(ls)
+echo $HOME
+# SomeText /home/fzf 2
+echo "SomeText $(pwd) $((1+1))"
+# SomeText $(pwd) $((1+1))
+echo 'SomeText $(pwd) $((1+1))'
 ```
 
 ## 变量

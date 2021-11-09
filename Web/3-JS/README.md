@@ -19,8 +19,10 @@ parseFloat()
 // 数字转字符串
 str.toString()
 
+// 替换
+str.replace(',', '')
 // 批量替换
-str.replace(/-/g, '')
+str.replaceAll()
 
 // 切片
 str.slice(0, 4)

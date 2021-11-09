@@ -31,6 +31,16 @@ sort:
 
 ![image-20201122222158054](https://gitee.com//nmdfzf404/Image-hosting/raw/master/2020/image-20201122222158054.png)
 
+- 连接报错
+
+> ` Resolver error: Error: Connecting with SSH timed out`
+
+```json
+"remote.SSH.useLocalServer": false
+```
+
+### Shell
+
 - `get bad result from install script`
 
 > 原因是conda卸载后cmd AutoRun 指向空文件，CMD打不开
@@ -58,4 +68,3 @@ sort:
   > `ctrl+alt+i`: 文件注释
   >
   > `ctrl+alt+t`: 函数注释
-  >

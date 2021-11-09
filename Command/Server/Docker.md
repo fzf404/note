@@ -26,6 +26,10 @@ sort:
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
+# 国内一键安装
+bash <(curl -sSL https://gitee.com/SuperManito/LinuxMirrors/raw/main/DockerInstallation.sh)
+
+
 # 启动
 systemctl start docker
 systemctl enable docker

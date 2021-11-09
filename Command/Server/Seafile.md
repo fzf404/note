@@ -1,3 +1,8 @@
+<!-- 
+title: Seafile
+sort: 
+--> 
+
 ```bash
 docker run -d --name seafile \
   --restart unless-stopped \

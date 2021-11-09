@@ -18,8 +18,16 @@ ftpd --host 0.0.0.0 \
      --user fzf \
      --pass mxr2002+ftp \
      --root /www/website/dl.fzf404.top
-     
+```
 
+## docker
+
+```bash
+docker run -d -v /opt/download:/home/vsftpd/<user_name> \
+  -p 20:20 -p 21:21 -p 21100-21110:21100-21110 \
+  -e FTP_USER=<user_name> -e FTP_PASS=<password> \
+  -e PASV_ADDRESS=<server_ip> -e PASV_MIN_PORT=21100 -e PASV_MAX_PORT=21110 \
+  --name vsftpd --restart=always fauria/vsftpd
 ```
 
 

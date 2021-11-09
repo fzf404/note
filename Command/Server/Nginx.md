@@ -26,24 +26,15 @@ services:
 
 ## 默认
 
-```nginx
+```bash
 # nginx替代品
-$ python3 -m http.server 80
+python3 -m http.server 80
 
-# /etc/nginx/sites-enable/default
+# 重新加载配置文件
+nginx -s reload
 
-server {
-	listen 80;
- 	server_name _;
-
-	location / {
-		root /var/www/html;
-		index index.html index.htm index.nginx-debian.html;
-	}
-}
-include	<someconfig>
-
-$ nginx -s reload
+# 返回特定值
+return 200 'ok';
 ```
 
 ### 路径映射
@@ -138,6 +129,17 @@ docker run -d \
   -e "DISABLE_AUTH=true" \
   --restart always \
   fraoustin/fancyindex
+```
+
+### 强制https
+
+```nginx
+server {
+    listen 80;
+    server_name url;
+
+    rewrite ^(.*)$ https://$host$1 permanent;
+}
 ```
 
 ### 负载均衡
