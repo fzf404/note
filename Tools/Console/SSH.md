@@ -34,8 +34,9 @@ echo 'id_rsa.pub' >> authorized_keys
 # 允许root密码登录
 PermitRootLogin yes
 PasswordAuthentication yes
+
 # 允许密钥登录
 PermitRootLogin prohibit-password
-ubkeyAuthentication yes
+PubkeyAuthentication yes
 ```
 

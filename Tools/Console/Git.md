@@ -36,9 +36,9 @@ git reset --hard origin/master
 
 
 # 清除某次提交前的全部提交
-echo 'base' | git commit-tree 3b3edab^{tree}
+echo '🔥 主页v2.0' | git commit-tree c6b4418^{tree}
 > fb27a3e558d45bf7725dbe3dd6a204ff74454472
-git rebase --onto fb27a3 3b3edab		# Hash值前六位 目标Hash值
+git rebase --onto e4a0dc c6b4418		# Hash值前六位 目标Hash值
  
 # 从所有提交中删除某个文件
 git filter-branch --index-filter 'git rm --cached --ignore-unmatch xxx.xx' -f

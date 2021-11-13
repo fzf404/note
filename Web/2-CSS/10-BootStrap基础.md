@@ -1,11 +1,17 @@
 <!-- 
-title: 17-BootStrap基础
+title: 10-BootStrap基础
 sort: 
 --> 
 
-## 特性
+## 引入
 
-> `box-sizing`从`context-box`替换为`border-box`
+```html
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+```
 
 ## 小工具
 
