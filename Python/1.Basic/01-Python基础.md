@@ -2,90 +2,91 @@
 title: 01-Python基础
 sort: 
 --> 
-## python学习阶段常用命令
-
-- `dir()`
-
-  > 返回属性列表
-  >
-  > 可用于查看一个对象的所有方法
-
-- `type()`
-
-  > 返回对象类型
-  
-- `help()`
-
-  > 返回对象帮助
-
-- `id()`
-
-  > 返回对象内存地址
 
 ## 数据类型
 
-### `list`	列表
+### 字符串
 
-> list.append()		追加元素
->
-> list.insert()			插入元素至指定位置
->
-> list.pop					删除末尾元素
+```bash
+str = 'fzf404'
+str2 = "王山而"
 
-### `tuple`	元组
+# 分割为列表
+str.split(",")
+# 切三段
+s.partition(',')
 
-> tuple = ( )				使用（）	
->
-> tuple = ( 1 , )			定义一个数据必须加括号
->
-> t = ('a', 'b', ["a"])		定义一个”可变“tuple
+# 批量替换
+s.replace(","," ")
 
-### `dict`	字典
+# 删除字符串两边的指定字符 - 默认删除空格
+str.strip()
+# 左边 右边
+str.lstrip() rstrip()
+# 查找字符串 - 输出位置
+str.index(',')
 
-> d = {'a': 5, 'b': 6}		定义一个字典
->
-> d = dict([('a', 1), ('b', 2)])	
->
-> d.get('x', val)			x不存在的返回值	
->
-> 不准许放入列表	
+# 字符串长度
+len(str())
+```
+
+### 列表
+
+```bash
+# 追加元素
+list.append()
+# 插入元素
+list.insert()
+# 删除末尾元素
+list.pop()
+```
+
+### 字典
+
+```bash
+# 定义一个字典
+d = {'name': 'fzf404', 'age': 404}
+
+d = dict([('name', 'fzf404'), ('age', 404)])
+
+# val: x不存在时的返回值	
+d.get('name', val)			
+```
+
+## 工具方法
+
+```python
+# 返回属性列表 - 对象的所有方法
+dir()
+# 对象类型
+type()
+# 对象帮助
+help()
+# 对象内存地址
+id()
+```
 
 ## 函数
 
-### 传参
+```python
+# 可变参数 - 其他参数传入名为change的tuple中
+def (a, b, *change)
 
-> `function(a, b, *change )`	
->
-> 传入可变参数（即不需要名称的参数），所有参数放入一个名叫change的tuple。
->
-> `function(a, b, **change )`	
->
-> 传入关键字参数（即带名称的参数），所有参数放入一个名为change的dict中。
->
-> `function(a, *, bit)`					
->
-> 传入命名关键字参数，必须传入，参数名必须为bit	例：「bit = "233"」
->
-> `function(a, b, *args, bit, cat)`	
->
-> 假如有可变参数，就不用加\*了
->
-> `funcation(12, 34, bit, cat=2`)	可以有缺省值，有默认值也可不传入	
+# 关键字参数 - 其他参数传入名为change的dict中
+def (a, b, *change)
 
-### 参数组合
+# 传入命名关键字参数, 参数名必须为bit
+def (a, *, bit)
 
-- ```python
-  def f1(a, b, c = 1, *args, **kw):
-  ```
+# 例子
+def f1(a, b, c = 1, *args, **kw)
 
-  > ```python
-  > f1(1,2,5,'ai','py',dict = hh)
-  > >>> a = 1, b = 2, c = 5, args = ('ai','py'), kw = {dict:'hh'}
-  > 
-  > args = (1, 2, 3, 4)
-  > kw = {'d': 99, 'x': '#'}
-  > f1(*args, **kw)
-  > >>> a = 1, b = 2, c = 3, args = (4,) kw = {'d': 99, 'x': '#'} 
-  > ```
+# 结果
+f1(1,2,5,'ai','py',dict = hh)
+>>> a = 1, b = 2, c = 5, args = ('ai','py'), kw = {dict:'hh'}
 
-  
+args = (1, 2, 3, 4)
+kw = {'d': 99, 'x': '#'}
+f1(*args, **kw)
+>>> a = 1, b = 2, c = 3, args = (4,) kw = {'d': 99, 'x': '#'} 
+```

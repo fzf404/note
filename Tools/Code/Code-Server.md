@@ -45,14 +45,16 @@ server {
     ssl_certificate_key key.pem;
     server_name code-server.fzf404.top;
 
-    location / {
-      proxy_pass http://localhost:8080/;
-      
-      proxy_set_header Host $host;
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection upgrade;
-      proxy_set_header Accept-Encoding gzip;
-    }
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                proxy_pass http://127.0.0.1:8080/;
+                
+                proxy_set_header Host $host;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection upgrade;
+                proxy_set_header Accept-Encoding gzip;
+        }
 }
 ```
 

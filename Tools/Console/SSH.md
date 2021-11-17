@@ -39,4 +39,3 @@ PasswordAuthentication yes
 PermitRootLogin prohibit-password
 PubkeyAuthentication yes
 ```
-

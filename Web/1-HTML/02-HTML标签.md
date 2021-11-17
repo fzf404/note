@@ -108,6 +108,54 @@ text-decoration: none;
 </style>
 ```
 
+### 表单
+
+```html
+<form>
+
+  <label>学号</label>
+  <input type="text" name="id" placeholder="你的学号" autofocus required>
+
+  <br>
+
+  <label>姓名</label>
+  <input type="text" name="name" placeholder="你的姓名" required>
+
+  <br>
+
+  <label>密码</label>
+  <input type="text" name="password" placeholder="设置密码" required>
+
+  <br>
+
+  <label>性别</label>
+  <input type="radio" name="sex" value="0" required>
+  <label>👦</label>
+  <input type="radio" name="sex" value="1" required>
+  <label>👧</label>
+
+  <br>
+
+  <label class="textarea-label">介绍</label>
+  <textarea name="intro" rows="2" cols="36" placeholder="自己的基本情况" required></textarea>
+
+  <br>
+
+  <label class="textarea-label">爱好</label>
+  <textarea name="about" rows="4" cols="36" placeholder="自己平时的爱好" required></textarea>
+
+  <div id="choice">
+    <a id="submit">
+      提交
+    </a>
+    <a href="index.html">
+      返回
+    </a>
+  </div>
+
+</form>
+```
+
 ### 其他
 
 ```html

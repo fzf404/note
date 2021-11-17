@@ -14,14 +14,10 @@ npm install pm2 -g
 ```bash
 pm2 start app.js
 pm2 start app.py 
-# 设置名称
---name demo
-# 监听文件修改
---watch
-# Log保存位置
---log <log_path>
-# 重启延时
---restart-delay 5
+  --name demo # 设置名称
+  --watch # 监听文件修改
+  --log <log_path> # Log保存位置
+  --restart-delay 5 # 重启延时
 
 # 信息
 pm2 [list|ls|status]
@@ -30,16 +26,16 @@ pm2 monit
 pm2 plus
 
 # 操作
+pm2 delete app_name
 pm2 restart app_name
 pm2 reload app_name
 pm2 stop app_name
-pm2 delete app_name
 
 # 开机自启
 pm2 startup
 pm2 save
 # 验证
-systemctl status pm2-x
+systemctl status pm2-root.service
 ```
 
 ### 实践

@@ -74,28 +74,45 @@ document.write(sayHi())
 
 # package.json添加
 "build": "webpack"
+
 # 运行
 npm run build
-
 ```
 
-### 绑定处理函数
+### 引入css
+
+> `npm i css-loader -D`
+>
+> -D: 开发环境安装
+
+1. 配置文件
+
+```json
+// 追加
+module: {
+  rules: [
+    {
+      // 匹配字符串
+      test: /.css$/,
+      // 加载器
+      use: [
+        'css-loader'
+      ]
+    },
+  ]
+},
+```
+
+2. 添加css文件，执行编译命令
 
 ```js
-function onClick(id, callback) {
-    document.querySelector(`#${id}`).addEventListener('click',callback)
-}
-
-onClick('move-to-left',function () {
-    moveToLeft()
-})
+// 在js中引入css
+import './style.css'
 ```
 
 ### 编译ES6
 
-```
-yarn add @babel/core @babel/preset-env babel-loader 
-```
+> `yarn add @babel/core @babel/preset-env babel-loader `
 
 - `.babelrc`
 
@@ -119,31 +136,3 @@ yarn add @babel/core @babel/preset-env babel-loader
            ]
         }
   ```
-
-### 引入css
-
-> `npm i style-loader css-loader -D`
-
-1. 配置文件
-
-```json
-module: {
-  rules: [
-    {
-      test: /.css$/,
-      use: [
-        'style-loader',
-        'css-loader'
-      ]
-    },
-  ]
-},
-```
-
-2. 添加css文件，执行编译命令
-
-```js
-// 在js中引入css
-import './style.css'
-```
-

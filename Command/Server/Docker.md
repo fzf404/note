@@ -29,7 +29,6 @@ sh get-docker.sh
 # 国内一键安装
 bash <(curl -sSL https://gitee.com/SuperManito/LinuxMirrors/raw/main/DockerInstallation.sh)
 
-
 # 启动
 systemctl start docker
 systemctl enable docker
@@ -70,6 +69,9 @@ docker rmi (docker image -qa)
 # 删除容器
 docker rm <cid>
 docker rm (docker ps -qa)
+
+# 更新配置
+docker update --restart=always <cid>
 
 # 导出
 docker save -o <path> <id>

@@ -3,8 +3,6 @@ title: VsCode
 sort: 
 -->
 
-# VsCode配置
-
 ## 基本
 
 - `.vscode`中存着配置文件

@@ -5,6 +5,8 @@ sort:
 
 ## acme.sh
 
+> [复制下载](https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh)
+
 ```bash
 curl https://get.acme.sh | sh
 alias acme.sh=~/.acme.sh/acme.sh
@@ -62,37 +64,6 @@ ln -s /etc/nginx/sites-available/*.conf /etc/nginx/sites-enabled/
 
 ### 配置文件
 
-- web服务器
-
-```nginx
-server {
-    
-    listen 80;
-    listen 443 ssl;
-
-    server_name xxx.fzf404.top;
-
-    root /www/website/xxx.fzf404.top;
-    index index.html;
-
-    # ssl_certificate /www/cert/xxx.fzf404.top/cert.pem;
-    # ssl_certificate_key /www/cert/xxx.fzf404.top/key.pem;
-
-    location ~ ^/(\.git|LICENSE)
-    {
-        return 404;
-    }
-  
-    location / {
-        try_files $uri $uri/ =404;
-    }
-
-    access_log /www/log/xxx.fzf404.top.log;
-    error_log /www/log/xxx.fzf404.top.error.log;
-
-}
-```
-
 - 反向代理
 
 ```nginx
@@ -106,11 +77,12 @@ server {
     # ssl_certificate_key /www/cert/xxx.fzf404.top/key.pem;
 
     location / {
-        proxy_pass http://xxx.fzf404.top:8080/;
+        proxy_pass http://localhost:8080/;
+    
         proxy_set_header Host $host;
         proxy_set_header Referer $http_referer;
         proxy_set_header X-Real-Ip $remote_addr;
-        proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
         proxy_http_version 1.1;
 

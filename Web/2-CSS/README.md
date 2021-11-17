@@ -49,7 +49,31 @@ canvas.height = window.innerHeight;
 }
 ```
 
+### 滚动条样式
 
+```css
+/* 整体样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  /* 不显示横向滑块 */
+  height: 0;
+}
+
+/* 滑块与导轨共有样式 */
+::-webkit-scrollbar-thumb,::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+
+/* 滑块 */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0, 0.06);
+}
+
+/* 导轨 */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0, 0.04);
+}
+```
 
 
 

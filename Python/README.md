@@ -15,5 +15,9 @@ for index ,v in enumerate(list):
     
 # 三元运算符
 '男' if sex else '女'
+
+# 格式化
+name = "fzf"
+f'Hello, my name is {name}'
 ```
 

@@ -15,7 +15,10 @@ git config --global user.name "fzf404"
 git config --global user.email nmdfzf404@163.com
 
 # WARNING: UNPROTECTED PRIVATE KEY FILE! 
-chmod 700 ~/.ssh/*
+chmod 600 ~/.ssh/*
+
+# 加速
+https://hub.fastgit.org/
 ```
 
 ## 常用
@@ -28,7 +31,6 @@ git config --global --unset http.proxy
 
 # 更新远程地址
 git remote remove origin
-git remote add origin https://github.com.cnpmjs.org/fzf404/
 
 # 强制覆盖
 git fetch --all

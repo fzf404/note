@@ -12,3 +12,10 @@ str.substring(2,14)
 str.replaceAll("s","")
 ```
 
+## 命令行
+
+```bash
+# 正在运行的java进程
+jps
+```
+
