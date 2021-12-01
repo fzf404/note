@@ -30,4 +30,20 @@ sort:
 
 ## 例子
 
-`/app/message[@name='xx']`
+```python
+from lxml import etree
+
+# 发送请求
+r = requests.get(url)
+r.encoding='utf-8'
+
+# 解析html
+content = etree.HTML(r.text)
+# 筛选Xpath
+content = content.xpath("/body/input[@name='']")
+# 解析为字符串
+etree.tostring(content[0],encoding='utf-8').decode('utf-8')
+```
+
+
+

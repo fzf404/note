@@ -5,65 +5,79 @@ sort:
 
 # Flask入门
 
-## HelloWorld
+- [官方文档](https://dormousehole.readthedocs.io/en/latest/)
+- [SocketIO文档](https://flask-socketio.readthedocs.io/en/latest/getting_started.html)
+
+## Flask
 
 ```python
 from flask import Flask
 
-server = Flask(__name__)
+app = Flask(__name__)
 
 @server.route('/')
 def index():
     return '<h2>Flask Running...</h2>'
  
-server.run('127.0.0.1',port=8080)
-```
-
-## 上传文件
-
-```python
-from flask import request
-
-@server.route('/upload', methods=['GET', 'POST'])
-def upload():
-    keygen = request.form.get('keygen')
-    fname = request.files['upload']
-    if keygen == 'passwd' and 'fname':
-        t = time.strftime('%Y-%m-%d_%H-%M-%S_')
-        name = t + fname.filename
-        fname.save('./upload/' + name)
-        return '<h2>Upload Success!</h2>'
-    else:
-        return '<h2>Please Select File!</h2>'
+app.run('127.0.0.1',port=8080)
 ```
 
 ### 参数获取
 
 ```python
-# Get参数获取
+# parme获取
 request.args.get('mess')
 request.args['mess']
 # form-data获取
 request.form.get('mess')
-# paload-json获取
+# json获取
 request.json['mess']
+# 文件获取/保存
+f = request.files['img']
+f.save('public/' + name)
 ```
 
-## 跨域请求
+### 跨域请求
 
 ```python
 from flask_cors import *
 CORS(app, supports_credentials=True)
 ```
 
-## Json
+## SocketIO
+
+### 基础
 
 ```python
-from flask import jsonify
-@server.route('/')
-def index():
-    return jsonify({
-    'code': 200,
-    'msg': '成功'   
-    })
+from flask_socketio import SocketIO
+
+# 连接事件
+@socketio.on('connect')
+def test_connect():
+    global user_number
+    user_number += 1
+    socketio.emit('number', user_number)
+
+# 断开连接事件
+@socketio.on('disconnect')
+def test_disconnect():
+    global user_number
+    user_number -= 1
+    socketio.emit('number', user_number)
+
+# 默认message事件
+@socketio.on('message')
+def handle_message(msg):
+    chat_logger.info(msg)
+    socketio.send(msg)
+    
+if __name__ == '__main__':
+    socketio.run(app, '0.0.0.0', port='8080')
 ```
+
+### 跨域
+
+```python
+socketio = SocketIO(app, cors_allowed_origins="*")
+```
+

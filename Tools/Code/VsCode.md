@@ -19,7 +19,7 @@ sort:
 
   `Ctrl+K S`
 
-## ==问题==
+## 问题
 
 ### RemoteSSH
 
@@ -61,8 +61,14 @@ sort:
 
 ## 插件推荐
 
-- `KoroFileHeader`
+- KoroFileHeader
 
   > `ctrl+alt+i`: 文件注释
   >
   > `ctrl+alt+t`: 函数注释
+
+- Debugger for Microsoft Edge
+
+    > 配置`launch.json`
+    >
+    > 配合`five server`进行debug

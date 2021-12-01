@@ -2,6 +2,7 @@
 title: 02-Python正则
 sort: 
 --> 
+
 ## 描述字符
 
 - 单个字符
@@ -163,14 +164,14 @@ sort:
   ```python
   test = '用户输入的字符串'
   if re.match(r'正则表达式', test):
-      print('ok')
+    print('ok')
   else:
-      print('failed')
-```
+    print('failed')
+  ```
 
 - **切分字符串**
 
-  > `re.split(r'\s+', a b                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  > `re.split(r'\s+', a b                                                                                                                               
   >
   > 强于`str.split()`
 

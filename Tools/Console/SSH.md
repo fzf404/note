@@ -16,6 +16,9 @@ ssh-copy-id ip
 ssh 目标机ip
 # 假如私钥改名，可手动指定
 ssh -i ./newname root@ip
+
+# 私钥权限
+chmod 600 ~/.ssh/*
 ```
 
 ## 目标机

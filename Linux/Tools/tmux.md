@@ -7,17 +7,7 @@ sort:
 
 ## 入门
 
-- Session
-
-  >  一个tmux会话
-
-- Window
-
-  > 一个窗口
-
-- Pane
-
-  > 一个区域
+> Session > Window > pane
 
 ## 快捷键
 
@@ -37,4 +27,13 @@ sort:
 | s/w    | 切换Session        |
 | d      | 离开Session        |
 | tmux a | 进入Session        |
+
+## 命令
+
+```bash
+# 保存第三个pane中 642-5557 行
+tmux capture-pane -t 3 -S -5557 -E -642 
+# 保存全部内容
+tmux capture-pane -S -
+```
 

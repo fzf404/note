@@ -16,6 +16,7 @@ curl -fsSL https://code-server.dev/install.sh | sh -s -- --version 3.9.3
 
 # 运行
 code-server
+# 开机自启
 systemctl enable code-server@root
 systemctl rstart code-server@root
 

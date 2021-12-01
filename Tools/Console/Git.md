@@ -24,9 +24,17 @@ https://hub.fastgit.org/
 ## 常用
 
 ```bash
+# clone
+git clone <remote_url>
+# 克隆链接的第三方仓库
+git clone --recurse-submodules <remote_url>
+# 或
+git submodule update --init --recursive
+
 # 代理
-git config --global http.proxy 127.0.0.1:port
-git config --global https.proxy 127.0.0.1:port
+git config --global http.proxy http://127.0.0.1:10808
+git config --global https.proxy http://127.0.0.1:10808
+git config --global https.proxy socks5://127.0.0.1:10808
 git config --global --unset http.proxy
 
 # 更新远程地址

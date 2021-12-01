@@ -28,7 +28,7 @@ sort:
 | 选中该行           | Ctrl+L                 |
 | 选中所有匹配项     | Ctrl+Shift+L           |
 | 更改所有选中项     | Ctrl+F2                |
-| 选中特定区域       | Shift + Alt + Righ     |
+| 选中特定区域       | Shift+Alt+⬅️/➡️          |
 | **跳转**           |                        |
 | 鼠标文件、函数跳转 | Ctrl+鼠标              |
 | 最近打开的文件     | Ctrl+P/Ctrl+Tab        |
