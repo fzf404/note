@@ -1,14 +1,14 @@
-<!-- 
+<!--
 title: Nest入门
-sort: 
---> 
+sort:
+-->
 
 ### Controller
 
 ```typescript
-import { Controller, Get } from '@nestjs/common';
-import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { AppService } from './app.service';
+import { Controller, Get } from "@nestjs/common";
+import { ApiOperation, ApiTags } from "@nestjs/swagger";
+import { AppService } from "./app.service";
 
 @Controller()
 @ApiTags("app")
@@ -17,13 +17,12 @@ export class AppController {
 
   @Get()
   @ApiOperation({
-    summary: "测试"
+    summary: "测试",
   })
   getHello(): string {
     return this.appService.getHello();
   }
 }
-
 ```
 
 ### MongoDB
@@ -32,18 +31,18 @@ export class AppController {
 
 ```typescript
 // nest g mo db
-`/src/db/db.module.ts`
-import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
+`/src/db/db.module.ts`;
+import { Module } from "@nestjs/common";
+import { MongooseModule } from "@nestjs/mongoose";
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/nest')],
+  imports: [MongooseModule.forRoot("mongodb://localhost/nest")],
 })
 export class DbModule {}
 
 // nest g interface user
-`/src/interface/user.interface.ts`
-import { Prop,Schema } from "@nestjs/mongoose";
+`/src/interface/user.interface.ts`;
+import { Prop, Schema } from "@nestjs/mongoose";
 import { ApiProperty } from "@nestjs/swagger";
 
 @Schema()
@@ -51,14 +50,14 @@ export class User extends Document {
   @Prop()
   @ApiProperty({
     description: "用户手机号",
-    example: "13074291048"
+    example: "13074291048",
   })
   readonly number: string;
-  
+
   @Prop()
   @ApiProperty({
     description: "用户密码",
-    example: "12345678"
+    example: "12345678",
   })
   readonly password: string;
 }
@@ -85,7 +84,7 @@ export const UserSchema = SchemaFactory.createForClass(User);
 nest g mi hashPassword
 // 响应接口
 nest g interface response
-    
+
 // 守护 在中间件后阻止不正常的请求
 nest g gu auth
 `/src/guards/auth.guard.ts`
@@ -110,4 +109,3 @@ export class AuthModule implements NestModule {
   }
 }
 ```
-

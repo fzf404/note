@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 45-WebAssembly
-sort: 
---> 
+sort:
+-->
 
-> [编译器SDK](https://github.com/emscripten-core/emscripten)
+> [编译器 SDK](https://github.com/emscripten-core/emscripten)
 >
 > [在线编译](http://mbebenita.github.io/WasmExplorer/)
 
@@ -15,7 +15,7 @@ git clone https://github.com/emscripten-core/emsdk.git
 ./emsdk activate latest
 
 # h
-source /opt/emsdk/emsdk_env.fish 
+source /opt/emsdk/emsdk_env.fish
 ```
 
 ## 例子
@@ -53,25 +53,24 @@ int main()
 	return 0;
 }
 
-// -O0 385ms 
-// -O1 253ms 
-// -O2/3 197ms 
+// -O0 385ms
+// -O1 253ms
+// -O2/3 197ms
 ```
 
 ### JS
 
 ```js
-const fib = x => {
-	if (x <= 0)
-		return 0
-	if (x <= 2) {
-		return 1
-	}
-	return fib(x - 1) + fib(x - 2)
-}
-console.time("Fib Time")
-let result = fib(40)
-console.timeEnd("Fib Time")
+const fib = (x) => {
+  if (x <= 0) return 0;
+  if (x <= 2) {
+    return 1;
+  }
+  return fib(x - 1) + fib(x - 2);
+};
+console.time("Fib Time");
+let result = fib(40);
+console.timeEnd("Fib Time");
 
 // Fib Time: 640ms
 ```
@@ -102,17 +101,15 @@ emcc fib.cc -o fib -s EXPORTED_FUNCTIONS='["_fib"]' -O2
 ### 浏览器使用
 
 ```js
-fetch('./fib.wasm').then(res =>
-	res.arrayBuffer()
-).then(bytes =>
-	WebAssembly.compile(bytes)
-).then(mod => {
-	const instance = new WebAssembly.Instance(mod)
-	const fib = instance.exports.fib
-	console.time("Fib Time")
-	let result = fib(40)
-	console.timeEnd("Fib Time")
-})
+fetch("./fib.wasm")
+  .then((res) => res.arrayBuffer())
+  .then((bytes) => WebAssembly.compile(bytes))
+  .then((mod) => {
+    const instance = new WebAssembly.Instance(mod);
+    const fib = instance.exports.fib;
+    console.time("Fib Time");
+    let result = fib(40);
+    console.timeEnd("Fib Time");
+  });
 // Fib Time: 370ms
 ```
-

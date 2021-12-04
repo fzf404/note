@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 03-Vue组件
-sort: 
---> 
+sort:
+-->
 
 ## HelloWorld
 
@@ -40,12 +40,12 @@ new Vue({
 </div>
 ```
 
-> `template`放置在html里
+> `template`放置在 html 里
 
 ```js
-// 模板使用id选择器	
+// 模板使用id选择器
 template:'#like-component-template-tpl'
-  
+
 <template id="like-component-template-tpl">
   <button @click="toggleLike()" :class="{liked,liked}">
     👍 {{likeCount}}
@@ -59,20 +59,20 @@ template:'#like-component-template-tpl'
 
 ```js
 // 子组件添加props
-Vue.component('alert', {
+Vue.component("alert", {
   template: `<a :href="\'/user/\'+username">{{username}}</a>`,
-  props: ['username'],
+  props: ["username"],
   methods: {},
 });
 
 new Vue({
-  el: '#app',
+  el: "#app",
 });
 
 // 父组件传入props
 <div id="app">
   <alert username="fzf404"></alert>
-</div>
+</div>;
 ```
 
 ## 调度器
@@ -127,4 +127,3 @@ Vue.component('hsay', {
 	<hsay></hsay>
 </div>
 ```
-

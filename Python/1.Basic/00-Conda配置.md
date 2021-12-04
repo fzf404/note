@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 00-Conda配置
-sort: 
---> 
+sort:
+-->
 
 > [Anaconda](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=D)
 
@@ -100,11 +100,10 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 pip install pycryptodome
 ```
 
-> 卸载后无法使用cmd
+> 卸载后无法使用 cmd
 
 ```bash
 # regedit
 Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor
 # AutoRun 设置为空
 ```
-

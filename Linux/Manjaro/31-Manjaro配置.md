@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 31-Manjaro配置
-sort: 
---> 
+sort:
+-->
 
-# Manjaro配置
+# Manjaro 配置
 
 `screenfetch`
 
@@ -51,26 +51,26 @@ Secure boot disenable
   	export QT_IM_MODULE=fcitx
   	export XMODIFIERS="@im=fcitx"
   ```
-  
+
 - 翻墙
 
-  >  [electron-ssr](https://github.com/qingshuisiyuan/electron-ssr-backup)
+  > [electron-ssr](https://github.com/qingshuisiyuan/electron-ssr-backup)
   >
-  >  ```shell
-  >  # 翻墙
-  >  git config --global http.proxy 'http://127.0.0.1:12333'
-  >  git config --global https.proxy 'http://127.0.0.1:12333'
-  >  
-  >  export all_proxy=http://127.0.0.1:12333 
-  >  # export http_proxy=http://127.0.0.1:12333 
-  >  # export https_proxy=http://127.0.0.1:12333
-  >  
-  >  # un翻墙
-  >  git config --global --unset http.proxy 
-  >  git config --global --unset https.proxy
-  >  unset ALL_PROXY
-  >  ```
-  
+  > ```shell
+  > # 翻墙
+  > git config --global http.proxy 'http://127.0.0.1:12333'
+  > git config --global https.proxy 'http://127.0.0.1:12333'
+  >
+  > export all_proxy=http://127.0.0.1:12333
+  > # export http_proxy=http://127.0.0.1:12333
+  > # export https_proxy=http://127.0.0.1:12333
+  >
+  > # un翻墙
+  > git config --global --unset http.proxy
+  > git config --global --unset https.proxy
+  > unset ALL_PROXY
+  > ```
+
 - 各种软件
 
   ```bash
@@ -83,7 +83,7 @@ Secure boot disenable
   yay -S google-chrome-dev
   yay -S visual-studio-code-bin	# 直接使用code
   yay -S deepin.com.qq.office
-  # deepin-wine-tim 
+  # deepin-wine-tim
   yay -Sy gnome-settings-daemon
   # 安装过程输入n
   # 安装wine-mono
@@ -97,7 +97,7 @@ Secure boot disenable
   yay -S github-cli	# githubCLI
   yay -S figlet		# word2paint
   yay -S dotnet-host dotnet-runtime dotnet-sdk	# CSharp
-  
+
   gimp
   # polybar
   mkdir ~/.config/polybar
@@ -109,6 +109,7 @@ Secure boot disenable
   ```bash
   curl -sLf https://spacevim.org/cn/install.sh | bash
   ```
+
 ### docker
 
 1. 安装
@@ -130,16 +131,16 @@ Secure boot disenable
    ```bash
    cat /etc/group | grep docker # 查找 docker 组，确认其是否存在
    groups # 列出自己的用户组，确认自己在不在 docker 组中
-   
+
    # 如果 docker 组不存在，则添加之：
    sudo groupadd docker
-   
+
    # 将当前用户添加到 docker 组
    sudo gpasswd -a ${USER} docker
-   
+
    # 重启服务
    sudo service docker restart
-   
+
    # 切换一下用户组（刷新缓存）
    newgrp - docker;
    newgrp - `groups ${USER} | cut -d' ' -f1`; # TODO：必须逐行执行，不知道为什么，批量执行时第二条不会生效
@@ -150,7 +151,7 @@ Secure boot disenable
 4. 运行
 
    ```bash
-   docker run -d -p 8080:8888 jupyter/datascience-notebook 
+   docker run -d -p 8080:8888 jupyter/datascience-notebook
    docker logs ~
    # 再次运行
    docker start ~

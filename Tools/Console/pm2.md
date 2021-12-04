@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: pm2
-sort: 
---> 
+sort:
+-->
 
 > 应用程序管理
 
@@ -13,7 +13,7 @@ npm install pm2 -g
 
 ```bash
 pm2 start app.js
-pm2 start app.py 
+pm2 start app.py
   --name demo # 设置名称
   --watch # 监听文件修改
   --log <log_path> # Log保存位置
@@ -45,4 +45,3 @@ systemctl status pm2-root.service
 npm build
 pm2 start --name nest dist/main.js
 ```
-

@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 01-Vue入门
-sort: 
---> 
+sort:
+-->
 
 ## HelloWorld
 
@@ -12,19 +12,19 @@ sort:
 
 <script src="https://unpkg.com/vue"></script>
 <script>
-  const app = new Vue({
-    // id选择器
-    el: '#app',
-    data: {
-      name: 'fzf'
-    }
-  })
+const app = new Vue({
+  // id选择器
+  el: "#app",
+  data: {
+    name: "fzf",
+  },
+});
 </script>
 ```
 
-### 对接API
+### 对接 API
 
-> 使用b站[API](http://api.bilibili.com/x/web-interface/ranking/region?rid=1)
+> 使用 b 站[API](http://api.bilibili.com/x/web-interface/ranking/region?rid=1)
 
 ```vue
 <div id="app">
@@ -41,36 +41,36 @@ sort:
 
 <script src="https://unpkg.com/vue"></script>
 <script>
-  // 创建Vue实例 
-  const app = new Vue({
-    el: '#app',
-    data: {
-      names: [],
-      bvs: [],
-      coins: []
+// 创建Vue实例
+const app = new Vue({
+  el: "#app",
+  data: {
+    names: [],
+    bvs: [],
+    coins: [],
+  },
+  computed: {
+    totalCoins() {
+      return this.coins.reduce((sum, coins) => sum + coins);
     },
-    computed:{
-      totalCoins(){
-        return this.coins.reduce((sum,coins)=>sum+coins)
-      },
-      addCoins(){
-        this.coins[0]+=1
-      }
+    addCoins() {
+      this.coins[0] += 1;
     },
-    // 创建异步请求
-    created() {
-      fetch('data.json')
-        // 解析JSON数据
-        .then(response => response.json())
-        .then(json => {
-          json.data.map(data => {
-            // PUSH进列表
-            this.names.push(data.title);
-            this.bvs.push(data.bvid);
-            this.coins.push(data.coins);
-          })
-        })
-    }
-  })
+  },
+  // 创建异步请求
+  created() {
+    fetch("data.json")
+      // 解析JSON数据
+      .then((response) => response.json())
+      .then((json) => {
+        json.data.map((data) => {
+          // PUSH进列表
+          this.names.push(data.title);
+          this.bvs.push(data.bvid);
+          this.coins.push(data.coins);
+        });
+      });
+  },
+});
 </script>
 ```

@@ -1,15 +1,15 @@
-<!-- 
+<!--
 title: Linux
-sort: 
---> 
+sort:
+-->
 
-> 居然还有人用Windows?!
+> 居然还有人用 Windows?!
 
 ## 问题解决
 
 ```bash
 # 修改主机名
-vim /etc/hostname		
+vim /etc/hostname
 
 # 修改时区
 timedatectl set-timezone Asia/Shanghai
@@ -27,4 +27,3 @@ bash <(curl -sSL https://gitee.com/SuperManito/LinuxMirrors/raw/main/ChangeMirro
 # 一键安装docker
 bash <(curl -sSL https://gitee.com/SuperManito/LinuxMirrors/raw/main/DockerInstallation.sh)
 ```
-

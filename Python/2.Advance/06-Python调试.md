@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: 06-Python调试
-sort: 
---> 
-# Python调试
+sort:
+-->
+
+# Python 调试
 
 ## 错误处理
 
@@ -10,7 +11,7 @@ sort:
 
 - 使用`try...except...finally...`处理错误：
 
-  > Python的错误其实也是class，所有的错误类型都继承自`BaseException`
+  > Python 的错误其实也是 class，所有的错误类型都继承自`BaseException`
 
   ```python
   try:
@@ -51,24 +52,24 @@ sort:
 
   ```python
   # err_logging.py
-  
+
   import logging
-  
+
   def foo(s):
       return 10 / int(s)
-  
+
   def bar(s):
       return foo(s) * 2
-  
+
   def main():
       try:
           bar('0')
       except Exception as e:
           logging.exception(e)
-  
+
   main()
   print('END')
-  
+
   '''
   ERROR:root:division by zero
   Traceback (most recent call last):
@@ -85,24 +86,24 @@ sort:
 
 - **抛出错误**
 
-  > 可以自定义错误class，列出可能出现的错误
+  > 可以自定义错误 class，列出可能出现的错误
   >
   > `raise`自动抛出异常
->
+  >
   > 使用`raise`抛出错误实例。
 
   ```python
   class FooError(ValueError):
       pass
-  
+
   def foo(s):
       n = int(s)
       if n==0:
           raise FooError('invalid value: %s' % s)
       return 10 / n
-  
+
   foo('0')
-  
+
   '''
   Traceback (most recent call last):
     File "err_throw.py", line 11, in <module>
@@ -130,13 +131,13 @@ sort:
       n = int(s)
       assert n != 0, 'n is zero!'			# 表达式错误，抛出异常
       return 10 / n
-  
+
   def main():
       foo('0')
-      
+
   # python -0 err.py
   ```
-  
+
 - ### **logging**
 
   > `logging`不会抛出错误，而且可以输出到文件。
@@ -148,7 +149,7 @@ sort:
   ```python
   import logging
   logging.basicConfig(level=logging.INFO)
-  
+
   s = '0'
   n = int(s)
   logging.info('n = %d' % n)
@@ -158,7 +159,7 @@ sort:
 - ### **pdb**
 
   > 让程序以单步方式运行。
-  
+
   ```python
   $ python -m pdb err.py		# 运行代码
   (Pdb) l						# 显示全部代码
@@ -166,14 +167,14 @@ sort:
   (Pdb) p name				# 可以输入命令p 变量名来查看变量
   (Pdb) q						# 结束程序
   ```
-  
+
 - ### pdb.set_trace()
 
   > 命令用法同上
 
   ```python
   import pdb
-  
+
   s = '0'
   n = int(s)
   pdb.set_trace() 			# 设置一个断点，运行到这里会自动暂停
@@ -198,19 +199,19 @@ sort:
   ```python
   # mydict.py
   class Dict(dict):
-  
+
       def __init__(self, **kw):
           super().__init__(**kw)
-  
+
       def __getattr__(self, key):
           try:
               return self[key]
           except KeyError:
               raise AttributeError(r"'Dict' object has no attribute '%s'" % key)
-  
+
       def __setattr__(self, key, value):
           self[key] = value
-          
+
   >>> d = Dict(a=1, b=2)
   >>> d['a']
   1
@@ -227,53 +228,53 @@ sort:
   ```python
   # 用于测试Dict
   import unittest
-  
+
   from mydict import Dict
-  
+
   class TestDict(unittest.TestCase):		# 继承
-  
+
       def test_init(self):
           d = Dict(a=1, b='test')
           self.assertEqual(d.a, 1)		# 判断测试是否成功
           self.assertEqual(d.b, 'test')
           self.assertTrue(isinstance(d, dict))
-  
+
       def test_key(self):
           d = Dict()
           d['key'] = 'value'
           self.assertEqual(d.key, 'value')
-  
+
       def test_attr(self):
           d = Dict()
           d.key = 'value'
           self.assertTrue('key' in d)
           self.assertEqual(d['key'], 'value')
-  
+
       def test_keyerror(self):
           d = Dict()
           with self.assertRaises(KeyError):	# 判断程序会抛出KeyError
               value = d['empty']
-  
+
       def test_attrerror(self):
           d = Dict()
           with self.assertRaises(AttributeError):
               value = d.empty
   ```
 
-- ### setUp与tearDown
+- ### setUp 与 tearDown
 
   > 在测是开始及结束时执行命令
 
 ### 文档测试
 
-- Python内置的“文档测试”（doctest）模块可以直接提取注释中的代码并执行测试。
+- Python 内置的“文档测试”（doctest）模块可以直接提取注释中的代码并执行测试。
 
   ```python
   # mydict2.py
   class Dict(dict):
       '''
       Simple dict but also support access as x.y style.
-  
+
       >>> d1 = Dict()
       >>> d1['x'] = 100
       >>> d1.x
@@ -295,19 +296,17 @@ sort:
       '''
       def __init__(self, **kw):
           super(Dict, self).__init__(**kw)
-  
+
       def __getattr__(self, key):
           try:
               return self[key]
           except KeyError:
               raise AttributeError(r"'Dict' object has no attribute '%s'" % key)
-  
+
       def __setattr__(self, key, value):
           self[key] = value
-  
+
   if __name__=='__main__':
       import doctest
       doctest.testmod()
   ```
-
-  

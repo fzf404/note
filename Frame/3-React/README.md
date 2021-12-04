@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: React
-sort: 
---> 
+sort:
+-->
 
 ## npm
 
@@ -35,7 +35,7 @@ yarn eject
 // 方式1
 {
   isActive
-  : 
+  :
   <p>show</p>
   ?
   <p>no show</p>
@@ -56,7 +56,7 @@ data.map((item, index) => {
     {item]}
   </div>
 }
-         
+
 // 对象渲染
 Object.keys(data).map((item, index) => {
   <div key={index}>
@@ -64,4 +64,3 @@ Object.keys(data).map((item, index) => {
   </div>
 }
 ```
-

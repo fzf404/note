@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Redis
-sort: 
---> 
+sort:
+-->
 
 > 以键值对方式存储数据
 
@@ -54,6 +54,5 @@ flushall
 select <index>
 
 -- 全部key
-keys 
+keys
 ```
-

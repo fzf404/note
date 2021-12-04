@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: LaTeX
-sort: 
---> 
+sort:
+-->
 
 ## 快速入门
 
@@ -49,4 +49,3 @@ sort:
 ```
 
 ![image-20210119220846630](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-20210119220846630.png)
-

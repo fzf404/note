@@ -1,11 +1,11 @@
-<!-- 
+<!--
 title: 02-CSharp基础语法
-sort: 
---> 
+sort:
+-->
 
 ## 数据类型
 
-> 与c++差不多
+> 与 c++差不多
 
 - sizeof
 
@@ -47,7 +47,7 @@ Console.WriteLine("Str: {0}\n@Str: {1}", str, stra);
 
 #### 指针类型
 
-> 与c中的指针具有相同功能
+> 与 c 中的指针具有相同功能
 
 ### 类型转换
 
@@ -65,8 +65,3 @@ string str = d.ToString();
 num = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input num is: {0}", num);
 ```
-
-
-
-
-

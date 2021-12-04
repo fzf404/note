@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Choco
-sort: 
---> 
+sort:
+-->
 
 > Windows 命令行安装应用
 >
@@ -87,6 +87,3 @@ choco install unity
 choco install tim
 
 ```
-
-
-

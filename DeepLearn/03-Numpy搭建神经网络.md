@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 03-Numpy搭建神经网络
-sort: 
---> 
+sort:
+-->
 
 ### 详解
 
@@ -11,9 +11,9 @@ sort:
 
 1. 随机初始化参数，使用线性回归算法`y=wx+b`
 2. 测试集中选图，对第一张进行第一轮运算，得出预测值
-3. 梯度下降：预测值与实际值相减，进行矩阵运算，返回梯度下降后的parameters
-4. 100个为一组，100组parameters相加求平均数
-5. 更新parameters进行下一组运算
+3. 梯度下降：预测值与实际值相减，进行矩阵运算，返回梯度下降后的 parameters
+4. 100 个为一组，100 组 parameters 相加求平均数
+5. 更新 parameters 进行下一组运算
 6. 运算完全部测试集
 7. 使用验证集测试训练结果，输出准确度
 8. 使用测试集进行测试
@@ -21,7 +21,6 @@ sort:
 ## 代码
 
 > 手写数字识别
->
 
 ```python
 # -*- coding: utf-8 -*-
@@ -174,7 +173,7 @@ def grad_parameters(img, lab, parameters):
     L1_out = activation[1](L1_in)
     # 与实际的差[10位列表]
     diff = onehot[lab]-L1_out
-    
+
     act1 = np.dot(differential[activation[1]](L1_in), diff)
     act2 = differential[activation[0]](L0_in)
     # 将参数进行梯度下降
@@ -243,4 +242,3 @@ pre = predict(test_img[r], parameters)
 print('predict:{}'.format(pre.argmax()))
 show_test(r)
 ```
-

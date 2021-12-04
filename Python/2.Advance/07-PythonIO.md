@@ -1,12 +1,13 @@
-<!-- 
+<!--
 title: 07-PythonIO
-sort: 
---> 
-# PythonIO编程
+sort:
+-->
 
-> 涉及到数据交换的地方，IO操作会有Input和Output两个数据流。
+# PythonIO 编程
+
+> 涉及到数据交换的地方，IO 操作会有 Input 和 Output 两个数据流。
 >
-> 同步和异步的区别就在于是否等待IO执行的结果。
+> 同步和异步的区别就在于是否等待 IO 执行的结果。
 
 ## 文件读写
 
@@ -30,7 +31,7 @@ sort:
 
 - **file-like Object**
 
-  > 像`open()`函数返回的这种有个`read()`方法的对象，在Python中统称为file-like Object。除了file外，还可以是内存的字节流，网络流，自定义流等等。file-like Object不要求从特定类继承，只要写个`read()`方法就行。
+  > 像`open()`函数返回的这种有个`read()`方法的对象，在 Python 中统称为 file-like Object。除了 file 外，还可以是内存的字节流，网络流，自定义流等等。file-like Object 不要求从特定类继承，只要写个`read()`方法就行。
 
 - 传入参数
 
@@ -46,7 +47,7 @@ sort:
   f = open('test.txt','w')		# 覆盖写入
   f.write('Hello TXT.')
   f.close()
-  
+
   with open('test.txt','a') as f:	# 追加写入
   	f.write('hhh')
   ```
@@ -71,11 +72,11 @@ f_csv.writerows(rows)					# 写入字典
 
 ## StringIO
 
-- 在内存中读写str
+- 在内存中读写 str
 
   ```python
   from io import StringIO
-  
+
   f = StringIO()
   f.write('Hello')
   f.write(' ')
@@ -87,7 +88,7 @@ f_csv.writerows(rows)					# 写入字典
 
   ```python
   from io import BytesIO
-  
+
   f = BytesIO()
   f.write('中文'.encode('utf-8'))
   # f.write(r'\xe4...')
@@ -115,12 +116,11 @@ os.remove(file)			# 删除
 # 复制文件可以参考shutil函数
 [x for x in os.listdir('.') if os.path.isdir(x)]
 # 列出所有文件夹
-os.listdir('.')	当前目录的所有文件及文件夹 
+os.listdir('.')	当前目录的所有文件及文件夹
 os.isdir()		判断是否为路径
 [x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1]=='.py']
 # 列出所有py文件
 ```
-
 
 ## 序列化
 
@@ -130,7 +130,7 @@ os.isdir()		判断是否为路径
 
   ```python
   import pickle
-  
+
   with open('dump.txt', 'wb') as f:
       list = '1 2 3 4'.split()
       pickle.dump(list, f)
@@ -143,14 +143,14 @@ os.isdir()		判断是否为路径
 
 - 在不同编程语言之间传递对象。
 
-- | JSON类型   | Python类型 |
-  | :--------- | :--------- |
-  | {}         | dict       |
-  | []         | list       |
-  | "string"   | str        |
-  | 1234.56    | int或float |
-  | true/false | True/False |
-  | null       | None       |
+- | JSON 类型  | Python 类型  |
+  | :--------- | :----------- |
+  | {}         | dict         |
+  | []         | list         |
+  | "string"   | str          |
+  | 1234.56    | int 或 float |
+  | true/false | True/False   |
+  | null       | None         |
 
   ```python
   import json
@@ -158,26 +158,24 @@ os.isdir()		判断是否为路径
   d = json.load(dj)				# 转换回来
   ```
 
-- 将`class`转换为JSON。
+- 将`class`转换为 JSON。
 
   ```python
   import json
-  
+
   class Student(object):
       def __init__(self, name, age, score):
           self.name = name
           self.age = age
           self.score = score
-          
+
   def student2dict(std):				# 写一个转换函数
       return {
           'name': std.name,
           'age': std.age,
           'score': std.score
       }
-      
+
   s = Student('Bob', 20, 88)
   print(json.dumps(s, default = student2dict))
   ```
-
-  

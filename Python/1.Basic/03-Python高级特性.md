@@ -1,7 +1,8 @@
-<!-- 
+<!--
 title: 03-Python高级特性
-sort: 
---> 
+sort:
+-->
+
 ## 列表生成式
 
 - 常规写法与生成式写法：
@@ -10,20 +11,20 @@ sort:
   L = []
   for x in range(1, 11):
       L.append(x * x)
-      
+
   L = [x * x for x in range(1, 11)]
   #将生成式提前，条件是放后
   ```
 
-- [元素 for ]			要生成的元素在前，for循环在后。
+- [元素 for ] 要生成的元素在前，for 循环在后。
 
   > ```python
   > [m + n for i in 'ABC' for n in 'XYZ']				# 生成全排列
-  > 
+  >
   > [k + '=' + v for k, v in d.items()]					# 字典变列表
-  > 
+  >
   > L = [s.lower() for s in L2 if isinstance(s,str)]	# 增加判断条件
-  > 
+  >
   > # 练习
   > # 1. 100内的全部偶数
   > # 2. 100内的全部质数
@@ -37,14 +38,14 @@ sort:
 
 - 保存生成式算法
 
-  > next()	 	调用下一项
+  > next() 调用下一项
   >
-  > yield			中断，下次从这里执行
+  > yield 中断，下次从这里执行
   >
   > - 函数是顺序执行，遇到`return`语句或者最后一行函数语句就返回。
-  > - 而generator的函数，在每次调用`next()`的时候执行，遇到`yield`语句返回，再次执行时从上次返回的`yield`语句处继续执行。
-  > - 注：必须不断递归才能代替next函数。
-  
+  > - 而 generator 的函数，在每次调用`next()`的时候执行，遇到`yield`语句返回，再次执行时从上次返回的`yield`语句处继续执行。
+  > - 注：必须不断递归才能代替 next 函数。
+
   ```python
   # 生成器
   def n1():
@@ -52,17 +53,16 @@ sort:
       while True:
           yield a
           a = a+1
-  
+
   ne = n1()
   g1 = next(ne)
   g2 = next(ne)
   pint(g1,g2)
   ```
-  
 
 ## 迭代器
 
-- 迭代是Python最强大的功能之一，是访问集合元素的一种方式。
+- 迭代是 Python 最强大的功能之一，是访问集合元素的一种方式。
 
 - 迭代器有两个基本的方法：**iter()** 和 **next()**。
 
@@ -101,16 +101,15 @@ sort:
     def __iter__(self):
       self.a = 1
       return self
-   
+
     def __next__(self):
       x = self.a
       self.a += 1
       return x
-   
+
   myclass = MyNumbers()
   myiter = iter(myclass)
-  
+
   print(next(myclass))
   print(next(myclass))
   ```
-

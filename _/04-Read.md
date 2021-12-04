@@ -1,11 +1,11 @@
-<!-- 
+<!--
 title: 04-权限+读wiki
-sort: 
---> 
+sort:
+-->
 
 - [ ] 操作权限
 - [ ] 读英文文档
-- [ ] 挂载u盘
+- [ ] 挂载 u 盘
 
 ## 权限
 
@@ -40,9 +40,9 @@ sort:
 
   > 更改文件所有者
   >
-  > `chown root:users`：文件所有者改成root，用户组改成users
+  > `chown root:users`：文件所有者改成 root，用户组改成 users
   >
-  > `chown root:`：文件所有者改成root，文件用户组也改成root
+  > `chown root:`：文件所有者改成 root，文件用户组也改成 root
 
 - chgrp
 
@@ -50,7 +50,7 @@ sort:
   >
   > 前一个命令不能改文件夹的
 
-## LInux小技巧
+## LInux 小技巧
 
 `Ctrl+A`: 回到开头
 
@@ -66,6 +66,6 @@ sort:
 | v       | visual      |
 | shift+v | line visual |
 
-## 阅读Arch Wiki
+## 阅读 Arch Wiki
 
-> 为什么有人说Arch是邪教?
+> 为什么有人说 Arch 是邪教?

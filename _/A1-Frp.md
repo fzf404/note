@@ -1,11 +1,11 @@
-<!-- 
+<!--
 title: 内网穿透
-sort: 
---> 
+sort:
+-->
 
 > 推荐使用[Sakura](https://www.natfrp.com/)
 >
-> 咱学校ip好像被sakura给ban了
+> 咱学校 ip 好像被 sakura 给 ban 了
 >
 > 自己用阿里云搭吧
 
@@ -13,7 +13,7 @@ sort:
 
 > [Release](https://github.com/fatedier/frp/releases)
 >
-> 使用开源项目frp-v0.32
+> 使用开源项目 frp-v0.32
 
 ```bash
 wget https://github.com/fatedier/frp/releases/download/v0.32.0/frp_0.32.0_linux_amd64.tar.gz
@@ -22,7 +22,7 @@ tar -zxvf frp_0.32.0_linux_amd64.tar.gz
 
 ### 编辑配置
 
-> frpc是客户端(client),frps是服务端(server)
+> frpc 是客户端(client),frps 是服务端(server)
 >
 > 别忘记开端口!
 
@@ -45,9 +45,9 @@ dashboard_pwd = passwd
 
 ### 自启动
 
-> 为frps创建services
+> 为 frps 创建 services
 >
-> 项目中service文件已经写好,直接copy过去就可以
+> 项目中 service 文件已经写好,直接 copy 过去就可以
 
 ```bash
 # 进入frp的systemd目录
@@ -72,12 +72,12 @@ WantedBy=multi-user.target
 
 # 把frps与配置文件拷贝到其应在的目录
 cp frps /usr/bin
-mkdir /etc/frp       
+mkdir /etc/frp
 cp frps.ini /etc/frp
 
 # 启动服务
 # 重载services
-systemctl daemon-reload 
+systemctl daemon-reload
 # 尝试运行
 systemctl start frps
 # 开机自启动
@@ -93,7 +93,7 @@ systemctl enable frps
 server_addr = ip
 server_port = 7000
 token = passwd_token
- 
+
 [localhost]
 # 写你要开放的端口
 type = tcp
@@ -135,10 +135,9 @@ cp frpc.ini /etc/frp
 
 # 启动服务
 # 重载services
-systemctl daemon-reload 
+systemctl daemon-reload
 # 尝试运行
 systemctl start frpc
 # 开机自启动
 systemctl enable frpc
 ```
-

@@ -1,7 +1,7 @@
 <!-- 
 title: 01-数学基础
 sort: 
---> 
+-->
 
 <p>均方差: $\frac1n \sum_{i=1}^n (y - y_{label})^2 $</p>
 <p>均方根差: $\sqrt{ \frac1n \sum_{i=1}^n (y - y_{label})^2 }$</p>
@@ -9,24 +9,34 @@ sort:
 <p>导数: $f&#39;(x_0) = \lim_{\Delta x\to0}\frac{f(x_0+\Delta x)}{\Delta x}$</p>
 <p>导数运算1: $(uv)&#39; = uv&#39;+v&#39;u$</p>
 <p>导数运算2: $(\frac uv)&#39; = \frac{uv&#39;-v&#39;u}{v^2}$</p>
-<p>偏微分: </p>
+<p>偏微分:</p>
 <p>$f=(y-(xw+b))^2$</p>
-<p>$\frac{\partial f}{\partial w} = 2(y-g())\frac{\partial h}{\partial w} = 2(y-(xw+b))x \tag 1$</p>
-<p>$\frac{\partial f}{\partial b} = 2(y-g())\frac{\partial h}{\partial b} = 2(y-(xw+b)) \tag 2$</p>
+<p>
+  $\frac{\partial f}{\partial w} = 2(y-g())\frac{\partial h}{\partial w} =
+  2(y-(xw+b))x \tag 1$
+</p>
+<p>
+  $\frac{\partial f}{\partial b} = 2(y-g())\frac{\partial h}{\partial b} =
+  2(y-(xw+b)) \tag 2$
+</p>
 <p>$\nabla = ((1)+(2))$</p>
 <p>切线方程: $y-y_0 = {f&#39;(x_0)}(x-x_0)$</p>
 <p>法线方程: $y-y_0 = -\frac{1}{f&#39;(x_0)}(x-x_0)$</p>
 <p>莱布尼茨公式: $(uv)^2 = \sum^n_{i=0} C^i_n u^i v^{n-i}$</p>
 <h3 id="泰勒公式">泰勒公式</h3>
 <blockquote>
-<p>用多项式函数, 近似一个复杂函数</p>
-<p>$f(x)=f(0)+{f}&#39;(0)x+\frac{1}{2!}{f}&#39;&#39;(0){{x}^{2}}+\cdots +\frac{{{f}^{(n)}}(0)}{n!}{{x}^{n}}+{{R}_{n}}$</p>
+  <p>用多项式函数, 近似一个复杂函数</p>
+  <p>
+    $f(x)=f(0)+{f}&#39;(0)x+\frac{1}{2!}{f}&#39;&#39;(0){{x}^{2}}+\cdots
+    +\frac{{{f}^{(n)}}(0)}{n!}{{x}^{n}}+{{R}_{n}}$
+  </p>
 </blockquote>
 <h3 id="曲率">曲率</h3>
 <blockquote>
-<p>曲线上无限接近的两个点，构成圆的半径就被定义为曲线在这一点的曲率半径</p>
-<p><strong>曲率被定义为曲率半径的倒数.</strong></p>
-<p>$k=\frac{\left| y&#39;&#39; \right|}{{{(1+y{{&#39;}^{2}})}^{\tfrac{3}{2}}}}$</p>
+  <p>曲线上无限接近的两个点，构成圆的半径就被定义为曲线在这一点的曲率半径</p>
+  <p><strong>曲率被定义为曲率半径的倒数.</strong></p>
+  <p>
+    $k=\frac{\left| y&#39;&#39; \right|}{{{(1+y{{&#39;}^{2}})}^{\tfrac{3}{2}}}}$
+  </p>
 </blockquote>
 <h2 id="线代">线代</h2>
-

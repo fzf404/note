@@ -1,19 +1,19 @@
-<!-- 
+<!--
 title: 30-WebSocket
-sort: 
---> 
+sort:
+-->
 
-## 原生WebSocket
+## 原生 WebSocket
 
 ```js
 // 初始化WebSocket
-let ws = new WebSocket('ws://17.0.0.1:1880/wx')
+let ws = new WebSocket("ws://17.0.0.1:1880/wx");
 
 // 监听消息事件
-ws.onmessage=(msg)=>console.log(msg.data)
+ws.onmessage = (msg) => console.log(msg.data);
 
 // 发送信息
-ws.send("fzf404")
+ws.send("fzf404");
 ```
 
 ## SocketIO
@@ -23,16 +23,12 @@ let socket = io(`${base_url}`);
 
 // 接受数据处理
 socket.on("message", (data) => {
-  console.log(`${data.user_name}: ${data.message}`)
+  console.log(`${data.user_name}: ${data.message}`);
 });
-
-
 
 // 连接成功
 socket.on("connect", () => {
   // 发送
   socket.send({ user_name: user_name, message: "已加入" });
 });
-
 ```
-

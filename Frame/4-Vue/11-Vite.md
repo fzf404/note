@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 11-Vite
-sort: 
---> 
+sort:
+-->
 
 [官方文档](https://vitejs.dev/guide/)
 
@@ -43,4 +43,3 @@ createApp(App)
 // App.vue
 <router-view></router-view>
 ```
-

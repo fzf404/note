@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 05-Vue更多
-sort: 
---> 
+sort:
+-->
 
 ## 混合器
 
@@ -19,16 +19,16 @@ var base = {
     },
     toggle: function () {
       this.visible = !this.visible;
-    }
+    },
   },
   data: function () {
     return {
       visible: false,
-    }
-  }
+    };
+  },
 };
 
-Vue.component('tooltip', {
+Vue.component("tooltip", {
   template: `
   <div>
     <span @mouseenter="show" @mouseleave="hide">bys</span>
@@ -40,7 +40,7 @@ Vue.component('tooltip', {
   mixins: [base],
 });
 
-Vue.component('popup', {
+Vue.component("popup", {
   template: `
   <div>
     <button @click="toggle">Popup</button>
@@ -51,18 +51,18 @@ Vue.component('popup', {
     </div>
   </div>
   `,
-  mixins: [base]
+  mixins: [base],
 });
 
 <div id="app">
   <tooltip></tooltip>
   <popup></popup>
-</div>
+</div>;
 ```
 
 ## 插槽
 
-> 在html里插东西
+> 在 html 里插东西
 
 ```js
 Vue.component('panel', {
@@ -90,4 +90,3 @@ new Vue({
   </div>
 </template>
 ```
-

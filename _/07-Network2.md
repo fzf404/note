@@ -1,14 +1,14 @@
-<!-- 
+<!--
 title: 07-网络基础2
-sort: 
---> 
+sort:
+-->
 
 > 初探网络一脚
 
-- [ ] Nginx配置文件
-- [ ] TCP/IP协议
-- [ ] HTTP协议
-- [ ] wireshark查看各个网络层的数据
+- [ ] Nginx 配置文件
+- [ ] TCP/IP 协议
+- [ ] HTTP 协议
+- [ ] wireshark 查看各个网络层的数据
 - [ ] 网络命令
 
 ## Nginx
@@ -36,4 +36,3 @@ sort:
 ```bash
 wget -m url		# 站点镜像
 ```
-

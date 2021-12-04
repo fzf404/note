@@ -1,10 +1,11 @@
-<!-- 
+<!--
 title: WinTer
-sort: 
---> 
-# Windows Terminal入门
+sort:
+-->
 
-### 开启WSL2
+# Windows Terminal 入门
+
+### 开启 WSL2
 
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
@@ -21,8 +22,8 @@ wsl --set-default-version 2
 
 - 主题
 
-  > 添加到powershell{}里
-  
+  > 添加到 powershell{}里
+
   `"colorScheme": "One Half Dark"`
 
 ## 使用

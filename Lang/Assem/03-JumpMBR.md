@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 03-跳出MBR
-sort: 
---> 
+sort:
+-->
 
 > 效果图
 
@@ -40,9 +40,9 @@ start:
     call floppyLoad
     jmp OUTseg:0    ; 跳出MBR
 
-inMBR: 
+inMBR:
     ; 初始化数据段寄存器
-    mov ax, MBRseg 
+    mov ax, MBRseg
     mov ds, ax
     ; 为读数据到软盘做准备
     mov ax, OUTseg
@@ -53,7 +53,7 @@ inMBR:
     call newLine
     call newLine
     call showLoad
-    ret   
+    ret
 
 inMBRShow:
     mov si, msg_welcome
@@ -72,7 +72,7 @@ showLoad:
     call printStr
     call newLine
     ret
-    
+
 printStr:
     ; 将字符拷贝到al
     mov al, [si]
@@ -176,14 +176,14 @@ floppyLoad:
     mov byte [sector+11], 1
     inc byte [header+11]
     cmp byte [header+11],NumHeader+1
-    jne floppyLoad            
+    jne floppyLoad
     ; 下一个柱面
     mov byte [header+11],0
     inc byte [cylind+11]
     cmp byte [cylind+11],NumCylind+1
-    jne floppyLoad            
+    jne floppyLoad
 
-    ret 
+    ret
 
 ; 数字转ASCII 传入cl
 num2ascii:
@@ -252,7 +252,7 @@ retry:
     call newLine
     jmp exitRead
 
-ReadOK:    
+ReadOK:
     mov     si, fyOK
     call    printStr
     call    newLine
@@ -385,4 +385,3 @@ Hex2Bit2:
     ret
 
 ```
-

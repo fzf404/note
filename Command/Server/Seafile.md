@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Seafile
-sort: 
---> 
+sort:
+-->
 
 ```bash
 docker run -d --name seafile \
@@ -13,4 +13,3 @@ docker run -d --name seafile \
   -e SEAFILE_ADMIN_PW="xxx" \
   tinysnake/seafile
 ```
-

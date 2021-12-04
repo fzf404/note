@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: Git
-sort: 
---> 
-# Git教程
+sort:
+-->
+
+# Git 教程
 
 ## 问题
 
@@ -14,7 +15,7 @@ git config --global http.sslBackend "openssl"
 git config --global user.name "fzf404"
 git config --global user.email nmdfzf404@163.com
 
-# WARNING: UNPROTECTED PRIVATE KEY FILE! 
+# WARNING: UNPROTECTED PRIVATE KEY FILE!
 chmod 600 ~/.ssh/*
 
 # 加速
@@ -49,7 +50,7 @@ git reset --hard origin/master
 echo '🔥 主页v2.0' | git commit-tree c6b4418^{tree}
 > fb27a3e558d45bf7725dbe3dd6a204ff74454472
 git rebase --onto e4a0dc c6b4418		# Hash值前六位 目标Hash值
- 
+
 # 从所有提交中删除某个文件
 git filter-branch --index-filter 'git rm --cached --ignore-unmatch xxx.xx' -f
 ```
@@ -64,7 +65,7 @@ git push -u origin master		# push一下commit
 # git config --global credential.helper store
 
 # 更新ssh
-git remote rm origin	
+git remote rm origin
 git push --set-upstream origin master
 git remote add origin git@github.com:fzf404/Tech_Note.git
 ```
@@ -113,7 +114,7 @@ git commit -am "Clean old Commit"
 git push -f origin master
 
 # Github Gitee 同步更新
-git remote rm origin	
+git remote rm origin
 # 关联 github 与 gitee
 git remote add github git@github.com:
 git remote add gitee git@gitee.com:
@@ -150,4 +151,3 @@ git pull			# 拉取远端仓库的最新版本并合并
 > 以问号`?`通配单个字符；
 > 以方括号`[]`包含单个字符的匹配列表；
 > 以叹号`!`表示不忽略(跟踪)匹配到的文件或目录；
-

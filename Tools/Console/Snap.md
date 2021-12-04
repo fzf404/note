@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Snap
-sort: 
---> 
+sort:
+-->
 
 > 通用的软件包管理工具
 
@@ -16,4 +16,3 @@ snap list					# 已安装的snap
 
 snap logs docker	# docker日志
 ```
-

@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 01-Verilog入门
-sort: 
---> 
+sort:
+-->
 
 ## HelloWorld
 
@@ -42,4 +42,3 @@ assign out_hi = in[15:8];
 assign out_lo = in[7:0];
 
 ```
-

@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: Puppeteer
-sort: 
---> 
+sort:
+-->
 
-> 爬虫框架-基于Chrome
+> 爬虫框架-基于 Chrome
 >
 > [官方中文文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/)
 
@@ -18,13 +18,13 @@ yarn add puppeteer-core
 > HelloWorld
 
 ```js
-const puppeteer = require('puppeteer');
+const puppeteer = require("puppeteer");
 
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://example.com');
-  await page.screenshot({path: 'example.png'});
+  await page.goto("https://example.com");
+  await page.screenshot({ path: "example.png" });
   await browser.close();
 })();
 ```
@@ -32,16 +32,16 @@ const puppeteer = require('puppeteer');
 ### 更改配置
 
 ```js
-const puppeteer = require('puppeteer');
+const puppeteer = require("puppeteer");
 
 (async () => {
   // 显示浏览器窗体
-  const browser = await puppeteer.launch({headless: false});
+  const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   // 调整页面大小
-  await page.setViewport({width: 1920, height: 1080})
-  await page.goto('https://example.com');
-  await page.screenshot({path: 'example.png'});
+  await page.setViewport({ width: 1920, height: 1080 });
+  await page.goto("https://example.com");
+  await page.screenshot({ path: "example.png" });
 
   await browser.close();
 })();
@@ -58,44 +58,41 @@ const puppeteer = require('puppeteer');
 - `elementHandle.type('hello')`：在输入框输入文本
 
 ```js
-const puppeteer = require('puppeteer');
+const puppeteer = require("puppeteer");
 
 (async () => {
   // 创建新浏览器
   const browser = await puppeteer.launch({
     headless: false,
     defaultViewport: { width: 1280, height: 960 },
-    ignoreHTTPSErrors: false,     // 忽略https报错
+    ignoreHTTPSErrors: false, // 忽略https报错
     // args: ['--start-fullscreen']  // 全屏
   });
 
   const page = await browser.newPage();
-  await page.goto('https://www.baidu.com/');
+  await page.goto("https://www.baidu.com/");
 
-  const inputElement = await page.$('#kw');
+  const inputElement = await page.$("#kw");
   // type 输入文本
-  await inputElement.type('hello world', { delay: 20 });
-  
+  await inputElement.type("hello world", { delay: 20 });
+
   // 等待跳转
   await page.waitForNavigation();
   // 模拟按键
-  await page.keyboard.down('Enter');
+  await page.keyboard.down("Enter");
 
   // 点击进入
-  let searchElement = await page.$('#\\31 > h3 > a');
+  let searchElement = await page.$("#\\31 > h3 > a");
 
   // 等待页面跳转完成，一般点击某个按钮需要跳转时，都需要等待 page.waitForNavigation() 执行完毕才表示跳转成功
-  await Promise.all([
-    searchElement.click(),
-    page.waitForNavigation()
-  ])
+  await Promise.all([searchElement.click(), page.waitForNavigation()]);
 
   await page.close();
   await browser.close();
 })();
 ```
 
-### 植入JS
+### 植入 JS
 
 > 浏览器内部执行代码
 
@@ -107,33 +104,35 @@ const puppeteer = require('puppeteer');
 - `page.exposeFunction(name, puppeteerFunction)`：在 window 对象上注册一个函数，这个函数在 Node 环境中执行，有机会在浏览器环境中调用 Node.js 相关函数库
 
 ```js
-const puppeteer = require('puppeteer');
+const puppeteer = require("puppeteer");
 
 (async () => {
-    const browser = await puppeteer.launch({headless: false});
-    const page = await browser.newPage();
-    await page.goto('https://www.baidu.com/');
+  const browser = await puppeteer.launch({ headless: false });
+  const page = await browser.newPage();
+  await page.goto("https://www.baidu.com/");
 
-    // page.evaluate 在浏览器里执行代码
-    const resultData = await page.evaluate(async () =>  {
-      let data = {};
-      // 选择实时热榜
-      const ListEle = [...document.querySelectorAll('#hotsearch-content-wrapper > li')];
-      data = ListEle.map((ele) => {
-        // 从li中筛出信息
-        const url = ele.querySelector('a.c-link');
-        const title = ele.querySelector('.title-content-title');
-        return {
-          href: url.href,
-          title: title.innerText,
-        };
-      });
-      return data;
+  // page.evaluate 在浏览器里执行代码
+  const resultData = await page.evaluate(async () => {
+    let data = {};
+    // 选择实时热榜
+    const ListEle = [
+      ...document.querySelectorAll("#hotsearch-content-wrapper > li"),
+    ];
+    data = ListEle.map((ele) => {
+      // 从li中筛出信息
+      const url = ele.querySelector("a.c-link");
+      const title = ele.querySelector(".title-content-title");
+      return {
+        href: url.href,
+        title: title.innerText,
+      };
     });
+    return data;
+  });
 
-    console.log(resultData)
-    await page.close();
-    await browser.close();
+  console.log(resultData);
+  await page.close();
+  await browser.close();
 })();
 ```
 
@@ -156,9 +155,9 @@ const puppeteer = require('puppeteer');
 const page = await browser.newPage();
 
 // 拦截没有必要的请求
-const blockTypes = new Set(['image', 'media', 'font']);
+const blockTypes = new Set(["image", "media", "font"]);
 await page.setRequestInterception(true); //开启请求拦截
-page.on('request', request => {
+page.on("request", (request) => {
   const type = request.resourceType();
   const shouldBlock = blockTypes.has(type);
   if (shouldBlock) {
@@ -169,13 +168,13 @@ page.on('request', request => {
     return request.continue({
       // 可以对 url method postData headers 进行覆盖
       headers: Object.assign({}, request.headers(), {
-        'puppeteer-test': 'true'
-      })
+        "puppeteer-test": "true",
+      }),
     });
   }
 });
 
-await page.goto('https://www.baidu.com/');
+await page.goto("https://www.baidu.com/");
 ```
 
 ### 上传下载
@@ -183,30 +182,29 @@ await page.goto('https://www.baidu.com/');
 ```js
 // 通过 CDP 会话设置下载路径
 const cdp = await page.target().createCDPSession();
-await cdp.send('Page.setDownloadBehavior', {
-    behavior: 'allow', 	// 允许所有下载请求
-    downloadPath: 'D:'  // 设置下载路径
+await cdp.send("Page.setDownloadBehavior", {
+  behavior: "allow", // 允许所有下载请求
+  downloadPath: "D:", // 设置下载路径
 });
-await (await page.waitForSelector('#someButton')).click();
+await (await page.waitForSelector("#someButton")).click();
 
 // 使用node下载文件
 const http = require("http");
 const fs = require("fs");
-http.request(url, res => {
-  res.pipe(fs.createWriteStream(path.basename(url)))
-})
+http.request(url, (res) => {
+  res.pipe(fs.createWriteStream(path.basename(url)));
+});
 
 // 上传文件
-await inputElement.uploadFile('/path/to/file');
+await inputElement.uploadFile("/path/to/file");
 ```
 
 ### 模拟设备
 
 ```js
-const devices = puppeteer.devices['iPad Pro'];
+const devices = puppeteer.devices["iPad Pro"];
 await page.emulate(devices);
 
 // 获得支持设备json文件
-fs.writeFile('device.json',JSON.stringify(puppeteer.devices),err => {})
+fs.writeFile("device.json", JSON.stringify(puppeteer.devices), (err) => {});
 ```
-

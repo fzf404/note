@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 内网穿透
-sort: 
---> 
+sort:
+-->
 
 ## 自搭
 
@@ -30,9 +30,9 @@ dashboard_pwd = passwd
 
 ### 自启动
 
-> 为frps创建services
+> 为 frps 创建 services
 >
-> 项目中service文件已经写好,直接copy过去就可以
+> 项目中 service 文件已经写好,直接 copy 过去就可以
 
 ```bash
 # 进入frp的systemd目录
@@ -43,12 +43,12 @@ cp ./systemd/frps@.service /lib/systemd/system/
 
 # 把frps与配置文件拷贝到其应在的目录
 cp frps /usr/bin
-mkdir /etc/frp       
+mkdir /etc/frp
 cp frps.ini /etc/frp
 
 # 启动服务
 # 重载services
-systemctl daemon-reload 
+systemctl daemon-reload
 # 尝试运行
 systemctl start frps
 # 开机自启动
@@ -64,7 +64,7 @@ systemctl enable frps
 server_addr = ip
 server_port = 7000
 token = passwd_token
- 
+
 [localhost]
 # 写你要开放的端口
 type = tcp
@@ -90,10 +90,9 @@ cp frpc.ini /etc/frp
 
 # 启动服务
 # 重载services
-systemctl daemon-reload 
+systemctl daemon-reload
 # 尝试运行
 systemctl start frpc
 # 开机自启动
 systemctl enable frpc
 ```
-

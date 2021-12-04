@@ -1,6 +1,6 @@
-<!-- 
+<!--
 title: 21-ResNet网络
-sort: 
+sort:
 -->
 
 > 其内部的残差块使用了跳跃连接，缓解了在深度神经网络中增加深度带来的梯度消失问题。
@@ -110,7 +110,7 @@ class ResNet34(nn.Module):
       elif isinstance(m, nn.BatchNorm2d):
         nn.init.constant_(m.weight, 1)
         nn.init.constant_(m.bias, 0)
-        
+
 # 训练
 # 训练
 import torch
@@ -161,7 +161,7 @@ def fit(model, loader, train=True):
     loss = loss_func(label_pred, label.to(device, torch.long))
     running_loss += loss
     if train:
-      loss.backward() 
+      loss.backward()
       optimizer.step()
   running_loss = running_loss / (max_step)
   avg_acc = acc / ((max_step) * batch_size)
@@ -169,4 +169,3 @@ def fit(model, loader, train=True):
     scheduler.step()
   return running_loss, avg_acc
 ```
-

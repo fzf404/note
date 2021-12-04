@@ -1,13 +1,14 @@
-<!-- 
+<!--
 title: A2-FairMOT
-sort: 
---> 
+sort:
+-->
 
-> [Github地址](https://github.com/ifzhang/FairMOT)
+> [Github 地址](https://github.com/ifzhang/FairMOT)
 
 ## 环境
 
 ### colab
+
 ```python
 !git clone https://github.com/ifzhang/FairMOT.git
 !cd FairMOT
@@ -15,7 +16,7 @@ sort:
 !pip install -r requirements.txt
 
 !git clone https://github.com/CharlesShang/DCNv2
-!cd DCNv2 
+!cd DCNv2
 !./make.sh
 ```
 

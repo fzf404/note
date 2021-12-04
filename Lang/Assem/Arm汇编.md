@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Arm汇编
-sort: 
---> 
+sort:
+-->
 
 ## 环境
 
@@ -17,15 +17,15 @@ sort:
 var1: .word 3  /* 内存中的变量var1=3*/
 var2: .word 4  /* 内存中的变量var2=4*/
 
-.text          /* 代码段开始位置 */ 
+.text          /* 代码段开始位置 */
 .global _start
 
 _start:
     ldr r0, adr_var1  @ 通过标签adr_var1获得变量var1的地址，并加载到R0。
     ldr r1, adr_var2  @ 通过标签adr_var2获得变量var2的地址，并加载到R1。
     ldr r2, [r0]      @ 通过R0内的地址获取到该地址处的值（0x03)，加载到R2。
-    str r2, [r1]      @ 将R2内的值（0x03）存储到R1中的地址处。 
-    bkpt             
+    str r2, [r1]      @ 将R2内的值（0x03）存储到R1中的地址处。
+    bkpt
 
 adr_var1: .word var1  /* 变量var1的地址位置 */
 adr_var2: .word var2  /* 变量var2的地址位置 */
@@ -85,11 +85,11 @@ strsb = Store signed Byte
 
 ## 指令集
 
-### ARM和Thumb模式
+### ARM 和 Thumb 模式
 
-> ARM模式下指令集始终是32-bit
+> ARM 模式下指令集始终是 32-bit
 >
-> Thumb模式下可以是16-bit或者32-bit
+> Thumb 模式下可以是 16-bit 或者 32-bit
 
 ### 指令
 
@@ -110,7 +110,7 @@ Operand2     - 第二操作数. 立即数或者带有位移操作后缀（可选
   Rx, LSR n               - 寄存器x，逻辑右移n位 (1 = n = 32)。
   Rx, ROR n               - 寄存器x，循环右移n位 (1 = n = 31)。
   Rx, RRX                 - 寄存器x，扩展的循环位移，右移1位。
-  
+
 ADD   R0, R1,          	 - R0与R1的值相加，存储到R0。
 ADD   R0, R1, R2         - R1与R2的值相加，存储到R0。
 ADD   R0, R1, #2         - R1内的值加2，存储到R0。
@@ -182,11 +182,11 @@ ldmda r0, {r4-r6}	@ 将words[3]-[1]的值批量保存到r4-r6
 
 ### 立即数
 
-> arm32位指令
+> arm32 位指令
 >
-> 分配到立即数只有12位(4096位
+> 分配到立即数只有 12 位(4096 位
 
-1. 使用较小的值构造较大值`MOV r0, #256 `和`ADD r0, #255`
+1. 使用较小的值构造较大值`MOV r0, #256 `和`ADD r0, #255`
 
 2. 编译器处理: `LDR r1, = 511`
 
@@ -202,4 +202,3 @@ ldmia sp!, {r4, r5}
 push {r0, r1}
 pop {r4, r5}
 ```
-

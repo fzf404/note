@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 07-Vuex
-sort: 
---> 
+sort:
+-->
 
 ## Vuex
 
@@ -37,43 +37,43 @@ export default {
     product() {
       // 从store中获取state
       return this.$store.state.products[0];
-    }
-  }
-}
+    },
+  },
+};
 </script>
 ```
 
 ### 修改属性 (mutations)
 
-> 修改state的值
+> 修改 state 的值
 
 ```vue
 <script>
 export default {
-	mutations: {
-    ADD_TO_CART (state, payload) {
-      const { product } = payload
-      state.cart.push(product)
+  mutations: {
+    ADD_TO_CART(state, payload) {
+      const { product } = payload;
+      state.cart.push(product);
     },
-    REMOVE_FROM_CART (state, payload) {
-      const { productId } = payload
-      state.cart = state.cart.filter(product => product._id !== productId)
-    }
-  }
-}
+    REMOVE_FROM_CART(state, payload) {
+      const { productId } = payload;
+      state.cart = state.cart.filter((product) => product._id !== productId);
+    },
+  },
+};
 </script>
 
 // 触发
 <script>
 export default {
   methods: {
-    addToCart (product) {
-      this.$store.commit('ADD_TO_CART', {
-        product
-      })
-    }
-  }
-}
+    addToCart(product) {
+      this.$store.commit("ADD_TO_CART", {
+        product,
+      });
+    },
+  },
+};
 </script>
 ```
 
@@ -84,29 +84,28 @@ export default {
 ```vue
 // 定义
 <script>
-  actions: {
-    allProducts({ commit }) {
-      commit('ALL_PRODUCTS')
-  
-      axios.get(`${API_BASE}/products`).then(response => {
-        console.log('response', response);
-        commit('ALL_PRODUCTS_SUCCESS', {
-          products: response.data,
-        });
-      })
-    }
+actions: {
+  allProducts({ commit }) {
+    commit('ALL_PRODUCTS')
+
+    axios.get(`${API_BASE}/products`).then(response => {
+      console.log('response', response);
+      commit('ALL_PRODUCTS_SUCCESS', {
+        products: response.data,
+      });
+    })
   }
+}
 </script>
 
 // 触发
 <script>
-  // 生命周期
-  created () {
-    if (this.products.length === 0) {
-      // 触发父组件action
-      this.$store.dispatch('allProducts')
-    }
-  },
+// 生命周期
+created () {
+  if (this.products.length === 0) {
+    // 触发父组件action
+    this.$store.dispatch('allProducts')
+  }
+},
 </script>
 ```
-

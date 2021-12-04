@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: 01-PowerShell入门
-sort: 
---> 
-# PowerShell入门
+sort:
+-->
+
+# PowerShell 入门
 
 ## 特性
 
@@ -26,8 +27,6 @@ sort:
   > cp -> Copy-Item
   ```
 
-  
-
 ## 使用
 
 示例缩写：
@@ -46,7 +45,6 @@ sort:
   ```
   sal -name ll -value ls
   ```
-
 
 ### 存储对象
 

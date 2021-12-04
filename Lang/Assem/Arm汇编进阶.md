@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Arm汇编进阶
-sort: 
---> 
+sort:
+-->
 
 ## 条件状态和分支
 
@@ -17,7 +17,7 @@ main:
   bx      lr					@ 跳转到lr寄存器地址处，也就是子程序返回
 ```
 
-### IT指令
+### IT 指令
 
 IT：If-Then（下一条指令是条件的）；
 
@@ -41,7 +41,7 @@ _start:
     bx r3            @ 切换到Thumb模式
 
     .code 16         @ Thumb模式
-    cmp r0, #10      
+    cmp r0, #10
     ite eq           @ 如果R0等于10...
     addeq r1, #2     @ ... 那么 R1 = R1 + 2
     addne r1, #3     @ ... 否则 R1 = R1 + 3
@@ -60,11 +60,11 @@ main:
   blt     r1_lower   /* R2更大(N==1)，跳转到r1_lower */
   mov     r0, r1     /* 没有跳转，将R1的值存储到R0 */
   b       end        /* 结束 */
-  
+
  r1_lower:
   mov			r0, r2     /* R1小于R2时跳转, R2的值存储到R0 */
   b				end        /* 结束 */
-  
+
 end:
   bx lr              /* THE END */
 ```
@@ -85,13 +85,13 @@ end:
         bx lr              /* THE END */
 ```
 
-### B、BX、BLX指令
+### B、BX、BLX 指令
 
 > B：直接跳转至函数
 >
-> BL：将PC+4的值保存到LR寄存器，然后跳转。
+> BL：将 PC+4 的值保存到 LR 寄存器，然后跳转。
 >
-> BX、BLX用来切换ARM模式到Thumb模式。
+> BX、BLX 用来切换 ARM 模式到 Thumb 模式。
 
 ## 栈和函数
 
@@ -107,7 +107,7 @@ _start:
      mov   r0, #3  /* 覆盖R0的值 */
      pop   {r0}    /* 恢复R0的初始值 */
      bx    lr      /* 结束程序 */
-     
+
 as demo.s -o demo.o && ld demo.o -o demo && gdb -f demo
 
 gef> x/w $sp
@@ -130,4 +130,3 @@ bl     max          /* 调用函数max */
 sub    sp, r11, #0  /* 重新调整栈指针 */
 pop    {r11, pc}    /* 恢复栈帧指针, 通过加载之前保存的LR到PC，程序跳转到之前LR保存位置。函数的栈帧被销毁 */
 ```
-

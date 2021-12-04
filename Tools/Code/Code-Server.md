@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Code-Server
-sort: 
---> 
+sort:
+-->
 
 ## 安装
 
@@ -50,7 +50,7 @@ server {
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
                 proxy_pass http://127.0.0.1:8080/;
-                
+
                 proxy_set_header Host $host;
                 proxy_set_header Upgrade $http_upgrade;
                 proxy_set_header Connection upgrade;
@@ -76,7 +76,7 @@ docker create \
   -v /path/to/appdata/config:/config \
   --restart unless-stopped \
   linuxserver/code-server
-  
+
 0b4289087f1643420556707388953a58efb653815cb5e63e0a185c6aca175e3a
 
 docker start 0b428
@@ -88,6 +88,3 @@ docker start 0b428
 sudo apt-get update
 sudo apt-get gcc gdb
 ```
-
-
-

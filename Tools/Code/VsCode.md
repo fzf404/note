@@ -1,6 +1,6 @@
-<!-- 
+<!--
 title: VsCode
-sort: 
+sort:
 -->
 
 ## 基本
@@ -10,8 +10,7 @@ sort:
 
   > 搜索: `code.(.*).fzf`
   >
-  > 替换:  `code.$1.fzf`
-  >
+  > 替换: `code.$1.fzf`
 
 ## 配置
 
@@ -41,7 +40,7 @@ sort:
 
 - `get bad result from install script`
 
-> 原因是conda卸载后cmd AutoRun 指向空文件，CMD打不开
+> 原因是 conda 卸载后 cmd AutoRun 指向空文件，CMD 打不开
 >
 > 解决：
 >
@@ -55,7 +54,7 @@ sort:
 
 - 乱码
 
-> 进入setting.json，添加如下字段：
+> 进入 setting.json，添加如下字段：
 >
 > `"code-runner.runInTerminal": true`
 
@@ -69,6 +68,6 @@ sort:
 
 - Debugger for Microsoft Edge
 
-    > 配置`launch.json`
-    >
-    > 配合`five server`进行debug
+  > 配置`launch.json`
+  >
+  > 配合`five server`进行 debug

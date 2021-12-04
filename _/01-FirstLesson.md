@@ -1,27 +1,27 @@
-<!-- 
+<!--
 title: 01-第一节课
-sort: 
---> 
+sort:
+-->
 
-- [ ] linux软件包管理
-- [ ] vim基本操作
-- [ ] html基础
-- [ ] 何为github?
-- [ ] nginx搭建第一个网站
+- [ ] linux 软件包管理
+- [ ] vim 基本操作
+- [ ] html 基础
+- [ ] 何为 github?
+- [ ] nginx 搭建第一个网站
 
-## Linux基础
+## Linux 基础
 
-> Linux有众多发行版
+> Linux 有众多发行版
 >
-> 学长开的虚拟机是debian
+> 学长开的虚拟机是 debian
 
 ### 换源
 
-> Linux安装软件极为方便
+> Linux 安装软件极为方便
 >
 > 但默认源服务器在国外
 >
-> 访问速度达到了惊人的30kb/s
+> 访问速度达到了惊人的 30kb/s
 >
 > 所以要换到国内的镜像源
 
@@ -60,9 +60,9 @@ apt remove sl
 
 ## Vim
 
-> vim天下第一（逃
+> vim 天下第一（逃
 
-1. 分享vim使用心得
+1. 分享 vim 使用心得
 
    > 好用的插件
    >
@@ -77,9 +77,9 @@ apt remove sl
 3. 入门键位图
 
    ![img](https://www.runoob.com/wp-content/uploads/2015/10/vi-vim-cheat-sheet-sch1.gif)
-   
-   > 这里只放了我认为初学者需要掌握的4张
->
+
+   > 这里只放了我认为初学者需要掌握的 4 张
+   >
    > 更多参考: [VIm-Key](https://www.runoob.com/w3cnote/all-vim-cheatsheat.html)
 
    ![vi-vim-tutorial-1](http://www.runoob.com/wp-content/uploads/2015/10/vi-vim-tutorial-1.gif)
@@ -103,24 +103,22 @@ apt remove sl
 ```html
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-7" />
+    <title>HelloWorld</title>
+  </head>
 
-<head>
-	<meta charset="utf-7">
-	<title>HelloWorld</title>
-</head>
-
-<body>
-	<h1>Welcom to my website.</h1>
-	<p>I can answer all your question</p>
-	<a href="https://baidu.com">Click me!I will reply you.</a>
-</body>
-
+  <body>
+    <h1>Welcom to my website.</h1>
+    <p>I can answer all your question</p>
+    <a href="https://baidu.com">Click me!I will reply you.</a>
+  </body>
 </html>
 ```
 
 ## Github
 
-> 每一位程序员最先了解的应是github
+> 每一位程序员最先了解的应是 github
 
 ```bash
 apt install git
@@ -130,7 +128,7 @@ git clone https://gitee.com/zzburning/2048.git
 
 ## Nginx
 
-> 高性能的web代理服务器
+> 高性能的 web 代理服务器
 >
 > 新浪网易都在用
 
@@ -156,4 +154,3 @@ location /baidu {
     proxy_pass https://baidu.com/;		# 重定向
 }
 ```
-

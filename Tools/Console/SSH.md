@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: SSH
-sort: 
---> 
-# SSH入门
+sort:
+-->
+
+# SSH 入门
 
 ## 密钥验证
 
@@ -29,7 +30,7 @@ echo 'id_rsa.pub' >> authorized_keys
 # 写入文件
 ```
 
-## sshd配置
+## sshd 配置
 
 `vim /etc/ssh/sshd_config`
 

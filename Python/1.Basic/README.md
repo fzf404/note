@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: Python基础
-sort: 
---> 
+sort:
+-->
 
-## Python换源
+## Python 换源
 
 ```bash
 # 临时使用
@@ -14,11 +14,11 @@ https://pypi.mirrors.ustc.edu.cn/simple # 中科大
 https://mirrors.aliyun.com/pypi/simple	# 阿里
 ```
 
-## Pip使用
+## Pip 使用
+
 ```bash
 pip freeze > requirements.txt
 pip install -r requirements.txt
 # 忽略安装某个库
 pip install xxx --ignore-installed xxx
 ```
-

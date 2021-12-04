@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 03-React组件
-sort: 
---> 
+sort:
+-->
 
-## 组件与props
+## 组件与 props
 
 ```react
 <script type="text/babel">
@@ -15,7 +15,7 @@ sort:
         </div>
     }
 
-    ReactDOM.render( 
+    ReactDOM.render(
         <Hello name="fzf" age="19" />
         , document.getElementById('app'));
 </script>
@@ -100,4 +100,3 @@ ReactDOM.render(
     <Hello />
     , document.getElementById('app'));
 ```
-

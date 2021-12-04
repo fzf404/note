@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 07-Hooks
-sort: 
---> 
+sort:
+-->
 
 ## 入门
 
@@ -16,10 +16,10 @@ export default function App() {
   	const response = await fetch('...');
   // ...
 	}, [globalStats]);
- 
+
 ```
 
-## 路由Hooks
+## 路由 Hooks
 
 > 获得路由的参数
 
@@ -30,14 +30,14 @@ export default function Detail() {
 
   const params = useParams();
   const history = useHistory();
-  
+
   // history显式传参
   history.push('/api/somdata')
   // 路由配置
   <Route path="/api/:data" component={api}></Route>
   // 获得
   data = params.data
-  
+
   // history 隐藏传参
   history.push({
     pathname: '/api',
@@ -47,7 +47,7 @@ export default function Detail() {
   })
   // 获得参数
   const data = props.location.state.data
-  
+
   return <div>
     <p>{params.Data}</p>
     <Button onClick={ () => {
@@ -68,13 +68,12 @@ function Child(props,ref) {
       return 'somthing'
     }
   }))
-  
+
 export default forwardRef(Child);
-  
+
 // 父组件
 const childRef = useRef();
   const getCode = () => {
     childRef.current.getValue()
-  }  
+  }
 ```
-

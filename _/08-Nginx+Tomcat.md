@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 08-Nginx+Tomcat
-sort: 
---> 
+sort:
+-->
 
 > 配置文件列表
 >
@@ -11,7 +11,7 @@ sort:
 >
 > `/opt/lib/tomcat9/webapps/`
 
-## Nginx配置文件
+## Nginx 配置文件
 
 ```nginx
 # /etc/nginx/sites-enable/default

@@ -1,13 +1,13 @@
-<!-- 
+<!--
 title: 04-进入内核
-sort: 
---> 
+sort:
+-->
 
 > 分成两个文件：
 >
 > `Loader.asm`&`Kernal.asm`
 >
-> 这时不需要减去512字节的偏移地址
+> 这时不需要减去 512 字节的偏移地址
 
 ```bash
 # 连接两个文件
@@ -16,32 +16,32 @@ copy /b /Y 2-Loader.bin+3-Kernel.bin Boot.bin
 
 ## 颜色
 
-| 二进制数 | 颜色   | 例子       |
-| -------- | ------ | ---------- |
-| 0000     | 0-黑色 | black      |
-| 0001     | 1-蓝色 | blue       |
-| 0010     | 2-绿色 | green      |
-| 0011     | 3-青色 | cyan       |
-| 0100     | 4-红色 | red        |
-| 0101     | 5-紫红色 | magenta    |
-| 0110     | 6-棕色 | brown      |
-| 0111     | 7-银色 | light gray |
-| 1000     | 8-灰色   | gray          |
-| 1001     | 9-淡蓝色 | light blue    |
-| 1010     | A-淡绿色 | light green   |
-| 1000     | B-淡青色 | light cyan    |
-| 1100     | C-淡红色 | light red     |
+| 二进制数 | 颜色       | 例子          |
+| -------- | ---------- | ------------- |
+| 0000     | 0-黑色     | black         |
+| 0001     | 1-蓝色     | blue          |
+| 0010     | 2-绿色     | green         |
+| 0011     | 3-青色     | cyan          |
+| 0100     | 4-红色     | red           |
+| 0101     | 5-紫红色   | magenta       |
+| 0110     | 6-棕色     | brown         |
+| 0111     | 7-银色     | light gray    |
+| 1000     | 8-灰色     | gray          |
+| 1001     | 9-淡蓝色   | light blue    |
+| 1010     | A-淡绿色   | light green   |
+| 1000     | B-淡青色   | light cyan    |
+| 1100     | C-淡红色   | light red     |
 | 1101     | D-淡紫红色 | light magenta |
-| 1110     | E-黄色 | yellow        |
-| 1111     | F-白色 | white         |
+| 1110     | E-黄色     | yellow        |
+| 1111     | F-白色     | white         |
 
-## FAT文件
+## FAT 文件
 
-> Loader放在软盘的第1扇区
+> Loader 放在软盘的第 1 扇区
 >
-> 必须要严格遵守FAT格式BPB结构
+> 必须要严格遵守 FAT 格式 BPB 结构
 >
-> 再把Kernel以文件方式放到软盘里
+> 再把 Kernel 以文件方式放到软盘里
 
 - `Loader.asm`
 
@@ -71,7 +71,7 @@ RESB    18          ; 先腾出18字
 
 ## 制作镜像
 
-> 使用WinImage
+> 使用 WinImage
 
 ```
 ->Image -> Boot sector properties -> Open...
@@ -81,6 +81,3 @@ RESB    18          ; 先腾出18字
 Load Kernel.bin
 Save as boot.IMA
 ```
-
-
-

@@ -1,10 +1,9 @@
-<!-- 
+<!--
 title: 24-PyEcharts
-sort: 
---> 
+sort:
+-->
 
 ![img](https://user-images.githubusercontent.com/19553554/57307650-8a4d0280-7117-11e9-921f-69b8e9c5e4aa.png)
-
 
 ```python
 bar = Bar(init_opts=opts.InitOpts(theme=ThemeType.LIGHT)) # 主题
@@ -19,4 +18,3 @@ bar = Bar(init_opts=opts.InitOpts(theme=ThemeType.LIGHT)) # 主题
     datazoom_opts=opts.DataZoomOpts(type_="inside")
   )
 ```
-

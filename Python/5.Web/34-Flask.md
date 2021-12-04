@@ -1,12 +1,12 @@
-<!-- 
+<!--
 title: 34-Flask
-sort: 
+sort:
 -->
 
-# Flask入门
+# Flask 入门
 
 - [官方文档](https://dormousehole.readthedocs.io/en/latest/)
-- [SocketIO文档](https://flask-socketio.readthedocs.io/en/latest/getting_started.html)
+- [SocketIO 文档](https://flask-socketio.readthedocs.io/en/latest/getting_started.html)
 
 ## Flask
 
@@ -18,7 +18,7 @@ app = Flask(__name__)
 @server.route('/')
 def index():
     return '<h2>Flask Running...</h2>'
- 
+
 app.run('127.0.0.1',port=8080)
 ```
 
@@ -70,7 +70,7 @@ def test_disconnect():
 def handle_message(msg):
     chat_logger.info(msg)
     socketio.send(msg)
-    
+
 if __name__ == '__main__':
     socketio.run(app, '0.0.0.0', port='8080')
 ```
@@ -80,4 +80,3 @@ if __name__ == '__main__':
 ```python
 socketio = SocketIO(app, cors_allowed_origins="*")
 ```
-

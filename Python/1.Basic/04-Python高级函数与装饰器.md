@@ -1,7 +1,8 @@
-<!-- 
+<!--
 title: 04-Python高级函数与装饰器
-sort: 
---> 
+sort:
+-->
+
 ## 高阶函数
 
 - `f=abs`函数可以赋值给变量。
@@ -18,15 +19,15 @@ sort:
 
 - ```python
   from functools import reduce
-  
+
   l = [1, 4, 8, 20, 52]
-  
+
   def my_pow(i):
       return i**2
-  
+
   def my_add(x, y):
       return x+y
-  
+
   print(reduce(my_add, map(my_pow, l)))
   ```
 
@@ -39,7 +40,7 @@ sort:
   ```python
   def del_odd(i):
       return i % 2 == 0
-  
+
   l = [1, 2, 3, 4, 5, 6]
   print(list(filter(del_odd, l)))z
   ```
@@ -79,46 +80,46 @@ sort:
   def hi(name='fzf'):
       def admin():
           return "hello admin"
-  
+
       def guest():
           return "hello guset"
       if name == 'fzf':
           return admin
       else:
           return guest
-  
-  
+
+
   a = hi()
   print(a())
   ```
 
- - 装饰器
+- 装饰器
 
-   ```python
-   def hi(func, name='fzf'):		# 装饰函数
-       def admin():
-           print("hello admin")
-           func()
-           print("bye admin")
-   
-       def guest():
-           print("hello %s" % name)
-           func()
-           print("bye %s" % name)
-   
-       if name == 'fzf':
-           return admin
-       else:
-           return guest
-   
-   
-   def opera():
-       print("i want to kill you!")
-   
-   
-   a = hi(opera, name="pig")
-   a()
-   ```
+  ```python
+  def hi(func, name='fzf'):		# 装饰函数
+      def admin():
+          print("hello admin")
+          func()
+          print("bye admin")
+
+      def guest():
+          print("hello %s" % name)
+          func()
+          print("bye %s" % name)
+
+      if name == 'fzf':
+          return admin
+      else:
+          return guest
+
+
+  def opera():
+      print("i want to kill you!")
+
+
+  a = hi(opera, name="pig")
+  a()
+  ```
 
 - 使用`@`
 
@@ -128,21 +129,21 @@ sort:
           print("hello admin")
           func()
           print("bye admin")
-  
+
       def guest():
           print("hello %s" % name)
           func()
           print("bye %s" % name)
-  
+
       if name == 'fzf':
           return admin
       else:
           return guest
-  
+
   @hi
   def opera():
       print("i want to kill you!")
-  
+
   opera()
   ```
 
@@ -159,24 +160,24 @@ sort:
       ...
   ```
 
- - **最基础的闭包+装饰器：**
+- **最基础的闭包+装饰器：**
 
-  ```python
+```python
 from functools import wraps
 
 
 def decorator_name(f):
-    @wraps(f)
-    def decorated(*args, **kwargs):
-        if not can_run:
-            return "Function will not run"
-        return f(*args, **kwargs)	# 运行原函数
-    return decorated		# 返回修饰好的函数
+  @wraps(f)
+  def decorated(*args, **kwargs):
+      if not can_run:
+          return "Function will not run"
+      return f(*args, **kwargs)	# 运行原函数
+  return decorated		# 返回修饰好的函数
 
 
 @decorator_name
 def func():
-    return("Function is running")
+  return("Function is running")
 
 
 can_run = True
@@ -186,7 +187,7 @@ print(func())
 can_run = False
 print(func())
 # Output: Function will not run
-  ```
+```
 
 - 高阶带参数
 
@@ -197,26 +198,25 @@ print(func())
               print("hello admin")
               func()
               print("bye admin")
-  
+
           def guest():
               print("hello %s" % name)
               func()
               print("bye %s" % name)
-  
+
           if name == 'fzf':
               return admin
           else:
               return guest
      return hi
-  
-  
+
+
   @log('pig')
   def opera():
       print("i want to kill you!")
-  
+
   opera()
   ```
-
 
 ## 匿名函数
 
@@ -245,21 +245,21 @@ print(func())
   		print('call %s():' % func.__name__)
   		return func(*args, **kw)
   	return wrapper
-  
+
   @log						# 相当于：now = log(now(*))
   def now(s):
   	print(s + '2020-3-10')
-      
+
   now('现在时间：')
-   
-  >>> 
+
+  >>>
   call now()
   现在时间：2020-3-10
   ```
-  
-- 只是将now函数名指向新的函数。
 
-- 假如decorator本身需要传入参数，需要编写返回d的高阶函数：
+- 只是将 now 函数名指向新的函数。
+
+- 假如 decorator 本身需要传入参数，需要编写返回 d 的高阶函数：
 
 - ```python
   def log(text):		# 多加一层
@@ -269,11 +269,11 @@ print(func())
               return func(*args, **kw)
           return wrapper
       return decorator
-      
+
   @log('execute')				# 相当于：now = log('execute')(now)
   def now():
       print('2015-3-25')
-  
+
   >>> now()
   execute now():
   2015-3-25
@@ -283,10 +283,10 @@ print(func())
 
 - ```python
   import functools
-  
+
   def log(text):
       def decorator(func):
-          @functools.wraps(func)		
+          @functools.wraps(func)
           def wrapper(*args, **kw):
               print('%s %s():' % (text, func.__name__))
               return func(*args, **kw)

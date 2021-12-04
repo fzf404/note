@@ -1,7 +1,8 @@
-<!-- 
+<!--
 title: RDoc
-sort: 
---> 
+sort:
+-->
+
 # RDoc
 
 > [react-doc](https://react-doc.github.io/)
@@ -15,4 +16,3 @@ npm install    # 安装依赖，这里依赖了 rdoc 版本，避免 rdoc 升级
 npm start      # 启动服务
 npm run build	# 生成静态文件
 ```
-

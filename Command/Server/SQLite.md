@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: SQLite
-sort: 
---> 
+sort:
+-->
 
 ```sqlite
 # 创建数据库
@@ -41,4 +41,3 @@ $ sqlite3 testDB.db < testDB.sql	# 恢复
 
 .exit	# 退出
 ```
-

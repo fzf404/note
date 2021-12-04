@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 35-Scrapy入门
-sort: 
---> 
+sort:
+-->
 
 > 集成爬虫框架
 
@@ -49,7 +49,7 @@ import scrapy
 
 class WebSpider(scrapy.Spider):
     # 唯一的名字
-    name = "test"	
+    name = "test"
     # 返回一个可迭代的请求
     def start_requests(self):
         urls = [

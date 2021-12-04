@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 10-Unity入门
-sort: 
---> 
+sort:
+-->
 
 ### 脚本编程
 
@@ -71,4 +71,3 @@ Application.targetFrameRate = 60;
 otherObj.transform.Translate(x,y,z);
 
 ```
-

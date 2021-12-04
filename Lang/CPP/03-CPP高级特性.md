@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 03-CPP高级特性
-sort: 
---> 
+sort:
+-->
 
 ## 列表初始化
 
@@ -27,4 +27,3 @@ template <typename T> T add(T a, T b) { return a + b; }
 ## STL
 
 > 标准模板库
-

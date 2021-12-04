@@ -1,15 +1,15 @@
-<!-- 
+<!--
 title: 05-OpenCV
-sort: 
---> 
+sort:
+-->
 
-# OpenCV配置
+# OpenCV 配置
 
 > 开源图像处理库
 
 ### HelloWorld
 
-> show一张图片并转成png
+> show 一张图片并转成 png
 
 ```cpp
 #include <opencv2/core.hpp>
@@ -44,4 +44,3 @@ int main(int argc, char const *argv[])
     return 0;
 }
 ```
-

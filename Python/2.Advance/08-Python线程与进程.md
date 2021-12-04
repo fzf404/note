@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: 08-Python进程
-sort: 
---> 
-# Python进程与线程
+sort:
+-->
+
+# Python 进程与线程
 
 > 一个任务就是一个进程。
 >
@@ -153,13 +154,13 @@ t2.join()
 
 > 可以理解为全局变量`local_school`是一个`dict`，不但可以用`local_school.student`，还可以绑定其他变量，如`local_school.teacher`等等。
 
-> `ThreadLocal`最常用的地方就是为每个线程绑定一个数据库连接，HTTP请求，用户身份信息等，这样一个线程的所有调用到的处理函数都可以非常方便地访问这些资源。
+> `ThreadLocal`最常用的地方就是为每个线程绑定一个数据库连接，HTTP 请求，用户身份信息等，这样一个线程的所有调用到的处理函数都可以非常方便地访问这些资源。
 
 ## 进程与线程
 
 - 进程稳定，线程快（a little)
-- 计算密集型用c，IO密集型用py。
-- 使用异步IO单进程单线程执行多任务。
+- 计算密集型用 c，IO 密集型用 py。
+- 使用异步 IO 单进程单线程执行多任务。
 
 ## 分布式进程
 
@@ -270,7 +271,7 @@ if __name__ == '__main__':
 
 - `fork()`
 
-操作系统自动复制当前进程，子进程返回0，父进程返回子进程的ID。
+操作系统自动复制当前进程，子进程返回 0，父进程返回子进程的 ID。
 
 ```python
 import os
@@ -284,8 +285,8 @@ else:
     print('I (%s) just created a child process (%s).' % (os.getpid(), pid))
 ```
 
-
 - multiprocessing（翻译：多种进程）
+
 ```python
 from multiprocessing import Process	# windows使用多线程
 import os
@@ -294,7 +295,7 @@ import os
 def run_proc(name):
     print('Run child process %s (%s)...' % (name, os.getpid())
     # os.getppid()	获取父进程id
-    
+
 if __name__=='__main__':
     print('Parent process %s.' % os.getpid())
     p = Process(target=run_proc, args=('test',))
@@ -316,7 +317,9 @@ Run child process test (19276)...
 Child process end.
 '''
 ```
+
 - Pool（进程池）
+
 ```python
 from multiprocessing import Pool
 import os, time, random
@@ -342,7 +345,7 @@ if __name__=='__main__':
 
 ## 子进程
 
-- 在python中运行命令
+- 在 python 中运行命令
 
 ```python
 import subprocess
@@ -361,8 +364,8 @@ from multiprocessing import Process, Queue
 import os
 import time
 import random
-  
-  
+
+
 def make(q):
     print('My PID is %s and I am random a nember,Do you know it?' % os.getpid())
     q.put(random.randint(1, 100))

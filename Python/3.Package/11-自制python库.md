@@ -1,12 +1,13 @@
-<!-- 
+<!--
 title: 11-自制python库
-sort: 
---> 
-# 自己动手做一个python库
+sort:
+-->
 
-> 新建一个简单的python库，并打包发送至test.pypi，使用户可通过pypi安装~
+# 自己动手做一个 python 库
+
+> 新建一个简单的 python 库，并打包发送至 test.pypi，使用户可通过 pypi 安装~
 >
-> 建议先建一个虚拟python环境
+> 建议先建一个虚拟 python 环境
 
 ## HelloWorld
 
@@ -80,11 +81,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-> 别忘了在readme里写一点东西呀~
+> 别忘了在 readme 里写一点东西呀~
 
 ## 发布
 
-> 当然啦，这个项目是不可能发布至pypi的，但pypi提供了test.pypi，我们可以发布至那里~
+> 当然啦，这个项目是不可能发布至 pypi 的，但 pypi 提供了 test.pypi，我们可以发布至那里~
 
 ### 打包
 
@@ -98,15 +99,15 @@ python setup.py sdist bdist_wheel
 
 ### 发布
 
-> 首先需要创建一个pypi账号
+> 首先需要创建一个 pypi 账号
 >
 > [传送门](https://pypi.org/account/register/)
 >
-> 然后生成一个api令牌
+> 然后生成一个 api 令牌
 >
 > [传送门](https://test.pypi.org/manage/account/token/)
 >
->  创建成功后记住下面提供的账号和密码
+> 创建成功后记住下面提供的账号和密码
 >
 > 就可以发布啦~
 
@@ -130,14 +131,12 @@ https://test.pypi.org/project/fzf-first-pkg/0.0.1/
 >
 > 回到控制台安装一下~
 >
-> 接着打开python终端
+> 接着打开 python 终端
 >
 > `import fzf_first_pkg`
 >
 > <p >
 >     <img src="https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200715100551.png"align="left"/>
 > <p/>
->
-> 
 
 **运行成功啦~**

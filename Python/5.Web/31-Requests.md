@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: 31-Requests
-sort: 
---> 
-# Requests库入门
+sort:
+-->
+
+# Requests 库入门
 
 ## 发送请求
 
@@ -15,8 +16,8 @@ sort:
 
 2. `Post`请求
 
-   这是requests中最重要的对象
-   
+   这是 requests 中最重要的对象
+
    ```python
    payload = {'key1': 'value1', 'key2': 'value2'}
    # x-www-form-urlencoded格式
@@ -27,7 +28,7 @@ sort:
    payload = {'key1': 'value1', 'file': open('xx.jpg','rb')}
    r = requests.post("http://httpbin.org/post", file=payload)
    ```
-   
+
 3. 获得内容
 
    ```python
@@ -42,7 +43,7 @@ sort:
    # 将原始数据保存到文件
    for i in r.iter_content():  # 迭代的content
        f.write(i)
-   
+
    ```
 
 4. 请求头
@@ -54,8 +55,8 @@ sort:
    r = requests.head(url)
    print(r.headers)
    ```
-   
-6. 重定向
+
+5. 重定向
 
    > Requests 会自动处理所有重定向。
 
@@ -64,12 +65,11 @@ sort:
    r = requests.get(url, allow_redirects=False)	# 拒绝重定向
    ```
 
-
 ## Session
 
 > 能够跨请求保持某些参数，在同一个 Session 实例发出的所有请求之间保持 cookie。
 
-1. 保持cookie
+1. 保持 cookie
 
    ```python
    s = requests.session()
@@ -79,8 +79,8 @@ sort:
    <RequestsCookieJar[<Cookie BDORZ=27[3]15 for .baidu.com/>]>
    '''
    ```
-   
-2. 传入传出cookies
+
+2. 传入传出 cookies
 
    ```python
    s = requests.Session()
@@ -98,7 +98,7 @@ sort:
    s = requests.Session()
    s.auth = ('user', 'pass')
    s.headers.update({'x-test': 'true'})
-   
+
    # b'x-test' and 'x-test2' 都被发送
    r = s.get('http://httpbin.org/headers', headers={'x-test2': 'true'})
    print(r.text)
@@ -109,19 +109,19 @@ sort:
        "Authorization": "Basic dXNlcjpwYXNz",
        "Host": "httpbin.org",
        "User-Agent": "python-requests/2.23.0",
-       "X-Amzn-Trace-Id": "Root=1-5ed8e20e-bca4639c82a80f6e0fd6308e",        
+       "X-Amzn-Trace-Id": "Root=1-5ed8e20e-bca4639c82a80f6e0fd6308e",
        "X-Test": "true",
        "X-Test2": "true"
      }
    }'''
    # 方法级别的参数不会被保留
-   
+
    s = requests.Session()
-   
+
    r = s.get('http://httpbin.org/cookies', cookies={'from-my': 'browser'})
    print(r.text)
    # '{"cookies": {"from-my": "browser"}}'
-   
+
    r = s.get('http://httpbin.org/cookies')
    print(r.text)
    # '{"cookies": {}}'
@@ -208,7 +208,7 @@ requests.get(url, proxies = {'http':'http://user:pass@127.0.0.1:8888/'})
 # 安装requests[socks]可使用sock代理
 ```
 
-## HTTP动词
+## HTTP 动词
 
 ```python
 >>> r = requests.get('https://api.github.com/requests/kennethreitz/requests/issues/482')
@@ -232,7 +232,7 @@ Feature any http verb in docs
 Probably in the "advanced" section
 ```
 
-PATCH一个issue
+PATCH 一个 issue
 
 ```python
 >>> from requests.auth import HTTPBasicAuth

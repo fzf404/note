@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: Adobe_AI
-sort: 
---> 
-# illustrator快捷键
+sort:
+-->
+
+# illustrator 快捷键
 
 ### 绘制基础
 
@@ -94,4 +95,3 @@ sort:
 | K            | 实时上色 |
 | Shift+F5     | 图像样式 |
 | Shift+F6     | 外观面板 |
-

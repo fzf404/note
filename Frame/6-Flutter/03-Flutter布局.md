@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 02-Flutter布局
-sort: 
---> 
+sort:
+-->
 
-## 水平布局Row
+## 水平布局 Row
 
 > 顺带介绍三种按钮
 
@@ -104,7 +104,7 @@ class MyApp extends StatelessWidget {
 
 ```
 
-## 垂直布局Colume
+## 垂直布局 Colume
 
 ```dart
 import 'package:flutter/material.dart';
@@ -142,7 +142,7 @@ class MyApp extends StatelessWidget {
 
 ```
 
-## 层叠布局Stack
+## 层叠布局 Stack
 
 ```dart
 import 'package:flutter/material.dart';
@@ -251,4 +251,3 @@ class MyApp extends StatelessWidget {
 }
 
 ```
-

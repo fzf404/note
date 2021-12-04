@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 16-LSTM
-sort: 
---> 
+sort:
+-->
 
 > 学习长的依赖关系
 
@@ -15,4 +15,3 @@ h0 = torch.randn(2, 3, 20)
 c0 = torch.randn(2, 3, 20)
 output, (hn, cn) = rnn(input, (h0, c0))
 ```
-

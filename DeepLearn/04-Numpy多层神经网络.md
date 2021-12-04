@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 04-Numpy多层神经网络
-sort: 
---> 
+sort:
+-->
 
 ```python
 # -*- coding: utf-8 -*-
@@ -420,4 +420,3 @@ np.save('parameters.npy', parameters)
 # parameters = np.load('complete_train.npy').item()
 
 ```
-

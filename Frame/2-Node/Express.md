@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 41-Express入门
-sort: 
---> 
+sort:
+-->
 
 - 准备
 
@@ -18,14 +18,14 @@ npm i hbs
 ## HelloWorld
 
 ```js
-const express = require('express');
+const express = require("express");
 
-const hostname = 'localhost';
+const hostname = "localhost";
 const port = 3000;
 
 const app = express();
-app.get('/', (req, res) => {
-  res.send('Hello World');
+app.get("/", (req, res) => {
+  res.send("Hello World");
 });
 
 app.listen(port, () => {
@@ -44,30 +44,30 @@ app.listen(port, () => {
 
 ```js
 // 发送内容
-res.send('HTML String');
+res.send("HTML String");
 
 // 发送文件
-res.sendFile('file.zip');
+res.sendFile("file.zip");
 
 // 渲染模板并发送
-res.render('index');
+res.render("index");
 
 // 设置状态码为 404，并返回字符串
-res.status(404).send('Page Not Found');
+res.status(404).send("Page Not Found");
 ```
 
 ## 功能
 
 ```js
 // 路由
-app.get('/', handle, () => {})
+app.get("/", handle, () => {});
 // 中间件
 function someMiddleware(req, res, next) {}
-app.use(someMiddleware);	// 全局使用
-app.get('/',someMiddleware, () => {})	// 单独使用
+app.use(someMiddleware); // 全局使用
+app.get("/", someMiddleware, () => {}); // 单独使用
 
 // 静态文件中间件
-app.use(express.static('public'));
+app.use(express.static("public"));
 ```
 
 ## mongodb
@@ -77,14 +77,14 @@ app.use(express.static('public'));
 - 连接数据库
 
 ```js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 mongoose.connect(`mongodb://39.106.106.202:27017/test`);
 ```
 
 - Schema
 
 ```js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const model = mongoose.model.bind(mongoose);
 const ObjectId = mongoose.Schema.Types.ObjectId;
@@ -97,14 +97,14 @@ const productSchema = Schema({
   description: String,
 });
 
-const Product = model('Product', productSchema);
+const Product = model("Product", productSchema);
 module.exports = { Product, Manufacturer };
 ```
 
 - 使用官方库
 
 ```js
-const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require("mongodb").MongoClient;
 
 const uri = "mongodb://user:password@ip";
 
@@ -112,27 +112,29 @@ async function someFunc() {
   const client = new MongoClient(uri);
   await client.connect();
   const cmd = client.db("testm").collection("users");
-  let data = await cmd.find({}, { projection: { '_id': 0 } }).toArray();
+  let data = await cmd.find({}, { projection: { _id: 0 } }).toArray();
 
   client.close();
-  return data
+  return data;
 }
 ```
 
 ## 允许跨域
 
 ```js
-app.all('/*', function(req, res, next) {
+app.all("/*", function (req, res, next) {
   // CORS headers
   res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
   // Set custom headers for CORS
-  res.header('Access-Control-Allow-Headers', 'Content-type,Accept,X-Access-Token,X-Key');
-  if (req.method == 'OPTIONS') {
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Content-type,Accept,X-Access-Token,X-Key"
+  );
+  if (req.method == "OPTIONS") {
     res.status(200).end();
   } else {
     next();
   }
 });
 ```
-

@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 02-Android基础
-sort: 
---> 
+sort:
+-->
 
-# Android基础
+# Android 基础
 
 ## 四大组件
 
@@ -13,7 +13,7 @@ sort:
 
 - 服务(Service)
 
-  > 后台提供服务，无界面，与Activity同级
+  > 后台提供服务，无界面，与 Activity 同级
 
 - 广播接收器(BroadcastReceiver)
 
@@ -39,7 +39,7 @@ sort:
 
 ### 声明布局
 
-> 在XML中声明界面元素
+> 在 XML 中声明界面元素
 >
 > 每个布局文件只能包含一个根元素，必须是视图对象或`ViewGroup`
 
@@ -63,7 +63,8 @@ sort:
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
-> XML文件将会编译成`View`资源，
+
+> XML 文件将会编译成`View`资源，
 >
 > 在`MainActivity.onCreate()`回调内，
 >
@@ -99,9 +100,9 @@ public class MainActivity extends AppCompatActivity {
 	android:textSize="24sp" />
 ```
 
-> `@id`：对View对象进行唯一标识
+> `@id`：对 View 对象进行唯一标识
 >
-> `@+id`在R.java文件新增id名称，`@id`直接引用已存在的id资源
+> `@+id`在 R.java 文件新增 id 名称，`@id`直接引用已存在的 id 资源
 >
 > 在`MainActivity.java`调用：
 >

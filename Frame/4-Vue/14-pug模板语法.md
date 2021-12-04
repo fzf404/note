@@ -1,15 +1,11 @@
-<!-- 
+<!--
 title: 14-pug模板语法
-sort: 
---> 
+sort:
+-->
 
 ```js
-div.header(style="background: #eee")
-  h1
-    | Title
-  span
-    | subTitle
-  p
-    | somthing
+div.header((style = "background: #eee"));
+h1 | Title;
+span | subTitle;
+p | somthing;
 ```
-

@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 01-CSharp入门
-sort: 
---> 
+sort:
+-->
 
-# CSharp入门
+# CSharp 入门
 
 ## 安装
 
@@ -11,9 +11,9 @@ sort:
 >
 > 验证安装：`dotnet`
 >
-> `.NET Core` 是CLR(Common Language Runtime)与FCL(Framework Class Library)
+> `.NET Core` 是 CLR(Common Language Runtime)与 FCL(Framework Class Library)
 
-## 第一个C#程序
+## 第一个 C#程序
 
 ```powershell
 # 生成第一个程序
@@ -54,7 +54,7 @@ dotnet .\bin\Debug\netcoreapp3.1\FirstCSharp.dll	# 运行生成的dll
 
 ## 基础语法
 
-> 基础语法大多与c++相同
+> 基础语法大多与 c++相同
 >
 > 所有值都是类型的实例
 
@@ -119,7 +119,7 @@ namespace FirstCSharp	// 声明类的命名空间
             // 英里2英尺
             UnitConvert mileToFeetConv = new UnitConvert(5280);
             // 报错。因为ratio默认为private，声明为publi才可以访问。
-            // Console.WriteLine(feetToInchConv.ratio); 
+            // Console.WriteLine(feetToInchConv.ratio);
             // 调动类的实例方法
             Console.WriteLine(feetToInchConv.Conver(mileToFeetConv.Conver(3)));
         }
@@ -144,6 +144,3 @@ namespace FirstCSharp	// 声明类的命名空间
     }
 }
 ```
-
-
-

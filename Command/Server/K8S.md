@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: K8S
-sort: 
---> 
+sort:
+-->
 
 > Docker[安装文档](https://docs.docker.com/engine/install/)
 >
@@ -17,27 +17,27 @@ sort:
 
 - Pod
 
-  > 调度最小单位为Pod。
+  > 调度最小单位为 Pod。
   >
-  > 根容器为Pause，所有业务都共享此根Pod的**IP和Volume**。
+  > 根容器为 Pause，所有业务都共享此根 Pod 的**IP 和 Volume**。
 
 - Service
 
-  > Service用于将Pod代理出去，
+  > Service 用于将 Pod 代理出去，
   >
-  > K8S会为其分配一个集群内唯一的IP，叫做**ClusterIP**，
+  > K8S 会为其分配一个集群内唯一的 IP，叫做**ClusterIP**，
   >
-  > 由kube-proxy进程将对Service的请求转发到具体的Pod上
+  > 由 kube-proxy 进程将对 Service 的请求转发到具体的 Pod 上
 
 - Label
 
-  > 可以打在Pod与Service上的标签
+  > 可以打在 Pod 与 Service 上的标签
   >
-  > Service可以通过Label Selector，找到打了同一Label的Pod副本集。
+  > Service 可以通过 Label Selector，找到打了同一 Label 的 Pod 副本集。
 
 - Replica Set
 
-  > 定期的检测当前存活的Pod数量，保持设定副本数量，
+  > 定期的检测当前存活的 Pod 数量，保持设定副本数量，
 
 ## 搭建
 
@@ -106,7 +106,7 @@ kubeadm reset
 
 ### 问题
 
-1. docker增加用户权限
+1. docker 增加用户权限
 
    ```bash
    # 将 docker 的权限移交给非 root 用户
@@ -118,11 +118,10 @@ kubeadm reset
 
    ```bash
    vim /etc/docker/daemon.json
-   
+
    {
     "exec-opts":["native.cgroupdriver=systemd"]
    }
-   
+
    systemctl restart docker
    ```
-

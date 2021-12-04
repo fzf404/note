@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Vpn
-sort: 
---> 
+sort:
+-->
 
 ## IPSEC
 
@@ -43,4 +43,3 @@ docker run \
   -d --privileged \
   mobtitude/vpn-pptp
 ```
-

@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Appium
-sort: 
---> 
+sort:
+-->
 
 > 安卓自动化测试
 
@@ -23,27 +23,27 @@ sort:
 
 ```json
 {
-  "platformName": "Android",  
-  "platformVersion": "10",  
-  "deviceName": "mi",  
-  "appPackage": "tv.danmaku.bili",  
-  "appActivity": ".ui.splash.SplashActivity",  
-  "unicodeKeyboard": true,  
-  "resetKeyboard": true,  
-  "noReset": true,  
+  "platformName": "Android",
+  "platformVersion": "10",
+  "deviceName": "mi",
+  "appPackage": "tv.danmaku.bili",
+  "appActivity": ".ui.splash.SplashActivity",
+  "unicodeKeyboard": true,
+  "resetKeyboard": true,
+  "noReset": true,
   "newCommandTimeout": 6000,
   "automationName": "UiAutomator2"
 }
 ```
 
-> `expand_search`: 搜索框ID
+> `expand_search`: 搜索框 ID
 
 ```python
 from appium import webdriver
 # 初始化参数
 desired_caps = {
-    'platformName': 'Android', 
-    'platformVersion': '10', 
+    'platformName': 'Android',
+    'platformVersion': '10',
     'deviceName': 'mi',  # 设备名
     'appPackage': 'tv.danmaku.bili',  # 启动Package
     'appActivity': '.ui.splash.SplashActivity',  # 启动Activity
@@ -67,4 +67,3 @@ driver.find_element_by_id("play_button").click()
 # 退出
 # driver.quit()
 ```
-

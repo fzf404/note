@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 42-文件操作
-sort: 
---> 
+sort:
+-->
 
 ## 文件列表
 
@@ -43,4 +43,3 @@ fs.writeFile(jsonPath, JSON.stringify(filesList, '', '\t'), err => err);
 console.log('成功')));
 
 ```
-

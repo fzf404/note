@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: Nginx
-sort: 
+sort:
 -->
 
-# Nginx入门
+# Nginx 入门
 
 > [OpenResty](http://openresty.org/cn/)
 
@@ -11,7 +11,7 @@ sort:
 
 ```yml
 # docker-compose
-version: '3.1'
+version: "3.1"
 services:
   nginx:
     restart: always
@@ -19,7 +19,7 @@ services:
     container_name: nginx
     ports:
       - 80:80
-    volumes: 
+    volumes:
       - /opt/docker_nginx/conf.d:/etc/nginx/conf.d
       - /usr/share/nginx/html
 ```
@@ -107,7 +107,7 @@ location /app {
 server {
   listen 80;
   root /www/website/x;
-  
+
   autoindex on;
   autoindex_exact_size off;
   autoindex_localtime on;
@@ -115,7 +115,7 @@ server {
 }
 
 
-    
+
 # clone本项目到服务器
 cd /opt
 git clone https://github.com/QinLiStudio/download.git download-theme
@@ -131,7 +131,7 @@ docker run -d \
   fraoustin/fancyindex
 ```
 
-### 强制https
+### 强制 https
 
 ```nginx
 server {

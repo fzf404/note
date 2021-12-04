@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: Docker
-sort: 
---> 
+sort:
+-->
 
-# Docker入门
+# Docker 入门
 
 ## 安装
 
@@ -45,7 +45,7 @@ sudo groupadd docker
 # 权限移交给非 root 用户
 sudo usermod -aG docker $USER
 # 激活更改
-newgrp docker 	
+newgrp docker
 
 # snap docker 配置文件
 sudo vim /var/snap/docker/xxxx/config/daemon.json
@@ -98,7 +98,7 @@ docker run -it <name/id>
 
 # 正在运行的容器
 docker ps [-qa]
-# -q 仅查看id 
+# -q 仅查看id
 # -a 全部容器，包括没有运行的
 
 # 查看日志
@@ -157,7 +157,7 @@ ENV GO111MODULE=on \
 # 将此目录作为工作目录
 WORKDIR /opt/opus-go
 # 复制go文件
-COPY . /opt/opus-go 
+COPY . /opt/opus-go
 # 跑起来
 RUN go build .
 # 开放端口
@@ -191,7 +191,6 @@ docker-compose ps
 ```yml
 version: "3.1"
 services:
-
   db:
     image: mariadb
     container_name: mysql
@@ -204,28 +203,28 @@ services:
     image: fzf404/opus-go
     container_name: opus-go
     ports:
-    - 8080
+      - 8080
     depends_on:
-    - db
+      - db
     links:
-    - db
+      - db
     volumes:
-    - /opt/images:/opt/images
-    - /opt/opus-go/config/config.toml:/opt/opus-go/config/config.toml
+      - /opt/images:/opt/images
+      - /opt/opus-go/config/config.toml:/opt/opus-go/config/config.toml
 
   web:
     image: nginx
     restart: always
     ports:
-    - 80:80
+      - 80:80
     depends_on:
-    - go
+      - go
     links:
-    - go
+      - go
     volumes:
-    - /opt/opus-web:/opt/opus-web
-    - /opt/nginx/nginx.conf:/etc/nginx/nginx.conf
-    - /opt/images:/opt/images
+      - /opt/opus-web:/opt/opus-web
+      - /opt/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /opt/images:/opt/images
 ```
 
 > `nginx.conf`
@@ -280,4 +279,3 @@ sudo docker run --detach \
   --volume /srv/gitlab/data:/var/opt/gitlab \
   gitlab/gitlab-ce:latest
 ```
-

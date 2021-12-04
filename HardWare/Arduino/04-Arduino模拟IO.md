@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: 04-Arduino模拟IO
-sort: 
---> 
-# Arduino模拟IO
+sort:
+-->
+
+# Arduino 模拟 IO
 
 > 编号带有`A`的引脚是模拟输入引脚.
 >
@@ -10,7 +11,7 @@ sort:
 >
 > `analogRead(pin)`：读取引脚上的模拟值
 >
-> `analogWrite(pin, value)`：输出PWM
+> `analogWrite(pin, value)`：输出 PWM
 
 ## 串口监视器
 
@@ -18,6 +19,3 @@ sort:
 Serial.begin(9600);
 Serial.println();
 ```
-
-  
-

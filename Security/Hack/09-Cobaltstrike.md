@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 09-Cobaltstrike
-sort: 
---> 
+sort:
+-->
 
 ```bash
 # 服务器运行
@@ -10,4 +10,3 @@ sort:
 # 设置延时时间
 sleep 1
 ```
-

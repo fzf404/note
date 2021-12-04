@@ -1,11 +1,11 @@
-<!-- 
+<!--
 title: 05-SqlMap
-sort: 
---> 
+sort:
+-->
 
 ## 基础使用
 
-- get方法
+- get 方法
 
 > `-Raw`: 文件
 >
@@ -13,11 +13,11 @@ sort:
 >
 > `--dbs`: 全部数据库
 >
-> `sqlmap -r xxx -p pwd --dbs`
+> `sqlmap -r xxx -p pwd --dbs`
 
-- Post方法
+- Post 方法
 
-> `--form`：form表单
+> `--form`：form 表单
 >
 > `--method`：方法
 >
@@ -25,7 +25,7 @@ sort:
 >
 > `sqlmap -u http://xxx/xxx.php --method=POST --forms --data="username" --dbs`
 
-- 使用url
+- 使用 url
 
 > `-Url`: 网址
 >
@@ -55,7 +55,7 @@ sort:
 
 > `--users`: 用户信息
 >
-> `sqlmap -d "musql://root:1234@127.0.0.1:3306/dbname" -f --banner`
+> `sqlmap -d "musql://root:1234@127.0.0.1:3306/dbname" -f --banner`
 
 ## 设置
 

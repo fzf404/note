@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Https
-sort: 
---> 
+sort:
+-->
 
 ## acme.sh
 
@@ -22,7 +22,7 @@ acme.sh --issue -d xxx.fzf404.top --nginx
 # 安装证书
 acme.sh --install-cert -d xxx.fzf404.top \
 --key-file       /etc/nginx/key.pem  \
---fullchain-file /etc/nginx/cert.pem 
+--fullchain-file /etc/nginx/cert.pem
 
 # nginx配置文件
 # 注释掉
@@ -55,10 +55,10 @@ mkdir -p /www/cert/$item
 
 /root/.acme.sh/acme.sh --install-cert -d $item \
 --key-file       /www/cert/$item/key.pem  \
---fullchain-file /www/cert/$item/cert.pem 
+--fullchain-file /www/cert/$item/cert.pem
 done
 
-# Nginx 
+# Nginx
 ln -s /etc/nginx/sites-available/*.conf /etc/nginx/sites-enabled/
 ```
 
@@ -78,7 +78,7 @@ server {
 
     location / {
         proxy_pass http://localhost:8080/;
-    
+
         proxy_set_header Host $host;
         proxy_set_header Referer $http_referer;
         proxy_set_header X-Real-Ip $remote_addr;
@@ -96,4 +96,3 @@ server {
     error_log /www/log/xxx.fzf404.top.error.log;
 }
 ```
-

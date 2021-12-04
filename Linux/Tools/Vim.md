@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Vim
-sort: 
---> 
+sort:
+-->
 
 # Vim
 
@@ -11,7 +11,7 @@ sort:
 
 - 正常模式
 
-  > `esc`键切换至Normal-mode
+  > `esc`键切换至 Normal-mode
 
 - 插入模式
 
@@ -47,28 +47,28 @@ sort:
 
 ### 组合
 
-> <option操作> + <motion动作>
+> <option 操作> + <motion 动作>
 >
-> Ctrl+v 选中  [大写i] 输入 按Esc：同时编辑多行
+> Ctrl+v 选中 [大写 i] 输入 按 Esc：同时编辑多行
 
-| 快捷键                                                       | 功能                             |
-| ------------------------------------------------------------ | -------------------------------- |
-| Shift+A                                                      | 行末插入                         |
-| Shift+I                                                      | 行首插入                         |
-| Shift+O                                                      | 上一行写入                       |
-| d                                                            | 删除                             |
-| p                                                            | 粘贴                             |
-| y                                                            | 【yank】复制                     |
-| c [ciw]                                                      | 【change in word】删除并进入写入 |
-| f [f*]                                                       | find * 单词                      |
-| Shift+V                                                      | 选中当前行                       |
-| Ctrl+V                                                       | 随便选                           |
-| Ctrl+v 向下选 I[upper i] 输入 Esc                            | 同时编辑                         |
-| : normal i TEXT                                              | 选中文本后同时插入               |
+| 快捷键                                                                          | 功能                             |
+| ------------------------------------------------------------------------------- | -------------------------------- |
+| Shift+A                                                                         | 行末插入                         |
+| Shift+I                                                                         | 行首插入                         |
+| Shift+O                                                                         | 上一行写入                       |
+| d                                                                               | 删除                             |
+| p                                                                               | 粘贴                             |
+| y                                                                               | 【yank】复制                     |
+| c [ciw]                                                                         | 【change in word】删除并进入写入 |
+| f [f*]                                                                          | find \* 单词                     |
+| Shift+V                                                                         | 选中当前行                       |
+| Ctrl+V                                                                          | 随便选                           |
+| Ctrl+v 向下选 I[upper i] 输入 Esc                                               | 同时编辑                         |
+| : normal i TEXT                                                                 | 选中文本后同时插入               |
 | %s/Str/Str/g<br />%: 指定要操作的行号,%代表所有<br />s: 查找并替换<br />g: 全局 | 全局替换 substitute / globe      |
-| :%s/s/o/gc                                                   | 每次替换提示                     |
-| qa [write] q 5@a                                             | 定义宏                           |
-| Ctrl+f/b                                                     | 下一页、上一页                   |
+| :%s/s/o/gc                                                                      | 每次替换提示                     |
+| qa [write] q 5@a                                                                | 定义宏                           |
+| Ctrl+f/b                                                                        | 下一页、上一页                   |
 
 ## 命令
 
@@ -92,12 +92,12 @@ yay -S cmake clang
 git config --global http.proxy 'http://127.0.0.1:12333'
 git config --global https.proxy 'http://127.0.0.1:12333'
 
-export all_proxy=http://127.0.0.1:12333 
-# export http_proxy=http://127.0.0.1:12333 
+export all_proxy=http://127.0.0.1:12333
+# export http_proxy=http://127.0.0.1:12333
 # export https_proxy=http://127.0.0.1:12333
 
 # un翻墙
-git config --global --unset http.proxy 
+git config --global --unset http.proxy
 git config --global --unset https.proxy
 unset ALL_PROXY
 # clone
@@ -118,7 +118,7 @@ git submodule update --init --recursive
 
 - surround
 
-  > 选中+S  
+  > 选中+S
   >
   > `cs "'` 把”变成‘
 

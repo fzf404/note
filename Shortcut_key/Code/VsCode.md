@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: VsCode
-sort: 
---> 
-# VsCode_快捷键
+sort:
+-->
+
+# VsCode\_快捷键
 
 ## 代码编辑
 
@@ -28,7 +29,7 @@ sort:
 | 选中该行           | Ctrl+L                 |
 | 选中所有匹配项     | Ctrl+Shift+L           |
 | 更改所有选中项     | Ctrl+F2                |
-| 选中特定区域       | Shift+Alt+⬅️/➡️          |
+| 选中特定区域       | Shift+Alt+⬅️/➡️        |
 | **跳转**           |                        |
 | 鼠标文件、函数跳转 | Ctrl+鼠标              |
 | 最近打开的文件     | Ctrl+P/Ctrl+Tab        |
@@ -56,4 +57,3 @@ sort:
 | 控制面板 | Ctrl+Shift+P |
 | 禅模式   | Ctrl+Shift+O |
 | 控制台   | Ctrl+J       |
-

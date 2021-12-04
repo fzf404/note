@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 05-图形化
-sort: 
---> 
+sort:
+-->
 
 > 如何拥有图形化界面?
 
@@ -9,7 +9,7 @@ sort:
 
 ## 窗口
 
-> 调用10h-06h中断
+> 调用 10h-06h 中断
 
 ```asm
 ; 特定位置显示窗口
@@ -39,7 +39,7 @@ sort:
 
 ## 绘图
 
-> 调用10h-0ch
+> 调用 10h-0ch
 
 ![image-20210108200400585](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20210108200408.png)
 
@@ -68,9 +68,9 @@ setmode:
   int  10h
   ret
 
-alllines: 
+alllines:
   mov  dx,0        ; 列计数
-goon2:   
+goon2:
   mov  cx,0       ; 行计数
   call oneline
   inc  dx
@@ -82,19 +82,19 @@ oneline:           ; 第dx行画水平线
   ;mov cx,0        ; x坐标
   ;mov dx,0        ; y坐标
   mov al,00010001b     ; 写入像素 xxxxARGB
-  mov ah,0ch       ; 
-goon:   
+  mov ah,0ch       ;
+goon:
   inc cx
   cmp cx,1023
   int 10h
   jne goon
   ret
 
-win1:    
+win1:
   mov dx,200      ; 200行开始
-linew1:  
+linew1:
   mov cx,300      ; 300列
-goonw1: 
+goonw1:
   mov al,0100b     ;颜色
   mov ah,0ch       ;写入点像
   inc cx
@@ -106,13 +106,13 @@ goonw1:
   jne linew1
   ret
 
-win2:    
-  mov dx,200      
-linew2:  
+win2:
+  mov dx,200
+linew2:
   mov cx,520
-goonw2: 
-  mov al,0010b     
-  mov ah,0ch       
+goonw2:
+  mov al,0010b
+  mov ah,0ch
   inc cx
   int 10h
   cmp cx,720
@@ -122,13 +122,13 @@ goonw2:
   jne linew2
   ret
 
-win3:    
-  mov dx,420      
-linew3:  
+win3:
+  mov dx,420
+linew3:
   mov cx,300
-goonw3: 
-  mov al,0001b     
-  mov ah,0ch       
+goonw3:
+  mov al,0001b
+  mov ah,0ch
   inc cx
   cmp cx,500
   int 10h
@@ -138,13 +138,13 @@ goonw3:
   jne linew3
   ret
 
-win4:    
-  mov dx,420      
-linew4:  
+win4:
+  mov dx,420
+linew4:
   mov cx,520
-goonw4: 
-  mov al,0110b     
-  mov ah,0ch       
+goonw4:
+  mov al,0110b
+  mov ah,0ch
   inc cx
   cmp cx,720
   int 10h
@@ -183,17 +183,17 @@ jmp   $
 
 setmode:
   mov ah,0
-  mov al,13h         
+  mov al,13h
   int 10h
   ret
 
 setmode2:         ; 1024*768
   mov AX,4F02H
-  mov bx,4105H       
+  mov bx,4105H
   int 10h
   ret
 
-backgroud:         
+backgroud:
   mov dx, colorfuncport
   mov al, 0               ; 建调色板索引0号
 
@@ -214,33 +214,33 @@ colorset:                 ; 显示色设置
   mov al, 1               ; 建调色板索引1号
   out dx, al
   mov dx, colorsetport    ;设置红色调色板
-  mov al,32               
+  mov al,32
   out dx,al
-  mov al,0               
+  mov al,0
   out dx,al
-  mov al,0               
+  mov al,0
   out dx,al
 
   mov dx, colorfuncport
   mov al, 2                 ; 建调色板索引2号
   out dx,al
   mov dx,  colorsetport     ;设置蓝色调色板
-  mov al,0          
+  mov al,0
   out dx,al
-  mov al,0           
+  mov al,0
   out dx,al
-  mov al,32         
+  mov al,32
   out dx,al
 
   mov dx,  colorfuncport
   mov al, 3                 ;建调色板索引3号
   out dx,al
   mov dx,  colorsetport     ;设置绿色
-  mov al,0           
+  mov al,0
   out dx,al
-  mov al,32           
+  mov al,32
   out dx,al
-  mov al,0          
+  mov al,0
   out dx,al
 
   mov dx, colorfuncport
@@ -248,11 +248,11 @@ colorset:                 ; 显示色设置
   out dx,al
 
   mov dx,  colorsetport     ;设置黄色
-  mov al,32              
+  mov al,32
   out dx,al
-  mov al,32           
+  mov al,32
   out dx,al
-  mov al,0          
+  mov al,0
   out dx,al
 
   ret
@@ -264,7 +264,7 @@ drawimg:           ; 满屏画同一颜色
   mov es,ax
   mov cx,0xffff    ; 设置距离
   mov di,0
-  
+
 nextpoint:
   mov  [es:di],bl   ; 调色板颜色索引送往显存地址
   inc  di
@@ -299,17 +299,17 @@ win2:
   add ax,displayadd
   mov es,ax
   win2line:
-  mov cx,50         
-  mov di,100          ; 起始列     
+  mov cx,50
+  mov di,100          ; 起始列
   win2point:
-  mov  [es:di],bl   
+  mov  [es:di],bl
   inc di
   loop win2point
   inc dx
   mov ax,es
-  add ax,0x14      
+  add ax,0x14
   mov es,ax
-  cmp dx,160       
+  cmp dx,160
   jne win2line
   ret
 
@@ -320,17 +320,17 @@ win3:
   add ax,displayadd
   mov es,ax
   win3line:
-  mov cx,50          
+  mov cx,50
   mov di,160         ; 起始列
   win3point:
-  mov  [es:di],bl    
+  mov  [es:di],bl
   inc di
   loop win3point
   inc dx
   mov ax,es
-  add ax,0x14      
+  add ax,0x14
   mov es,ax
-  cmp dx,100       
+  cmp dx,100
   jne win3line
   ret
 
@@ -341,18 +341,17 @@ win4:
   add ax,displayadd
   mov es,ax
   win4line:
-  mov cx,50         
+  mov cx,50
   mov di,160         ; 起始列
   win4point:
-  mov  [es:di],bl  
+  mov  [es:di],bl
   inc di
   loop win4point
   inc dx
   mov ax,es
-  add ax,0x14     
+  add ax,0x14
   mov es,ax
-  cmp dx,160      
+  cmp dx,160
   jne win4line
   ret
 ```
-

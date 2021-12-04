@@ -1,9 +1,7 @@
-
-
-<!-- 
+<!--
 title: 31-Requests-HTML
-sort: 
---> 
+sort:
+-->
 
 ```python
 from requests_html import HTMLSession
@@ -25,4 +23,3 @@ node.text # 纯文本
 node.attrs # 属性
 
 ```
-

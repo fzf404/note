@@ -1,11 +1,11 @@
-<!-- 
+<!--
 title: 04-GPIO工作模式
-sort: 
---> 
+sort:
+-->
 
 ![image-20210706171642966](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/20210706171643.png)
 
-## HAL库
+## HAL 库
 
 ```c
 // GPIO 初始化
@@ -28,4 +28,3 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 // 调用形式
 HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);
 ```
-

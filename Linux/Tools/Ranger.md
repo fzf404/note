@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Ranger
-sort: 
---> 
+sort:
+-->
 
 > 效率非常高的终端文件管理器
 
@@ -24,7 +24,7 @@ sort:
 | o            | 排序                           |
 | M            | 模式                           |
 | g            | 标签页                         |
-| S            | shell打开当前目录              |
+| S            | shell 打开当前目录             |
 
 ### 操作
 
@@ -39,7 +39,7 @@ sort:
 
 ## 问题
 
-- 挂载u盘
+- 挂载 u 盘
 
   ```bash
   yay install usbmount
@@ -47,5 +47,3 @@ sort:
   # 对挂载的U盘拥有写权限
   MOUNTOPTIOS="rw,user,noatime,nodiratime
   ```
-
-  

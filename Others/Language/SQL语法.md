@@ -1,13 +1,14 @@
-<!-- 
+<!--
 title: SQL
-sort: 
---> 
+sort:
+-->
+
 # SQL
 
 ## 使用
 
 ```mysql
-~$ mysql -uroot -p	
+~$ mysql -uroot -p
 mysql> select version();	# 版本信息
 mysql> select now();		# 当前时间
 mysql> exit		# 退出
@@ -23,14 +24,14 @@ mysql> drop database zf_db;		# 删除数据库
 # 表操作
 mysql> show tables；
 # 新建表
-mysql> create table fzf(		
+mysql> create table fzf(
     -> name varchar(10) not null,
     -> id int unsigned primary key auto_increment,
     # 字段名	数据类型		主键		自动增加
     -> age tinyint
     -> );
 # 查看表结构
-mysql> desc fzf;	
+mysql> desc fzf;
 mysql> show create table fzf;
 # 修改表结构
 mysql> alter table fzf add sex enum('man','woman');	# 增加
@@ -193,7 +194,7 @@ mysql> select sum(age)/count(*) from students;
 +-------------------+
 |           14.0000 |
 +-------------------+
-avg()	# 平均数		
+avg()	# 平均数
 round(num,digits)	# 保留位数
 
 ```
@@ -306,7 +307,7 @@ mysql> select * from students limit 0,3;
 ### 连接查询
 
 ```mysql
-join on 
+join on
 # 将一个表中断内容连接至另一表
 
 mysql> select * from students inner join classes;
@@ -358,8 +359,6 @@ select * from students where age > ( select avg(age) from students);
 +----+--------+------+--------+--------+------------------+
 ```
 
-
-
 ### 练习
 
 ```sql
@@ -371,19 +370,19 @@ select * from students where age > ( select avg(age) from students);
  gender enum('男','女','保密','LGBT') default '保密' ,
  ts_delete bit default 0
  );
- 
+
  create table classes(
  id int unsigned primary key auto_increment not null ,
  name varchar(30) not null
  );
- 
+
  insert into students values
  (0,'小明',14,162.00,1,0),
  (0,'小红',13,152.00,2,0),
  (0,'小刚',15,165.00,1,0),
  (0,'小齐',14,163.00,4,0)
  ;
- 
+
  select s.id,s.name from students as s;
  +----+--------+
  | id | name   |

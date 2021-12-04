@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 04-Vue指令
-sort: 
---> 
+sort:
+-->
 
 ## 过滤器
 
@@ -134,4 +134,3 @@ new Vue({
     Lorem ipsum dolor sit amet, consectetur
   </div>
 ```
-

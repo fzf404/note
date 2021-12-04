@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: ADB
-sort: 
---> 
-# ADB命令入门
+sort:
+-->
+
+# ADB 命令入门
 
 ## 操作
 
@@ -101,4 +102,3 @@ scrcpy --window-borderless	# 无边框
 scrcpy --always-on-top			# 保持最前
 scrcpy -f 									# 全屏
 ```
-

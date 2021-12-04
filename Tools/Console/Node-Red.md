@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Node-Red
-sort: 
---> 
+sort:
+-->
 
 ## 安装
 
@@ -18,4 +18,3 @@ vim /root/.node-red/settings.js
 node-red
 > http://127.0.0.1:1880/
 ```
-

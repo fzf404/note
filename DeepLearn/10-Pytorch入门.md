@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 10-Pytorch入门
-sort: 
---> 
+sort:
+-->
 
-> 使用pytorch
+> 使用 pytorch
 >
 > [官方安装教程](https://pytorch.org/get-started/locally/)
 
@@ -211,8 +211,3 @@ a.norm(1)
 # 2范数平方求和开根
 a.norm(2, dim=1)
 ```
-
-
-
-
-

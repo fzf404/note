@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 09-Tomcat+git+redis
-sort: 
---> 
+sort:
+-->
 
 > `wget 192.168.25.37/download/hello-world.war`
 >
@@ -58,7 +58,7 @@ select <index>
 
 ## Tomcat
 
-> 部署war包
+> 部署 war 包
 
 ## GIthub
 
@@ -76,6 +76,3 @@ git reset --soft|--hard <id>
 git remote add origin <url>
 git push -u origin master
 ```
-
-
-

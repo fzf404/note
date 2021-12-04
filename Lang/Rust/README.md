@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Rust
-sort: 
---> 
+sort:
+-->
 
 > [中文文档](https://rustwiki.org/zh-CN/rust-by-example/)
 
@@ -10,6 +10,3 @@ sort:
 #[derive(Debug)]
 println!("{:#?}",a_user);
 ```
-
-
-

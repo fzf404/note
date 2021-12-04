@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 01-Rust入门
-sort: 
---> 
+sort:
+-->
 
 ## 安装
 
@@ -9,7 +9,7 @@ sort:
 
 ```bash
 rustup update	# 更新
-rustc --version	# 版本 
+rustc --version	# 版本
 rustup doc		# 本地文档
 ```
 
@@ -51,7 +51,7 @@ rustc main.rs
 let demo: i16 = 40404;		// 有符号
 let demo = 40404u16;			// 无符号
 // 可变变量 字符串切片 &str
-let mut demo = "String"; 	
+let mut demo = "String";
 
 // 常量
 const MILLION = 1_000_000;
@@ -62,7 +62,7 @@ let byte = b'A'		// byte类型
 // 元组
 let tup: (i32, f32, u8) = (404, 3.14, 1);
 // 数组
-let week = [1,2,3,4,5,6,0];  
+let week = [1,2,3,4,5,6,0];
 
 // 条件分支
 if x == 0 {
@@ -87,7 +87,7 @@ loop {
 }
 
 while stop == true {
-  
+
 }
 
 // 函数名(参数)->f
@@ -193,4 +193,3 @@ let f = File::open(path).except("无法打开文件");
 let f = File::open(path)?;
 Ok(f)
 ```
-

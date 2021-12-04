@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 00-AStudio安装配置
-sort: 
---> 
+sort:
+-->
 
-# Android Studio安装配置
+# Android Studio 安装配置
 
 ## 安装
 
@@ -16,14 +16,13 @@ sort:
    - 进入安装目录
    - `bin\jlink.exe --module-path jmods --add-modules java.desktop --output jre`
 
-   设置环境变量至bin目录
+   设置环境变量至 bin 目录
 
    > `jre\bin`与`jdk\bin`
 
 2. 安装`AndroidStudio`
 
    > 官网：[developers](https://developer.android.google.cn/studio?hl=zh-cn)
-
 
 ## 遇到过的问题
 
@@ -44,7 +43,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.2.1'
     }
 }
- 
+
 allprojects {
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }

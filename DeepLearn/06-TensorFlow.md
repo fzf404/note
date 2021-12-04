@@ -1,7 +1,8 @@
-<!-- 
+<!--
 title: 06-TensorFlow
-sort: 
---> 
+sort:
+-->
+
 # TensorFlow
 
 > 机器学习框架
@@ -149,4 +150,3 @@ _ = plt.xticks(range(10), class_names, rotation=45)
 # 预测值
 np.argmax(predictions_single[0])
 ```
-

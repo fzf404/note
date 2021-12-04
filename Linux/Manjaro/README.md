@@ -1,6 +1,6 @@
-<!-- 
+<!--
 title: Manjaro
-sort: 
---> 
+sort:
+-->
 
-> Arch小弟
+> Arch 小弟

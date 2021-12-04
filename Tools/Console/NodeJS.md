@@ -1,11 +1,11 @@
-<!-- 
+<!--
 title: NodeJS
-sort: 
---> 
+sort:
+-->
 
 ## NodeJS
 
-> `node.js`是基于chrome v8引擎的JS运行环境
+> `node.js`是基于 chrome v8 引擎的 JS 运行环境
 >
 > [包管理器安装](https://nodejs.org/zh-cn/download/package-manager/)
 
@@ -52,16 +52,16 @@ npm unpublish --force
 
 > `npm i yarn -g`
 >
-> 弥补了npm的一些缺陷
+> 弥补了 npm 的一些缺陷
 >
 > [中文文档](https://yarn.bootcss.com/)
 
 ```powershell
 npm i yarn@1.22.0 -g 	# 安装特定版本
 npm upgrade yarn -g		# 更新
-  
+
 yarn config set registry https://registry.npm.taobao.org
-  
+
 yarn -v
 # 初始化项目
 yarn init
@@ -86,7 +86,7 @@ yarn login			# 登录
 yarn logout			# 登出
 ```
 
-> 编辑Package
+> 编辑 Package
 
 ```json
 "scripts": {
@@ -96,7 +96,7 @@ yarn logout			# 登出
 
 ## Nvm
 
-> nodejs版本管理工具
+> nodejs 版本管理工具
 
 ```bash
 nvm ls-remote

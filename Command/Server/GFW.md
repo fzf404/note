@@ -1,15 +1,15 @@
-<!-- 
+<!--
 title: GFW
-sort: 
---> 
+sort:
+-->
 
 ## V2ray
 
 [服务器部署](https://github.com/sprov065/v2-ui)
 
-[win客户端](https://github.com/2dust/v2rayN)
+[win 客户端](https://github.com/2dust/v2rayN)
 
-[mac客户端](https://github.com/yanue/V2rayU)
+[mac 客户端](https://github.com/yanue/V2rayU)
 
 [安卓客户端](https://github.com/2dust/v2rayNG)
 
@@ -41,13 +41,11 @@ admin
 admin
 ```
 
-
-
-## ss客户端
+## ss 客户端
 
 > ss-qt5
 
-## ssr客户端
+## ssr 客户端
 
 > ShadowsocksR
 >
@@ -58,7 +56,7 @@ pip install shadowsocks
 vim /etc/shadowsocks.json
 # add info
 
-# run 
+# run
 ssserver -c /etc/shadowsocks.json
 # background
 ssserver -c /etc/shadowsocks.json -d start
@@ -86,4 +84,3 @@ yarn start
 Get-NetAdapter
 Restart-NetAdapter
 ```
-

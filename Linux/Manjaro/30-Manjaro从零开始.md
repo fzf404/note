@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 30-Manjaro从零开始
-sort: 
---> 
+sort:
+-->
 
 ## 换源
 
@@ -48,4 +48,3 @@ systemctl start clash
 # 看日志
 journalctl -u clash
 ```
-

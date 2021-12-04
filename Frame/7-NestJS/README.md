@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: NestJS
-sort: 
---> 
+sort:
+-->
 
-> Node开发服务端
+> Node 开发服务端
 >
 > [官网](https://nestjs.bootcss.com/)
 
@@ -28,7 +28,7 @@ yarn add nestjs-redis
 # s
 yarn add @nestjs/websockets @nestjs/platform-socket.io
 yarn a@types/socket.io
- 
+
 # crypto
 yarn add crypto
 
@@ -47,4 +47,3 @@ yarn format
 # Error: Cannot find module '@nestjs/core/router/route-path-factory'
 nest update -f -t latest
 ```
-

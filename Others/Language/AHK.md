@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: AHK
-sort: 
---> 
+sort:
+-->
 
 > 模拟热键
 
@@ -23,4 +23,3 @@ r::
   Until stop
 Return
 ```
-

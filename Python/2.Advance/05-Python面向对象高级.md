@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: 05-Python面向对象高级
-sort: 
---> 
-# Python面向对象
+sort:
+-->
+
+# Python 面向对象
 
 ## 面向对象总结
 
@@ -54,21 +55,21 @@ sort:
           print('%s is %s weights %s'%(self.name,self.age,self.__weight))
   print(person.__class__)		# <class 'type'>
   print(person.__repr__)		# <slot wrapper '__repr__' of 'object' objects>
-  
+
   person = person('bruce',25,60)
   print(person)				# <__main__.person object at 0x0000020744E69668>
   infoma = person.infoma()	# bruce is 25 weights 60
   cmp = person.__cmp__()		# 625
   lens = person.__len__()		# 5
   adds = person.__add__()		# 85
-  print('doc is %s'%person.__doc__)	
+  print('doc is %s'%person.__doc__)
   print('dir is %s'%person.__dir__)
   print('delatter is %s'%person.__delattr__)
   print('gt is %s'%person.__gt__)
   print('hash is %s'%person.__hash__)
   print('init is %s'%person.__init__)
   print('new is %s'%person.__new__)
-  
+
   '''
   doc is None
   dir is <built-in method __dir__ of person object at 0x0000020744E69668>
@@ -95,35 +96,35 @@ sort:
       def infoma(self):
           print('%s is %s weights %s'%(self.name,self.age,self.weight))
   person.hobbies.extend(["football", "woman"])   # 类数据属性可以进行访问/修改
-  print("person hobbies list: %s" %person.hobbies) 
-  
+  print("person hobbies list: %s" %person.hobbies)
+
   person.hobbies2 = ["reading", "jogging", "swimming"]  # 可以通过类名动态添加类数据属性。
-  print("person hobbies2 list: %s" %person.hobbies2)  
+  print("person hobbies2 list: %s" %person.hobbies2)
   print(dir(person))		# person中所有属性
-  
-  
+
+
   Bruce = person("Bruce", 25,60)    #实例数据属性只能通过实例访问
   print("%s is %d years old" %(Bruce.name, Bruce.age))
   Bruce.gender = "male"   #动态添加实例数据属性
-  print("%s is %s" %(Bruce.name, Bruce.gender) )  
+  print("%s is %s" %(Bruce.name, Bruce.gender) )
   print(dir(Bruce))
   Bruce.hobbies.append("C#")
   print(Bruce.hobbies)	# ['football', 'woman', 'C#']
-  
-  will = person("Will", 27,60) 
-  print("%s is %d years old" %(will.name, will.age))  
+
+  will = person("Will", 27,60)
+  print("%s is %d years old" %(will.name, will.age))
   print(will.__dict__)    # 列出所有属性及值
   print (will.hobbies)	# ['football', 'woman', 'C#']
   ```
 
 - 类的属性
 
-  > _ _ name_ _：类的名字（字符串）
+  > \_ _ name_ _：类的名字（字符串）
   > _ _ doc _ _ ：类的文档字符串
   > _ _ bases _ _：类的所有父类组成的元组
   > _ _ dict _ _：类的属性组成的字典
   > _ _ module _ _：类所属的模块
-  > _ _ class _ _：类对象的类型
+  > _ _ class _ \_：类对象的类型
 
 ## 类的方法
 
@@ -178,7 +179,7 @@ sort:
   >
   > **属性名前增加了单下划线和类名**
 
-## 类的继承、初始化与super方法
+## 类的继承、初始化与 super 方法
 
 1. 继承
 
@@ -191,18 +192,16 @@ sort:
        Value = "Hi, Parent value"
        def fun(self):
            print("This is from Parent")
-   
+
    class Child(Parent):
        Value = "Hi, Child  value"
        def fun(self):
            print("This is from Child")
            Parent.fun(self)   #调用父类Parent的fun函数方法
-   
-   c = Child()    
+
+   c = Child()
    c.fun()
    ```
-
-   
 
 2. 继承中的`__init__`
 
@@ -216,24 +215,23 @@ sort:
            self.name = name
            print("create an instance of:", self.__class__.__name__)
            print("name attribute is:", self.name)
-   
+
    class Child(Parent):
        pass
-   
+
    c = Child('fzf')		# 调用父函数
    c = Child()				# 报错
    ```
 
-## Super的使用
+## Super 的使用
 
 - 调用父类方法，以显示父类
 
   > 子类会继承父类的所有的属性和方法
   >
   > 并覆盖父类的同名属性和方法
-  >
+
   ```python
   super(Child,self).fun()
   # 代替Parent.fun()
   ```
-

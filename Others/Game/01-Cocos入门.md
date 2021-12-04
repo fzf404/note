@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 01-Cocos2D入门
-sort: 
---> 
+sort:
+-->
 
 ## 事件处理
 
@@ -20,15 +20,19 @@ sort:
 > [按键枚举](https://docs.cocos.com/creator/api/zh/enums/macro.KEY.html)
 
 ```js
-cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, (event)=>{
+cc.systemEvent.on(
+  cc.SystemEvent.EventType.KEY_DOWN,
+  (event) => {
     cc.log(event.keyCode);
-    switch(event.keyCode){
-        //
-        case cc.macro.KEY.space : {
-            cc.log('Enter Space');
-        }
+    switch (event.keyCode) {
+      //
+      case cc.macro.KEY.space: {
+        cc.log("Enter Space");
+      }
     }
-}, this);
+  },
+  this
+);
 ```
 
 ### 自定义事件
@@ -74,7 +78,7 @@ start() {
 
 - [粒子特效](http://www.effecthub.com/particle2dx)
 - Spine: 骨骼动画
-- Tiled: RPG地图编辑
+- Tiled: RPG 地图编辑
 
 ## Class
 
@@ -102,4 +106,3 @@ properties: {
 // 获取绑定的节点
 let player = this.player;
 ```
-

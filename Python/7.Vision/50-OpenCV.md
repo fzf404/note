@@ -1,7 +1,8 @@
-<!-- 
+<!--
 title: 50-OpenCV
-sort: 
---> 
+sort:
+-->
+
 # OpenCV
 
 ## 安装
@@ -12,7 +13,7 @@ sort:
 
 ### 调用摄像头
 
-```python 
+```python
 import cv2
 
 # 获取摄像头，传入0表示获取系统默认摄像头
@@ -98,14 +99,14 @@ while(True):
         img = cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
     	# 框选出人脸区域，在人脸区域而不是全图中进行人眼检测，节省计算资源
         face_area = img[y:y+h, x:x+w]
-        
+
         ## 人眼检测
         # 用人眼级联分类器引擎在人脸区域进行人眼识别，返回的eyes为眼睛坐标列表
         eyes = eye_cascade.detectMultiScale(face_area,1.3,10)
         for (ex,ey,ew,eh) in eyes:
             #画出人眼框，绿色，画笔宽度为1
             cv2.rectangle(face_area,(ex,ey),(ex+ew,ey+eh),(0,255,0),1)
-        
+
         ## 微笑检测
         # 用微笑级联分类器引擎在人脸区域进行人眼识别，返回的eyes为眼睛坐标列表
         smiles = smile_cascade.detectMultiScale(face_area,scaleFactor= 1.16,minNeighbors=65,minSize=(25, 25),flags=cv2.CASCADE_SCALE_IMAGE)
@@ -113,7 +114,7 @@ while(True):
             #画出微笑框，红色（BGR色彩体系），画笔宽度为1
             cv2.rectangle(face_area,(ex,ey),(ex+ew,ey+eh),(0,0,255),1)
             cv2.putText(img,'Smile',(x,y-7), 3, 1.2, (0, 0, 255), 2, cv2.LINE_AA)
-        
+
 	# 实时展示效果画面
     cv2.imshow('frame2',img)
     # 每5毫秒监听一次键盘动作
@@ -124,4 +125,3 @@ while(True):
 cap.release()
 cv2.destroyAllWindows()
 ```
-

@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 33-XML
-sort: 
---> 
+sort:
+-->
 
 # XML
 
@@ -13,4 +13,3 @@ html = requetst.get(url, headers).text
 content = etree.HTML(html)
 data = content.xpath("")
 ```
-

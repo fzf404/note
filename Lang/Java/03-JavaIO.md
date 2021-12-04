@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 03-JavaIO
-sort: 
---> 
+sort:
+-->
 
 ## IO
 
@@ -38,7 +38,7 @@ File[] fs1 = f.listFiles(); // 列出所有文件和子目录
 printFiles(fs1);
 ```
 
-### Path对象
+### Path 对象
 
 > 路径操作
 
@@ -49,11 +49,11 @@ import java.nio.file.*;
 public class Main {
   public static void main(String[] args) throws IOException {
       // 构造一个Path对象
-    Path p1 = Paths.get(".", "data", "fzf404"); 
-    System.out.println(p1);					// "./data/fzf404"	
-    Path p2 = p1.toAbsolutePath();	
-    System.out.println(p2);					// "/opt/./data/fzf404"	
-    Path p3 = p2.normalize(); 
+    Path p1 = Paths.get(".", "data", "fzf404");
+    System.out.println(p1);					// "./data/fzf404"
+    Path p2 = p1.toAbsolutePath();
+    System.out.println(p2);					// "/opt/./data/fzf404"
+    Path p3 = p2.normalize();
     System.out.println(p3);					// "/opt/data/fzf404"
     File f = p3.toFile(); 					// 转换为File对象
     System.out.println(f);					// "/opt/data/fzf404"
@@ -112,4 +112,3 @@ public String readFile2() throws IOException {
       }
   }
 ```
-

@@ -1,13 +1,13 @@
-<!-- 
+<!--
 title: 11-Git与hub
-sort: 
---> 
+sort:
+-->
 
 ## 🚛Gitee
 
 > 免费的国内代码托管机构
 >
-> 除了👉速度快
+> 除了 👉 速度快
 >
 > 目前还没发现其他的优势
 
@@ -76,7 +76,7 @@ git reset --hard hi.txt
 
 ## SSH
 
-> 何为SSH？
+> 何为 SSH？
 
 ```bash
 ssh-keygen
@@ -91,4 +91,4 @@ git remote add origin git@github.com:xxx/xx.git
 2. Typora
 3. Notion
 4. WoLai
-5. 
+5.

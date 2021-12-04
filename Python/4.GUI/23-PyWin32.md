@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 23-Pywin32
-sort: 
---> 
+sort:
+-->
 
 ```python
 import win32gui
@@ -55,4 +55,3 @@ def main():
 main()
 
 ```
-

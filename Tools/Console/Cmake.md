@@ -1,7 +1,7 @@
-<!-- 
-title: Cmake 
-sort: 
---> 
+<!--
+title: Cmake
+sort:
+-->
 
 ## HelloWorld
 
@@ -34,14 +34,14 @@ cmake ..
 
 ## 包含头文件
 
-| 变量名                   | 信息                                                       |
-| :----------------------- | :--------------------------------------------------------- |
-| CMAKE_SOURCE_DIR         | 根源代码目录，工程顶层目录。暂认为就是PROJECT_SOURCE_DIR   |
-| CMAKE_CURRENT_SOURCE_DIR | 当前处理的 CMakeLists.txt 所在的路径                       |
-| PROJECT_SOURCE_DIR       | 工程顶层目录                                               |
-| CMAKE_BINARY_DIR         | 运行cmake的目录。外部构建时就是build目录                   |
-| CMAKE_CURRENT_BINARY_DIR | The build directory you are currently in.当前所在build目录 |
-| PROJECT_BINARY_DIR       | 暂认为就是CMAKE_BINARY_DIR                                 |
+| 变量名                   | 信息                                                         |
+| :----------------------- | :----------------------------------------------------------- |
+| CMAKE_SOURCE_DIR         | 根源代码目录，工程顶层目录。暂认为就是 PROJECT_SOURCE_DIR    |
+| CMAKE_CURRENT_SOURCE_DIR | 当前处理的 CMakeLists.txt 所在的路径                         |
+| PROJECT_SOURCE_DIR       | 工程顶层目录                                                 |
+| CMAKE_BINARY_DIR         | 运行 cmake 的目录。外部构建时就是 build 目录                 |
+| CMAKE_CURRENT_BINARY_DIR | The build directory you are currently in.当前所在 build 目录 |
+| PROJECT_BINARY_DIR       | 暂认为就是 CMAKE_BINARY_DIR                                  |
 
 ### 文件树
 
@@ -73,7 +73,7 @@ add_executable(hello_headers ${SOURCES})
 
 # 包含的库的路径
 target_include_directories(hello_headers
-    PRIVATE 
+    PRIVATE
         ${PROJECT_SOURCE_DIR}/include
 )
 ```
@@ -87,4 +87,3 @@ cd build/
 cmake ..
 make
 ```
-

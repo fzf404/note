@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: Windows
-sort: 
---> 
-# Win10快捷键
+sort:
+-->
+
+# Win10 快捷键
 
 ## 输入法
 
@@ -19,4 +20,3 @@ sort:
 | Win+X            | 常用功能       |
 | Ctrl+Shift+Enter | 管理员权限运行 |
 |                  |                |
-

@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: XPath
-sort: 
---> 
-# XPath入门
+sort:
+-->
+
+# XPath 入门
 
 ## 基本
 
@@ -44,6 +45,3 @@ content = content.xpath("/body/input[@name='']")
 # 解析为字符串
 etree.tostring(content[0],encoding='utf-8').decode('utf-8')
 ```
-
-
-

@@ -1,19 +1,18 @@
-<!-- 
+<!--
 title: 04-基础布局
-sort: 
---> 
+sort:
+-->
 
 ## 定位
 
 ### static(默认)
 
 > 固定位置，不随窗口而移动
->
 
 ```css
 div {
-    position: static;
-    border: 3px solid #73AD21;
+  position: static;
+  border: 3px solid #73ad21;
 }
 ```
 
@@ -23,9 +22,9 @@ div {
 
 ```css
 p {
-	position:fixed;
-	top:30px;
-	right:5px;
+  position: fixed;
+  top: 30px;
+  right: 5px;
 }
 ```
 
@@ -37,8 +36,8 @@ p {
 
 ```css
 h2 {
-    position:relative;
-    left:-20px;
+  position: relative;
+  left: -20px;
 }
 ```
 
@@ -48,9 +47,9 @@ h2 {
 
 ```css
 p {
-	position:absolute;
-	left:100px;
-	top:150px;
+  position: absolute;
+  left: 100px;
+  top: 150px;
 }
 ```
 
@@ -62,8 +61,8 @@ p {
 
 ```css
 div {
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
 }
 ```
 
@@ -72,11 +71,7 @@ div {
 > 元素布局方式
 
 ```css
-display:
-  block 块级元素
-  inline-block 行内块元素
-  inline 行内元素
-  none 隐藏
+display: block 块级元素 inline-block 行内块元素 inline 行内元素 none 隐藏;
 ```
 
 ## Overflow
@@ -93,10 +88,10 @@ display:
 
 ```css
 div {
-    width: 200px;
-    height: 50px;
-    background-color: #eee;
-    overflow: auto;
+  width: 200px;
+  height: 50px;
+  background-color: #eee;
+  overflow: auto;
 }
 ```
 
@@ -104,7 +99,7 @@ div {
 
 ```css
 /* 浮动 */
-float:right;
+float: right;
 
 /* 元素居中 */
 margin: auto;
@@ -113,7 +108,7 @@ margin: auto;
 text-align: center;
 
 /* 垂直居中 */
-vertical-align: top;
+vertical-align: top;
 
 /* 垂直居中*/
 width: 200px;
@@ -123,4 +118,3 @@ margin: 0 auto;
 position: absolute;
 right: 0px;
 ```
-

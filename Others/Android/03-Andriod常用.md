@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 03-Android常用
-sort: 
---> 
+sort:
+-->
 
 ### 定时器
 
@@ -35,4 +35,3 @@ val face = Typeface.createFromAsset
 )
 text.setTypeface(face)
 ```
-

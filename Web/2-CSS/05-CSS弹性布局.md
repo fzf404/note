@@ -1,13 +1,13 @@
-<!-- 
+<!--
 title: 05-弹性布局
-sort: 
---> 
+sort:
+-->
 
 > `display: flex;`
 >
 > `display: grid;`
 
-## Flex布局
+## Flex 布局
 
 ### 父容器
 
@@ -19,20 +19,20 @@ flex-wrap: nowrap | wrap | wrap-reverse;
 // 合并前两个
 flex-flow: column wrap;
 // 水平对齐
-justify-content: 
+justify-content:
 //	开头		结尾		中心
-flex-start | flex-end | center | 
+flex-start | flex-end | center |
 //	两头		中心		等距
-space-between | space-around | space-evenly 
+space-between | space-around | space-evenly
 // 垂直对齐
-align-items: 
+align-items:
 // 拉伸		顶部			底部		中心
-stretch | flex-start | flex-end | center | 
+stretch | flex-start | flex-end | center |
 baseline	// 中心线
 // 多行对齐
 align-content:
-stretch | flex-start | flex-end | center | 
-space-between | space-around | space-evenly | baseline 
+stretch | flex-start | flex-end | center |
+space-between | space-around | space-evenly | baseline
 ```
 
 ### 子项目
@@ -52,18 +52,18 @@ auto | flex-start | flex-end | center | stretch | baseline
 
 ```css
 /* 居中对齐 */
-display:flex;
-justify-content:center;
-align-items:center;
+display: flex;
+justify-content: center;
+align-items: center;
 
 /* 导航栏 */
-display       : flex;
+display: flex;
 flex-direction: row;
-flex-wrap     : wrap;
+flex-wrap: wrap;
 justify-content: space-between;
 ```
 
-## Grid布局
+## Grid 布局
 
 ```scss
 display: grid;
@@ -80,17 +80,16 @@ column-gap: 2rem;
 grid-gap: 2rem 2rem;
 
 // 相对父容器对齐
-justify-content:center;
+justify-content: center;
 align-content: center;
 
 // 子元素对齐
-justify-items: center;	// 水平对齐
-align-items: center;		// 垂直对齐
+justify-items: center; // 水平对齐
+align-items: center; // 垂直对齐
 
 // 子元素操作
 .item:nth-child(2) {
-	justify-self: start;
-	align-items: start;
+  justify-self: start;
+  align-items: start;
 }
 ```
-

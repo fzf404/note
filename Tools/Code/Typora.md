@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: Typora
-sort: 
---> 
-# Typora 笔记
+sort:
+-->
 
+# Typora 笔记
 
 官方网站：[typora](https://www.typora.io/)
 
@@ -13,21 +13,21 @@ sort:
 
 ## 基本使用
 
-> 链接：	[test](www.baidu.com)
+> 链接： [test](www.baidu.com)
 >
 > 删除线：~~test~~
 >
-> 上标：	x^4^
+> 上标： x^4^
 >
-> 下标：	H~2~ 
+> 下标： H~2~
 >
-> 数学：	$e^2$
+> 数学： $e^2$
 >
 > - [x] asdf
 >
 > test[^1]
 >
-> [^1]:it's a infomation
+> [^1]: it's a infomation
 >
 > :happy:
 >
@@ -37,29 +37,27 @@ sort:
 
 ### 源代码
 
- ``` markdown
-链接:		[test](www.baidu.com)
-删除线:	~~test~~
-上标:		X^4^ 
-下标:		H~2~ 
-数学		$e^2$
-方框:		- [ ] asdf
-		 - [x] asdf
-说明:		test[^1]
+```markdown
+链接: [test](www.baidu.com)
+删除线: ~~test~~
+上标: X^4^
+下标: H~2~
+数学 $e^2$
+方框: - [ ] asdf - [x] asdf
+说明: test[^1]
 [^1]:it's a infomation
-Emoji:	 :happy:
-锚链接:	[锚链接](#test)
-		## 流程图 {#test}
-快速链接：	<https://www.baidu.com>
- ```
+Emoji: :happy:
+锚链接: [锚链接](#test) ## 流程图 {#test}
+快速链接： <https://www.baidu.com>
+```
 
 ## 插入图片
 
 - 插入本地图片：(不灵活，不便于分享)
 
   ```markdown
-  ![avatar](./picture/1.png)		# Linux
-  ![avatar](.\photo\1.png)		# windows
+  ![avatar](./picture/1.png) # Linux
+  ![avatar](.\photo\1.png) # windows
   ```
 
 - 插入网络图片：
@@ -68,7 +66,7 @@ Emoji:	 :happy:
   ![avatar](https://www.baidu.com/img/bd_logo1.png?where=super)
   ```
 
-- 把图片插入markdown文件：
+- 把图片插入 markdown 文件：
 
   ```markdown
   ![avatar](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAUlEQVQYlS3JvVICMRQG0C8/m8AgwgLSWjnjjFrY+cK+hYWdnXbqjKMUiKAILITNkiW51wLbc8T77Zuyqnc9aAysNEpZxcypSkzMkUS9qYUUqqmEFADA8F/lz8N3dLF9dqx1S/8HAID2tHj8XT4tOHE1rzQnPjQTA3AjVzwXYRVAoMj6oGER/KTMOmZ6N/GfJdUkleRIEsQAwJy1s928KsdbSgxAGmlyKwFQTVnHtE6PYhmjjyAWUpjcnNwM9W6+K14KZVX3IufEACCFymTnvJuqqGf3U/exgRTRR9u3tt+IPioj926/fl1rN3JhGSDEduTyyzy/6lUz3xg2y/G2XoU/6m2XoKb9l94AAAAASUVORK5CYII=)
@@ -76,7 +74,7 @@ Emoji:	 :happy:
 
   > 但是会影响写文章的体验。
   >
-  > 可以把大段的base64字符串放在文章末尾，然后在文章中通过一个id来调用。
+  > 可以把大段的 base64 字符串放在文章末尾，然后在文章中通过一个 id 来调用。
 
   ```markdown
   ![avatar][test]
@@ -94,7 +92,8 @@ graph TD;
     A-->C;
     B-->D;
 ```
-> TD代表方向：Top-Down
+
+> TD 代表方向：Top-Down
 
 ```mermaid
 graph TD;
@@ -230,4 +229,3 @@ pie
     "领导" : 17
     "精英" : 3
 ```
-

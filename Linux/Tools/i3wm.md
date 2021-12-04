@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: i3wm
-sort: 
---> 
+sort:
+-->
 
-# i3wm配置
+# i3wm 配置
 
 ## 安装
 
@@ -14,7 +14,7 @@ yay -S picom	# shell渲染器
 picom
 yay -S dmenu	# super+d
 yay -S i3-gaps	# i3边框
-yay -S lxappearance		# layout								
+yay -S lxappearance		# layout
 yay -S variety	 feh	# wallpaper
 yay -S kdenlive gimp ranger	libreoffice # 视频 图像 文件 办公
 ```
@@ -52,7 +52,7 @@ xev		# 按键显示
 vi
 ```
 
-## u盘挂载
+## u 盘挂载
 
 ```bash
 mkdir /mnt/usbstick1
@@ -62,4 +62,3 @@ mount device_node /mnt/usbstick
 mount -U UUID /mnt/usbstick
 sudo mount -o remount,rw /partition/identifier /mount/point
 ```
-

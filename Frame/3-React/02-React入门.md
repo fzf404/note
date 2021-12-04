@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 02-React入门
-sort: 
---> 
+sort:
+-->
 
 ## 第一个程序
 
@@ -9,51 +9,52 @@ sort:
 
 ```html
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demo1</title>
     <!-- CDN 组件 -->
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-</head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <div id="app"></div>
     <script>
-        var hello = React.createElement('h1',{},"HelloWorld");
-        ReactDOM.render(hello,document.getElementById('app'));
+      var hello = React.createElement("h1", {}, "HelloWorld");
+      ReactDOM.render(hello, document.getElementById("app"));
     </script>
-</body>
-
+  </body>
 </html>
 ```
 
-> babel6语法糖
+> babel6 语法糖
 
 ```html
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demo1</title>
     <!-- <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script> -->
     <!-- <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script> -->
     <script src="node_modules\react\umd\react.development.js"></script>
     <script src="node_modules\react-dom\umd\react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app"></div>
     <script type="text/babel">
-        ReactDOM.render(
-        	<h1>HelloWorld</h1>
-        	,document.getElementById('app'));
+      ReactDOM.render(<h1>HelloWorld</h1>, document.getElementById("app"));
     </script>
-</body>
-
+  </body>
 </html>
 ```
 
@@ -79,6 +80,5 @@ setInterval(tick, 1000);
 
 ```js
 // 最外层空标签
-import Fragment from 'react'
+import Fragment from "react";
 ```
-

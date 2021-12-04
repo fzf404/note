@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 01-入门
-sort: 
---> 
+sort:
+-->
 
 ## HelloWorld
 
@@ -27,7 +27,7 @@ electron .
 > `main.js`
 
 ```js
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow } = require("electron");
 
 // 窗体创建函数
 const createWindow = () => {
@@ -36,12 +36,12 @@ const createWindow = () => {
     height: 600,
     // 允许子页面调用api
     webPreferences: {
-      nodeIntegration: true
-    }
+      nodeIntegration: true,
+    },
   });
 
   // 加载文件
-  mainWindow.loadFile('src/index.html');
+  mainWindow.loadFile("src/index.html");
 
   // 开启调试工具
   mainWindow.webContents.openDevTools();
@@ -51,9 +51,9 @@ const createWindow = () => {
 app.whenReady().then(createWindow);
 
 // 关闭所有窗口后推出
-app.on('window-all-closed', () => {
+app.on("window-all-closed", () => {
   // OS X除外
-  if (process.platform !== 'darwin') {
+  if (process.platform !== "darwin") {
     app.quit();
   }
 });
@@ -63,31 +63,30 @@ app.on('window-all-closed', () => {
 
 ```html
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Electron</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello Electron</title>
-</head>
+  <body>
+    <h1>💖 Hello Electron</h1>
+    <button id="btn">Get Info</button>
+    <div class="info"></div>
+    <script>
+      const fs = require("fs");
 
-<body>
-  <h1>💖 Hello Electron</h1>
-  <button id="btn">Get Info</button>
-  <div class="info"></div>
-  <script>
-    const fs = require('fs');
-
-		window.onload = () => {
-      let btn = this.document.getElementById('btn');
-      let info = this.document.getElementsByClassName('info');
-      btn.onclick = () => {
-        fs.readFile('info.txt', (err, data) => {
-          info[0].innerHTML = `<p>${data}</p>`
-        })
-    	}
-		}
-  </script>
-</body>
+      window.onload = () => {
+        let btn = this.document.getElementById("btn");
+        let info = this.document.getElementsByClassName("info");
+        btn.onclick = () => {
+          fs.readFile("info.txt", (err, data) => {
+            info[0].innerHTML = `<p>${data}</p>`;
+          });
+        };
+      };
+    </script>
+  </body>
 </html>
 ```
 

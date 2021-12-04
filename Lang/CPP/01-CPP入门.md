@@ -1,11 +1,11 @@
-<!-- 
+<!--
 title: 01-CPP入门
-sort: 
---> 
+sort:
+-->
 
 # C++入门
 
-## 第一个C++程序
+## 第一个 C++程序
 
 ```c++
 #include<iostream>
@@ -36,9 +36,9 @@ c = a > b ? a : b;
 
 // 结构体
 struct student {
-	string name;  
-	int age;      
-	int score;    
+	string name;
+	int age;
+	int score;
 };
 
 // 结构体数组
@@ -57,13 +57,12 @@ p->score=75;
 
 ## 命名空间
 
-> 标准库中函数或对象，都是在std命名空间中定义的。
+> 标准库中函数或对象，都是在 std 命名空间中定义的。
 >
-> 调用标准库需要写上std
+> 调用标准库需要写上 std
 
 ```c++
 // ::作用
 // 命名空间::类::方法
 IR::Statement::toJSON(){}
 ```
-

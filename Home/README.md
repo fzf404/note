@@ -1,8 +1,8 @@
-<!-- 
+<!--
 title: 小fのNote
 layout: IndexLayout
 visible: true
---> 
+-->
 
 <style>
   .markdown {
@@ -85,15 +85,13 @@ visible: true
 </div>
 <div class="jumbotron-block"> </div>
 
-
-
 | [PL](#/Lang)        | [Python](#/Python)             | [前端](#/Web)                  | [Linux](#/Linux)           | [硬件](#/HardWare)             | [深度学习](#/DeepLearn) | 其他                               |
 | ------------------- | ------------------------------ | :----------------------------- | -------------------------- | ------------------------------ | ----------------------- | ---------------------------------- |
 | [C](#/Lang/C)       | [基础](#/Python/1.Basic)       | [Html](#/Web/1-HTML)           | [Manjaro](#/Linux/Manjaro) | [Arduino](#/HardWare/Arduino)  | Numpy                   | [PowerShell](#/Command/PowerShell) |
-| [C++](#/Lang)       | [进阶](#/Python/2.Advance)     | [CSS](#/Web/2-CSS)             | [Tools](#/Linux/Tools)     | [51单片机](#/HardWare/51MCU)   | TensorFlow              | [Dos](#/Command/Dos)               |
+| [C++](#/Lang)       | [进阶](#/Python/2.Advance)     | [CSS](#/Web/2-CSS)             | [Tools](#/Linux/Tools)     | [51 单片机](#/HardWare/51MCU)  | TensorFlow              | [Dos](#/Command/Dos)               |
 | [C#](#/Lang/CSharp) | [第三方库](#/Python/3.Package) | [JS/TS](#/Web/3-JS)            | [Server](#/Command/Server) | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Lang/Java)                |
 | [Rust](#/Lang/Rust) | [CV](#/Python/7.Vision)        | [Node](#/Frame/2-Node)         | [Shell](#/Linux)           | [树莓派](#/HardWare/Raspberry) | Net                     | [Nest](#/Frame/7-NestJS)           |
-| [GoLang](#/Golang)  | [网络编程](#/Python/6.Network) | [React](#/Frame/3-React)       | [MiniSys](#/Lang/Assem)    | [ESP](#/HardWare/Esp8266)      | Paddle                  | [安全](#/Security)                |
+| [GoLang](#/Golang)  | [网络编程](#/Python/6.Network) | [React](#/Frame/3-React)       | [MiniSys](#/Lang/Assem)    | [ESP](#/HardWare/Esp8266)      | Paddle                  | [安全](#/Security)                 |
 | [Asm](#/Lang/Assem) | [机器学习](#/DeepLearn)        | [Vue](#/Frame/4-Vue)           |                            | [各种模块](#/HardWare/EleMod)  |                         |                                    |
 |                     |                                | [Electron](#/Frame/5-Electron) |                            |                                |                         |                                    |
 
@@ -106,4 +104,3 @@ visible: true
 | 文档                  | Vscode                   | SSH                           | SQL                           | WireShark                   | LNMP                     | vim                   |
 | Nginx                 | Typora                   | Choco                         | Redis                         | BurpSuite                   | NodeJS                   | ranger                |
 |                       |                          |                               | MongoDB                       |                             | MQTT                     | i3wm                  |
-

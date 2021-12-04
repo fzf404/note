@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: 03-Hexo基本操作
-sort: 
---> 
-# Hexo基本操作
+sort:
+-->
+
+# Hexo 基本操作
 
 ## 写作
 
@@ -14,21 +15,21 @@ sort:
 
   > - **layout：文件布局**
   >
-  > | 布局  | 路径           | 作用     |
-  > | ----- | -------------- | -------- |
-  > | post  | source/_post   | 新建文章 |
-  > | page  | source         | 新建页面 |
-  > | draft | source/_drafts | 新建草稿 |
+  > | 布局  | 路径            | 作用     |
+  > | ----- | --------------- | -------- |
+  > | post  | source/\_post   | 新建文章 |
+  > | page  | source          | 新建页面 |
+  > | draft | source/\_drafts | 新建草稿 |
   >
   > 不想被处理的文章，可修改 Font-Matter 中`layout:false`
   >
-  > - **设置titile**
+  > - **设置 titile**
   >
   > `hexo new :2002:03:16:fzf`
   >
   > - **模板（scaffold）**
   >
-  > Hexo会根据`scaffolds`文件夹建立文件。
+  > Hexo 会根据`scaffolds`文件夹建立文件。
 
 - Font-Matter
 
@@ -61,7 +62,7 @@ sort:
   >
   > - JSON Font-matter
   >
-  >   可使用JSON编写，将`---`变成`;;;`
+  >   可使用 JSON 编写，将`---`变成`;;;`
 
 ## 资源文件夹
 
@@ -73,11 +74,11 @@ sort:
 
 ## 服务器
 
-- 安装hexo-server：`npm install hexo-server --save`
+- 安装 hexo-server：`npm install hexo-server --save`
 
-  > -p 5000			更换端口
+  > -p 5000 更换端口
   >
-  > -i 192.168.1.1	 更换ip
+  > -i 192.168.1.1 更换 ip
 
 ## 生成器
 
@@ -85,13 +86,13 @@ sort:
 
 ## 模板
 
-- 将模板克隆到themes目录：
+- 将模板克隆到 themes 目录：
 
   ```bash
-  git clone https://github.com/HmyBmny/hexo-theme-concise.git themes/concise 
+  git clone https://github.com/HmyBmny/hexo-theme-concise.git themes/concise
   ```
 
-- 修改_config.yml中的theme：
+- 修改\_config.yml 中的 theme：
 
   ```yml
   theme: concise

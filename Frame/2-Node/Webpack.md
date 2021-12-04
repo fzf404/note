@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Webpack入门
-sort: 
---> 
+sort:
+-->
 
 > `yarn add webpack webpack-cli`
 >
@@ -12,21 +12,21 @@ sort:
 1. 配置文件`webpack.config.js`
 
 ```js
-'use strict'
-const path = require('path');
+"use strict";
+const path = require("path");
 module.exports = {
   // 打包入口
   entry: {
-    index: './src/index.js',
+    index: "./src/index.js",
   },
   // 输出地址
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'index.js'
+    path: path.join(__dirname, "dist"),
+    filename: "index.js",
   },
   // 开发环境
-  mode: 'production',
-}
+  mode: "production",
+};
 ```
 
 2. 源代码`src`
@@ -54,15 +54,15 @@ document.write(sayHi())
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script src="./index.js" type="text/javascript"></script>
-</body>
+  </body>
 </html>
 ```
 
@@ -79,7 +79,7 @@ document.write(sayHi())
 npm run build
 ```
 
-### 引入css
+### 引入 css
 
 > `npm i css-loader -D`
 >
@@ -103,14 +103,14 @@ module: {
 },
 ```
 
-2. 添加css文件，执行编译命令
+2. 添加 css 文件，执行编译命令
 
 ```js
 // 在js中引入css
-import './style.css'
+import "./style.css";
 ```
 
-### 编译ES6
+### 编译 ES6
 
 > `yarn add @babel/core @babel/preset-env babel-loader `
 
@@ -118,9 +118,7 @@ import './style.css'
 
   ```json
   {
-      "presets": [
-          "@babel/preset-env",
-      ]
+    "presets": ["@babel/preset-env"]
   }
   ```
 
@@ -128,11 +126,11 @@ import './style.css'
 
   ```js
   module: {
-          rules: [
-              {
-                  test: /.js$/,
-                  use: 'babel-loader'
-              },
-           ]
-        }
+    rules: [
+      {
+        test: /.js$/,
+        use: "babel-loader",
+      },
+    ];
+  }
   ```

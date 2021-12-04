@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 06-React-Antd
-sort: 
---> 
+sort:
+-->
 
 ## 使用
 
@@ -13,4 +13,3 @@ sort:
 yarn create react-app .
 yarn add antd @craco/craco craco-less
 ```
-

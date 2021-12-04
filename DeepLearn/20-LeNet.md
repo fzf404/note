@@ -1,21 +1,21 @@
-<!-- 
+<!--
 title: 20-LeNet网络
-sort: 
+sort:
 -->
 
-## LeNet-5 
+## LeNet-5
 
 > 典型的卷积神经网络的结构
 
 ![从零开始实现一个基于Pytorch的卷积神经网络](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/OYoihxStFCslGzw.jpg)
 
-1. C1-卷积层：6个5*5的卷积核，产生6个大小为28x28的特征图
-2. S2-池化层：2x2最大池化进行下采样，产生6个大小为14*14的滤波图
-3. C3-卷积层：16个10*10的特征图
-4. S4-池化层：16个大小为5*5的滤波图
+1. C1-卷积层：6 个 5\*5 的卷积核，产生 6 个大小为 28x28 的特征图
+2. S2-池化层：2x2 最大池化进行下采样，产生 6 个大小为 14\*14 的滤波图
+3. C3-卷积层：16 个 10\*10 的特征图
+4. S4-池化层：16 个大小为 5\*5 的滤波图
 5. C5-卷积层：卷积层，也可为全连接层，16\*5\*5=129
-6. F6-全连接层：输入为120维向量，输出为84维向量
-7. OUTPUT-输出层：输入为84维向量，输出为10维向量
+6. F6-全连接层：输入为 120 维向量，输出为 84 维向量
+7. OUTPUT-输出层：输入为 84 维向量，输出为 10 维向量
 
 ```python
 import torch
@@ -37,7 +37,7 @@ class LeNet(nn.Module):
     self.F6 = nn.Linear(in_features=120, out_features=84)
     self.R4 = nn.ReLU()
     self.OUT = nn.Linear(84, 10)
-  # 向前传播  
+  # 向前传播
   def forward(self, x):
     x = self.C1(x)
     x = self.R1(x)
@@ -134,4 +134,3 @@ for i, data in enumerate(test_loader):
 acc = (acc / length) * 100
 print('Accuracy: %.2f' %acc, '%')
 ```
-

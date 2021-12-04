@@ -1,13 +1,13 @@
-<!-- 
+<!--
 title: 05-Linux能干什么
-sort: 
---> 
+sort:
+-->
 
 > [zhihu](https://zhihu.com/search?q=linux能干什么&utm_content=search_suggestion&type=content)
 
 ## 开发
 
-> 如何在Linux上搞开发?
+> 如何在 Linux 上搞开发?
 
 ### 包管理器
 
@@ -26,7 +26,7 @@ sort:
 ### 开发环境
 
 ```bash
-gcc 
+gcc
 ```
 
 ### MarkDown
@@ -35,10 +35,10 @@ gcc
 >
 > 软件: `typora`
 
-```markdown
+````markdown
 # 权限
 
-> 命令执行不h成功,除了命令错啦,就是权限不够
+> 命令执行不 h 成功,除了命令错啦,就是权限不够
 
 - `chmod`
   > 修改文件权限
@@ -48,13 +48,16 @@ gcc
       printf("HelloWorld");
   }
   ```
+````
 
 ## 安装软件
 
 1. 安装....
 2. 破解
 3. 使用
+
 ```
 
 ### Nginx
 
+```

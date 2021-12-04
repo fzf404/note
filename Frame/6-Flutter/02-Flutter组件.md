@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 02-Flutter组件
-sort: 
---> 
+sort:
+-->
 
 ## 组件
 
@@ -239,4 +239,3 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-

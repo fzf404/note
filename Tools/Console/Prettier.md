@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Prettier
-sort: 
---> 
+sort:
+-->
 
 > 代码格式化工具
 
@@ -10,7 +10,7 @@ sort:
 ```json
 // .prettierrc
 {
-  "tabWidth": 2, 
+  "tabWidth": 2,
   "useTabs": false,
   "printWidth": 100
 }
@@ -22,4 +22,3 @@ sort:
 # 格式化全部代码
 prettier --config .prettierrc --write *
 ```
-

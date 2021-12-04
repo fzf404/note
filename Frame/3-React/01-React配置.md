@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 01-React配置
-sort: 
---> 
+sort:
+-->
 
 ## Vscode
 
@@ -14,4 +14,3 @@ sort:
 | imd   | import { } from 'module |
 
 ![image-20210103173333081](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20210103173340.png)
-

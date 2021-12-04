@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: A4-Matplotlib
-sort: 
---> 
+sort:
+-->
 
 > `matplotlib`
 
@@ -42,7 +42,7 @@ s='', marker='x'		# 大小与标志
 
 ## 图像
 
-```	python
+```python
 # 设置图形对象 ：窗口
 plt.figure('Figure Object 1',       # 图形对象名称  窗口左上角显示
            figsize = (8, 6),        # 窗口大小
@@ -60,7 +60,7 @@ plt.show()
 
 ## 3D
 
-- 使用plt
+- 使用 plt
 
 ```python
 # 生成点
@@ -88,4 +88,3 @@ ax.set_xlabel('x')
 ax.set_ylabel('y')
 plt.show()
 ```
-

@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 36-Django入门
-sort: 
---> 
+sort:
+-->
 
 ## 创建
 
@@ -42,7 +42,7 @@ news                     // news 应用目录
    ```python
    from django.contrib import admin
    from django.urls import path, include
-   
+
    urlpatterns = [
    	path('admin/', admin.site.urls),
    	# 引用子路由表
@@ -54,9 +54,9 @@ news                     // news 应用目录
 
    ```python
    from django.urls import path
-   
+
    from . import views
-   
+
    urlpatterns = [
      # 子路由表
      path('', views.index, name='index')
@@ -67,7 +67,7 @@ news                     // news 应用目录
 
    ```python
    from django.http import HttpResponse
-   
+
    def index(request):
      return HttpResponse('Hello Django')
    ```
@@ -95,7 +95,7 @@ news                     // news 应用目录
 
    ```python
    from django.shortcuts import render
-   
+
    def index(request):
        context = {
            'news_list': [
@@ -122,7 +122,7 @@ Blog.objects.all()
 # 查询单个模型 SELECT * FROM Blog WHERE ID=1
 Blog.objects.get(id=1)
 
-# 添加单个模型 
+# 添加单个模型
 # INSERT INTO Blog (title, content) VALUES ('hello', 'world')
 blog = Blog(title='hello', content='world')
 blog.save()
@@ -132,15 +132,15 @@ blog.save()
 
    ```python
    from django.db import models
-   
+
    # Create your models here.
    class Post(models.Model):
        title = models.CharField(max_length=200)
        content = models.TextField()
-   
+
        def __str__(self):
            return self.title
-   
+
    # 生成迁移脚本 news\migrations\0001_initial.py
    python manage.py makemigrations
    # 进行数据迁移
@@ -154,7 +154,7 @@ blog.save()
    ```python
    # 引入之前配置好的数据模型
    from .models import Post
-   
+
    admin.site.register(Post)
    ```
 
@@ -162,7 +162,7 @@ blog.save()
 
    ```python
    from .models import Post
-   
+
    def index(request):
        context = { 'news_list': Post.objects.all() }
        return render(request, 'news/index.html', context=context)
@@ -171,4 +171,3 @@ blog.save()
 4. 完工
 
    ![image-20210209123700262](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-20210209123700262.png)
-

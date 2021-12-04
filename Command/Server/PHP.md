@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Php
-sort: 
---> 
+sort:
+-->
 
 ```bash
 apt install php-fpm nginx
@@ -18,4 +18,3 @@ location ~ \.php$ {
 # wecenter
 apt install php-gd php-mysql php-curl
 ```
-

@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 11-NodeMCU网络
-sort: 
---> 
+sort:
+-->
 
 > 开发板：`NodeMCU 1.0 (ESP-12E Module)`
 
@@ -25,16 +25,16 @@ void setup()
     Serial.println(ssid);
     Serial.print("IP: ");
     Serial.println(WiFi.softAPIP());
-    
+
     // 连接wifi
     # 添加Wifi信息
-    ESP8266WiFiMulti wifiMulti;     
+    ESP8266WiFiMulti wifiMulti;
     # 建立ESP8266WiFiMulti对象
     wifiMulti.addAP(ssid1,passwd1);
     wifiMulti.addAP(ssid2,passwd2);
 	# 自动连接
     wifiMulti.run()；
-    
+
     // 直接连接
     WiFi.begin(ssid,password)
     // 判断是否连接
@@ -57,17 +57,14 @@ void loop()
 WiFi.begin(ssid,password)
 // 根据添加的信息自动连接
 ESP8266WiFiMulti wifiMulti.addAP(ssid1,passwd1);
-wifiMulti.run();	
+wifiMulti.run();
 // 判断是否连接
 WiFi.status() == WL_CONNECTED;
 // 连接信息
 WiFi.localIP();
 WiFi.SSID();
-    
+
 // AP模式
 WiFi.softAP(ssid, password);
 WiFi.softAPIP();
 ```
-
-
-

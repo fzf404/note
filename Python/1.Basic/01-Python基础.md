@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 01-Python基础
-sort: 
---> 
+sort:
+-->
 
 ## 数据类型
 
@@ -49,8 +49,8 @@ d = {'name': 'fzf404', 'age': 404}
 
 d = dict([('name', 'fzf404'), ('age', 404)])
 
-# val: x不存在时的返回值	
-d.get('name', val)			
+# val: x不存在时的返回值
+d.get('name', val)
 ```
 
 ## 工具方法
@@ -88,5 +88,5 @@ f1(1,2,5,'ai','py',dict = hh)
 args = (1, 2, 3, 4)
 kw = {'d': 99, 'x': '#'}
 f1(*args, **kw)
->>> a = 1, b = 2, c = 3, args = (4,) kw = {'d': 99, 'x': '#'} 
+>>> a = 1, b = 2, c = 3, args = (4,) kw = {'d': 99, 'x': '#'}
 ```

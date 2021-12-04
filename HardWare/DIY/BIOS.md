@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: BIOS
-sort: 
---> 
+sort:
+-->
 
 ## 按键
 
@@ -15,6 +15,6 @@ sort:
 
 - NUC
 
-BIOS -> Boot -> Secure Boot 
+BIOS -> Boot -> Secure Boot
 
-启动盘 -> 右侧蓝色USB接口
+启动盘 -> 右侧蓝色 USB 接口

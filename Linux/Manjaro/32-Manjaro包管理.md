@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 32-Manjaro包管理
-sort: 
---> 
+sort:
+-->
 
-# Manjaro包管理
+# Manjaro 包管理
 
 ## 清理垃圾
 
@@ -42,7 +42,7 @@ wget -c -r -np -k -L -p http://
 
 ## Snap
 
-要在Arch Linux上安装Snapd，你可以使用pacman包管理器或AUR：
+要在 Arch Linux 上安装 Snapd，你可以使用 pacman 包管理器或 AUR：
 
 ```bash
 sudo pacman -S snapd
@@ -61,18 +61,18 @@ source /etc/profile
 
 ### 使用介绍
 
-- 通过安装hello-world snap来测试你的系统，并确保它正确运行：
+- 通过安装 hello-world snap 来测试你的系统，并确保它正确运行：
 
   `$ sudo snap install hello-world`
 
-- 列出已安装的snaps：
+- 列出已安装的 snaps：
 
   `$ snap list`
 
-- 删除snap：
+- 删除 snap：
 
   `$ sudo snap remove hello-world`
-  
-- 安装OneNote
+
+- 安装 OneNote
 
   [OneNote](https://github.com/patrikx3/onenote)

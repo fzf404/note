@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: JQuery
-sort: 
+sort:
 -->
 
-> 初学JS
+> 初学 JS
 
 ## 常用
 
@@ -11,7 +11,9 @@ sort:
 
 ```js
 $(".nav-link").click(function () {
-	$($(this).attr("href")).get(0).scrollIntoView({ block: 'center', behavior: 'smooth' })
+  $($(this).attr("href"))
+    .get(0)
+    .scrollIntoView({ block: "center", behavior: "smooth" });
 });
 ```
 
@@ -50,13 +52,13 @@ $('.owl-carousel').owlCarousel({
 
 ```js
 // 会话存储
-window.sessionStorage.setItem('data', data.data.token);
-window.sessionStorage.getItem('data')
+window.sessionStorage.setItem("data", data.data.token);
+window.sessionStorage.getItem("data");
 
 // 本地存储
-window.localStorage.setItem('data', data.data.token);
-window.localStorage.getItem('data')
+window.localStorage.setItem("data", data.data.token);
+window.localStorage.getItem("data");
 
 // object存储
-window.sessionStorage.setItem('data', JSON.stringify(data));
+window.sessionStorage.setItem("data", JSON.stringify(data));
 ```

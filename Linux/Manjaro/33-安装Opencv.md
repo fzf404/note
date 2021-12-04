@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 33-安装Opencv
-sort: 
---> 
+sort:
+-->
 
-> 从github下载源码
+> 从 github 下载源码
 
 ## 安装依赖
 
@@ -16,11 +16,11 @@ sudo pacman -S pkg-config
 sudo pacman -S python
 sudo pacman -S ffmpeg
 
-sudo pacman -S intel-tbb   
-sudo pacman -S libdc1394  
-sudo pacman -S jasper 
-sudo pacman -S libjpeg-turbo libjpeg6-turbo 
-sudo pacman -S libtiff 
+sudo pacman -S intel-tbb
+sudo pacman -S libdc1394
+sudo pacman -S jasper
+sudo pacman -S libjpeg-turbo libjpeg6-turbo
+sudo pacman -S libtiff
 ```
 
 ## 编译安装
@@ -69,6 +69,3 @@ cd ~/opencv-3.4.12/samples/cpp
 g++ `pkg-config --libs opencv` drawing.cpp `pkg-config --cflags opencv` -o drawing.out
 
 ```
-
-
-

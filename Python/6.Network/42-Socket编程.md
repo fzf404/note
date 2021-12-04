@@ -1,12 +1,13 @@
-<!-- 
+<!--
 title: 42-Socket编程
-sort: 
---> 
-# Socket编程
+sort:
+-->
+
+# Socket 编程
 
 ## 入门
 
-### 创建tcp/udp套接字
+### 创建 tcp/udp 套接字
 
 ```python
 import socket
@@ -27,7 +28,7 @@ upd_socket.close()
 >
 > `SOCK_STREAM` TCP
 
-### 使用 
+### 使用
 
 #### 发送
 
@@ -63,7 +64,7 @@ udp.close()
 ```python
 # SOL_SOCKET 当前套接字
 # SO_BROADCAST 广播
-# 设置套接字参数（套接字，参数名，参数） 
+# 设置套接字参数（套接字，参数名，参数）
 udp.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, True)
 udp.sendto("hello".encode(), ('255.255.255.255',8080))
 
@@ -140,7 +141,6 @@ tcp.close()
   tcp.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)  python、python
   ```
 
-
 ## HTTP
 
 ### 基本
@@ -167,4 +167,3 @@ else:
 client_socket.close()
 tcp.close()
 ```
-

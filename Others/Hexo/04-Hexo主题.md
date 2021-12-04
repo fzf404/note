@@ -1,18 +1,19 @@
-<!-- 
+<!--
 title: 04-Hexo主题
-sort: 
---> 
-# Hexo设置主题
+sort:
+-->
+
+# Hexo 设置主题
 
 ## 安装
 
-- 从github下载主题
+- 从 github 下载主题
 
-    ```bash
-    git clone https://github.com/theme-next/hexo-theme-next themes/next
-    ```
+  ```bash
+  git clone https://github.com/theme-next/hexo-theme-next themes/next
+  ```
 
-- 更改Hexo配置文件
+- 更改 Hexo 配置文件
 
   ```bash
   notepad _config.yml

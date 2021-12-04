@@ -1,23 +1,23 @@
-<!-- 
+<!--
 title: 15-RNN
-sort: 
---> 
+sort:
+-->
 
 > 循环神经网络
 
 - 数据处理方式
 
-> 3句话，每句10词，每词100维向量
+> 3 句话，每句 10 词，每词 100 维向量
 >
 > `seq_len=10 batch=3 feature_len=100`
 
 - 隐藏记忆单元
 
-> h是可自定义的二维向量 `[batch,hidden_len]`
+> h 是可自定义的二维向量 `[batch,hidden_len]`
 >
 > 每个样本用 `hidden_len` 长度的向量记录
 
-### 构造RNN
+### 构造 RNN
 
 ```python
 from torch import nn
@@ -26,7 +26,7 @@ from torch import nn
 rnn = nn.RNN(100, 10)
 # odict_keys(['weight_ih_l0', 'weight_hh_l0', 'bias_ih_l0', 'bias_hh_l0'])
 # 源数据与隐藏数据的参数w，源数据与隐藏数据的偏执b
-print(rnn._parameters.keys())  
+print(rnn._parameters.keys())
 ```
 
 ## 实战
@@ -34,7 +34,7 @@ print(rnn._parameters.keys())
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-import torch 
+import torch
 import torch.nn as nn
 from torch import optim
 
@@ -59,7 +59,7 @@ class RnnNet(nn.Module):
     )
     # 输入维度hidden_size*output_size,输出维度output_size的线性层
     self.linear = nn.Linear(hidden_size,output_size)
-      
+
   def forward(self,x,hidden_prev):
     out,hidden_prev = self.rnn(x,hidden_prev)
     out = out.view(-1,hidden_size)
@@ -92,9 +92,9 @@ for iter in range(iterations):
     loss = criterion(output,y)
     model.zero_grad()
     loss.backward()
-    
+
     optimizer.step()
-    
+
     if iter % 1000 == 999:
         print(f"Iteration: {iter+1} loss: {loss.item()}")
 
@@ -104,7 +104,7 @@ predictions = []
 input =  x[:,0,:]
 for _ in range(x.shape[1]):
     input = input.view(1,1,1)
-    # 预测下一位置 
+    # 预测下一位置
     (pred,hidden_prev) = model(input,hidden_prev)
     input = pred
     predictions.append(pred.detach().numpy().ravel()[0])
@@ -118,4 +118,3 @@ plt.plot(time_steps[:-1], x.ravel())
 plt.scatter(time_steps[1:], predictions)
 plt.show()
 ```
-

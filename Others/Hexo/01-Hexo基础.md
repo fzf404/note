@@ -1,26 +1,26 @@
-<!-- 
+<!--
 title: 01-Hexo基础
-sort: 
---> 
-# Hexo基础
+sort:
+-->
+
+# Hexo 基础
 
 ## 介绍
 
-- Vue使用的是Hexo。
+- Vue 使用的是 Hexo。
 
-- hexo是一个博客工具，不需要部署到服务器。
+- hexo 是一个博客工具，不需要部署到服务器。
 - 也就是说，它是一个静态界面生成、上传的工具。
 
 ## 安装
 
-- 需要git与node.js
-- npm换源：`npm install -g cnpm --registry=https://registry.npm.taobao.org`
-- 使用cnpm安装Hexo：`cnpm install -g hexo-cli`
-
+- 需要 git 与 node.js
+- npm 换源：`npm install -g cnpm --registry=https://registry.npm.taobao.org`
+- 使用 cnpm 安装 Hexo：`cnpm install -g hexo-cli`
 
 ## 建站
 
-- 初始化hexo文件夹：（需要翻墙）
+- 初始化 hexo 文件夹：（需要翻墙）
 
   ```bash
   hexo init <folder>
@@ -35,14 +35,14 @@ sort:
   hexo s			# 开启服务
   ```
 
- - 写下第一篇文章：
+- 写下第一篇文章：
 
-   ```bash
-   hexo new 'post title'			# 建立一篇标题为“post title”的文章
-   hexo new draft 'draft title'	# 建立一篇不被渲染的草稿
-   ```
+  ```bash
+  hexo new 'post title'			# 建立一篇标题为“post title”的文章
+  hexo new draft 'draft title'	# 建立一篇不被渲染的草稿
+  ```
 
-- makedown的默认配置：`Front Matter`
+- makedown 的默认配置：`Front Matter`
 
 ## 命令
 
@@ -54,7 +54,7 @@ sort:
 
   > 新建一篇文章
   >
-  > 如果没有设置`layout`，默认使用_config,yml
+  > 如果没有设置`layout`，默认使用\_config,yml
 
   | 参数          | 描述                         |
   | ------------- | ---------------------------- |
@@ -94,12 +94,12 @@ sort:
 
 - `hexo deploy(d)`
 
-  > github部署网站
+  > github 部署网站
 
   - `npm install --save hexo-deployer-git`
 
   - 编辑`_congig.yml`
-    
+
     ```yml
     deploy:
       type: git

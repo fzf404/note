@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 11-Proto语法
-sort: 
---> 
+sort:
+-->
 
 ```protobuf
 // protoc/person.proto
@@ -62,6 +62,5 @@ message Date {
 }
 
 // 编译
-protoc  --go_out=. protoc/person.proto protoc/date.proto 
+protoc  --go_out=. protoc/person.proto protoc/date.proto
 ```
-

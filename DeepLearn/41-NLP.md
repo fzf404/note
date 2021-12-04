@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 41-NLP自然语言处理
-sort: 
+sort:
 -->
 
-### python基础
+### python 基础
 
 ```python
 str.strip()		# 去除某个字符
@@ -143,4 +143,3 @@ my_wordcloud = WordCloud(
 ).generate_from_frequencies(dict(count))	# 词频字典
 my_wordcloud.to_file('result.jpg')		# b
 ```
-

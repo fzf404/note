@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: MySQL
-sort: 
---> 
+sort:
+-->
 
 ## 安装
 
@@ -29,7 +29,6 @@ docker run -d -p 3306:3306 --name mariadb -e MYSQL_ROOT_PASSWORD=root mariadb
 docker exec -it <name>/<cid> bash
 ```
 
-
 ### 更换密码
 
 ```bash
@@ -53,7 +52,7 @@ flush privileges;  # 立即生效
 > alter table old_name rename as new_name;
 
 # 导出数据库
-mysqldump -uroot -p temp > temp.sql 
+mysqldump -uroot -p temp > temp.sql
 # 导出数据表
 mysqldumo -uroot -p temp name > temp_name.sql
 
@@ -62,4 +61,3 @@ mysql -uroot -p
 mysql> use temp;
 mysql> source temp.sql;
 ```
-

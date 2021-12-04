@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: CSS实战
-sort: 
---> 
+sort:
+-->
 
 ## 全屏
 
@@ -21,7 +21,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ```
 
-### div居中
+### div 居中
 
 ```css
 /* 方式1 */
@@ -31,7 +31,7 @@ canvas.height = window.innerHeight;
   left: 0;
   right: 0;
   bottom: 0;
-  
+
   margin: auto;
   text-align: center;
 }
@@ -44,7 +44,7 @@ canvas.height = window.innerHeight;
   top: 50%;
   /* 中心 */
   transform: translate(-50%, -50%);
-  
+
   text-align: center;
 }
 ```
@@ -60,20 +60,18 @@ canvas.height = window.innerHeight;
 }
 
 /* 滑块与导轨共有样式 */
-::-webkit-scrollbar-thumb,::-webkit-scrollbar-track {
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
   border-radius: 8px;
 }
 
 /* 滑块 */
 ::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0, 0.06);
+  background: rgba(0, 0, 0, 0.06);
 }
 
 /* 导轨 */
 ::-webkit-scrollbar-track {
-  background: rgba(0,0,0, 0.04);
+  background: rgba(0, 0, 0, 0.04);
 }
 ```
-
-
-

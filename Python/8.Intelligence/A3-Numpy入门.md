@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: A3-Numpy入门
-sort: 
---> 
-#  Numpy入门
+sort:
+-->
+
+# Numpy 入门
 
 ## 创建数据
 
@@ -20,7 +21,7 @@ arr = np.arange(100)
 arr = arr.reshape(10,10)
 ```
 
-### ndarray的参数
+### ndarray 的参数
 
 ```python
 arr.ndim	# 阶数
@@ -63,4 +64,3 @@ np.genfromtxt('csv.csv', delimiter = ',', dtype = 'int16')
 # fmt指定存储类型
 np.savetxt('2.csv', arr, fmt='%d', delimiter = ',')
 ```
-

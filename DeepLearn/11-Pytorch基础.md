@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 11-Pytorch基础
-sort: 
---> 
+sort:
+-->
 
 ## 计算
 
@@ -83,7 +83,7 @@ a3 = torch.tensor([0.001,0.001,0.001,0.997])
 
 ### 正则化
 
->  Regularization / Weight Decay
+> Regularization / Weight Decay
 >
 > 降低模型复杂度防止过拟合
 
@@ -105,7 +105,6 @@ a3 = torch.tensor([0.001,0.001,0.001,0.997])
 
 ## DropOut
 
-> 忽略一部分w值
+> 忽略一部分 w 值
 >
 > `nn.Dropout(0.5)`
-

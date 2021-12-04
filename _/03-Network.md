@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 03-网络基础
-sort: 
---> 
+sort:
+-->
 
 > 网络是怎样连接的？
 >
@@ -31,7 +31,7 @@ sort:
 >
 > 有什么问题？
 
-1. 如何读取多个1or0
+1. 如何读取多个 1or0
 
    > 双方使用同一套协议
    >
@@ -53,9 +53,9 @@ sort:
 
 ### 浏览器
 
-> f12怎么用？
+> f12 怎么用？
 
-#### get请求
+#### get 请求
 
 > header
 
@@ -105,6 +105,6 @@ sort:
 
 ## 扩展阅读
 
-[输入Google.com并且按下回车之后发生了什么？](https://blog.csdn.net/code_segment/article/details/78762266)
+[输入 Google.com 并且按下回车之后发生了什么？](https://blog.csdn.net/code_segment/article/details/78762266)
 
 [网络是怎样连接的](https://www.jianshu.com/p/6c92358dffc4)

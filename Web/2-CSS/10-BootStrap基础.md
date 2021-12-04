@@ -1,12 +1,15 @@
-<!-- 
+<!--
 title: 10-BootStrap基础
-sort: 
---> 
+sort:
+-->
 
 ## 引入
 
 ```html
-<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+<link
+  href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
@@ -70,7 +73,7 @@ justify-self-start * *
 // 向右偏移
 offset-lg-4
 // 向左右移动
-ml-auto	
+ml-auto
 mr-lg-auto
 // 消除间隙
 no-gutters
@@ -123,7 +126,7 @@ order-1 ~ 12 first
 
 // 代码
 <code>import bootstrap4</code>
-    
+
 // 按键
 <kbd>Ctrl+D</kbd>
 
@@ -147,6 +150,7 @@ order-1 ~ 12 first
 
 bg-xx: 	// 背景颜色
 ```
+
 ## 表格
 
 ```scss
@@ -280,7 +284,7 @@ progress-bar-animated: 进度条动画
 ```scss
 <div class="card bg-success text-white">
   <div class="card-header">头部</div>
-  <div class="card-body">内容</div> 
+  <div class="card-body">内容</div>
   <div class="card-footer">底部</div>
 </div>
 // 图片展示
@@ -321,9 +325,9 @@ dropdown-toggle-split
 
 ## 折叠
 
->  `a`元素上你可以使用` href`属性来代替`data-target`属
+> `a`元素上你可以使用` href`属性来代替`data-target`属
 >
-> 默认隐藏，使用.show显示
+> 默认隐藏，使用.show 显示
 
 ```scss
 <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">简单的折叠</button>
@@ -376,7 +380,7 @@ dropdown-toggle-split
 ## 导航
 
 ```scss
-ul-justify-content-center: 居中显示 
+ul-justify-content-center: 居中显示
    justify-content-end: 右对齐
    flex-column: 垂直导航
    nav-pills: 胶囊导航
@@ -466,9 +470,9 @@ fixed-bottom
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
-      </li>    
+      </li>
     </ul>
-  </div>  
+  </div>
 </nav>
 ```
 
@@ -547,7 +551,7 @@ fixed-bottom
     </div>
     <input type="text" class="form-control" placeholder="Username">
   </div>
- 
+
   <div class="input-group mb-3">
     <input type="text" class="form-control" placeholder="Your Email">
 		// 后缀
@@ -562,7 +566,7 @@ fixed-bottom
   <div class="custom-control custom-checkbox mb-3">
     <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
     <label class="custom-control-label" for="customCheck">自定义复选框</label>
-  </div>  
+  </div>
   // 默认复选框
   <input type="checkbox" id="defaultCheck" name="example2">
   <label for="defaultCheck">默认复选框</label>
@@ -571,11 +575,11 @@ fixed-bottom
   <div class="custom-control custom-radio">
     <input type="radio" class="custom-control-input" id="customRadio" name="example1">
     <label class="custom-control-label" for="customRadio">单选框1</label>
-  </div>    
+  </div>
 	<div class="custom-control custom-radio">
       <input type="radio" class="custom-control-input" id="customRadio2" name="example2">
       <label class="custom-control-label" for="customRadio2">单选框2</label>
-  </div> 
+  </div>
   // 自定义下拉菜单
   <select name="cars" class="custom-select-sm">
     <option selected>自定义选择菜单</option>
@@ -585,7 +589,6 @@ fixed-bottom
   </select>
   <button type="submit" class="btn btn-primary">提交</button>
 </form>
-        
+
 custom-control-inline: 一行显示
 ```
-

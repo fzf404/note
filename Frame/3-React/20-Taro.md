@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 20-Taro
-sort: 
---> 
+sort:
+-->
 
-> 使用React开发微信小程序
+> 使用 React 开发微信小程序
 
 ## 安装
 
@@ -19,89 +19,87 @@ yarn build:weapp
 
 ## 使用
 
-1. 建立Page
+1. 建立 Page
 
    ```jsx
-   import { Component } from 'react'
-   import { View } from '@tarojs/components'
-   
-   import { AtButton } from 'taro-ui'
-   
-   import './index.scss'
-   
+   import { Component } from "react";
+   import { View } from "@tarojs/components";
+
+   import { AtButton } from "taro-ui";
+
+   import "./index.scss";
+
    export default class Index extends Component {
-     state = {
-         
-     }
-   
+     state = {};
+
      onChange = () => {
-       this.setState({
-       })
-     }
-   
+       this.setState({});
+     };
+
      render() {
        return (
-         <View className='container'>
-           <AtButton className='select-button' type='primary'>Hello</AtButton>
-         </View >
-       )
+         <View className="container">
+           <AtButton className="select-button" type="primary">
+             Hello
+           </AtButton>
+         </View>
+       );
      }
    }
-   
    ```
-   
+
 2. 编写组件
 
    ```jsx
-   import { Component } from 'react'
-   import Taro from '@tarojs/taro'
-   
-   import { AtTabBar } from 'taro-ui'
-   
+   import { Component } from "react";
+   import Taro from "@tarojs/taro";
+
+   import { AtTabBar } from "taro-ui";
+
    export default class Index extends Component {
-       
      constructor() {
-       super(...arguments)
+       super(...arguments);
        this.state = {
-         current: parseInt(this.props.current)
-       }
+         current: parseInt(this.props.current),
+       };
      }
-       
+
      handleClick(value) {
-       if (value == this.state.current) { return }
+       if (value == this.state.current) {
+         return;
+       }
        this.setState({
-         current: value
-       })
-         
+         current: value,
+       });
+
        switch (value) {
          case 0:
            Taro.navigateTo({
-             url: '/pages/index/index'
-           })
+             url: "/pages/index/index",
+           });
            break;
          case 1:
            Taro.navigateTo({
-             url: '/pages/home/index'
-           })
+             url: "/pages/home/index",
+           });
            break;
          default:
            break;
        }
      }
-       
+
      render() {
        return (
          <AtTabBar
            fixed
-           tabList={
-             [
-               { title: '首页', iconType: 'home' },
-               { title: '个人信息', iconType: 'user' },
-             ]}
+           tabList={[
+             { title: "首页", iconType: "home" },
+             { title: "个人信息", iconType: "user" },
+           ]}
            onClick={this.handleClick.bind(this)}
            current={this.state.current}
          />
-       )
+       );
      }
    }
    ```
@@ -111,28 +109,28 @@ yarn build:weapp
    ```jsx
    // 跳转到目的页面，打开新页面
    Taro.navigateTo({
-     url: '/pages/page/path/name'
-   })
-   
+     url: "/pages/page/path/name",
+   });
+
    // 跳转到目的页面，在当前页面打开
    Taro.redirectTo({
-     url: '/pages/page/path/name'
-   })
-   
+     url: "/pages/page/path/name",
+   });
+
    // 传入参数 id=2&type=test
    Taro.navigateTo({
-     url: '/pages/page/path/name?id=2&type=test'
-   })
-   
+     url: "/pages/page/path/name?id=2&type=test",
+   });
+
    // 获得参数
-   import { getCurrentInstance } from '@tarojs/taro'
-   getCurrentInstance().router.params
+   import { getCurrentInstance } from "@tarojs/taro";
+   getCurrentInstance().router.params;
    ```
 
 ### 配置
 
 ```js
-// 配置导航栏 
+// 配置导航栏
 // app.config.js
 
 tabBar: {
@@ -177,11 +175,10 @@ export default {
 > [主题色生成器](https://nervjs.github.io/taro-ui-theme-preview/)
 
 ```scss
-$at-button-bg                    : #FF971B;
-$at-button-border-color-secondary:#FF971B;
-$at-button-color                 : #CC7815;
-$color-brand                     :#FF971B;
-
+$at-button-bg: #ff971b;
+$at-button-border-color-secondary: #ff971b;
+$at-button-color: #cc7815;
+$color-brand: #ff971b;
 
 @import "~taro-ui/dist/style/index.scss";
 
@@ -191,4 +188,3 @@ $color-brand                     :#FF971B;
   }
 }
 ```
-

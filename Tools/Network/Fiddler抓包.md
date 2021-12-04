@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: Fiddler抓包
-sort: 
---> 
+sort:
+-->
 
-## Fiddler基础
+## Fiddler 基础
 
 | 功能         | 介绍                           |
 | ------------ | ------------------------------ |
@@ -15,7 +15,7 @@ sort:
 
 ### 快捷键
 
-- R键：重放请求（R包）
+- R 键：重放请求（R 包）
 - Shift+R：多次重放
 - Ctrl+X：删除全部
 
@@ -26,14 +26,14 @@ sort:
 | cls       | 清空请求列表                   |
 | select    | 选择对应类型<br />select image |
 | `?<text>` | 含有关键词的高亮               |
-| `>size`   | 根据大小查找size               |
+| `>size`   | 根据大小查找 size              |
 | bpu xxx   | 响应前根据关键词设置断点       |
 | bpa xxx   | 响应后根据关键词设置断点       |
-| bps 404   | 中断404状态码                  |
-| bpv get   | 中断get请求                    |
+| bps 404   | 中断 404 状态码                |
+| bpv get   | 中断 get 请求                  |
 
 ## 手机抓包
 
-1. 设置代理到电脑的8888端口
-2. Fiddler的Connection打开允许所有
-3. 手机访问电脑ip及端口，安装CA证书
+1. 设置代理到电脑的 8888 端口
+2. Fiddler 的 Connection 打开允许所有
+3. 手机访问电脑 ip 及端口，安装 CA 证书

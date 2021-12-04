@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 12-Pytorch实战
-sort: 
---> 
+sort:
+-->
 
 ## MNIST
 
@@ -44,8 +44,8 @@ train_loader = torch.utils.data.DataLoader(torchvision.datasets.MNIST('datasets/
                 train=True,
                 download=True,
                 transform=torchvision.transforms.Compose([
-                torchvision.transforms.ToTensor(),                
-                torchvision.transforms.Normalize((0.1307, ), (0.3081, )) 
+                torchvision.transforms.ToTensor(),
+                torchvision.transforms.Normalize((0.1307, ), (0.3081, ))
     ])), batch_size=batch_size,shuffle=True)
 
 test_loader = torch.utils.data.DataLoader(torchvision.datasets.MNIST('datasets/mnist_data/',
@@ -106,7 +106,7 @@ for data, target in test_loader:
   break
 ```
 
-## 高级API
+## 高级 API
 
 ```python
 class MLP(nn.Module):
@@ -126,12 +126,12 @@ class MLP(nn.Module):
     def forward(self, x):
         x = self.model(x)
         return x
-      
+
 # GPU加速
 device = torch.device('cuda:0')
 net = MLP().to(device)
-# 重新定义优化器      
-optimizer = optim.SGD(net.parameters(), lr=learning_rate)   
+# 重新定义优化器
+optimizer = optim.SGD(net.parameters(), lr=learning_rate)
 
 + data, target = data.to(device), target.to(device)
 - logits = forward(data)
@@ -152,7 +152,7 @@ scheduler = ReduceLROnPlateau(optimizer, mode="min", patience=200, factor=0.7)
 # 每执行800次，就将学习率×90%
 scheduler = StepLR(optimizer, step_size=800, gamma=0.9)
 	scheduler.step()
-  
+
 # DropOut
 self.model = nn.Sequential(
   nn.Linear(784, 200),
@@ -167,4 +167,3 @@ self.model = nn.Sequential(
 # 测试集取消DropOut
 	net.eval()
 ```
-

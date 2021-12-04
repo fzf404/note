@@ -1,19 +1,19 @@
-<!-- 
+<!--
 title: 05-NexT个性化
-sort: 
---> 
+sort:
+-->
 
-# NexT主题个性化配置
+# NexT 主题个性化配置
 
 ## 配置
 
 - 更改主题配置文件
 
-  > NexT共有三种主题设定
+  > NexT 共有三种主题设定
   >
-  > \#scheme: Muse 
+  > \#scheme: Muse
   >
-  > \#scheme: Mist 
+  > \#scheme: Mist
   >
   > \#scheme: Pisces
 
@@ -61,11 +61,11 @@ sort:
 
 - 设定菜单显示文本
 
-  > 在language目录下对应的语言文件
+  > 在 language 目录下对应的语言文件
 
 - 添加友链
 
-  > 编辑NexT_config：`link`字段
+  > 编辑 NexT_config：`link`字段
 
 - 开启打赏
 
@@ -82,7 +82,7 @@ sort:
   > `\themes\next\source\css\_common\outline\sidebar\sidebar-author.styl`
   >
   > ```css
-  > border-radius: 20%;	/*头像变圆*/
+  > border-radius: 20%; /*头像变圆*/
   > ```
 
 - 设置阅读全文
@@ -108,16 +108,15 @@ sort:
   > canvas_sphere: false
   > ```
 
-
 ## 编辑文章
 
 - 新建文章
 
   > `hexo n firstblog`
   >
-  > 保存在_posts文件夹
+  > 保存在\_posts 文件夹
   >
-  > 修改md文件添加信息
+  > 修改 md 文件添加信息
 
 - 修改内链颜色
 
@@ -125,11 +124,11 @@ sort:
   >
   > ```css
   > .post-body p a {
-  > color: #345;
-  > border-bottom: none;
-  > &:hover{
-  >  color:#aaa;
-  > }
+  >   color: #345;
+  >   border-bottom: none;
+  >   &:hover {
+  >     color: #aaa;
+  >   }
   > }
   > ```
 
@@ -140,7 +139,7 @@ sort:
   > https://fontawesome.com/
   >
   > ```css
-  > rel="tag" 
+  > rel="tag"
   > /* 在此之后添加 */
   > <i class="fas fa-tags"></i>
   > ```
@@ -199,4 +198,3 @@ gitalk:
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language: zh-CN
 ```
-

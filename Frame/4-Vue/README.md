@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Vue
-sort: 
---> 
+sort:
+-->
 
 > 前端框架
 
@@ -12,4 +12,3 @@ sort:
 webpack.dev.conf.js >
 disableHostCheck: true
 ```
-

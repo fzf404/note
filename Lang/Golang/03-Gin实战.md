@@ -1,16 +1,16 @@
-<!-- 
+<!--
 title: 03-Gin实战
-sort: 
---> 
+sort:
+-->
 
-> 使用Gin框架开发
+> 使用 Gin 框架开发
 
 ```bash
 # 环境准备
 mkdir goLearn
 cd goLearn
 # 使用mod管理依赖
-go mod init goLearn 
+go mod init goLearn
 # 安装gin框架
 go get -u github.com/gin-gonic/gin
 ```
@@ -34,7 +34,7 @@ func main() {
 		})
 	})
     // 异常处理
-    panic(r.Run()) 
+    panic(r.Run())
 }
 ```
 
@@ -414,4 +414,3 @@ type User struct {
 	Sex      bool   `gorm:"type:bool;not null"`
 	Password string `gorm:"size:255;not null`
 ```
-

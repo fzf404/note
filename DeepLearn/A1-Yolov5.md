@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: A1-YOLOv5
-sort: 
---> 
+sort:
+-->
 
 # YOLOv5
 
@@ -29,7 +29,7 @@ python detect.py --source origin.mp4 --weights weights/yolov5x.pt --output.mp4
 
 ## 训练自己的模型
 
-> coco128数据集
+> coco128 数据集
 
 ```python
 # 使用colib进行训练
@@ -44,7 +44,7 @@ os.chdir('./yolov5')
   --epochs 100 \	# 次数
   --data /content/DataSet/fire/data.yaml \	# 训练数据
   --cfg models/yolov5s.yaml		# 预训练模型
-    
+
 # 运行模型
 python detect.py --weights .\best.pt --source <img/video/camera>
 ```

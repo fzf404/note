@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 04-React事件处理
-sort: 
---> 
+sort:
+-->
 
 ## 事件处理
 
@@ -91,7 +91,7 @@ function Logout(props) {
 }
 class App extends React.Component {
     state = {
-        isLogin: false 
+        isLogin: false
     }
     updateLog = () => {
         console.log(this)
@@ -112,7 +112,7 @@ class App extends React.Component {
 ReactDOM.render(
     <App name="admin" />
     , document.getElementById('app')
-) 
+)
 ```
 
 ## 列表渲染
@@ -133,7 +133,7 @@ class List extends React.Component {
         })
         return <div>
             <ul>
-                {listItem}    
+                {listItem}
             </ul>
         </div>
     }
@@ -141,10 +141,10 @@ class List extends React.Component {
 ReactDOM.render(
     <List/>
     , document.getElementById('app')
-) 
+)
 ```
 
-### kw列表渲染
+### kw 列表渲染
 
 ```react
 state = {
@@ -167,7 +167,7 @@ render() {
     }
     return <div>
         <ul>
-            {listItem}    
+            {listItem}
         </ul>
     </div>
 }
@@ -203,7 +203,7 @@ render() {
     const arr = this.state.list;
     const listItem = []
     arr.map((item,index) => {
-        // 添加索引key 
+        // 添加索引key
         let li = <li key = {index}>{item}</li>
         listItem.push(li)
     })
@@ -218,4 +218,3 @@ render() {
     </div>
 }
 ```
-

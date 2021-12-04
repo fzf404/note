@@ -1,7 +1,7 @@
  <!-- 
 title: 02-Rust基础
 sort: 
---> 
+-->
 
 ### 结构体
 
@@ -75,9 +75,9 @@ impl IPAddr{
 
 #### Option
 
-> 可选变量，两种状态，None或Some
+> 可选变量，两种状态，None 或 Some
 >
-> Rust中没有None类型，使用Option创建。
+> Rust 中没有 None 类型，使用 Option 创建。
 >
 > 这样当变量不为`Option<T>`类型时，一定不为空。
 
@@ -137,7 +137,7 @@ if let Some(5) = y {
 ```rust
 // 定义Vectro
 let mut v = vec![1, 2, 3];
-v[2] = 4;   // 修改值 
+v[2] = 4;   // 修改值
 v.push(4);  // 增加值
 // 可变引用
 let first =  &mut v[0];
@@ -184,4 +184,3 @@ let e = new_colors.entry("white");
 e.or_insert(RGB{r:255,g:255,b:255});
 println!("{:#?}",new_colors)
 ```
-

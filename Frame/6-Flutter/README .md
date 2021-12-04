@@ -1,13 +1,13 @@
-<!-- 
+<!--
 title: Flutter
-sort: 
---> 
+sort:
+-->
 
-> Google的移动端开发神器神器
+> Google 的移动端开发神器神器
 
 ## 安装
 
-- [SDK官网](https://flutter.dev/docs/development/tools/sdk/releases)
+- [SDK 官网](https://flutter.dev/docs/development/tools/sdk/releases)
 
 ```bash
 flutter doctor	# 环境验证
@@ -21,10 +21,9 @@ set https_proxy=http://127.0.0.1:10809
 
 ## 问题
 
-- 与AndroidStudio4.1不匹配
+- 与 AndroidStudio4.1 不匹配
 
 ```
 flutter channel dev
 flutter upgrade
 ```
-

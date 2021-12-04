@@ -1,15 +1,15 @@
-<!-- 
+<!--
 title: 01-Java快速入门
-sort: 
---> 
+sort:
+-->
 
 > [refer_1](https://blog.csdn.net/yhsnihao/article/details/88697660) [refer_2](https://blog.csdn.net/qq_30993595/article/details/81951361)
 
-## JAVA基础
+## JAVA 基础
 
 > 面向对象
 >
-> 编译器将每一个class编译成相应名称的`.class`字节码文件。
+> 编译器将每一个 class 编译成相应名称的`.class`字节码文件。
 
 ## 特性
 
@@ -24,7 +24,7 @@ sort:
   > 无论一个类实例化多少对象，它的静态变量只有一份拷贝。
   >
   > `main()`方法是静态的，执行时不会创建所在类的实例对象
-  
+
 - `final`
 
   > 指向变量的指针不可修改
@@ -33,7 +33,7 @@ sort:
 
 > 函数中变量分配栈内存，调用结束后自动释放。
 >
-> `new`定义的对象或数组分配堆内存，由java虚拟机自动回收
+> `new`定义的对象或数组分配堆内存，由 java 虚拟机自动回收
 
 ```java
 // 数组不可指定大小
@@ -61,7 +61,6 @@ for (int num : for_array) {
 (a>b)?c:d;
 ```
 
-
 ### 枚举
 
 ```java
@@ -69,7 +68,7 @@ class FreshJuice {
    enum FreshJuiceSize{ SMALL, MEDIUM , LARGE }
    FreshJuiceSize size;
 }
- 
+
 public class FreshJuiceTest {
    public static void main(String[] args){
       FreshJuice juice = new FreshJuice();
@@ -155,7 +154,7 @@ class A
 		// 实例化A类
 		A a1 = new A();
 		// 对象a1调用fun2()方法
-		a1.fun2();		
+		a1.fun2();
 	}
 }
 ```
@@ -275,7 +274,7 @@ class demo
 >
 > 子类继承父类所有成员变量和方法
 >
-> JAVA只支持单继承,但可多层继承
+> JAVA 只支持单继承,但可多层继承
 
 ### 子类的实例化
 
@@ -315,7 +314,7 @@ class Student extends Person
 	public Student(String name,int age,String school)
 	{
 		this(namde,age);
-		
+
 		this.school = school
 	}
 }
@@ -363,4 +362,3 @@ interface A
 	void bb();
 }
 ```
-

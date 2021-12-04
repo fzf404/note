@@ -1,47 +1,49 @@
-<!-- 
+<!--
 title: 08-Router
-sort: 
---> 
+sort:
+-->
 
 > 使用路由进行跳转
 >
 > `yarn add react-route-dom`
 
-
-
 ```jsx
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from "react";
 
-import App from './pages/App'
-import NoMatch from './pages/NoMatch'
+import App from "./pages/App";
+import NoMatch from "./pages/NoMatch";
 
 export default function IRouter() {
-  return <Router>
-    <Switch>
-      <Route exact path="/" component={App}></Route>
-      <Route path="*" component={NoMatch} />
-    </Switch>
-  </Router>
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={App}></Route>
+        <Route path="*" component={NoMatch} />
+      </Switch>
+    </Router>
+  );
 }
 ```
 
 ### Hash
 
 ```jsx
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import React from 'react'
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import React from "react";
 
-import App from './pages/App'
-import NoMatch from './pages/NoMatch'
+import App from "./pages/App";
+import NoMatch from "./pages/NoMatch";
 
 export default function IRouter() {
-  return <Router>
-    <Switch>
-      <Route exact path="/" component={App}></Route>
-      <Route path="*" component={NoMatch} />
-    </Switch>
-  </Router>
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={App}></Route>
+        <Route path="*" component={NoMatch} />
+      </Switch>
+    </Router>
+  );
 }
 ```
 
@@ -57,25 +59,25 @@ export default function IRouter() {
 
 > useParams, useHistory
 >
-> 获取动态路由的params，跳转
+> 获取动态路由的 params，跳转
 
 ```jsx
-import React from 'react'
-import { useParams, useHistory } from 'react-router-dom'
-import { Button } from 'antd'
-import 'antd/dist/antd.css'
-import './app.scss'
+import React from "react";
+import { useParams, useHistory } from "react-router-dom";
+import { Button } from "antd";
+import "antd/dist/antd.css";
+import "./app.scss";
 
 export default function Detail() {
   const params = useParams();
   const history = useHistory();
-  return <div className="container">
-    <h1>React Route Detail Test</h1>
-    <p>Value of ID: {params.id}</p>
-    <Button onClick={()=>
-      history.push('/')
-      }>Return</Button>
-  </div>
+  return (
+    <div className="container">
+      <h1>React Route Detail Test</h1>
+      <p>Value of ID: {params.id}</p>
+      <Button onClick={() => history.push("/")}>Return</Button>
+    </div>
+  );
 }
 
 /*
@@ -94,4 +96,3 @@ export default class App extends React.Component {
 }
 */
 ```
-

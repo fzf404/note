@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: GithubAction
-sort: 
---> 
+sort:
+-->
 
 > 基础语法
 >
@@ -23,8 +23,8 @@ on :
 env:
   GIT_USER: fzf404
   GIT_EMAIL: nmdfzf404@163.com
-  
-# 工作  
+
+# 工作
 jobs:
   # job_name
   job1_name:
@@ -32,17 +32,17 @@ jobs:
     steps:
       - name: Checkout source
         uses:actions/checkout@v2
-        
+
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
           version:  ${{ matrix.node_version }}
-          
+
       - name: Setup nodejs
         run: |
           date
           npm install
-          
+
       - name: Do job
       - run: |
       	npm version
@@ -89,17 +89,17 @@ jobs:
           git config --global user.email $GIT_USER
           git config --global user.name $GIT_EMAIL
           npm install
-          
+
       - name: Note Theme
         run: |
           git clone https://github.com/fzf404/rdoc-theme-fzf.git
           rm -rf node_modules/rdoc/theme/default/*
           mv rdoc-theme-fzf/* node_modules/rdoc/theme/default/
-          
+
       - name: Note build
         run: |
           npm run build
-          
+
       - name: Note deploy
         run: |
           npm run deploy
@@ -166,7 +166,7 @@ jobs:
           hexo d
 ```
 
-> 拷贝hexo配置
+> 拷贝 hexo 配置
 
 ```
 themes
@@ -174,7 +174,7 @@ _config.yml
 package.json
 ```
 
-> 上传github
+> 上传 github
 
 ```yml
 git remote add origin git@github.com:xx/xx.git

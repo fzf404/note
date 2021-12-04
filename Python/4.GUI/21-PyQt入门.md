@@ -1,12 +1,13 @@
-<!-- 
+<!--
 title: 21-PyQt入门
-sort: 
---> 
+sort:
+-->
+
 # PyQt5
 
 - 安装：`pip install pyqt5`
 
-## 第一个QT5程序
+## 第一个 QT5 程序
 
 ```python
 from PyQt5.QtWidgets import QApplication, QLabel
@@ -28,11 +29,11 @@ class MyWindows(QMainWindow):
     def __init__(self,*args,**kwargs):
         # 调用父类的init
         super(MyWindows, self).__init__(*args,**kwargs)
-        
+
         # 中心放一串文字
         label = QLabel('添加一个文本')
         self.setCentralWidget(label)
-        
+
 
 # 窗口实例化
 app = QApplication(sys.argv)
@@ -60,26 +61,26 @@ self.setCentralWidget(label)
 widget = QWidget()		# 最基本的容器
 layout = QVBoxLayout()	# 建立一个布局
 # layout = QHBoxLayout() 水平布局
-        
+
 # Layout中的内容
 label = QLabel('添加一个文本')
 button = QPushButton('按钮')
 # 添加Widget
 layout.addWidget(label)
 layout.addWidget(button)
-        
+
 # 整合
 widget.setLayout(layout)
 self.setCentralWidget(widget)
-        
+
 ```
 
 #### 表格布局
 
 ```python
 # 建立框架
-widget = QWidget()		
-layout = QGridLayout()  
+widget = QWidget()
+layout = QGridLayout()
 # Layout中的内容
 label = QLabel('添加一个文本')
 button1 = QPushButton('按钮1')
@@ -97,15 +98,11 @@ widget.setLayout(layout)
 self.setCentralWidget(widget)
 ```
 
-
-
-
-
 ## 数据及含义
 
 ### Widgets（'不知名的'小器物）
 
-> Qt程序中每个东西都称之为一个`widget`
+> Qt 程序中每个东西都称之为一个`widget`
 >
 > 包括：按钮、标签、窗口、对话框……
 
@@ -127,7 +124,7 @@ self.setCentralWidget(widget)
 
 ### Layouts（布局）
 
-告诉qt如何安放`widgets`
+告诉 qt 如何安放`widgets`
 
 ```python
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
@@ -201,4 +198,3 @@ button.clicked.connect(on_button_clicked)	# 假如点击则连接函数
 button.show()
 app.exec_()
 ```
-

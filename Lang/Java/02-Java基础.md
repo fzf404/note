@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 02-Java基础
-sort: 
---> 
+sort:
+-->
 
 ## 数据类型
 
@@ -39,7 +39,7 @@ double │   │   │   │   │   │   │   │   │
 String s = "hello";
 s.equals(arg)	// 判断是否相等
 // PI是一个常量
-final double PI = 3.14; 
+final double PI = 3.14;
 // 类型名字太长
 var sb = new StringBuilder();
 // 强制类型转换
@@ -77,7 +77,7 @@ int age = s.nextInt();
 
 ```java
 if() {
-} else if() { 
+} else if() {
 }else{
 }
 // switch
@@ -107,7 +107,7 @@ class Friend {
   public int age;
   private double relation;					// 子类实例均无法调用
   protected double relationship;		// 子类可继承,实例无法调用
-  
+
 	// 构造方法
   public Friend(String name, int age) {
     this.name = name;
@@ -191,7 +191,7 @@ public class Main {
 
 ## 迭代器
 
-> 使用迭代器访问LIst效率最高
+> 使用迭代器访问 LIst 效率最高
 
 ```java
 import java.util.Iterator;
@@ -227,4 +227,3 @@ public static void main(String[] args) {
     }
 }
 ```
-

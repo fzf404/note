@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 20-Scss
-sort: 
---> 
+sort:
+-->
 
 > `npm i sass -g`
 >
@@ -47,10 +47,10 @@ header ~ p { font-size: 1.1em }
 
 ```scss
 // 引入 style.scss
-@import	"style"
-    
-// 嵌套引入
-.fzf-theme { @import "style" }
+@import "style" // 嵌套引入
+  .fzf-theme {
+  @import "style";
+}
 
 // 这种注释内容不会出现在生成的css文件中
 /* 这种注释内容会出现在生成的css文件中 */
@@ -61,8 +61,8 @@ header ~ p { font-size: 1.1em }
 ```scss
 // 代码复用
 @mixin normal-theme {
-    color: brown;
-    border-radius: 5px;
+  color: brown;
+  border-radius: 5px;
 }
 // 在代码中引入
 @include normal-theme;
@@ -70,8 +70,12 @@ header ~ p { font-size: 1.1em }
 // 混合器传参
 @mixin link-colors($normal, $hover, $visited) {
   color: $normal;
-  &:hover { color: $hover; }
-  &:visited { color: $visited; }
+  &:hover {
+    color: $hover;
+  }
+  &:visited {
+    color: $visited;
+  }
 }
 // 调用
 a {
@@ -84,13 +88,10 @@ a {
 ```scss
 .inherit {
   border: 1px solid red;
-  background-color: #fdd;    
+  background-color: #fdd;
 }
 .normal {
   @extend .inherit;
   border: 3px;
 }
 ```
-
-
-

@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Hadoop
-sort: 
---> 
+sort:
+-->
 
 > [官方文档](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html)
 
@@ -234,4 +234,3 @@ bin/hadoop jar wordcount.jar com.fzf404.WordCount /user/root/input /user/root/ou
 # 查看结果
 bin/hadoop fs -cat /user/root/output/*
 ```
-

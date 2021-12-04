@@ -1,11 +1,11 @@
-<!-- 
+<!--
 title: Cloudreve
-sort: 
---> 
+sort:
+-->
 
 > 文件管理系统
 >
-> [DockerHub地址](https://hub.docker.com/r/xavierniu/cloudreve)
+> [DockerHub 地址](https://hub.docker.com/r/xavierniu/cloudreve)
 
 ## docker
 
@@ -49,7 +49,7 @@ CLOUDREVE_PGID=0
 ARIA2_RPC_SECRET=password
 
 # Optional
-# But I highly recommend you keep items below as default 
+# But I highly recommend you keep items below as default
 # unless you know what you are doing.
 
 # > Temp download folder for Aria2 & Cloudreve
@@ -68,55 +68,54 @@ CLOUDREVE_AVATAR_PATH=/opt/cloudreve/avatar
 - `docker-compose.yml`
 
 ```yaml
-version: '3'
+version: "3"
 
-services: 
-    aria2: 
-        image: p3terx/aria2-pro
-        logging: 
-            options: 
-                max-size: 1m
-        ports: 
-            - 6800:6800
-            - 6888:6888
-            - 6888:6888/udp
-        environment: 
-            - PUID=${CLOUDREVE_PUID}
-            - PGID=${CLOUDREVE_PGID}
-            - RPC_SECRET=${ARIA2_RPC_SECRET}
-        volumes: 
-            - ${ARIA2_CONFIG_PATH}:/config
-            - ${TEMP_FOLDER_PATH}:/downloads
-        networks: 
-            - cloudreve-network
-        restart: unless-stopped
+services:
+  aria2:
+    image: p3terx/aria2-pro
+    logging:
+      options:
+        max-size: 1m
+    ports:
+      - 6800:6800
+      - 6888:6888
+      - 6888:6888/udp
+    environment:
+      - PUID=${CLOUDREVE_PUID}
+      - PGID=${CLOUDREVE_PGID}
+      - RPC_SECRET=${ARIA2_RPC_SECRET}
+    volumes:
+      - ${ARIA2_CONFIG_PATH}:/config
+      - ${TEMP_FOLDER_PATH}:/downloads
+    networks:
+      - cloudreve-network
+    restart: unless-stopped
 
-    cloudreve: 
-        image: xavierniu/cloudreve
-        ports:
-            - 5212:5212
-        environment: 
-            - PUID=${CLOUDREVE_PUID}
-            - PGID=${CLOUDREVE_PGID}
-        volumes: 
-            - ${CLOUDREVE_UPLOAD_PATH}:/cloudreve/uploads
-            - ${TEMP_FOLDER_PATH}:/downloads
-            - ${CLOUDREVE_CONF_PATH}:/cloudreve/config
-            - ${CLOUDREVE_DB_PATH}:/cloudreve/db
-            - ${CLOUDREVE_AVATAR_PATH}:/cloudreve/avatar
-        networks: 
-            - cloudreve-network
+  cloudreve:
+    image: xavierniu/cloudreve
+    ports:
+      - 5212:5212
+    environment:
+      - PUID=${CLOUDREVE_PUID}
+      - PGID=${CLOUDREVE_PGID}
+    volumes:
+      - ${CLOUDREVE_UPLOAD_PATH}:/cloudreve/uploads
+      - ${TEMP_FOLDER_PATH}:/downloads
+      - ${CLOUDREVE_CONF_PATH}:/cloudreve/config
+      - ${CLOUDREVE_DB_PATH}:/cloudreve/db
+      - ${CLOUDREVE_AVATAR_PATH}:/cloudreve/avatar
+    networks:
+      - cloudreve-network
 
-
-networks: 
-    cloudreve-network:
+networks:
+  cloudreve-network:
 ```
 
 - nginx
 
 ```nginx
 server {
-    
+
     listen 80;
     listen 443 ssl;
 
@@ -137,7 +136,7 @@ server {
         proxy_redirect off;
 
         client_max_body_size 20000m;
-    
+
     }
 
     access_log  /www/logs/cloud.fzf404.top.log;
@@ -145,8 +144,6 @@ server {
 
 }
 ```
-
-
 
 ### Webdav
 
@@ -162,4 +159,3 @@ net stop webclient
 net start webclient
 
 ```
-

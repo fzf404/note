@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 10-Proto入门
-sort: 
---> 
+sort:
+-->
 
 ## gRPC
 
@@ -58,7 +58,7 @@ func NewPersonMessage() {
 
 > `google.golang.org/protobuf/proto`
 >
-> 将proto生成的结构体保存至文件
+> 将 proto 生成的结构体保存至文件
 
 ```go
 // 读取二进制文件
@@ -95,11 +95,11 @@ func writeToFile(fileName string, pb proto.Message) error {
 }
 ```
 
-### Json转换
+### Json 转换
 
 > `google.golang.org/protobuf/encoding/protojson`
 >
-> proto与json的互转
+> proto 与 json 的互转
 
 ```go
 // 转为JSON

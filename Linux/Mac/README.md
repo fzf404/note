@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Mac
-sort: 
---> 
+sort:
+-->
 
 ## 软件
 
@@ -42,4 +42,3 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py &&
 # 无法打开img
 sudo xattr -r -d com.apple.quarantine *.img
 ```
-

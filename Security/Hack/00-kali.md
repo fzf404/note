@@ -1,7 +1,8 @@
-<!-- 
+<!--
 title: 00-kali
-sort: 
---> 
+sort:
+-->
+
 ## 基础配置
 
 ```bash
@@ -12,4 +13,3 @@ sudo apt-get install fcitx-googlepinyin		# 安装输入法
 sudo passwd root		# 第一次设置root密码
 sudo apt-get install python3-pip
 ```
-

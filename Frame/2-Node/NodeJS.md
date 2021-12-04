@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 40-NodeJS入门
-sort: 
---> 
+sort:
+-->
 
 ## 全局对象
 
@@ -32,17 +32,17 @@ buf.toString('base64')
 - 编写模块
 
 ```js
-const os = require('os');
+const os = require("os");
 
 function printProgramInfo() {
-	console.log('当前用户', os.userInfo().username);
-	console.log('当前进程 ID', process.pid);
-	console.log('当前脚本路径', __filename);
+  console.log("当前用户", os.userInfo().username);
+  console.log("当前进程 ID", process.pid);
+  console.log("当前脚本路径", __filename);
 }
 
 function getCurrentTime() {
-	const time = new Date();
-	return time.toLocaleString();
+  const time = new Date();
+  return time.toLocaleString();
 }
 
 // 导出单个函数
@@ -51,36 +51,36 @@ module.exports = printProgramInfo;
 module.exports = { printProgramInfo, printProgramInfo };
 // 导出
 exports.sayHi = () => {
-	return 'Hello nodejs~'
-}
+  return "Hello nodejs~";
+};
 ```
 
 - 导入模块
 
 ```js
-const { printProgramInfo, getCurrentTime } = require('./demo')
-printProgramInfo()
-getCurrentTime()
+const { printProgramInfo, getCurrentTime } = require("./demo");
+printProgramInfo();
+getCurrentTime();
 ```
 
 ## 命令行
 
-> 使用npm安装依赖
+> 使用 npm 安装依赖
 
 ### commander
 
 > `yarn add commander`
 
 ```js
-const { Command } = require('commander');
+const { Command } = require("commander");
 const program = new Command();
 
 // 配置选项
 program
-  .option('-d, --debug', 'output extra debugging')
+  .option("-d, --debug", "output extra debugging")
   // 选项 延迟输出 默认值
-  .option('-t, --time <number>', 'delay time', 10)
-  .option('-m, --message <string>', 'output message', 'Hello Command');
+  .option("-t, --time <number>", "delay time", 10)
+  .option("-m, --message <string>", "output message", "Hello Command");
 
 program.parse(process.argv);
 
@@ -102,31 +102,31 @@ setTimeout(() => {
 > 事件触发与事件监听器功能
 
 ```js
-const {EventEmitter} = require('events');
+const { EventEmitter } = require("events");
 
 const emitter = new EventEmitter();
 
 // 监听 connect 事件，注册回调函数
-emitter.on('connect', username => {
+emitter.on("connect", (username) => {
   console.log(`${username} 已连接`);
 });
 
 // 触发 connect 事件
-emitter.emit('connect', 'fzf404');
+emitter.emit("connect", "fzf404");
 ```
 
 ## 服务
 
 ```js
-const http = require('http');
+const http = require("http");
 
-const hostname = 'localhost';
+const hostname = "localhost";
 const port = 3000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('Hello World\n');
+  res.setHeader("Content-Type", "text/html");
+  res.end("Hello World\n");
 });
 
 server.listen(port, () => {

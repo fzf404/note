@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 06-Vue路由
-sort: 
---> 
+sort:
+-->
 
 ## 基础
 
@@ -26,44 +26,43 @@ this.$router.push({ path: 'Info' ,query: { i: '123' }})
 ## 案例
 
 ```js
-import Vue from 'vue'
-import Router from 'vue-router'
-import store from '@/store'
-import manageRoutes from './module/manage'
-import infoRoutes from './module/info'
+import Vue from "vue";
+import Router from "vue-router";
+import store from "@/store";
+import manageRoutes from "./module/manage";
+import infoRoutes from "./module/info";
 
-Vue.use(Router)
+Vue.use(Router);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import('../views/Index.vue')
+    path: "/",
+    name: "Home",
+    component: () => import("../views/Index.vue"),
   },
   ...manageRoutes,
   ...infoRoutes,
   {
-    path: '*',
-    name: '404',
-    component: () => import('../views/404.vue')
-  }
-]
+    path: "*",
+    name: "404",
+    component: () => import("../views/404.vue"),
+  },
+];
 const router = new Router({
-  routes
-})
+  routes,
+});
 router.beforeEach((to, from, next) => {
   if (to.meta.auth) {
     // 判断用户是否登录
     if (store.state.userModule.token) {
-      next()
+      next();
     } else {
-      router.push({ name: 'Home' })
+      router.push({ name: "Home" });
     }
   } else {
-    next()
+    next();
   }
-})
+});
 
-export default router
+export default router;
 ```
-

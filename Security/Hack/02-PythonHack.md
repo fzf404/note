@@ -1,7 +1,8 @@
-<!-- 
+<!--
 title: 02-PythonHack
-sort: 
---> 
+sort:
+-->
+
 ## 0x1 使用类
 
 ```python
@@ -56,18 +57,18 @@ for host in hosts:
             if banner:
                 print("[+] " + host + ":" + str(port) + " open: \n" + banner)
             s.close()
-        except: 
+        except:
             pass
 ```
 
 ## 0x4 Fuzzer
 
-> fuzz是利用暴力实现对目标程序的测试
+> fuzz 是利用暴力实现对目标程序的测试
 
 ```python
 import sys, socket
 from time import sleep
- 
+
 # set first argument given at CLI to 'target' variable
 target = sys.argv[1]
 # create string of 50 A's '\x41'
@@ -83,7 +84,7 @@ while True:
     s.settimeout(2)
     s.connect((target,21))
     s.recv(1024)
- 
+
     print "Sending buffer with length: "+str(len(buff))
     # Send in string 'USER' + the string 'buff'
     s.send("USER "+buff+"\r\n")
@@ -91,7 +92,7 @@ while True:
     sleep(1)
     # Increase the buff string by 50 A's and then the loop continues
     buff = buff + '\x41'*50
- 
+
   except: # If we fail to connect to the server, we assume its crashed and print the statement below
     print "[+] Crash occured with buffer length: "+str(len(buff)-50)
     sys.exit()
@@ -113,13 +114,10 @@ while True:
    print(r.getheaders())
    ```
 
-4. 使用bs4解析
+4. 使用 bs4 解析
 
    ```python
    parse = BeautifulSoup(r.read(), features='html.parser')
    print(parse.title)
    print(parsed.find_all('h2'))
    ```
-
-   
-

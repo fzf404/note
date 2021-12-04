@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Ftp
-sort: 
---> 
+sort:
+-->
 
 ## goftp
 
@@ -30,16 +30,13 @@ docker run -d -v /opt/download:/home/vsftpd/<user_name> \
   --name vsftpd --restart=always fauria/vsftpd
 ```
 
-
-
 ## 客户端
-
 
 > 推荐使用[Filezilla](https://www.filezilla.cn/)
 
 ## 问题
 
->  Can't open that file: Permission denied
+> Can't open that file: Permission denied
 
 ```bash
 sudo chown -fR www ./*

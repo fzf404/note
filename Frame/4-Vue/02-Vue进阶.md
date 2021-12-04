@@ -1,25 +1,24 @@
-<!-- 
+<!--
 title: 02-Vue进阶
-sort: 
---> 
+sort:
+-->
 
 ## 判断与循环
 
 ```vue
-
 <span v-if="isEditing">Update Product</span>
 <span v-else>Add Product</span>
 
 <script>
 export default {
   data: { isEditing: false },
-}
+};
 </script>
 ```
 
 ## 双向绑定
 
-> 属性与data值同时改变
+> 属性与 data 值同时改变
 
 ```js
 <input v-model="name">
@@ -54,7 +53,7 @@ v-on="{click: onClick, keyup: onKeyup}"
 @keyup.enter="onKeyup">
 
 // 实例
-<button 
+<button
   v-on="{mouseenter: onEnter, mouseout: onOut, click: onClick}"
   :class="{active: changeColor}"
 >点我</button>
@@ -122,4 +121,3 @@ computed: {
   }
 }
 ```
-

@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 05-React通信
-sort: 
---> 
+sort:
+-->
 
 ```react
 // 父组件
@@ -13,4 +13,3 @@ sort:
     {this.props.showTe}
 </Button>
 ```
-

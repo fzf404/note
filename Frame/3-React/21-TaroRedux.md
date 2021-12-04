@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: 21-Taro中使用Redux
-sort: 
---> 
+sort:
+-->
 
-## 创建Redux
+## 创建 Redux
 
 `\src\store\index.jsx`
 
@@ -53,7 +53,7 @@ export default App
 import { connect } from "react-redux";
 
 class Index extends Component {
-    
+
   countIncrease = () => {
     this.props.setCount(this.props.count + 1)
   }
@@ -61,9 +61,9 @@ class Index extends Component {
   countDecrease = () => {
     this.props.setCount(this.props.count - 1)
   }
-  
+
   render() {
-    return (          
+    return (
       <View>
         <View>{this.props.count}</View>
         <AtButton onClick={() => this.countIncrease()}>
@@ -90,4 +90,3 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(Index)
 ```
-

@@ -1,20 +1,21 @@
-<!-- 
+<!--
 title: Typora
-sort: 
---> 
-# Typora_快捷键
+sort:
+-->
+
+# Typora\_快捷键
 
 ## 快速工作流
 
 ### 选择
 
-| 快捷键       | 功能           |
-| ------------ | -------------- |
-| Ctrl+L       | 选中当前行     |
-| Ctrl+D       | 选中当前词     |
-| Ctrl+Shift+D | 删除当前词     |
-| Ctrl+Shift+V | 粘贴纯文本     |
-| Ctrl+Shift+C | 复制为MarkDown |
+| 快捷键       | 功能            |
+| ------------ | --------------- |
+| Ctrl+L       | 选中当前行      |
+| Ctrl+D       | 选中当前词      |
+| Ctrl+Shift+D | 删除当前词      |
+| Ctrl+Shift+V | 粘贴纯文本      |
+| Ctrl+Shift+C | 复制为 MarkDown |
 
 ### 编辑
 
@@ -35,6 +36,3 @@ sort:
 | Ctrl+Shift+K | 插入代码块 |
 | Ctrl+K       | 链接       |
 | Ctrl+Shift+I | 插入图片   |
-
- 
-

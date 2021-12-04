@@ -1,7 +1,8 @@
-<!-- 
+<!--
 title: PicGo
-sort: 
---> 
+sort:
+-->
+
 # PicGo
 
 > 下载：[Releases](https://github.com/Molunerfinn/picgo/releases)

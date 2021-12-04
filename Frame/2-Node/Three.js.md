@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Three.js
-sort: 
---> 
+sort:
+-->
 
 ## 步骤
 
@@ -91,16 +91,16 @@ sort:
 
 ```js
 // 贴图
-const material = new THREE.MeshPhongMaterial({ 
-  map: new THREE.TextureLoader().load("logo.jpg")
+const material = new THREE.MeshPhongMaterial({
+  map: new THREE.TextureLoader().load("logo.jpg"),
 });
 
 // 透明材质
 const material = new THREE.MeshPhongMaterial({
-  side: THREE.DoubleSide,     // 双边渲染
-  transparent: true,          // 是否透明
+  side: THREE.DoubleSide, // 双边渲染
+  transparent: true, // 是否透明
   map: new THREE.TextureLoader().load("logo.png"),
-  alphaTest: 0.1,             // alpha通道小于0.1的像素点不显示
+  alphaTest: 0.1, // alpha通道小于0.1的像素点不显示
 });
 ```
 
@@ -109,16 +109,16 @@ const material = new THREE.MeshPhongMaterial({
 ```js
 // 批量创建物体
 function makeInstance(geometry, color, x) {
-  const material = new THREE.MeshPhongMaterial({color});
+  const material = new THREE.MeshPhongMaterial({ color });
   const cube = new THREE.Mesh(geometry, material);
   scene.add(cube);
   cube.position.x = x;
   return cube;
 }
 const cubes = [
-  makeInstance(geometry, 0x44aa88,  0),
+  makeInstance(geometry, 0x44aa88, 0),
   makeInstance(geometry, 0x8844aa, -2),
-  makeInstance(geometry, 0xaa8844,  2),
+  makeInstance(geometry, 0xaa8844, 2),
 ];
 ```
 
@@ -173,8 +173,8 @@ function onDocumentMouseDown(event) {
 function onDocumentMouseMove(event) {
   mouseX = event.clientX - windowHalfX;
   mouseY = event.clientY - windowHalfY;
-  targetRotationX = targetRotationXOnMouseDown + (mouseX - mouseXOnMouseDown) 
-  targetRotationY = targetRotationYOnMouseDown + (mouseY - mouseYOnMouseDown) 
+  targetRotationX = targetRotationXOnMouseDown + (mouseX - mouseXOnMouseDown)
+  targetRotationY = targetRotationYOnMouseDown + (mouseY - mouseYOnMouseDown)
 }
 // 鼠标抬起事件
 function onDocumentMouseUp(event) {
@@ -220,4 +220,3 @@ function render(time) {
 }
 requestAnimationFrame(render);
 ```
-

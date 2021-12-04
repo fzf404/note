@@ -1,13 +1,13 @@
-<!-- 
+<!--
 title: 02-常用标签
-sort: 
---> 
+sort:
+-->
 
 ### a
 
 > 链接标签
 
-- href: 目标链接, 使用#跳转id
+- href: 目标链接, 使用#跳转 id
 - title: 说明, 鼠标悬浮显示
 - target: 打开方式, 新标签页
 
@@ -33,7 +33,7 @@ text-decoration: none;
 - width/height: 宽度/高度
 
 ```html
-<img src="" alt="" width="960" height="720">
+<img src="" alt="" width="960" height="720" />
 ```
 
 ### table
@@ -48,23 +48,23 @@ text-decoration: none;
 
 ```html
 <table border="2" cellpadding="5" align="center">
-    <tr>
-        <th colspan="3">Our Classmates</th>
-    </tr>
-    <tr>
-        <td>fzf</td>
-        <td>🚹</td>
-        <td>18</td>
-    </tr>
-    <tr>
-        <td rowspan="2">ly</td>
-        <td>🚺</td>
-        <td>16</td>
-    </tr>
-    <tr>
-        <td>🚹</td>
-        <td>17</td>
-    </tr>
+  <tr>
+    <th colspan="3">Our Classmates</th>
+  </tr>
+  <tr>
+    <td>fzf</td>
+    <td>🚹</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td rowspan="2">ly</td>
+    <td>🚺</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>🚹</td>
+    <td>17</td>
+  </tr>
 </table>
 ```
 
@@ -82,28 +82,28 @@ text-decoration: none;
 
 <style>
   ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 200px;
-      background-color: #f1f1f1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
   }
 
   li a {
-      display: block;
-      color: #000;
-      padding: 8px 16px;
-      text-decoration: none;
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
   }
 
   li a.active {
-      background-color: #4CAF50;
-      color: white;
+    background-color: #4caf50;
+    color: white;
   }
 
   li a:hover:not(.active) {
-      background-color: #555;
-      color: white;
+    background-color: #555;
+    color: white;
   }
 </style>
 ```
@@ -112,61 +112,74 @@ text-decoration: none;
 
 ```html
 <form>
-
   <label>学号</label>
-  <input type="text" name="id" placeholder="你的学号" autofocus required>
+  <input type="text" name="id" placeholder="你的学号" autofocus required />
 
-  <br>
+  <br />
 
   <label>姓名</label>
-  <input type="text" name="name" placeholder="你的姓名" required>
+  <input type="text" name="name" placeholder="你的姓名" required />
 
-  <br>
+  <br />
 
   <label>密码</label>
-  <input type="text" name="password" placeholder="设置密码" required>
+  <input type="text" name="password" placeholder="设置密码" required />
 
-  <br>
+  <br />
 
   <label>性别</label>
-  <input type="radio" name="sex" value="0" required>
+  <input type="radio" name="sex" value="0" required />
   <label>👦</label>
-  <input type="radio" name="sex" value="1" required>
+  <input type="radio" name="sex" value="1" required />
   <label>👧</label>
 
-  <br>
+  <br />
 
   <label class="textarea-label">介绍</label>
-  <textarea name="intro" rows="2" cols="36" placeholder="自己的基本情况" required></textarea>
+  <textarea
+    name="intro"
+    rows="2"
+    cols="36"
+    placeholder="自己的基本情况"
+    required
+  ></textarea>
 
-  <br>
+  <br />
 
   <label class="textarea-label">爱好</label>
-  <textarea name="about" rows="4" cols="36" placeholder="自己平时的爱好" required></textarea>
+  <textarea
+    name="about"
+    rows="4"
+    cols="36"
+    placeholder="自己平时的爱好"
+    required
+  ></textarea>
 
   <div id="choice">
-    <a id="submit">
-      提交
-    </a>
-    <a href="index.html">
-      返回
-    </a>
+    <a id="submit"> 提交 </a>
+    <a href="index.html"> 返回 </a>
   </div>
-
 </form>
 ```
 
 ### 其他
 
 ```html
-<strong> # 黑体
-<em> # 斜体
+<strong>
+  # 黑体
+  <em>
+    # 斜体
 
-<br> # 换行
-<hr> # 水平线
-  
-<span> # 行内元素
+    <br />
+    # 换行
+    <hr />
+    # 水平线
 
-<iframe src="URL"></iframe> # 内链界面
+    <span>
+      # 行内元素
+
+      <iframe src="URL"></iframe> # 内链界面</span
+    ></em
+  ></strong
+>
 ```
-

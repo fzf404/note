@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 01-基础样式
-sort: 
---> 
+sort:
+-->
 
 ### 背景
 
@@ -20,7 +20,7 @@ background-repeat:no-repeat		取消平铺
 /* 背景是否固定 */
 background-attachment: fixd;
 /* 位置在右上方 */
-background-position:right top	
+background-position:right top
 
 /* 渐变 */
 background: linear-gradient(to bottom right, #7ffb, #4bfb);
@@ -57,33 +57,50 @@ p { font-family:"Times New Roman", Times, serif;}
 
 ```css
 /* 圆点 */
-ul.a { list-style-type: circle; }
+ul.a {
+  list-style-type: circle;
+}
 /* 方点 */
-ul.b { list-style-type: square; }
+ul.b {
+  list-style-type: square;
+}
 /* 罗马数字 */
-ol.c { list-style-type: upper-roman; }
+ol.c {
+  list-style-type: upper-roman;
+}
 /* 英文字母 */
-ol.d { list-style-type: lower-alpha; }
+ol.d {
+  list-style-type: lower-alpha;
+}
 
 /* 标记改为图像 */
-ul { list-style-image: url('sqpurple.gif'); }
+ul {
+  list-style-image: url("sqpurple.gif");
+}
 
 /* 简写 */
-ul { list-style: square url("sqpurple.gif"); }
+ul {
+  list-style: square url("sqpurple.gif");
+}
 ```
 
 ### 表格
 
 ```css
 /* 边框 */
-table, th, td { border: 1px solid black; }
+table,
+th,
+td {
+  border: 1px solid black;
+}
 /* 边距 */
-td { padding:15px; }
+td {
+  padding: 15px;
+}
 
 /* 颜色 */
 th {
-    background-color:green;
-    color:white;
+  background-color: green;
+  color: white;
 }
 ```
-

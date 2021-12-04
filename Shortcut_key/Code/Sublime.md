@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: Sublime
-sort: 
---> 
-# Sublime_快捷键
+sort:
+-->
+
+# Sublime\_快捷键
 
 ## 选择
 
@@ -12,4 +13,3 @@ sort:
 | Ctrl+Alt+↑↓     | 列选择     |
 | Ctrl/Alt        | 新增/取消  |
 | Ctrl+D          | 选择下一个 |
-

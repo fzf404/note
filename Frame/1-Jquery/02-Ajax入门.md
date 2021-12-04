@@ -1,69 +1,58 @@
 <!--
 title: 02-Ajax入门
-sort: 
+sort:
 -->
 
 ## load
 
 ```js
-var text1 = $('#text1')
-var text2 = $('#text2')
-var text3 = $('#text3')
-var info = $('#info')
+var text1 = $("#text1");
+var text2 = $("#text2");
+var text3 = $("#text3");
+var info = $("#info");
 
 // 加载
-info.load("/api/info")
+info.load("/api/info");
 // 使用load发送get请求
-text2.load('/api/getdata?name=gdy')
+text2.load("/api/getdata?name=gdy");
 // 使用load发送Post请求
-text3.load("/api/getjson",{"data":"bili"})
+text3.load("/api/getjson", { data: "bili" });
 ```
 
 > 异步加载
 
 ```js
-var trigger = $('#trigger');
-var card = $('#card');
+var trigger = $("#trigger");
+var card = $("#card");
 var loaded;
 // 点击trigger触发加载
 trigger.click(() => {
   // 如果visable，缓出
-  if (card.is(':visible')) {
+  if (card.is(":visible")) {
     card.slideUp();
   } else {
     if (!loaded) {
-      card.load('card.html');
+      card.load("card.html");
       loaded = true;
     }
     card.slideDown();
   }
-})
+});
 ```
 
 ## 其他方法
 
 ```js
 // get方法
-$.get(
-  `${base_url}/total`, 
-  data => {
-    // 解析json
-    if (typeof (json) == 'string') {
-      json = JSON.parse(data)
-    }
+$.get(`${base_url}/total`, (data) => {
+  // 解析json
+  if (typeof json == "string") {
+    json = JSON.parse(data);
   }
-).fail(
-  () => {}
-)
+}).fail(() => {});
 
 // post方法
-$.post(
-  `${base_url}/new`, 
-  data, 
-  (json) => {}
-).fail(
-  () => handle_fail()
-)
+$.post(`${base_url}/new`, data, (json) => {}).fail(() => handle_fail());
 ```
 
 ## ajax
@@ -71,54 +60,52 @@ $.post(
 ```js
 // form-data 格式
 $.ajax({
-  type: 'post',
+  type: "post",
   url: `${base_url}/login`,
   data: {
-    username: 'fzf',
-    password: 'password'
+    username: "fzf",
+    password: "password",
   },
-  success: data => {},
-  error: () => {}
-})
+  success: (data) => {},
+  error: () => {},
+});
 
 // json格式
 $.ajax({
-  type: 'post',
+  type: "post",
   url: `${base_url}/update`,
   contentType: "application/json",
-  dataType:'json', 
+  dataType: "json",
   data: JSON.stringify(data),
 
   // 成功处理
-  success: data => {},
+  success: (data) => {},
   // 失败处理
   error: () => {},
-})
+});
 
 // 上传图片
-$('#uploadimg').on('change', (event) => {
+$("#uploadimg").on("change", (event) => {
   // console.log(event.target.files[0].name);
-  var uploadURL = '/api/upimg'
+  var uploadURL = "/api/upimg";
   var formData = new FormData();
-  formData.append('img', event.target.files[0])
+  formData.append("img", event.target.files[0]);
   // ajax上传图片
   $.ajax(uploadURL, {
-    method: 'POST',
+    method: "POST",
     data: formData,
     contentType: false,
     processData: false,
-    beforeSend: xhr => {
-      token = window.localStorage.getItem('token');
+    beforeSend: (xhr) => {
+      token = window.localStorage.getItem("token");
       xhr.setRequestHeader("Authorization", "Bearer " + token);
     },
     // 得到响应的处理
-    success: data => {
-    },
+    success: (data) => {},
     // 未响应的处理
-    error: () => {
-    }
-  })
-})
+    error: () => {},
+  });
+});
 ```
 
 ## Token
@@ -127,15 +114,15 @@ $('#uploadimg').on('change', (event) => {
 
 ```js
 // 存储Token
-window.localStorage.setItem('token', data.data.token);
+window.localStorage.setItem("token", data.data.token);
 // 获取token
-window.localStorage.getItem('token')
+window.localStorage.getItem("token");
 
 // ajax请求
 $.ajax(myinfoURL, {
-  method: 'POST',
-  beforeSend: xhr => {
-    token = window.localStorage.getItem('token');
+  method: "POST",
+  beforeSend: (xhr) => {
+    token = window.localStorage.getItem("token");
     xhr.setRequestHeader("Authorization", "Bearer " + token);
   },
   success: () => {},

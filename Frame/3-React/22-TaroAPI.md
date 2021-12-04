@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 21-Taro调用API
-sort: 
---> 
+sort:
+-->
 
 ## 基础
 
@@ -49,23 +49,21 @@ Taro.getStorage({
 ### 开发云函数
 
 ```js
-const cloud = require('wx-server-sdk')
+const cloud = require("wx-server-sdk");
 // 初始化
 cloud.init({
-  env: cloud.DYNAMIC_CURRENT_ENV
-})
+  env: cloud.DYNAMIC_CURRENT_ENV,
+});
 
 exports.main = async (event, context) => {
+  const { OPENID } = cloud.getWXContext();
 
-  const { OPENID } = cloud.getWXContext()
-  
   return {
     code: 200,
-    msg: '获取成功',
+    msg: "获取成功",
     openId: OPENID,
-  }
-
-}
+  };
+};
 ```
 
 ### 调用云函数
@@ -110,28 +108,33 @@ exports.main = async (event, context) => {
 }
 ```
 
-### 数据库API
+### 数据库 API
 
 ```js
-const _ = db.command
+const _ = db.command;
 
 // 查询date大于当前时间的数据
-const data = await scheduleDB.where({
-  date: _.gte(parseInt(dayjs().format('YYYYMMDD'))),
-}).get({})
-  
+const data = await scheduleDB
+  .where({
+    date: _.gte(parseInt(dayjs().format("YYYYMMDD"))),
+  })
+  .get({});
+
 // 删除date小于当前时间的数据
-await scheduleDB.where({
-  date: _.lte(parseInt(dayjs().format('YYYYMMDD')))
-}).remove({})  
+await scheduleDB
+  .where({
+    date: _.lte(parseInt(dayjs().format("YYYYMMDD"))),
+  })
+  .remove({});
 
 // 更新, point字段自增
-const userUpdate = await userDB.where({
-  _openid: OPENID
-}).update({
-  data: {
-    point: _.inc(1)
-  }
-})
+const userUpdate = await userDB
+  .where({
+    _openid: OPENID,
+  })
+  .update({
+    data: {
+      point: _.inc(1),
+    },
+  });
 ```
-

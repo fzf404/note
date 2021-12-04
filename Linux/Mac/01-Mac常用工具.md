@@ -1,11 +1,11 @@
-<!-- 
+<!--
 title: 01-Mac常用工具
-sort: 
---> 
+sort:
+-->
 
 ## man
 
-> [Github地址](https://github.com/man-pages-zh/manpages-zh)
+> [Github 地址](https://github.com/man-pages-zh/manpages-zh)
 
 ```bash
 # clone源码
@@ -35,4 +35,3 @@ alias ibrew="arch -x86_64 /usr/local/bin/brew"
 CFLAGS="-I$(ibrew --prefix openssl)/include -I$(ibrew --prefix bzip2)/include -I$(ibrew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(ibrew --prefix openssl)/lib -L$(ibrew --prefix readline)/lib -L$(ibrew --prefix zlib)/lib -L$(ibrew --prefix bzip2)/lib" arch -x86_64 pyenv install --patch 3.6.8 < <(curl -sSL https://github.com/python/cpython/commit/8ea6353.patch\?full_index\=1)
 
 ```
-

@@ -1,7 +1,7 @@
  <!-- 
 title: 14-NodeMCU网络
 sort: 
---> 
+-->
 
 ## ESP8266HTTPClient
 
@@ -17,14 +17,14 @@ void httpClientRequest();
 // wifi接入信息
 const char* ssid = "Tenda_fzf";
 const char* password = "18652798912";
- 
+
 void setup() {
   Serial.begin(9600);
- 
+
   // 设置工作模式为无线终端模式
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
- 
+
   // 判断连接
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
@@ -33,25 +33,25 @@ void setup() {
   Serial.println("");
   Serial.print("WiFi Connected!");
   // 发送请求
-  httpClientRequest();  
+  httpClientRequest();
 }
- 
+
 void loop() {}
- 
+
 // 发送HTTP请求
 void httpClientRequest(){
- 
+
   HTTPClient httpClient;
- 
+
   // 配置URL
-  httpClient.begin(URL); 
+  httpClient.begin(URL);
   Serial.print("URL: "); Serial.println(URL);
- 
+
   //发送请求
   int httpCode = httpClient.GET();
   Serial.print("Send GET request to URL: ");
   Serial.println(URL);
-  
+
   if (httpCode == HTTP_CODE_OK) {
     String responsePayload = httpClient.getString();
     Serial.println("Server Response Payload: ");
@@ -60,7 +60,7 @@ void httpClientRequest(){
     Serial.println("Server Respose Code：");
     Serial.println(httpCode);
   }
- 
+
   httpClient.end();
 }
 ```
@@ -127,8 +127,8 @@ void wifiClientRequest() {
       }
     }
     // 关闭连接
-    client.stop();                      
-    Serial.print("Disconnected from "); 
+    client.stop();
+    Serial.print("Disconnected from ");
     Serial.print(host);
 
   } else {
@@ -137,4 +137,3 @@ void wifiClientRequest() {
   }
 }
 ```
-

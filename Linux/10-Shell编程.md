@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: 10-Shell编程
-sort: 
---> 
+sort:
+-->
 
 ## 实用
 
@@ -23,7 +23,7 @@ echo 'SomeText $(pwd) $((1+1))'
 ## 变量
 
 ```bash
-#!/bin/bash 
+#!/bin/bash
 
 # 变量
 name="value"		# 定义变量
@@ -35,7 +35,7 @@ varls=`ls`			# 命令返回值赋值
 varls=$(ls)
 
 # 字符串
-str='this is a string'	
+str='this is a string'
 # 双引号内部可有变量
 str="You are \"$name\"! \n"
 len = ${#str}		# 字符串长度
@@ -47,7 +47,7 @@ str = ${str:0-3:4}	# 右边第3个字符串开始取4个
 read -p "Input Num=" NUM1
 echo "Your Num：$NUM1"
 # 等待10s
-read -t 10 -p "Input Num=" NUM1	
+read -t 10 -p "Input Num=" NUM1
 # 数组
 array=(value0 value1 value2 value3)
 $(array[index])			# 取值
@@ -55,7 +55,7 @@ $(array[@])					# 全部
 
 # 运算
 $(( (2+3)*4 ))
-$[(2+3)*4] 
+$[(2+3)*4]
 ```
 
 ### 参数
@@ -66,7 +66,7 @@ $*			# 所有参数
 $@			# 所有参数-列表
 $#			# 参数个数
 
-$$			# 当前进程号			
+$$			# 当前进程号
 ```
 
 ### 常用语法
@@ -93,7 +93,7 @@ if [ 'test' = 'test' ] 		# 等于
 if [ 20 -gt 10] 					# 大于
 if [ -e /root/nohup.out ] # 文件是否存在
 
-if [ 'test' = 'test' ] && echo 'equal' || echo '!' 
+if [ 'test' = 'test' ] && echo 'equal' || echo '!'
 ```
 
 ### case
@@ -147,4 +147,3 @@ read -p "Input n2: " n2
 # 调用 getSum 函数
 getSum $n1 $n2
 ```
-

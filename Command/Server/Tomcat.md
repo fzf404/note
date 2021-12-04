@@ -1,9 +1,9 @@
-<!-- 
+<!--
 title: Tomcat
-sort: 
---> 
+sort:
+-->
 
-> 使用docker
+> 使用 docker
 >
 > [dockerhub](https://hub.docker.com/_/tomcat)
 
@@ -25,10 +25,9 @@ cp <file> new/
 curl 127.0.0.1:8080/new
 ```
 
-## war包
+## war 包
 
 > HelloWorld
 
-1. 将war包放到tomcat文件夹下的webapp中。
+1. 将 war 包放到 tomcat 文件夹下的 webapp 中。
 2. 打开浏览器`localhost:8080/war_name`
-

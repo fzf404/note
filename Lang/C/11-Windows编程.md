@@ -1,10 +1,11 @@
-<!-- 
+<!--
 title: 11-Windows编程
-sort: 
---> 
-# Windows编程
+sort:
+-->
 
-## 第一个Windows程序
+# Windows 编程
+
+## 第一个 Windows 程序
 
 ```c
 #include <windows.h>
@@ -78,17 +79,17 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 ### 返回值的说明
 
-| 参数     | 含义 | 值   |
-| -------- | ---- | ---- |
-| IDOK     | 确定 | 1    |
-| IDCANCLE | 取消 | 2    |
-| IDABORT  | 中止 | 3    |
-| IDRETRY  | 重试 | 4    |
-| IDIGNORE | 忽略 | 5    |
-| IDYES    | 是   | 6    |
-| IDNO     | 否   | 7    |
+| 参数     | 含义 | 值  |
+| -------- | ---- | --- |
+| IDOK     | 确定 | 1   |
+| IDCANCLE | 取消 | 2   |
+| IDABORT  | 中止 | 3   |
+| IDRETRY  | 重试 | 4   |
+| IDIGNORE | 忽略 | 5   |
+| IDYES    | 是   | 6   |
+| IDNO     | 否   | 7   |
 
-## 写一个小的HACK程序
+## 写一个小的 HACK 程序
 
 ```c
 #include <windows.h>
@@ -110,4 +111,3 @@ int WINAPI WinMain(HINSTANCE hInstance,
     return 0;
 }
 ```
-

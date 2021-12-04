@@ -1,10 +1,11 @@
-<!-- 
+<!--
 title: 22-PIL入门
-sort: 
---> 
-# Pillow入门
+sort:
+-->
 
-## 使用Image
+# Pillow 入门
+
+## 使用 Image
 
 ```python
 >>> from PIL import Image
@@ -23,7 +24,7 @@ JPEG (505, 500) RGB
   ```python
   import os, sys
   from PIL import Image
-  
+
   for infile in sys.argv[1:]:
       f, e = os.path.splitext(infile)
       outfile = f + ".jpg"
@@ -32,7 +33,7 @@ JPEG (505, 500) RGB
               Image.open(infile).save(outfile)
           except IOError:
               print("cannot convert", infile)
-  ```    
+  ```
 
 ### 剪切，粘贴，合并图像
 
@@ -46,12 +47,12 @@ JPEG (505, 500) RGB
   >>> im.show
   >>> im.save('test.png')
   ```
-  
+
 - 颜色通道
 
   ```python
   >>> r, g, b = im.split()		# 分离颜色通道
-  >>> r.show()					
+  >>> r.show()
   >>> im = Image.merge("RGB", (b, g, r))`		# 颜色反转
   ```
 
@@ -71,4 +72,3 @@ out = im.transpose(Image.ROTATE_270)
 ```
 
 ### 颜色增强
-

@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: Screen
-sort: 
---> 
+sort:
+-->
 
 > 窗口管理
 
@@ -24,4 +24,3 @@ sort:
 - `Ctrl+a` `X` Close the current region、
 - `Ctrl+a` `k` Close this window
 - `Ctrl+a` `d` Detach from the current screen session, and leave it running. Use `screen -r` to resume
-

@@ -1,7 +1,7 @@
-<!-- 
+<!--
 title: MkDoc
-sort: 
---> 
+sort:
+-->
 
 ## 安装
 
@@ -25,8 +25,7 @@ mkdocs build
 ```markdown
 ---
 hide:
-  - navigation		# 隐藏导航栏
-  - toc		# y
+  - navigation # 隐藏导航栏
+  - toc # y
 ---
 ```
-

@@ -1,9 +1,9 @@
  <!-- 
 title: 15-JSON解析
 sort: 
---> 
+-->
 
-## JSON解析
+## JSON 解析
 
 > [计算缓冲区](https://arduinojson.org/v6/assistant/)
 
@@ -25,11 +25,11 @@ void jsonParse(String data) {
 }
 ```
 
-## JSON生成
+## JSON 生成
 
 ```cpp
 String rootJson(){
-  StaticJsonDocument<512> doc;   
+  StaticJsonDocument<512> doc;
   doc["code"] = 200;
   doc["msg"] = "获取成功";
   // 新建子数据
@@ -40,12 +40,12 @@ String rootJson(){
 
   serializeJson(doc, jsonCode);
   Serial.print("Json Code: ");
-  Serial.println(jsonCode); 
-  
+  Serial.println(jsonCode);
+
   return jsonCode;
 }
 // 绑定
 void handleRoot() {
-  esp8266_server.send(200, "application/json", rootJson());  
+  esp8266_server.send(200, "application/json", rootJson());
 }
 ```

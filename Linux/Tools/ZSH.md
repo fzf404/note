@@ -1,8 +1,9 @@
-<!-- 
+<!--
 title: ZSH
-sort: 
---> 
-# zsh安装与配置
+sort:
+-->
+
+# zsh 安装与配置
 
 ## 安装
 
@@ -64,7 +65,7 @@ https://www.nerdfonts.com/
   eval $(thefuck --alias)
   # vscode font  设置
   Hack Nerd Font
-  
+
   ## clone
   git clone https://github.com/fzf404/linux_config.git
   ln linux_config/.zshrc .zhsrc
@@ -104,11 +105,10 @@ https://www.nerdfonts.com/
 
 - 目录选择
 
-  > 连按两次`Tab`会列出所有的补全直接选择，可以使用 ctrl+n/p/f/b上下左右切换
+  > 连按两次`Tab`会列出所有的补全直接选择，可以使用 ctrl+n/p/f/b 上下左右切换
   >
   > 使用`j folder`直接进行目录跳转
   >
   > `j --stat`查看历史路径库
   >
-  >  `/usr/local/bin` 你可以输入` cd /u/l/b` 然后按/
-  >
+  > `/usr/local/bin` 你可以输入` cd /u/l/b` 然后按/
