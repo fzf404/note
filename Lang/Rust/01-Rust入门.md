@@ -8,23 +8,24 @@ sort:
 [安装文档](https://www.rust-lang.org/tools/install)
 
 ```bash
-rustup update	# 更新
-rustc --version	# 版本
-rustup doc		# 本地文档
+rustup update    # 更新
+rustc --version    # 版本
+rustup doc        # 本地文档
 ```
 
 ## Cargo
 
 > [包管理器](https://crates.io/)
->
+> 
 > [安装](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 
 ```bash
-cargo new hello_cargo
-cargo check	# 检查语法错误
-cargo build	# 编译
-cargo run		# 编译并执行
-cargo build --release	# 发布编译
+cargo new hello_cargo # 新建
+cargo doc --open # 查看依赖文档
+cargo check    # 检查语法错误
+cargo build    # 编译
+cargo run        # 编译并执行
+cargo build --release    # 发布编译
 
 # 添加依赖
 Cargo.toml
@@ -48,8 +49,8 @@ rustc main.rs
 
 ```rust
 // 标量
-let demo: i16 = 40404;		// 有符号
-let demo = 40404u16;			// 无符号
+let demo: i16 = 40404;        // 有符号
+let demo = 40404u16;            // 无符号
 // 可变变量 字符串切片 &str
 let mut demo = "String";
 
@@ -57,7 +58,7 @@ let mut demo = "String";
 const MILLION = 1_000_000;
 
 // 数据类型
-let byte = b'A'		// byte类型
+let byte = b'A'        // byte类型
 
 // 元组
 let tup: (i32, f32, u8) = (404, 3.14, 1);

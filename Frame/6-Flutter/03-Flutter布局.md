@@ -50,7 +50,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 ```
 
 ### 灵活布局
@@ -101,7 +100,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 ```
 
 ## 垂直布局 Colume
@@ -139,7 +137,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 ```
 
 ## 层叠布局 Stack
@@ -182,7 +179,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 ```
 
 ### 卡片布局
@@ -249,5 +245,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 ```

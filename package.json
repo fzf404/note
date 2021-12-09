@@ -3,8 +3,8 @@
   "version": "1.1.0",
   "description": "fzf-note",
   "scripts": {
-    "start": "rdoc -d Command,DeepLearn,Frame,HardWare,Home,Lang,Linux,Others,Python,Security,Tools,Web --clean",
-    "build": "rdoc -d Command,DeepLearn,Frame,HardWare,Home,Lang,Linux,Others,Python,Security,Tools,Web --clean --build && node ./node_modules/rdoc/theme/default/search.js"
+    "start": "rdoc -d Command,DeepLearn,Frame,HardWare,Home,Lang,Others,Python,Security,Tools,Web --clean",
+    "build": "rdoc -d Command,DeepLearn,Frame,HardWare,Home,Lang,Others,Python,Security,Tools,Web --clean --build && node ./node_modules/rdoc/theme/default/search.js"
   },
   "rdoc": {
     "footer": "Copyright © 2021 Create by <a target=\"_blank\" href=\"https://www.fzf404.top/\">fzf404</a>"

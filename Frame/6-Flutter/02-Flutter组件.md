@@ -39,7 +39,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 ```
 
 ### 容器
@@ -82,7 +81,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 ```
 
 #### decoration
@@ -169,7 +167,6 @@ class MyList extends StatelessWidget {
     );
   }
 }
-
 ```
 
 #### 动态列表
@@ -203,7 +200,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 ```
 
 #### 网格列表

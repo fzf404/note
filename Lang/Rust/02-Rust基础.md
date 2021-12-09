@@ -1,4 +1,4 @@
- <!-- 
+<!-- 
 title: 02-Rust基础
 sort: 
 -->
@@ -76,9 +76,9 @@ impl IPAddr{
 #### Option
 
 > 可选变量，两种状态，None 或 Some
->
+> 
 > Rust 中没有 None 类型，使用 Option 创建。
->
+> 
 > 这样当变量不为`Option<T>`类型时，一定不为空。
 
 ```rust
@@ -123,7 +123,7 @@ let y = Some(5);
 match y {
   // None => None,
   Some(i) => Some(i + 1),
-  _ => None,	// 匹配全部
+  _ => None,    // 匹配全部
 };
 
 // if let

@@ -14,8 +14,8 @@ background-color: #00FF00;
 background-image: url(background.jpg);
 
 /* 背景图像的重复方式 */
-background-repeat:repeat-x		水平方向平铺
-background-repeat:no-repeat		取消平铺
+background-repeat:repeat-x;		/* 水平方向平铺 */
+background-repeat:no-repeat;	/* 取消平铺 */
 
 /* 背景是否固定 */
 background-attachment: fixd;

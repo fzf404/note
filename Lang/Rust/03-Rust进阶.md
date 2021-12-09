@@ -1,4 +1,4 @@
- <!-- 
+<!-- 
 title: 03-Rust进阶
 sort: 
 -->
@@ -28,7 +28,7 @@ let s2 = s.clone();
 // 引用
 // 引用某些值而不获得所有权
 let s1 = &s;
-let s2 = &mut s;	// 可变引用
+let s2 = &mut s;    // 可变引用
 
 
 // 切片 &t

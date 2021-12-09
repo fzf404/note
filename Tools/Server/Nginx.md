@@ -35,6 +35,10 @@ nginx -s reload
 
 # 返回特定值
 return 200 'ok';
+
+
+# 禁止IP访问
+deny 39.106.106.202;
 ```
 
 ### 路径映射
@@ -46,7 +50,7 @@ location = / {
 }
 # 通用匹配
 location /xx {
-	# 匹配所有/xx/的路径
+    # 匹配所有/xx/的路径
 }
 # 正则匹配
 location ~/xx {
@@ -84,37 +88,26 @@ location /test/ {
 
 ```nginx
 location /test {
-	# 反向代理
-	proxy_pass http://group1/;
+    # 反向代理
+    proxy_pass http://group1/;
 }
 ```
 
 ### 文件服务器
 
 ```nginx
-location /app {
-    # 遍历目录
-    autoindex on;
-    # 文件大小显示
-    autoindex_exact_size off;
-    # 显示服务器时间
-    autoindex_localtime on;
-    # 中文文件夹转码
-    charset utf-8;
-}
-
-
 server {
-  listen 80;
-  root /www/website/x;
+    listen 80;
+    charset utf-8; # 防止中文文件名乱码
 
-  autoindex on;
-  autoindex_exact_size off;
-  autoindex_localtime on;
-  charset utf-8;
+    location /download {
+        alias /usr/share/nginx/static;  # 静态资源目录
+
+        autoindex on;    # 开启静态资源列目录，浏览目录权限
+        autoindex_exact_size off;   # on(默认)显示文件的确切大小，单位是byte；off显示文件大概大小，单位KB、MB、GB
+        autoindex_localtime off;   # off(默认)时显示的文件时间为GMT时间；on显示的文件时间为服务器时间
+    }
 }
-
-
 
 # clone本项目到服务器
 cd /opt
@@ -131,14 +124,27 @@ docker run -d \
   fraoustin/fancyindex
 ```
 
-### 强制 https
+### 重定向
 
 ```nginx
 server {
     listen 80;
     server_name url;
-
+    # 强制 https
     rewrite ^(.*)$ https://$host$1 permanent;
+
+    # 单域名重定向
+    if ($host = 'www.sherlocked93.club'){
+        return 301 https://www.sherlocked93.club$request_uri;
+    }
+
+    # 全局非 https 协议时重定向
+    if ($scheme != 'https') {
+        return 301 https://$server_name$request_uri;
+    }
+
+    # 或者全部重定向
+    return 301 https://$server_name$request_uri;
 }
 ```
 
@@ -147,14 +153,16 @@ server {
 ```nginx
 # 负载均衡 权重
 upstream group1{
-   	server 192.168.0.1:80 weight=2;
+    ip_hash; # 同一客户端访问同一服务器
+    least_conn; # 动态分配给压力较小服务器
+    server 192.168.0.1:80 weight=2;
     server 192.168.0.1:8080 weight=1;
 }
 
 server{
     location /test/ {
         # 随机重定向到两个网页
-		proxy_pass http://group1/;
+        proxy_pass http://group1/;
   }
 }
 ```
@@ -162,9 +170,10 @@ server{
 ### 关闭缓存
 
 ```nginx
-add_header Pragma   no-cache;
-add_header Expires 0;
-add_header Cache-Control no-cache,no-store;
+# 过期时间
+expires 10h;
+# 关闭
+expires -1;
 ```
 
 ### 请求头
@@ -179,4 +188,29 @@ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 proxy_set_header Upgrade $http_upgrade;
 proxy_set_header Connection upgrade;
 proxy_set_header Accept-Encoding gzip;
+
+# 加速访问
+gzip on;
+```
+
+### 移动端适配
+
+```nginx
+server {
+    listen 80;
+    server_name test.com;
+
+    location / {
+     root  /usr/local/app/pc; # pc 的 html 路径
+        if ($http_user_agent ~* '(Android|webOS|iPhone|iPod|BlackBerry)') {
+            root /usr/local/app/mobile; # mobile 的 html 路径
+        }
+        index index.html;
+    }
+}
+
+作者：腾讯技术工程
+链接：https://zhuanlan.zhihu.com/p/384752564
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
