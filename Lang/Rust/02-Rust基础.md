@@ -1,6 +1,6 @@
-<!-- 
+<!--
 title: 02-Rust基础
-sort: 
+sort:
 -->
 
 ### 结构体
@@ -76,9 +76,9 @@ impl IPAddr{
 #### Option
 
 > 可选变量，两种状态，None 或 Some
-> 
+>
 > Rust 中没有 None 类型，使用 Option 创建。
-> 
+>
 > 这样当变量不为`Option<T>`类型时，一定不为空。
 
 ```rust

@@ -16,7 +16,7 @@ rustup doc        # 本地文档
 ## Cargo
 
 > [包管理器](https://crates.io/)
-> 
+>
 > [安装](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 
 ```bash

@@ -17,6 +17,13 @@ sudo apt-get install -y nodejs
 # Using Debian, as root
 curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get install -y nodejs
+
+# 版本管理工具
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+fisher install jorgebucaran/nvm.fish
+# nvm使用
+nvm install 13
+nvm use 13
 ```
 
 ### 工具
@@ -67,9 +74,9 @@ yarn -v
 yarn init
 yarn install
 yarn add/remove # 添加依赖包
+yarn upgrade packeage@latest # 更新依赖包
 yarn global add	# 全局安装
-yarn publish
-yarn run
+yarn publish # 发布包
 
 # 更多
 yarn upgrade-interactive --latest	# 手动选择更新

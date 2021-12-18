@@ -53,6 +53,9 @@ git rebase --onto e4a0dc c6b4418		# Hash值前六位 目标Hash值
 
 # 从所有提交中删除某个文件
 git filter-branch --index-filter 'git rm --cached --ignore-unmatch xxx.xx' -f
+# 推荐的做法
+PACKAGE_TOOL install git-filter-repo
+git filter-repo --invert-paths --path 'xxx.xx' --use-base-name
 ```
 
 ## SSH
@@ -123,8 +126,6 @@ git remote -v
 # 上传
 git push github master
 git push gitee master
-# 修改配置文件
-notepad .\.git\config
 ```
 
 ### 分支
@@ -151,3 +152,27 @@ git pull			# 拉取远端仓库的最新版本并合并
 > 以问号`?`通配单个字符；
 > 以方括号`[]`包含单个字符的匹配列表；
 > 以叹号`!`表示不忽略(跟踪)匹配到的文件或目录；
+
+## 原理
+
+```bash
+# 查看数据库
+tree .git/objects
+
+# 读取文件类型
+git cat-file -t 58c9
+blob # 缓冲区
+tree # 归档区 - 目录结构快照
+commit # 归档区 - 提交信息
+
+# 读取文件具体内容
+git cat-file -p 58c9
+
+# 分支信息
+cat .git/HEAD
+cat .git/refs/heads/master
+
+# 修改配置文件
+vim .\.git\config
+```
+

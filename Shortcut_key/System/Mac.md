@@ -12,6 +12,7 @@ sort:
 | Command + Control + Shift + 4 | 截图存至剪贴板 |
 | Command + Alt + Esc           | 任务管理器     |
 | Command + Control + Space     | 输入 Emoji     |
+| Command + Shift + F           | 应用内全屏     |
 
 ## Typora
 

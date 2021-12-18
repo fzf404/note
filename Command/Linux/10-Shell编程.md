@@ -7,7 +7,7 @@ sort:
 
 ```bash
 # 判断命令是否存在
-type tmux > /dev/null 2>&1 || { echo '安装tmux中...' ; apt install tmux -y}
+type tmux > /dev/null 2>&1 || { echo '安装tmux中...' ; apt install tmux -y }
 
 # 变量展开
 echo 1+1=$((1+1))
@@ -18,6 +18,16 @@ echo $HOME
 echo "SomeText $(pwd) $((1+1))"
 # SomeText $(pwd) $((1+1))
 echo 'SomeText $(pwd) $((1+1))'
+
+# 调试
+# 打印命令展开 失败立即退出 拒绝使用未定义变量 管道命令失败
+set -xeuo pipefail
+
+# 退出时杀掉所有子进程
+trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
+
+# 超时停止运行
+timeout 10s bash demo.sh
 ```
 
 ## 变量
