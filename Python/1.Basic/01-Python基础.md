@@ -28,6 +28,10 @@ str.index(',')
 
 # 字符串长度
 len(str())
+
+# 全部大/小写
+s.upper()
+s.lower()
 ```
 
 ### 列表

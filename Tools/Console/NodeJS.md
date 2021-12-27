@@ -18,6 +18,9 @@ sudo apt-get install -y nodejs
 curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get install -y nodejs
 
+# 安装特定版本
+setup_12.x
+
 # 版本管理工具
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install jorgebucaran/nvm.fish
@@ -30,10 +33,18 @@ nvm use 13
 
 ```bash
 # 内网穿透
-npx localtunnel --port 8000
+yarn global add localtunnel # 安装
+lt --port 8080 # 映射 8080 端口
+> your url is: https://cowardly-termite-80.loca.lt
+
+# 在线使用
+npx localtunnel --port 8000 
+
 # 开启文件服务
 npm install -g http-server
-http-server
+http-server # 使用
+# 禁止缓存
+http-server -c-1
 ```
 
 ### Npm

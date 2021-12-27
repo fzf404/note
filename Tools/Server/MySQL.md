@@ -54,7 +54,7 @@ flush privileges;  # 立即生效
 # 导出数据库
 mysqldump -uroot -p temp > temp.sql
 # 导出数据表
-mysqldumo -uroot -p temp name > temp_name.sql
+mysqldump -uroot -p temp name > temp_name.sql
 
 # 导入
 mysql -uroot -p
