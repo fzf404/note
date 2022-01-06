@@ -20,10 +20,10 @@ sort:
 
    ```python
    payload = {'key1': 'value1', 'key2': 'value2'}
-   # x-www-form-urlencoded格式
-   r = requests.post("http://httpbin.org/post", data=payload)
    # 使用json
    r = requests.post(url, json=payload)
+   # x-www-form-urlencoded格式
+   r = requests.post("http://httpbin.org/post", data=payload)
    # form-data格式
    payload = {'key1': 'value1', 'file': open('xx.jpg','rb')}
    r = requests.post("http://httpbin.org/post", file=payload)

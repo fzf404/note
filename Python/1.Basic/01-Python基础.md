@@ -41,8 +41,17 @@ s.lower()
 list.append()
 # 插入元素
 list.insert()
+# 删除第一个值为 x 的元素
+list.remove('x')
 # 删除末尾元素
 list.pop()
+# 删除下标为 1 的字符
+list.pop(1)
+
+# 排序
+list.sort()
+# 反向
+list.reverse()
 ```
 
 ### 字典
@@ -55,6 +64,11 @@ d = dict([('name', 'fzf404'), ('age', 404)])
 
 # val: x不存在时的返回值
 d.get('name', val)
+
+# 浅拷贝
+d.copy()
+# 深拷贝
+copy.deepcopy(d)
 ```
 
 ## 工具方法
