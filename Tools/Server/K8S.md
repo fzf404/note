@@ -3,125 +3,105 @@ title: K8S
 sort:
 -->
 
-> Docker[安装文档](https://docs.docker.com/engine/install/)
+> [k8s安装脚本](https://github.com/lework/kainstall)
 >
-> kubectl[安装文档](https://kubernetes.io/zh/docs/tasks/tools/install-kubectl-linux/)
->
-> minikube[安装文档](https://minikube.sigs.k8s.io/docs/start/)
->
-> Dashboard[安装文档](https://kubernetes.io/zh/docs/tasks/access-application-cluster/web-ui-dashboard/)
+> [参考教程](https://k8s.easydoc.net/)
 
 ## 概念
+
+### 物理
+
+- Master
+
+    > 主节点，用于控制平台，可不跑任务，可以开多个主节点来提高集群可用度。
+
+- Worker
+
+    > 工作节点，由主节点管理，可不断加机器扩大集群
 
 <img src="https://d33wubrfki0l68.cloudfront.net/5cb72d407cbe2755e581b6de757e0d81760d5b86/a9df9/docs/tutorials/kubernetes-basics/public/images/module_03_nodes.svg" alt="pod" style="width:30%" />
 
 - Pod
 
-  > 调度最小单位为 Pod。
-  >
-  > 根容器为 Pause，所有业务都共享此根 Pod 的**IP 和 Volume**。
+  > 每个Woker可有多个Pod，调度最小单位，可包含多个容器，有自己的虚拟IP。
 
-- Service
+- deployment
 
-  > Service 用于将 Pod 代理出去，
-  >
-  > K8S 会为其分配一个集群内唯一的 IP，叫做**ClusterIP**，
-  >
-  > 由 kube-proxy 进程将对 Service 的请求转发到具体的 Pod 上
+    > 对 Pod 副本数量进行管理
 
-- Label
+### 组件
 
-  > 可以打在 Pod 与 Service 上的标签
-  >
-  > Service 可以通过 Label Selector，找到打了同一 Label 的 Pod 副本集。
+- `kube-apiserver`: API 服务器，对外提供 Kubernetes API
+- `etcd`: 键值数据库，保存 Kubernetes 所有集群数据
+- `kube-scheduler`: 调度 Pod 到哪个节点运行
+- `kube-controller`: 集群控制器
+- `cloud-controller`: 与云服务商交互
 
-- Replica Set
-
-  > 定期的检测当前存活的 Pod 数量，保持设定副本数量，
-
-## 搭建
-
-### kubeadm
+## 使用
 
 ```bash
-# 安装docker与kubeadm
-./tools/ubuntu-docker.sh
-./tools/install-kubeadm.sh
-
-# 设置hostname，方便查看
-sudo hostnamectl set-hostname master-node
-# 初始化集群
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16
-# 单核CPU
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=NumCPU
-
-# 返回值，注意保存，用于其他节点加入到集群中
-kubeadm join 10.0.8.13:6443 --token 34vads.azh5kfsbtifl3rnc \
-        --discovery-token-ca-cert-hash sha256:54e601f935c38d4d17e38430cdd4de98ebc4ddbf013d5a7835d20dc553213e42
-
-# 普通用户可执行
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
-# 查看节点状态，发现NotReady
-kubectl get nodes
-
-# 安装网络通信插件，状态为Ready
-sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-
-# node节点
-sudo hostnamectl set-hostname slave-node
-```
-
-### minikube
-
-> [教程](https://minikube.sigs.k8s.io/docs/start/)
-
-```bash
-# 启动
-minikube start
-# 控制板
-minikube dashboard
-# 配置代理
-kubectl proxy --port=8080 --address='0.0.0.0' --accept-hosts='^.*'
-# 访问
-http://ip/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
-# 关闭
-minikube delete
-```
-
-### 常用命令
-
-```bash
-kubectl get				# 列出资源
-kubectl describe	# 显示有关资源的详细信息
-kubectl logs			# 打印 pod 和其中容器的日志
-kubectl exec			# 在 pod 中的容器上执行命令
-# 进入pod中执行命令
+# 部署应用
+kubectl apply -f app.yaml
+# 应用操作
+kubectl rollout restart pod test-pod
+kubectl rollout restart deployment test-k8s
+kubectl rollout pause # 暂停
+kubectl rollout resum # 恢复
+# 查看
+kubectl get pod # 列出 pod
+kubectl get deployment # 列出 deployment
+kubectl get all # 全部
+kubectl describe pod $POD_NAME # 查看详细信息
+# 日志
+kubectl logs # 打印 pod 和其中容器的日志
+# 删除
+kubectl delete pod $POD_NAME
+kubectl delete deployment $DEPLOY_NAME
+kubectl delete all --all # 删除全部
+# 进入容器
+kubectl exec
 kubectl exec -ti $POD_NAME -- bash
-# 重置
-kubeadm reset
 ```
 
-### 问题
+- `pod.yaml`
 
-1. docker 增加用户权限
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod
+spec:
+  # 定义容器，可以多个
+  containers:
+    - name: test-k8s # 容器名字
+      image: # 镜像路径
+```
 
-   ```bash
-   # 将 docker 的权限移交给非 root 用户
-   sudo usermod -aG docker $USER
-   newgrp docker 	# 激活更改
-   ```
+- `deployment.yaml`
 
-2. ` The recommended driver is "systemd"`
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # 部署名字
+  name: test-k8s
+spec:
+  # 个数
+  replicas: 2
+  # 用来查找关联的 Pod，标签需匹配
+  selector:
+    matchLabels:
+      app: test-k8s
+  # 定义 Pod 相关数据
+  template:
+    metadata:
+      labels:
+        app: test-k8s
+    spec:
+      # 定义容器，可以多个
+      containers:
+      - name: test-k8s # 容器名字
+        image: # 镜像路径
+```
 
-   ```bash
-   vim /etc/docker/daemon.json
-
-   {
-    "exec-opts":["native.cgroupdriver=systemd"]
-   }
-
-   systemctl restart docker
-   ```
+​    

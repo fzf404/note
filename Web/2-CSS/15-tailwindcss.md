@@ -2,6 +2,13 @@
 title: 15-tailwindcss
 -->
 
+## 安装
+
+```bash
+# vue-cli
+vue add tailwind
+```
+
 ## 核心概念
 
 ### 响应式设计
@@ -59,10 +66,16 @@ localStorage.removeItem('theme')
 ### 布局
 
 ```css
-// 容器
+/* 容器 */
 container
-// 垂直居中
+/* 垂直居中 */
 flex flex-col items-center
+/* 完全居中 */
+flex flex-col flex-wrap justify-center items-center
+/* grid布局 */
+h-screen grid grid-cols-3 grid-rows-3
+/* 子项目 */
+col-span-2 row-span-2
 ```
 
 ### 效果

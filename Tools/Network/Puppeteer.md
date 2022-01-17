@@ -13,6 +13,9 @@ sort:
 yarn add puppeteer
 # 不包含chromium
 yarn add puppeteer-core
+
+# ubuntu
+apt install chromium-browser
 ```
 
 > HelloWorld
@@ -56,6 +59,7 @@ const puppeteer = require("puppeteer");
 - `elementHandle.focus()`：聚焦到某个元素
 - `elementHandle.hover()`：鼠标 hover 到某个元素上
 - `elementHandle.type('hello')`：在输入框输入文本
+- ``：获得值
 
 ```js
 const puppeteer = require("puppeteer");
@@ -71,6 +75,9 @@ const puppeteer = require("puppeteer");
 
   const page = await browser.newPage();
   await page.goto("https://www.baidu.com/");
+  
+  // 获得值
+  const code = await page.$eval('#code-box', (el) => el.innerText)
 
   const inputElement = await page.$("#kw");
   // type 输入文本

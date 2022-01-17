@@ -33,3 +33,16 @@ vim /etc/mongodb.conf
 auth: true
 systemctl restart mongodb
 ```
+
+## 语法
+
+```bash
+show dbs # 展示数据库
+use yapi # 进入数据库
+
+show collections # 展示集合
+
+db.user.find() # 查询集合数据
+db.user.find({email:/@gmail/}) # 条件查询, eamail 字段中含有gmail的数据
+
+db.user.remove({email:/@gmail/}) # 条件删除

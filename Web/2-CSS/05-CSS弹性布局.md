@@ -69,9 +69,13 @@ justify-content: space-between;
 display: grid;
 
 // 垂直排列
-grid-template-rows: 10rem 10rem;
-// 水平排列
-grid-template-columns: 10rem 20% 1f;
+grid-template-rows: 10rem 30%;
+// 两行, 每行 50px
+grid-template-rows: repeat(2, 50px);
+// 水平排列 自动 剩余空间占1份 最小100px/最大占2份
+grid-template-columns: auto 1fr minmax(100px, 2fr);
+// 自动填充, 每个单元格 200px
+grid-template-columns: repeat(auto-fill, 200px);
 
 // 间距
 row-gap: 2rem;
@@ -92,4 +96,12 @@ align-items: center; // 垂直对齐
   justify-self: start;
   align-items: start;
 }
+
+// 子元素
+// 大小为1, 左边框在第一个网格线, 右边框在第二个网格线
+grid-column-start: 1;
+grid-column-end: 2;
+// 大小为2, 左边框在第二个网格线, 右边框在第四个网格线
+grid-column-start: 2;
+grid-column-end: 4;
 ```

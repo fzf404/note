@@ -43,3 +43,18 @@ fs.writeFile(jsonPath, JSON.stringify(filesList, '', '\t'), err => err);
 console.log('成功')));
 
 ```
+
+## 文件操作
+
+```js
+const fs = require('fs')
+
+// 读文件
+const data = fs.readFileSync('demo.txt', 'utf-8')
+// 写文件
+const logFile = fs.createWriteStream('./outPut.txt', {
+  flags: 'a', // 追加写入
+  encoding: 'utf-8', // utf8编码
+})
+```
+

@@ -30,7 +30,7 @@ const app = new Vue({
 <div id="app">
   <ul>
     <!-- for 循环 -->
-    <li v-for="(name,index) in names" key="index">
+    <li v-for="(name,index) in names" :key="index">
       {{name}}<br />{{bvs[index]}}<br/>{{coins[index]}}
       <!-- if判断是否显示 -->
       <b v-if="coins[index]>=100000">-- Conin Too Much</b>
