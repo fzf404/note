@@ -113,6 +113,17 @@ yarn logout			# 登出
 },
 ```
 
+## 问题
+
+```bash
+# 超过最大可监控的文件数量
+Error: ENOSPC: System limit for number of file watchers reached
+
+echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf
+```
+
+
+
 ## Nvm
 
 > nodejs 版本管理工具
