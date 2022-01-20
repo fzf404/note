@@ -5,6 +5,67 @@ sort:
 
 ## 组件
 
+### List
+
+`list.dart`
+
+```dart
+import 'package:flutter/material.dart';
+
+class ListPage extends StatelessWidget {
+  const ListPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    
+    //定义列表 widget 的 list
+    List<Widget> list = <Widget>[];
+
+    // 数据
+    var data = [
+      {"id": 1, "title": "测试数据AAA", "subtitle": "ASDFASDFASDF"},
+      {"id": 2, "title": "测试数据bbb", "subtitle": "ASDFASDFASDF"},
+      {"id": 3, "title": "测试数据ccc", "subtitle": "ASDFASDFASDF"},
+      {"id": 4, "title": "测试数据eee", "subtitle":"ASDFASDFASDF"},
+    ];
+
+    // 构造列表 ListTile 组件 list
+    for (var item in data) {
+      list.add(ListTile(
+          title: Text(item["title"] as String,
+              style: const TextStyle(fontSize: 18.0)),
+          subtitle: Text(item["subtitle"] as String),
+          leading: const Icon(Icons.fastfood, color: Colors.orange),
+          trailing: const Icon(Icons.keyboard_arrow_right)));
+    }
+
+    // 返回整个页面
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("List Page"),
+      ),
+      body: Center(
+          child: ListView(
+        children: list,
+      )),
+    );
+  }
+}
+```
+
+`main.dart`
+
+```dart
+import 'list.dart';
+
+onPressed: () {
+  // 路由跳转
+  Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return const ListPage();
+  }));
+},
+```
+
 ### 文本
 
 ```dart

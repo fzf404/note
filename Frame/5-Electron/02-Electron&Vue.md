@@ -13,8 +13,8 @@ yarn add electron electron-builder -D
 ## 使用
 
 ```js
-# 调用 electron api
-# vue.config.js
+// 调用 electron api
+/ vue.config.js
 module.exports = {
   pluginOptions: {
     electronBuilder: {

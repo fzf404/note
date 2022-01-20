@@ -7,7 +7,7 @@ sort:
 
 ## 安装
 
-- [SDK 官网](https://flutter.dev/docs/development/tools/sdk/releases)
+- [官方教程](https://developer.android.google.cn/studio)
 
 ```bash
 flutter doctor	# 环境验证

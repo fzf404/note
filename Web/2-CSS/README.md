@@ -75,3 +75,12 @@ canvas.height = window.innerHeight;
   background: rgba(0, 0, 0, 0.04);
 }
 ```
+
+### 禁止选择
+
+```css
+user-select: none;
+-webkit-user-selet: none;
+-moz-user-select: none;
+```
+

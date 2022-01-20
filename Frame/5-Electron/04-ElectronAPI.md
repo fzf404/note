@@ -33,3 +33,12 @@ win.on('move',function(){
 win.setAlwaysOnTop(!win.isAlwaysOnTop())
 ```
 
+### 样式
+
+```css
+/* 允许用户拖拽 */
+-webkit-app-region: drag; 
+/* 禁止用户拖拽 */
+-webkit-app-region: no-drag; 
+```
+

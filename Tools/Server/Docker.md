@@ -266,16 +266,7 @@ http {
 
 ### 常用镜像
 
-- Gitlab
-
-```
-sudo docker run --detach \
-  --hostname gitlab.example.com \
-  --publish 9980:80 --publish 9922:22 \
-  --name gitlab \
-  --restart always \
-  --volume /srv/gitlab/config:/etc/gitlab \
-  --volume /srv/gitlab/logs:/var/log/gitlab \
-  --volume /srv/gitlab/data:/var/opt/gitlab \
-  gitlab/gitlab-ce:latest
+```bash
+# mariadb
+docker run -d -p 3306:3306 --env MARIADB_ROOT_PASSWORD=fzf404 mariadb:latest
 ```
