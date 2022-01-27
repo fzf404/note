@@ -5,67 +5,6 @@ sort:
 
 ## 组件
 
-### List
-
-`list.dart`
-
-```dart
-import 'package:flutter/material.dart';
-
-class ListPage extends StatelessWidget {
-  const ListPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    
-    //定义列表 widget 的 list
-    List<Widget> list = <Widget>[];
-
-    // 数据
-    var data = [
-      {"id": 1, "title": "测试数据AAA", "subtitle": "ASDFASDFASDF"},
-      {"id": 2, "title": "测试数据bbb", "subtitle": "ASDFASDFASDF"},
-      {"id": 3, "title": "测试数据ccc", "subtitle": "ASDFASDFASDF"},
-      {"id": 4, "title": "测试数据eee", "subtitle":"ASDFASDFASDF"},
-    ];
-
-    // 构造列表 ListTile 组件 list
-    for (var item in data) {
-      list.add(ListTile(
-          title: Text(item["title"] as String,
-              style: const TextStyle(fontSize: 18.0)),
-          subtitle: Text(item["subtitle"] as String),
-          leading: const Icon(Icons.fastfood, color: Colors.orange),
-          trailing: const Icon(Icons.keyboard_arrow_right)));
-    }
-
-    // 返回整个页面
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("List Page"),
-      ),
-      body: Center(
-          child: ListView(
-        children: list,
-      )),
-    );
-  }
-}
-```
-
-`main.dart`
-
-```dart
-import 'list.dart';
-
-onPressed: () {
-  // 路由跳转
-  Navigator.push(context, MaterialPageRoute(builder: (context) {
-    return const ListPage();
-  }));
-},
-```
-
 ### 文本
 
 ```dart
@@ -81,7 +20,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
             child: Text(
-          '测试~',
+          '测试',
           // 文本位置
           textAlign: TextAlign.left,
           // 超出长度的隐藏方式
@@ -91,7 +30,8 @@ class MyApp extends StatelessWidget {
           // 样式
           style: TextStyle(
             fontSize: 25.0,
-            color: Color.fromARGB(255, 255, 0, 0),
+            color: Color.fromARGB(255, 255, 0, 0), // Color(0xFF0000ff)
+            fontWeight: FontWeight.bold,
             decoration: TextDecoration.underline,
             decorationStyle: TextDecorationStyle.solid,
           ),
@@ -128,32 +68,35 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: Text('hi~')),
         body: Center(
           child: Container(
+            alignment: Alignment.center, // 容器内部元素对齐方式
             child: Text('Hello Flutter', style: TextStyle(fontSize: 40.0)),
-            alignment: Alignment.center,
             width: 500.0,
             height: 400.0,
             color: Colors.lightBlue, // 颜色
             // 左上右下
-            padding: const EdgeInsets.fromLTRB(50.0, 50.0, 0.0, 0.0),
+            padding: const EdgeInsets.fromLTRB(50.0, 50.0, 0.0, 0.0), 
+            // padding: EdgeInsets.all(30),
             margin: const EdgeInsets.fromLTRB(50.0, 50.0, 0.0, 0.0),
+            // margin: EdgeInsets.only(left: 150,top: 0,right: 0,bottom: 0),
+            transform: Matrix4.rotationZ(0.5), // 旋转
+            decoration: BoxDecoration( // 装饰
+              gradient: const LinearGradient( // 渐变
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Colors.pink,
+                  Colors.blue,
+                ],
+              ),
+              border: Border.all(width: 5, color: Colors.red), // 边框
+              borderRadius: const BorderRadius.all(Radius.circular(20)), // 圆角边框
+            ),
           ),
         ),
       ),
     );
   }
 }
-```
-
-#### decoration
-
-```dart
-decoration: BoxDecoration(
-    // 渐变
-    gradient: const LinearGradient(
-        colors: [Colors.lightBlue, Colors.purple]),
-    // 边框
-    border: Border.all(width: 4.0, color: Colors.green)),
-),
 ```
 
 ### 图片组件
@@ -165,9 +108,42 @@ return MaterialApp(
     appBar: AppBar(
       title: Text(title),
     ),
-    body: Image.network('https://fzf404.top/public/avatar.jpg'),
+    body: Image.network('https://www.fzf404.top/public/avatar.jpg'),
+    // 或
+    Image(
+      image: NetworkImage("https://mat1.gtimg.com/pingjs/ext2020/qqindex2018/dist/img/qq_logo_2x.png"),
+      width: 200.0,
+    )
+    // 本地图片
+    image: AssetImage("images/xxx.jpg"),
   ),
 );
+```
+
+#### 引入本地图片
+
+`pubspec.yaml`
+
+```yaml
+flutter:
+  assets:
+    - images/xxx.jpg
+```
+
+## 布局
+
+```dart
+Row(
+  children: []
+)
+
+Column(
+  children:[]
+)    
+
+Center(
+  child:Text("Hello")
+)
 ```
 
 ### 列表组件
@@ -187,47 +163,35 @@ body: ListView(
 ),
 ```
 
-#### 横向列表
+#### 列表
 
 ```dart
-body: Center(
-  child: Container(
-    height: 200.0,
-    child: MyList()
-  ),
-),
-
-// 封装成组件
-class MyList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      scrollDirection: Axis.horizontal,
-      children: <Widget>[
-        Container(
-          width: 160.0,
-          color: Colors.red,
-        ),
-        Container(
-          width: 160.0,
-          color: Colors.blue,
-        ),
-        Container(
-          width: 160.0,
-          color: Colors.green,
-        ),
-        Container(
-          width: 160.0,
-          color: Colors.yellow,
-        ),
-        Container(
-          width: 160.0,
-          color: Colors.orange,
-        ),
-      ],
-    );
-  }
-}
+ListView(
+  scrollDirection: Axis.horizontal, // 横向列表
+  children: [
+    Container(
+      width: 20,
+      height: 20,
+      color: Colors.red,
+    ),
+    Container(
+      height: 20,
+      width: 20,
+      color: Colors.blue,
+    ),
+    Container(
+      width: 20,
+      color: Colors.green,
+    ),
+    Container(
+      width: 20,
+      color: Colors.yellow,
+    ),
+    Container(
+      width: 20,
+      color: Colors.orange,
+    ),
+  ],
 ```
 
 #### 动态列表
@@ -263,7 +227,36 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-#### 网格列表
+### Flex
+
+```dart
+body: Flex(
+  direction: Axis.horizontal,
+  children: [
+    Container(
+      width: 30,
+      height: 100,
+      color: Colors.blue,
+    ),
+    Expanded(
+      flex: 2,
+      child: Container(
+        height: 100.0,
+        color: Colors.red,
+      ),
+    ),
+    Expanded(
+      flex: 1,
+      child: Container(
+        height: 100.0,
+        color: Colors.green,
+      ),
+    ),
+  ],
+),
+```
+
+### Grid
 
 ```dart
 import 'package:flutter/material.dart';
