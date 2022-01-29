@@ -12,7 +12,7 @@ var text3 = $("#text3");
 var info = $("#info");
 
 // 加载
-info.load("/api/info");
+info.load("card.html");
 // 使用load发送get请求
 text2.load("/api/getdata?name=gdy");
 // 使用load发送Post请求
@@ -121,9 +121,10 @@ window.localStorage.getItem("token");
 // ajax请求
 $.ajax(myinfoURL, {
   method: "POST",
-  beforeSend: (xhr) => {
-    token = window.localStorage.getItem("token");
-    xhr.setRequestHeader("Authorization", "Bearer " + token);
+  // 设置请求头
+  beforeSend: (req) => {
+    token = window.localStorage.getItem('token')
+    req.setRequestHeader('x-token', token)
   },
   success: () => {},
 });

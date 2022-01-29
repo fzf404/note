@@ -60,6 +60,8 @@ location ~* \. (git|jpg|png)$ {
     # 匹配大多数图片格式
 }
 
+# 全部加 / 就对了
+
 # 带/ 与 不带/
 location /test {
     proxy_pass http://127.0.0.1:8080/;

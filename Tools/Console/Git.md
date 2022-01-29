@@ -32,6 +32,11 @@ git clone --recurse-submodules <remote_url>
 # 或
 git submodule update --init --recursive
 
+# 本地与远程冲突解决
+git stash
+git pull
+git stash pop
+
 # 代理
 git config --global http.proxy http://127.0.0.1:10808
 git config --global https.proxy http://127.0.0.1:10808

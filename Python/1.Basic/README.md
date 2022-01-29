@@ -22,3 +22,11 @@ pip install -r requirements.txt
 # 忽略安装某个库
 pip install xxx --ignore-installed xxx
 ```
+
+## 报错
+
+```bash
+# linux 下 python 包的安装
+apt install libpython3-dev
+```
+

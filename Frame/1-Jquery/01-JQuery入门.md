@@ -16,6 +16,7 @@ getOne.find("p");
 getOne.parent().css("color", "white");
 // 含有yellow类的
 getOne.filter(".yellow").css("background", "yellow");
+getOne.attr("checked", true);
 
 // 批量添加
 getOne.css({
@@ -44,24 +45,6 @@ jquery_test.html();
 jquery_test.append("<p>test</p>");
 jquery_test.prepend("<p>test</p>");
 jquery_test.remove();
-```
-
-> 广告版
-
-```js
-<h1 id="board">成人用品 二楼右拐</h1>;
-
-var board = $("#board");
-function toggle() {
-  // 判断是否active
-  if (board.hasClass("active")) {
-    board.removeClass("active");
-  } else {
-    board.addClass("active");
-  }
-}
-// 200ms执行一次
-setInterval(toggle, 200);
 ```
 
 ## 事件
@@ -114,11 +97,8 @@ $("#name").focus(() => {
 });
 // 提交表单
 $("#name").submit();
-```
 
-> 实战
-
-```js
+// 输入
 $("#input").focus(() => {
   alert("Don't Touch me");
 });
@@ -151,5 +131,5 @@ url_params.get("id"); // 获取参数
 // 判断checkbox是否选中
 $checkbox.is(":checked");
 // checkbox赋值
-$checkbox.attr("checked", true);
+
 ```

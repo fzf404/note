@@ -80,7 +80,7 @@ visible: true
       <a id="active" href="https://github.com/fzf404/Tech_Note/commits/master">>&emsp;更新记录</a>
       </div>
     </div>
-    <a class="jumbotron-btn" href="#/Home/About">关于我</a>
+    <a class="jumbotron-btn" href="http://www.fzf404.top/">关于我</a>
   </div>
 </div>
 <div class="jumbotron-block"> </div>
