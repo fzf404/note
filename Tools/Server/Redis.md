@@ -10,7 +10,7 @@ sort:
 apt install redis
 
 # 开启服务
-#redis-server
+redis-server
 
 # 连接服务
 redis-cli -h host -p port -a password
@@ -41,6 +41,8 @@ hdel hash1 name
 -- list 操作
 -- 链表
 lpush line1 value1 value2
+lpop line1
+
 lrange line1 0 -1
 -- 从第0个到结尾
 

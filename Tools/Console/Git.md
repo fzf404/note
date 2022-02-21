@@ -18,8 +18,10 @@ git config --global user.email nmdfzf404@163.com
 # WARNING: UNPROTECTED PRIVATE KEY FILE!
 chmod 600 ~/.ssh/*
 
-# 加速
-https://hub.fastgit.org/
+# 本地与远程冲突解决
+git stash
+git pull
+git stash pop
 ```
 
 ## 常用
@@ -32,19 +34,21 @@ git clone --recurse-submodules <remote_url>
 # 或
 git submodule update --init --recursive
 
-# 本地与远程冲突解决
-git stash
-git pull
-git stash pop
-
 # 代理
 git config --global http.proxy http://127.0.0.1:10808
 git config --global https.proxy http://127.0.0.1:10808
 git config --global https.proxy socks5://127.0.0.1:10808
 git config --global --unset http.proxy
 
+# tag 操作
+git tag v0.1.3 # 新增标签
+git push --tags # 推送 tag 到远程
+git tag -d v0.1.3 # 删除标签
+git push origin :refs/tags/v0.1.3 # 删除远程 tag
+
 # 更新远程地址
 git remote remove origin
+git remote add origin <remote_url>
 
 # 强制覆盖
 git fetch --all
@@ -61,16 +65,18 @@ git filter-branch --index-filter 'git rm --cached --ignore-unmatch xxx.xx' -f
 # 推荐的做法
 PACKAGE_TOOL install git-filter-repo
 git filter-repo --invert-paths --path 'xxx.xx' --use-base-name
+
+# 修改提交信息
+git log --oneline -5 # 最近5次提交信息
+git rebase -i ce53go # 进入 vim 修改信息
+git push -f # 强制推送
 ```
 
 ## SSH
 
 ```bash
-ssh-keygen.exe
-# 复制id_rsa.pub到Delpoy keys
-git push -u origin master		# push一下commit
-# 如果需要输入密码，执行下面命令
-# git config --global credential.helper store
+# 生成 ssh 密钥
+ssh-keygen
 
 # 更新ssh
 git remote rm origin

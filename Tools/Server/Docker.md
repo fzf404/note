@@ -268,5 +268,9 @@ http {
 
 ```bash
 # mariadb
-docker run -d -p 3306:3306 --env MARIADB_ROOT_PASSWORD=fzf404 mariadb:latest
+docker run -itd --name mariadb -p 3306:3306 --env MARIADB_ROOT_PASSWORD=fzf404 mariadb
+# redis
+docker run -itd --name redis -p 6379:6379 redis
+# mongo
+docker run -itd --name mongo -p 27017:27017 mongo
 ```

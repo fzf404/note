@@ -22,6 +22,9 @@ git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
 # 应用生效
 brew update
 
+# 安装软件
+brew install --cask firefox
+
 # fish 配置
 set HOMEBREW_BOTTLE_DOMAIN = "https://mirrors.aliyun.com/homebrew/homebrew-bottles"
 set PATH = "/opt/homebrew/bin" $PATH
