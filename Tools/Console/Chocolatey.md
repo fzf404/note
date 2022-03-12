@@ -13,7 +13,7 @@ choco uninstall
 choco upgrade
 
 # 代理
-netsh winhttp set proxy 127.0.0.1:10809
+netsh winhttp set proxy 127.0.0.1:7890
 
 # auto
 choco install -y git github-desktop vscode nodejs-lts firefox everything potplayer rufus filezilla postman fiddler wechat adb nmap picgo freedownloadmanager obsidian docker-desktop vmwareworkstation obs-s -y
