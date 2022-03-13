@@ -15,6 +15,9 @@ s.push_str(" World");
 // 字符串引用 &str
 let str = "Hello World";
 
+// &str 转为 String
+s = str.to_owned()
+
 // 复制Copy
 let j = i;
 

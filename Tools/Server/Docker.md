@@ -14,10 +14,6 @@ sort:
 > [官方安装文档](https://docs.docker.com/engine/install/)
 >
 > [阿里镜像源](https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors)
->
-> 清华镜像
->
-> 换源->阿里云->容器镜像服务->镜像加速器
 
 ### 安装
 
@@ -35,6 +31,9 @@ systemctl enable docker
 
 # 测试
 docker run hello-world
+
+# 换源
+"registry-mirrors": ["https://mirror.ccs.tencentyun.com"]
 ```
 
 ### 问题
@@ -109,6 +108,8 @@ docker exec -it <cid> bash
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 docker rm <cid>
+# 删除无用数据卷
+docker volume prune
 # 传文件
 docker cp <file> <cid>:<path>
 # 容器转镜像
