@@ -19,7 +19,7 @@ curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get install -y nodejs
 
 # 安装特定版本
-setup_12.x
+setup_14.x
 
 # 版本管理工具
 # linux && fish
@@ -29,8 +29,8 @@ fisher install jorgebucaran/nvm.fish
 https://github.com/coreybutler/nvm-windows/
 
 # nvm使用
-nvm install 13
-nvm use 13
+nvm install 14
+nvm use 14
 ```
 
 ### 工具
@@ -61,7 +61,7 @@ npm init
 npm install [-g]	# 全局安装
 	-S	--save-dev	# 安装为开发依赖
 # 换源
-npm config set registry https://registry.npm.taobao.org
+npm config set registry https://registry.npmmirror.com
 # 发布包时换回原来的源
 npm config set registry https://registry.npmjs.org
 # 发布插件
@@ -82,7 +82,7 @@ npm unpublish --force
 npm i yarn@1.22.0 -g 	# 安装特定版本
 npm upgrade yarn -g		# 更新
 
-yarn config set registry https://registry.npm.taobao.org
+yarn config set registry https://registry.npmmirror.com
 
 yarn -v
 # 初始化项目

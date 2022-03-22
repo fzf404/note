@@ -8,9 +8,14 @@ sort:
 [安装文档](https://www.rust-lang.org/tools/install)
 
 ```bash
-rustup update    # 更新
-rustc --version    # 版本
-rustup doc        # 本地文档
+# Rust及其附加工具管理
+rustup show # 当前安装的
+rustup update # 更新
+rustup doc # 本地文档
+rustup install stable/1.59 # 安装稳定/1.59版本
+
+# 编译器
+rustc --version # 版本
 ```
 
 ## Cargo
@@ -20,15 +25,30 @@ rustup doc        # 本地文档
 > [安装](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 
 ```bash
-cargo new hello_cargo # 新建
-cargo doc --open # 查看依赖文档
-cargo check    # 检查语法错误
-cargo build    # 编译
-cargo run        # 编译并执行
-cargo build --release    # 发布编译
+cargo init # 在当前目录初始化项目
+cargo new hello_cargo # 初始化项目
 
-# 添加依赖
-Cargo.toml
+cargo install # 全局安装
+cargo publish # 发布包
+
+cargo check # 检查语法错误
+cargo test # 测试
+
+cargo build # 编译
+cargo build --release # 发布编译
+cargo run # 编译并执行
+
+cargo doc # 查看依赖文档
+
+# 附加命令
+cargo install cargo-edit # 增加功能
+cargo add # 安装依赖
+cargo rm # 删除依赖
+
+# 宏展开
+rustup install nightly
+cargo install cargo-expand
+cargo expand main # 查看编译生成的源代码
 ```
 
 ## 语法
@@ -109,6 +129,9 @@ s.push('4')         // 添加字符
 // 字符串拼接
 let s3 = s + &s2;
 format!("{}-{}",s,s2);
+
+// 替换
+s = s.replace("world", "Rust");
 
 // 字符串切片 中文需要按字节数
 let cs = &s[0..1];

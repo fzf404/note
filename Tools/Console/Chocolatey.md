@@ -16,7 +16,7 @@ choco upgrade
 netsh winhttp set proxy 127.0.0.1:7890
 
 # auto
-choco install -y git github-desktop vscode nodejs-lts firefox everything potplayer rufus filezilla postman fiddler wechat adb nmap picgo freedownloadmanager obsidian docker-desktop vmwareworkstation obs-s -y
+choco install git github-desktop vscode nodejs-lts firefox everything potplayer rufus filezilla postman fiddler picgo freedownloadmanager obsidian docker-desktop vmwareworkstation -y
 ```
 
 ## 常用软件
