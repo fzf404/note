@@ -46,3 +46,5 @@ db.user.find() # 查询集合数据
 db.user.find({email:/@gmail/}) # 条件查询, eamail 字段中含有gmail的数据
 
 db.user.remove({email:/@gmail/}) # 条件删除
+db.user.remove({email:{"$ne":null}) # 不为空的
+```

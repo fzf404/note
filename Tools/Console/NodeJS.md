@@ -22,8 +22,11 @@ apt-get install -y nodejs
 setup_12.x
 
 # 版本管理工具
+# linux && fish
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install jorgebucaran/nvm.fish
+# windows
+https://github.com/coreybutler/nvm-windows/
 
 # nvm使用
 nvm install 13

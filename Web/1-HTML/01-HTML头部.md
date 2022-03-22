@@ -14,4 +14,6 @@ sort:
 <meta name="description" content="Some Text" />
 <!-- 缩放 用于移动端适配 -->
 <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+<!-- svg 网页头部图标 -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 ```
