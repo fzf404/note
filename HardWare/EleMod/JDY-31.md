@@ -5,7 +5,7 @@ sort:
 
 # JDY-31 蓝牙
 
-![image-20201022135213683](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20201022135220.png)
+![image-20201022135213683](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20201022135220.png)
 
 ## 命令大全
 

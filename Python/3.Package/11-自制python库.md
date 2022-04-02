@@ -123,7 +123,7 @@ https://test.pypi.org/project/fzf-first-pkg/0.0.1/
 >
 > 惊喜的发现，居然可以安装啦~
 >
-> ![image-20200715100204102](https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200715100211.png)
+> ![image-20200715100204102](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20200715100211.png)
 
 ## 安装使用
 
@@ -136,7 +136,7 @@ https://test.pypi.org/project/fzf-first-pkg/0.0.1/
 > `import fzf_first_pkg`
 >
 > <p >
->     <img src="https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200715100551.png"align="left"/>
+>     <img src="https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20200715100551.png"align="left"/>
 > <p/>
 
 **运行成功啦~**

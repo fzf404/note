@@ -9,23 +9,23 @@ sort:
 
 1. 新建项目
 
-![image-20200328185720856](https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200711105806.png)
+![image-20200328185720856](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20200711105806.png)
 
 2. 选择芯片类型
 
-![image-20200328190335746](https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200711105813.png)
+![image-20200328190335746](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20200711105813.png)
 
 3. 新建文件，并双击添加
 
-![image-20200328190641409](https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200711105816.png)
+![image-20200328190641409](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20200711105816.png)
 
 ## 输入程序
 
 1. 选择锤子，选择生成 hex 文件
 
-![image-20200328190947197](https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200711105819.png)
+![image-20200328190947197](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20200711105819.png)
 
-![image-20200328191000848](https://gitee.com/nmdfzf404/Image-hosting/raw/master/20200711105822.png)
+![image-20200328191000848](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20200711105822.png)
 
 2. 输入程序
 
@@ -47,4 +47,4 @@ sort:
 
    > 按 F7，或直接鼠标点击 build
 
-   ![image-20201031211923095](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20201031211923.png)
+   ![image-20201031211923095](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20201031211923.png)

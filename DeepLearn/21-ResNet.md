@@ -5,7 +5,7 @@ sort:
 
 > 其内部的残差块使用了跳跃连接，缓解了在深度神经网络中增加深度带来的梯度消失问题。
 
-![image-20210518220802949](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-20210518220802949.png)
+![image-20210518220802949](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/image-20210518220802949.png)
 
 ## 模型类
 

@@ -5,7 +5,7 @@ sort:
 
 > 如何拥有图形化界面?
 
-![image-20210104223703406](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20210104223710.png)
+![image-20210104223703406](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20210104223710.png)
 
 ## 窗口
 
@@ -41,7 +41,7 @@ sort:
 
 > 调用 10h-0ch
 
-![image-20210108200400585](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20210108200408.png)
+![image-20210108200400585](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20210108200408.png)
 
 ```asm
 jmp start
@@ -161,7 +161,7 @@ goonw4:
 >
 > 写入`0xa000`
 
-![image-20210108214311169](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20210108214311.png)
+![image-20210108214311169](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20210108214311.png)
 
 ```asm
 colorfuncport equ 3c8h   ; 设置调色板功能端口

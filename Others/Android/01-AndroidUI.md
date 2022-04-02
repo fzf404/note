@@ -80,7 +80,7 @@ Log.e("info","r=:"+r);
 </LinearLayout>
 ```
 
-![image-20210215220034946](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-20210215220034946.png)
+![image-20210215220034946](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/image-20210215220034946.png)
 
 ### 布局权重-
 
@@ -111,8 +111,8 @@ Log.e("info","r=:"+r);
 </LinearLayout>
 ```
 
-![image-20210215220704513](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-20210215220704513.png)
+![image-20210215220704513](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/image-20210215220704513.png)
 
 ### 相对布局
 
-![img](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/797932661-1.png)
+![img](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/797932661-1.png)

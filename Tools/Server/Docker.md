@@ -60,7 +60,7 @@ sudo snap restart docker
 
 ### 基础命令
 
-![img](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/16f6e0a6b0e1ab95.png)
+![img](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/16f6e0a6b0e1ab95.png)
 
 ```bash
 # 拉取镜像

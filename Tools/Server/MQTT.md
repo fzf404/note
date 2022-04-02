@@ -21,7 +21,7 @@ admin-public
 
 2. 使用 Node-Red 编写服务
 
-![image-20210429162729619](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/20210429162731.png)
+![image-20210429162729619](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/20210429162731.png)
 
 3. [MQTT.js](https://github.com/mqttjs/MQTT.js)
 

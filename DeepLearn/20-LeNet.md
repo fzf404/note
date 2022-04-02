@@ -7,7 +7,7 @@ sort:
 
 > 典型的卷积神经网络的结构
 
-![从零开始实现一个基于Pytorch的卷积神经网络](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/OYoihxStFCslGzw.jpg)
+![从零开始实现一个基于Pytorch的卷积神经网络](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/OYoihxStFCslGzw.jpg)
 
 1. C1-卷积层：6 个 5\*5 的卷积核，产生 6 个大小为 28x28 的特征图
 2. S2-池化层：2x2 最大池化进行下采样，产生 6 个大小为 14\*14 的滤波图

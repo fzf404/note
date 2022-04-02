@@ -5,7 +5,7 @@ sort:
 
 > 效果图
 
-![image-20210101230624929](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20210108154733.png)
+![image-20210101230624929](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20210108154733.png)
 
 ```assembly
 NumSector equ 4     ; 软盘最大扇区编号

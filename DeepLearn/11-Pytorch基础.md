@@ -75,11 +75,11 @@ a3 = torch.tensor([0.001,0.001,0.001,0.997])
 
 ## 项数影响
 
-![image-20210225202252994](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-20210225202252994.png)
+![image-20210225202252994](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/image-20210225202252994.png)
 
 ## 欠拟合与过拟合
 
-![image-20210225204202533](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-20210225204202533.png)
+![image-20210225204202533](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/image-20210225204202533.png)
 
 ### 正则化
 

@@ -3,7 +3,7 @@ title: 04-GPIO工作模式
 sort:
 -->
 
-![image-20210706171642966](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/20210706171643.png)
+![image-20210706171642966](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/20210706171643.png)
 
 ## HAL 库
 

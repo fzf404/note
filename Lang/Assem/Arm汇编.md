@@ -47,7 +47,7 @@ gef> x/4w 0x20090			# 查看4个内存的值
 
 ## 数据类型
 
-![img](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/data-types-1.png)
+![img](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/data-types-1.png)
 
 ```assembly
 ldr = Load Word

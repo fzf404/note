@@ -33,7 +33,7 @@ sort:
 >
 > `ViewGroup`是不可见容器
 
-![image-20201028200605153](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2020/20201028200612.png)
+![image-20201028200605153](https://img-1257284600.cos.ap-beijing.myqcloud.com/2020/20201028200612.png)
 
 > `View`对象一般为小部件，例如`Buttom`或`TextView`
 

@@ -9,7 +9,7 @@ sort:
 
 1. 进入`.ioc`文件，图形化配置引脚：`PC13->GPIO_Output`
 2. 进入`SYS`菜单，配置烧录模式：
-   ![配置烧录模式](https://gitee.com/nmdfzf404/Image-hosting/raw/master/2021/image-20210314144921580.png)
+   ![配置烧录模式](https://img-1257284600.cos.ap-beijing.myqcloud.com/2021/image-20210314144921580.png)
 3. `Ctrl+S`保存，自动生成代码。
 4. 在 while 循环中插入如下代码：
 
