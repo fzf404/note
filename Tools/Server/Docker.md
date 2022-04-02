@@ -33,7 +33,13 @@ systemctl enable docker
 docker run hello-world
 
 # 换源
-"registry-mirrors": ["https://mirror.ccs.tencentyun.com"]
+vim /etc/docker/daemon.json # 编辑配置文件
+{
+  "registry-mirrors": ["https://mirror.ccs.tencentyun.com"]
+}
+# 重新加载
+sudo systemctl daemon-reload 
+sudo systemctl restart docker
 ```
 
 ### 问题
@@ -92,6 +98,10 @@ docker build -t <name> .
 docker run -d -p 主机端口:镜像端口 <镜像名称>
 # -d 后台运行
 # -p 端口
+# --network=host 使用主机网络
+# --restart=always 自动重启
+# --restart=unless-stopped 自动重启，除非手动停止容器
+
 # 运行并进入
 docker run -it <name/id>
 

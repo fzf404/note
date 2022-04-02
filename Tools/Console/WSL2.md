@@ -12,6 +12,8 @@ sort:
 > 彩蛋：`wslfetch`
 
 ```powershell
+# 查看服务情况
+wsl -l -v
 # 切换至wsl2
 wsl --set-version debian 2
 # 文件服务地址

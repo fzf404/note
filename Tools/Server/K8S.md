@@ -103,5 +103,3 @@ spec:
       - name: test-k8s # 容器名字
         image: # 镜像路径
 ```
-
-​    
