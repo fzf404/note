@@ -12,21 +12,19 @@ sort:
 > [cloudreve](https://hub.docker.com/r/xavierniu/cloudreve)
 
 ```bash
-# 得到PUID&PGID
-id root
+mkdir -vp cloudreve/{uploads,avatar} \
+  && touch cloudreve/conf.ini \
+  && touch cloudreve/cloudreve.db \
+  cd cloudreve
 
 docker run -d \
+  -p 5212:5212 \
+  --mount type=bind,source=$PWD/conf.ini,target=/cloudreve/conf.ini \
+  --mount type=bind,source=$PWD/cloudreve.db,target=/cloudreve/cloudreve.db \
+  -v $PWD/uploads:/cloudreve/uploads \
+  -v $PWD/avatar:/cloudreve/avatar \
   --name cloudreve \
-  -e PUID=0 \
-  -e PGID=0 \
-  -e TZ="Asia/Shanghai" \
-  -p 80:5212 \
-  --restart=unless-stopped \
-  -v /opt/cloudreve/uploads:/cloudreve/uploads \
-  -v /opt/cloudreve/config:/cloudreve/config \
-  -v /opt/cloudreve/db:/cloudreve/db \
-  -v /opt/cloudreve/avatar:/cloudreve/avatar \
-  xavierniu/cloudreve
+  cloudreve/cloudreve:latest
 
 # 获取初始密码
 docker logs -f cloudreve
@@ -115,15 +113,18 @@ networks:
 
 ```nginx
 server {
+  listen 80;
+  server_name cloud.fzf404.top;
+  rewrite ^(.*)$ https://$host$1 permanent;
+}
 
-    listen 80;
+server {
+    
     listen 443 ssl;
-
     server_name cloud.fzf404.top;
-
+    
     ssl_certificate /www/cert/cloud.fzf404.top/cert.pem;
     ssl_certificate_key /www/cert/cloud.fzf404.top/key.pem;
-
 
     location / {
 
@@ -132,7 +133,7 @@ server {
         proxy_set_header Host $host;
         proxy_set_header Referer $http_referer;
         proxy_set_header X-Real-Ip $remote_addr;
-        proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_redirect off;
 
         client_max_body_size 20000m;

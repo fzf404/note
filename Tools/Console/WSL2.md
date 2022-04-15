@@ -46,7 +46,7 @@ service redis-server start
 
 - 1130 - Host 127.0.0.1 is not allowed to connect to this MySQL server
 
-  > ```bash
+  > ```ØØbash
   > mysql -u root -p
   >
   > use mysql;

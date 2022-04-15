@@ -211,3 +211,36 @@ server {
     }
 }
 ```
+
+### Https
+
+```nginx
+server {
+  listen 80;
+  server_name cloud.fzf404.top;
+  rewrite ^(.*)$ https://$host$1 permanent;
+}
+
+server {
+    listen 443 ssl;
+    server_name cloud.fzf404.top;
+    
+    ssl_certificate /www/cert/cloud.fzf404.top/cert.pem;
+    ssl_certificate_key /www/cert/cloud.fzf404.top/key.pem;
+
+    location / {
+        proxy_pass http://127.0.0.1:5212;
+
+        proxy_set_header Host $host;
+        proxy_set_header Referer $http_referer;
+        proxy_set_header X-Real-Ip $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_redirect off;
+
+        client_max_body_size 20000m;
+    }
+    access_log  /www/logs/cloud.fzf404.top.log;
+    error_log  /www/logs/cloud.fzf404.top.error.log;
+}
+```
+

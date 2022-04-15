@@ -29,5 +29,8 @@ pm2 start ./vendors/server/app.js
 # 开机自启动
 pm2 startup
 pm2 save
+
+# 禁止注册
+"closeRegister": true,
 ```
 

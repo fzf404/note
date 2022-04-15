@@ -3,7 +3,9 @@ title: K8S
 sort:
 -->
 
-> [k8s安装脚本](https://github.com/lework/kainstall)
+> [安装脚本](https://github.com/lework/kainstall)
+>
+> [图形化安装](https://github.com/eip-work/kuboard-spray)
 >
 > [参考教程](https://k8s.easydoc.net/)
 
@@ -42,6 +44,9 @@ sort:
 ```bash
 # 部署应用
 kubectl apply -f app.yaml
+kubectl create -f app.yaml
+# 删除应用
+kubectl delete -f app.yaml
 # 应用操作
 kubectl rollout restart pod test-pod
 kubectl rollout restart deployment test-k8s

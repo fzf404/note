@@ -67,9 +67,26 @@ PACKAGE_TOOL install git-filter-repo
 git filter-repo --invert-paths --path 'xxx.xx' --use-base-name
 
 # 修改提交信息
+
 git log --oneline -5 # 最近5次提交信息
-git rebase -i ce53go # 进入 vim 修改信息
+git rebase -i ce53go # 修改特定信息
+git rebase -i HEAD~5 # 修改近5次的提交信息
+
 git push -f # 强制推送
+
+# 修改日期
+https://github.com/PotatoLabs/git-redate
+# 修改近4次提交记录
+git redate -c 4
+
+# 修改初始提交时间
+git filter-branch --env-filter \
+"if test \$GIT_COMMIT = '448827e9ef01bb245ccd3939bfbddc2681c6d9c8'
+then
+    export GIT_AUTHOR_DATE='Sun May 7 02:23:03 2017 +0000'
+    export GIT_COMMITTER_DATE='Sun May 7 02:23:03 2017 +0000'
+fi" && rm -fr "$(git rev-parse --git-dir)/refs/original/"
+
 ```
 
 ## SSH

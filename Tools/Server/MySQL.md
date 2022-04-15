@@ -32,17 +32,19 @@ docker exec -it <name>/<cid> bash
 ### 更换密码
 
 ```bash
-# 增加远程访问权限
+# mysql 增加远程访问权限
 use mysql;
 update user set host = '%' where user = 'root';
 flush privileges;  # 立即生效
-# 重启mysql
-systemctl restart mysqld
+
+# mariadb 增加远程访问权限
+grant all privileges on *.* to 'root'@'%' identified by 'db_dev' with grant option;
+flush privileges;
 
 # 修改密码
 set password = password('1234');
 set password for 'root'@'%' = password('1234');
-flush privileges;  # 立即生效
+flush privileges; # 立即生效
 ```
 
 ### 操作
