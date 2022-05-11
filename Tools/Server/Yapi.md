@@ -34,3 +34,18 @@ pm2 save
 "closeRegister": true,
 ```
 
+### 配置文件
+
+```bash
+{
+   "port": "3000",
+   "adminAccount": "ql@sylu.edu.cm",
+   "timeout": 120000,
+   "db": {
+     "servername": "mongodb",
+     "port": 27017,
+     "DATABASE": "yapi"
+   }
+ }
+```
+

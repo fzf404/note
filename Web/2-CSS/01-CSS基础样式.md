@@ -51,6 +51,9 @@ h3 {text-decoration:underline;}
 
 /* 设置字体 */
 p { font-family:"Times New Roman", Times, serif;}
+
+/* 鼠标指针 */
+cursor: pointer
 ```
 
 ### 列表

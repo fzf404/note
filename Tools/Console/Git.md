@@ -44,7 +44,7 @@ git config --global --unset http.proxy
 git tag v0.1.3 # 新增标签
 git push --tags # 推送 tag 到远程
 git tag -d v0.1.3 # 删除标签
-git push origin :refs/tags/v0.1.3 # 删除远程 tag
+git push --delete origin v0.1.3 # 删除远程 tag
 
 # 更新远程地址
 git remote remove origin
@@ -53,7 +53,6 @@ git remote add origin <remote_url>
 # 强制覆盖
 git fetch --all
 git reset --hard origin/master
-
 
 # 清除某次提交前的全部提交
 echo '🔥 主页v2.0' | git commit-tree c6b4418^{tree}
@@ -67,7 +66,6 @@ PACKAGE_TOOL install git-filter-repo
 git filter-repo --invert-paths --path 'xxx.xx' --use-base-name
 
 # 修改提交信息
-
 git log --oneline -5 # 最近5次提交信息
 git rebase -i ce53go # 修改特定信息
 git rebase -i HEAD~5 # 修改近5次的提交信息
@@ -171,6 +169,8 @@ git merge b1		# 合并但不删除
 git pull			# 拉取远端仓库的最新版本并合并
 # 相当于如下指令的结合
 # fetch/merge
+
+# 新建空分支并切换
 ```
 
 ### 忽略文件
