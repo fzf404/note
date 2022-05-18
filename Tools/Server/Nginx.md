@@ -176,6 +176,9 @@ server{
 expires 10h;
 # 关闭
 expires -1;
+
+# 缓存
+proxy_cache_path  /tmp/nginx/cache levels=1:2 inactive=2h keys_zone=mycache:10m max_size=10g;
 ```
 
 ### 请求头

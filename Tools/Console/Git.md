@@ -41,10 +41,12 @@ git config --global https.proxy socks5://127.0.0.1:10808
 git config --global --unset http.proxy
 
 # tag 操作
-git tag v0.1.3 # 新增标签
+set tag v0.2.1
+git tag -d $tag # 删除标签
+git push --delete origin $tag # 删除远程 tag
+
+git tag $tag # 新增标签
 git push --tags # 推送 tag 到远程
-git tag -d v0.1.3 # 删除标签
-git push --delete origin v0.1.3 # 删除远程 tag
 
 # 更新远程地址
 git remote remove origin
