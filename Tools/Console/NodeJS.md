@@ -11,7 +11,7 @@ sort:
 
 ```bash
 # Using Ubuntu
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get install -y nodejs
 
 # Using Debian, as root
@@ -115,6 +115,14 @@ yarn logout			# 登出
     "ver": "npm -v"
 },
 ```
+
+## Pnpm
+
+```bash
+pnpm config set registry https://registry.npmmirror.com
+```
+
+
 
 ## 问题
 

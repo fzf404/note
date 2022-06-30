@@ -41,7 +41,7 @@ git config --global https.proxy socks5://127.0.0.1:10808
 git config --global --unset http.proxy
 
 # tag 操作
-set tag v0.2.1
+set tag v0.4.0
 git tag -d $tag # 删除标签
 git push --delete origin $tag # 删除远程 tag
 
@@ -62,9 +62,10 @@ echo '🔥 主页v2.0' | git commit-tree c6b4418^{tree}
 git rebase --onto e4a0dc c6b4418		# Hash值前六位 目标Hash值
 
 # 从所有提交中删除某个文件
-git filter-branch --index-filter 'git rm --cached --ignore-unmatch xxx.xx' -f
+git filter-branch --index-filter \
+    'git rm -rf --cached --ignore-unmatch xxx.xx' HEAD
 # 推荐的做法
-PACKAGE_TOOL install git-filter-repo
+brew install git-filter-repo
 git filter-repo --invert-paths --path 'xxx.xx' --use-base-name
 
 # 修改提交信息

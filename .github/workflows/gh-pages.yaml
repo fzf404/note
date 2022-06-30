@@ -1,4 +1,4 @@
-name: NOTE_DEPLOY
+name: gh-pages
 
 on:
   push:
