@@ -17,7 +17,7 @@ ftpd --host 0.0.0.0 \
      --port 2121 \
      --user fzf \
      --pass mxr2002+ftp \
-     --root /www/website/dl.fzf404.top
+     --root /www/website/dl.fzf404.art
 ```
 
 ## docker

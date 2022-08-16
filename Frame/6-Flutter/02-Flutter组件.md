@@ -74,7 +74,7 @@ class MyApp extends StatelessWidget {
             height: 400.0,
             color: Colors.lightBlue, // 颜色
             // 左上右下
-            padding: const EdgeInsets.fromLTRB(50.0, 50.0, 0.0, 0.0), 
+            padding: const EdgeInsets.fromLTRB(50.0, 50.0, 0.0, 0.0),
             // padding: EdgeInsets.all(30),
             margin: const EdgeInsets.fromLTRB(50.0, 50.0, 0.0, 0.0),
             // margin: EdgeInsets.only(left: 150,top: 0,right: 0,bottom: 0),
@@ -108,7 +108,7 @@ return MaterialApp(
     appBar: AppBar(
       title: Text(title),
     ),
-    body: Image.network('https://www.fzf404.top/public/avatar.jpg'),
+    body: Image.network('https://www.fzf404.art/public/avatar.jpg'),
     // 或
     Image(
       image: NetworkImage("https://mat1.gtimg.com/pingjs/ext2020/qqindex2018/dist/img/qq_logo_2x.png"),
@@ -139,7 +139,7 @@ Row(
 
 Column(
   children:[]
-)    
+)
 
 Center(
   child:Text("Hello")

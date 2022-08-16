@@ -4,4 +4,4 @@
 >
 > [GithubPage](https://fzf404.github.io/note/#/)
 >
-> [WebSite](https://note.fzf404.top/#/)
+> [WebSite](https://note.fzf404.art/#/)

@@ -15,12 +15,12 @@ alias acme.sh=~/.acme.sh/acme.sh
 acme.sh --register-account -m xxx@qq.com
 
 # 验证所有权
-acme.sh --issue -d xxx.fzf404.top --webroot /opt/xxx/
+acme.sh --issue -d xxx.fzf404.art --webroot /opt/xxx/
 # 自动nginx验证
-acme.sh --issue -d xxx.fzf404.top --nginx
+acme.sh --issue -d xxx.fzf404.art --nginx
 
 # 安装证书
-acme.sh --install-cert -d xxx.fzf404.top \
+acme.sh --install-cert -d xxx.fzf404.art \
 --key-file       /etc/nginx/key.pem  \
 --fullchain-file /etc/nginx/cert.pem
 
@@ -44,7 +44,7 @@ git clone https://github.com.cnpmjs.org/acmesh-official/acme.sh.git /root/.acme.
 
 /root/.acme.sh/acme.sh --register-account -m xxx@163.com
 
-webList=("xxx.fzf404.top")
+webList=("xxx.fzf404.art")
 
 # 批量为网站创建SSL证书
 for item in ${webList[*]}
@@ -71,10 +71,10 @@ server {
     listen 80;
     # listen 443 ssl;
 
-    server_name xxx.fzf404.top;
+    server_name xxx.fzf404.art;
 
-    # ssl_certificate /www/cert/xxx.fzf404.top/cert.pem;
-    # ssl_certificate_key /www/cert/xxx.fzf404.top/key.pem;
+    # ssl_certificate /www/cert/xxx.fzf404.art/cert.pem;
+    # ssl_certificate_key /www/cert/xxx.fzf404.art/key.pem;
 
     location / {
         proxy_pass http://localhost:8080/;
@@ -92,7 +92,7 @@ server {
 
     }
 
-    access_log /www/log/xxx.fzf404.top.log;
-    error_log /www/log/xxx.fzf404.top.error.log;
+    access_log /www/log/xxx.fzf404.art.log;
+    error_log /www/log/xxx.fzf404.art.error.log;
 }
 ```

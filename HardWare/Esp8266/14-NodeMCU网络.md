@@ -10,7 +10,7 @@ sort:
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 
-#define URL "http://opus.fzf404.top/api/active"
+#define URL "http://opus.fzf404.art/api/active"
 
 void httpClientRequest();
 
@@ -73,7 +73,7 @@ void httpClientRequest(){
 
 void wifiClientRequest();
 
-const char *host = "opus.fzf404.top"; // 网络服务器地址
+const char *host = "opus.fzf404.art"; // 网络服务器地址
 const int httpPort = 80;                         // http端口80
 
 // 设置wifi接入信息(请根据您的WiFi信息进行修改)

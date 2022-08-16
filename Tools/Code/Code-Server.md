@@ -33,7 +33,7 @@ acme.sh --register-account -m xxx@qq.com
 acme.sh --issue -d xxx.xxxxx.xxx --webroot /var/www/html
 
 # 安装证书
-acme.sh --install-cert -d code-server.fzf404.top \
+acme.sh --install-cert -d code-server.fzf404.art \
 --key-file       /etc/nginx/key.pem  \
 --fullchain-file /etc/nginx/cert.pem \
 
@@ -44,7 +44,7 @@ server {
 
     ssl_certificate cert.pem;
     ssl_certificate_key key.pem;
-    server_name code-server.fzf404.top;
+    server_name code-server.fzf404.art;
 
         location / {
                 # First attempt to serve request as file, then

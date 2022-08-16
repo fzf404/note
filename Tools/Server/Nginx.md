@@ -11,7 +11,7 @@ sort:
 
 ```yml
 # docker-compose
-version: "3.1"
+version: '3.1'
 services:
   nginx:
     restart: always
@@ -220,16 +220,16 @@ server {
 ```nginx
 server {
   listen 80;
-  server_name cloud.fzf404.top;
+  server_name cloud.fzf404.art;
   rewrite ^(.*)$ https://$host$1 permanent;
 }
 
 server {
     listen 443 ssl;
-    server_name cloud.fzf404.top;
-    
-    ssl_certificate /www/cert/cloud.fzf404.top/cert.pem;
-    ssl_certificate_key /www/cert/cloud.fzf404.top/key.pem;
+    server_name cloud.fzf404.art;
+
+    ssl_certificate /www/cert/cloud.fzf404.art/cert.pem;
+    ssl_certificate_key /www/cert/cloud.fzf404.art/key.pem;
 
     location / {
         proxy_pass http://127.0.0.1:5212;
@@ -242,8 +242,7 @@ server {
 
         client_max_body_size 20000m;
     }
-    access_log  /www/logs/cloud.fzf404.top.log;
-    error_log  /www/logs/cloud.fzf404.top.error.log;
+    access_log  /www/logs/cloud.fzf404.art.log;
+    error_log  /www/logs/cloud.fzf404.art.error.log;
 }
 ```
-
