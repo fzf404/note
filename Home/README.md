@@ -10,7 +10,7 @@ visible: true
   }
   .jumbotron {
     position: absolute;
-    background-color: #588;
+    background-color: #2980b9;
     top: 56px;
     left: 0;
     right: 0;
@@ -41,7 +41,6 @@ visible: true
   .jumbotron .jumbotron-btn {
     display: inline-block;
     color: #333;
-    font-weight: 500;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -85,22 +84,22 @@ visible: true
 </div>
 <div class="jumbotron-block"> </div>
 
-| [PL](#/Lang)        | [Python](#/Python)             | [前端](#/Web)                  | [Linux](#/Command/Linux)           | [硬件](#/HardWare)             | [深度学习](#/DeepLearn) | 其他                               |
-| ------------------- | ------------------------------ | :----------------------------- | ---------------------------------- | ------------------------------ | ----------------------- | ---------------------------------- |
-| [C](#/Lang/C)       | [基础](#/Python/1.Basic)       | [Html](#/Web/1-HTML)           | [Manjaro](#/Command/Linux/Manjaro) | [Arduino](#/HardWare/Arduino)  | Numpy                   | [PowerShell](#/Command/PowerShell) |
-| [C++](#/Lang)       | [进阶](#/Python/2.Advance)     | [CSS](#/Web/2-CSS)             | [Tools](#/Command/Linux/Tools)     | [51 单片机](#/HardWare/51MCU)  | TensorFlow              | [Dos](#/Command/Dos)               |
-| [C#](#/Lang/CSharp) | [第三方库](#/Python/3.Package) | [JS/TS](#/Web/3-JS)            | [Server](#/Command/Server)         | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Lang/Java)                |
-| [Rust](#/Lang/Rust) | [CV](#/Python/7.Vision)        | [Node](#/Frame/2-Node)         | [Shell](#/Command/Linux)           | [树莓派](#/HardWare/Raspberry) | Net                     | [Nest](#/Frame/7-NestJS)           |
-| [GoLang](#/Golang)  | [网络编程](#/Python/6.Network) | [React](#/Frame/3-React)       | [MiniSys](#/Lang/Assem)            | [ESP](#/HardWare/Esp8266)      | Paddle                  | [安全](#/Security)                 |
-| [Asm](#/Lang/Assem) | [机器学习](#/DeepLearn)        | [Vue](#/Frame/4-Vue)           |                                    | [各种模块](#/HardWare/EleMod)  |                         |                                    |
-|                     |                                | [Electron](#/Frame/5-Electron) |                                    |                                |                         |                                    |
+| [编程语言](#/Lang)      | [Python](#/Python)             | [前端](#/Web)                  | [Linux](#/Command/Linux)     | [硬件](#/HardWare)             | [深度学习](#/DeepLearn) | 其他                               |
+| ----------------------- | ------------------------------ | ------------------------------ | ---------------------------- | ------------------------------ | ----------------------- | ---------------------------------- |
+| [C](#/Lang/C)           | [基础](#/Python/1.Basic)       | [Html](#/Web/1-HTML)           | [Manjaro](#/Command/Manjaro) | [Arduino](#/HardWare/Arduino)  | Numpy                   | [PowerShell](#/Command/PowerShell) |
+| [C++](#/Lang)           | [进阶](#/Python/2.Advance)     | [CSS](#/Web/2-CSS)             | [Tools](#/Tools/Shell)       | [51 单片机](#/HardWare/51MCU)  | TensorFlow              | [Dos](#/Command/Dos)               |
+| [C#](#/Lang/CSharp)     | [第三方库](#/Python/3.Package) | [JS/TS](#/Web/3-JS)            | [Server](#/Tools/Server)     | [STM32](#/HardWare/STM32)      | Pytorch                 | [Java](#/Lang/Java)                |
+| [Rust](#/Lang/Rust)     | [CV](#/Python/7.Vision)        | [Node](#/Frame/2-Node)         | [Shell](#/Command/Linux)     | [树莓派](#/HardWare/Raspberry) | Net                     | [Nest](#/Frame/7-NestJS)           |
+| [GoLang](#/Lang/Golang) | [网络编程](#/Python/6.Network) | [React](#/Frame/3-React)       | [MiniSys](#/Lang/Assem)      | [ESP](#/HardWare/Esp8266)      | Paddle                  | [安全](#/Security)                 |
+| [Asm](#/Lang/Assem)     | [机器学习](#/DeepLearn)        | [Vue](#/Frame/4-Vue)           |                              | [各种模块](#/HardWare/EleMod)  |                         |                                    |
+|                         |                                | [Electron](#/Frame/5-Electron) |                              |                                |                         |                                    |
 
 ## 工具
 
-| [建站](#/Others/Blog) | [代码工具](#/Tools/Code) | [控制台工具](#/Tools/Console) | [其他语言](#/Others/Language) | [网络工具](#/Tools/Network) | [服务](#/Command/Server) | [Linux](#/Command/Linux) |
-| --------------------- | ------------------------ | ----------------------------- | ----------------------------- | --------------------------- | ------------------------ | ------------------------ |
-| Hexo                  | CodeServer               | ADB                           | Xpath                         | DevTools                    | Docker                   | [推荐](#/Tools/Shell)    |
-| 图床                  | Sublime                  | FFmpeg                        | LaTex                         | Fiddler                     | Git                      | zsh                      |
-| 文档                  | Vscode                   | SSH                           | SQL                           | WireShark                   | LNMP                     | vim                      |
-| Nginx                 | Typora                   | Choco                         | Redis                         | BurpSuite                   | NodeJS                   | ranger                   |
-|                       |                          |                               | MongoDB                       |                             | MQTT                     | i3wm                     |
+| [建站](#/Others/Blog) | [代码工具](#/Tools/Code) | [控制台工具](#/Tools/Console) | [其他语言](#/Others/Language) | [网络工具](#/Tools/Network) | [服务](#/Tools/Server) | [Linux](#/Command/Linux) |
+| --------------------- | ------------------------ | ----------------------------- | ----------------------------- | --------------------------- | ---------------------- | ------------------------ |
+| Hexo                  | CodeServer               | ADB                           | Xpath                         | DevTools                    | Docker                 | [推荐](#/Tools/Shell)    |
+| 图床                  | Sublime                  | FFmpeg                        | LaTex                         | Fiddler                     | Git                    | zsh                      |
+| 文档                  | Vscode                   | SSH                           | SQL                           | WireShark                   | LNMP                   | vim                      |
+| Nginx                 | Typora                   | Choco                         | Redis                         | BurpSuite                   | NodeJS                 | ranger                   |
+|                       |                          |                               | MongoDB                       |                             | MQTT                   | i3wm                     |
