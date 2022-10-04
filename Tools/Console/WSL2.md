@@ -12,6 +12,8 @@ sort:
 > 彩蛋：`wslfetch`
 
 ```powershell
+# 安装 wsl
+wsl --install
 # 查看服务情况
 wsl -l -v
 # 切换至wsl2

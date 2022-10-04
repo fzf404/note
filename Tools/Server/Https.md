@@ -15,13 +15,13 @@ alias acme.sh=~/.acme.sh/acme.sh
 acme.sh --register-account -m xxx@qq.com
 
 # 验证所有权
-acme.sh --issue -d xxx.fzf404.art --webroot /opt/xxx/
+acme.sh --issue -d cloud.fzf404.art --webroot /opt/xxx/
 # 自动nginx验证
-acme.sh --issue -d xxx.fzf404.art --nginx
+acme.sh --issue -d cloud.fzf404.art --nginx
 
 # 安装证书
-acme.sh --install-cert -d xxx.fzf404.art \
---key-file       /etc/nginx/key.pem  \
+acme.sh --install-cert -d cloud.fzf404.art \
+--key-file       /www/nginx/key.pem  \
 --fullchain-file /etc/nginx/cert.pem
 
 # nginx配置文件
