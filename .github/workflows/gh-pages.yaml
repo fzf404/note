@@ -3,7 +3,7 @@ name: gh-pages
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   GIT_USER: fzf404
@@ -41,3 +41,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .rdoc-dist
+          force_orphan: true
