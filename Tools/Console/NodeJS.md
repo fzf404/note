@@ -10,21 +10,16 @@ sort:
 > [包管理器安装](https://nodejs.org/zh-cn/download/package-manager/)
 
 ```bash
-# Using Ubuntu
-curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
-apt-get install -y nodejs
-
-# Using Debian, as root
 curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get install -y nodejs
 
 # 安装特定版本
 setup_14.x
 
-# 版本管理工具
 # linux && fish
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install jorgebucaran/nvm.fish
+
 # windows
 https://github.com/coreybutler/nvm-windows/
 
