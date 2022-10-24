@@ -18,7 +18,9 @@ docker run --name zerotier-moon -d --restart always -p 9993:9993/udp -v ~/config
 # 查看节点
 docker logs zerotier-moon
 # 加入 moon 节点
-Ø <id> <id>
+zerotier-cli orbit <id> <id>
+# 查看加入信息
+zerotier-cli listpeers
 
 # 配置路由
 10.5.0.0/16 via 172.24.1.1
