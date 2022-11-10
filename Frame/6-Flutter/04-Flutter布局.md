@@ -152,13 +152,13 @@ class MyApp extends StatelessWidget {
     var stack = Stack(
       children: <Widget>[
         CircleAvatar(
-          backgroundImage: NetworkImage('https://www.fzf404.art/public/avatar.jpg'),
+          backgroundImage: NetworkImage('https://fzf404.art/public/avatar.jpg'),
           radius: 100.0,
         ),
         Positioned(
           top: 20.0,
           left: 50.0,
-          child: Text('www.fzf404.art'),
+          child: Text('fzf404.art'),
         ),
         Positioned(
           bottom: 20.0,

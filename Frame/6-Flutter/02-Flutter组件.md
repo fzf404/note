@@ -108,7 +108,7 @@ return MaterialApp(
     appBar: AppBar(
       title: Text(title),
     ),
-    body: Image.network('https://www.fzf404.art/public/avatar.jpg'),
+    body: Image.network('https://fzf404.art/public/avatar.jpg'),
     // 或
     Image(
       image: NetworkImage("https://mat1.gtimg.com/pingjs/ext2020/qqindex2018/dist/img/qq_logo_2x.png"),

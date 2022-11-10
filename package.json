@@ -6,7 +6,7 @@
     "build": "rdoc -d Command,DeepLearn,Frame,HardWare,Home,Lang,Others,Python,Security,Tools,Web --clean --build && node ./node_modules/rdoc/theme/default/build.js"
   },
   "rdoc": {
-    "footer": "Copyright © 2022 Create by <a target=\"_blank\" href=\"https://www.fzf404.art/\">fzf404</a>"
+    "footer": "Copyright © 2022 Create by <a target=\"_blank\" href=\"https://fzf404.art/\">fzf404</a>"
   },
   "dependencies": {
     "rdoc": "1.12.0"
