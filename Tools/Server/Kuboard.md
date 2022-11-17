@@ -10,6 +10,7 @@ sort:
 - 在集群中搭建开源项目
 
 ## 准备
+
 1. 了解 Linux 以及 Docker 的基础知识
 2. 拥有两台不少于 2h4g 的 服务器 / 虚拟机
 	- 推荐使用 Ubuntu 20.04 系统
@@ -21,7 +22,9 @@ sort:
 | 10.1.5.210 | 8h16g  | 128G + 256G | Master 节点    |
 | 10.1.5.212 | 16h32g | 128G + 256G | 集群 Node 节点 |
 | 10.1.5.214 | 16h32g | 128G + 256G | 集群 Node 节点 |
+
 ## 基础知识
+
 - 节点中都有什么？
 - 包含哪些内容？
 	- `kube-apiserver`
@@ -30,7 +33,9 @@ sort:
 	- `kube-controller`
 
 ## 安装
+
 > 使用图形化界面安装 K8S 及 Kuboard
+
 ```bash
 # 10.1.5.208
 
@@ -91,7 +96,9 @@ cat ~/.kube/config
 
 ```
 ## 文件系统
+
 > 搭建所有节点共用的存储系统
+
 ```bash
 # 10.1.5.210
 
@@ -144,7 +151,9 @@ kubectl create -f myfs.yaml
 kubectl -n rook-ceph get secret rook-ceph-dashboard-password -o jsonpath="{['data']['password']}"|base64 --decode && echo
 
 # 访问链接
+
 https://10.1.5.208:31416
+
 ```
 ### 配置
 > 配置好 存储类 及 安装套件
@@ -160,7 +169,8 @@ https://10.1.5.208:31416
 3. 创建容器
 
 ### debian
->[Docker Hub](https://hub.docker.com/_/debian)
+
+> [Docker Hub](https://hub.docker.com/_/debian)
 
 ```bash
 # 启动命令
@@ -177,6 +187,7 @@ vim /var/www/html/index.nginx-debian.html
 ```
 
 ### nginx
+
 > [Docker Hub](https://hub.docker.com/_/nginx)
 
 ```bash
@@ -201,7 +212,6 @@ vim /var/www/html/index.nginx-debian.html
 [CephFS Rook - 快速安装 Ceph 集群](https://kuboard.cn/learning/k8s-intermediate/persistent/ceph/rook-config.html)
 
 [Debian Docker 镜像](https://hub.docker.com/_/debian)
-
 
 
 
