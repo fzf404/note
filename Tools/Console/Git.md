@@ -13,7 +13,7 @@ git config --global http.sslBackend "openssl"
 
 # name & email
 git config --global user.name "fzf404"
-git config --global user.email nmdfzf404@163.com
+git config --global user.email me@fzf404.art
 
 # WARNING: UNPROTECTED PRIVATE KEY FILE!
 chmod 600 ~/.ssh/*

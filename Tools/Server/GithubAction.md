@@ -22,7 +22,7 @@ on :
 # 环境变量
 env:
   GIT_USER: fzf404
-  GIT_EMAIL: nmdfzf404@163.com
+  GIT_EMAIL: me@fzf404.art
 
 # 工作
 jobs:
@@ -62,7 +62,7 @@ on:
 
 env:
   GIT_USER: fzf404
-  GIT_EMAIL: nmdfzf404@163.com
+  GIT_EMAIL: me@fzf404.art
 
 jobs:
   build:
@@ -133,7 +133,7 @@ on:
 
 env:
   GIT_USER: fzf404
-  GIT_EMAIL: nmdfzf404@163.com
+  GIT_EMAIL: me@fzf404.art
 
 jobs:
   build:

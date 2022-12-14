@@ -7,7 +7,7 @@ on:
 
 env:
   GIT_USER: fzf404
-  GIT_EMAIL: nmdfzf404@163.com
+  GIT_EMAIL: me@fzf404.art
 
 jobs:
   build:

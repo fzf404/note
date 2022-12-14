@@ -158,7 +158,7 @@ docker run -v <volume>:<c_path>
 # 编辑Dockerfile
 FROM golang
 # 维护人
-MAINTAINER "nmdfzf404@163.com"
+MAINTAINER "me@fzf404.art"
 # 环境变量
 ENV GO111MODULE=on \
     CGO_ENABLED=0 \
