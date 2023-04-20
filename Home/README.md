@@ -1,5 +1,5 @@
 <!--
-title: fzf404 | 笔记
+title: fzf404 - 笔记
 layout: IndexLayout
 visible: true
 -->
