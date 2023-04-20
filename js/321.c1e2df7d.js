@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[321],{949:function(n,e){n.exports="\x3c!--\ntitle: Python\nsort:\n--\x3e\n\n> 常用的代码片段\n\n```python\n# for循环获取index\nlist = ['a','b','c']\n\nfor index ,v in enumerate(list):\n    print(index)\n    print(v)\n\n# 三元运算符\n'男' if sex else '女'\n\n# 格式化\nname = \"fzf\"\nf'Hello, my name is {name}'\n```\n"}}]);

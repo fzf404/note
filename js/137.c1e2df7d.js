@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[137],{765:function(n,k){n.exports="\x3c!--\ntitle: 平衡车\nsort:\n--\x3e\n\n> 两轮平衡车制作\n\n## PID\n\n> 测量目标值的偏差，按比例缩放加上积分与微分，求出实际作用值。\n>\n> 想象一个漏水的水塔\n\n### 公式\n\n> $u = k_p * e(k) = k_i * \\sum e(k) + k_d[e(k)-e(k-1)]$\n>\n> $k_p$: 比例常数\n>\n> $k_i$: 积分常数\n>\n> $k_d$: 微分常数\n"}}]);

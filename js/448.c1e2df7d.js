@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[448],{1076:function(n,e){n.exports="\x3c!--\ntitle: 32-PWA\nsort:\n--\x3e\n\n[官方文档](https://create-react-app.dev/docs/making-a-progressive-web-app/)\n\n```bash\nnpx create-react-app <name> --template cra-template-pwa\n\n# src/index.js\nserviceWorkerRegistration.register();\n\n# public/manifest.json\n```\n\n"}}]);

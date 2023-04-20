@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[348],{976:function(n,t){n.exports="\x3c!--\ntitle: 12-BrupSuite\nsort:\n--\x3e\n\n## 使用\n\n1. Proxy -> Open Browser\n2. 进入相应网页\n3. 找到需要使用的请求 -> Action\n4. Send to Intruder\n5. Intruder -> Positions -> 标记有效载荷 -> `§xxx§`\n6. Payloads -> 构造字典\n7. Start attack"}}]);

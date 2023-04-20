@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[244],{872:function(n,e){n.exports="\x3c!--\ntitle: Anroid\nsort:\n--\x3e\n\n> 有多想少人想开发出一个属于自己的 app 呢？\n\n### 生成 APK\n\n> Build->Generate Signed APK\n\n### 不显示 ToolBar\n\n```kotlin\n// AppCompatActivity\nsupportRequestWindowFeature(Window.FEATURE_NO_TITLE)\n\n\nRequestWindowFeature(Window.FEATURE_NO_TITLE)\n```\n"}}]);

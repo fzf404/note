@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[396],{1024:function(n,o){n.exports="\x3c!--\ntitle: MrDoc\nsort:\n--\x3e\n\n> [官方文档](https://www.mrdoc.fun/doc/18/)\n\n```bash\n# 运行\ndocker run -d --name mrdoc -p 10086:10086 jonnyan404/mrdoc-alpine\n# 获得密码\ndocker logs mrdoc 2>&1|grep pwd\n```\n"}}]);

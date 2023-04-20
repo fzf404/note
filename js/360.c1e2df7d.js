@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[360],{988:function(n,e){n.exports="\x3c!--\ntitle: Node-Red\nsort:\n--\x3e\n\n## 安装\n\n```bash\n# 安装\nyarn global add node-red\n\n# 生成密文\nnode -e \"console.log(require('bcryptjs').hashSync(process.argv[1], 8));\" password\n# 登录权限\nvim /root/.node-red/settings.js\n\n# 运行\nnode-red\n> http://127.0.0.1:1880/\n```\n"}}]);

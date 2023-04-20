@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[387],{1015:function(n,p){n.exports="\x3c!--\ntitle: GraphGL\nsort:\n--\x3e\n\n> 用于 API 的查询语言\n>\n> [官网](https://graphql.cn/)\n"}}]);

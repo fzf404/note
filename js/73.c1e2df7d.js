@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[73],{701:function(n,a){n.exports="\x3c!--\ntitle: 06-React-Antd\nsort:\n--\x3e\n\n## 使用\n\n> [官方文档](https://ant.design/)\n>\n> [编辑主题](https://ant.design/docs/react/use-with-create-react-app-cn)\n\n```bash\nyarn create react-app .\nyarn add antd @craco/craco craco-less\n```\n"}}]);

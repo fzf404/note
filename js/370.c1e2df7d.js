@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[370],{998:function(n,o){n.exports="\x3c!--\ntitle: ab压测工具\nsort:\n--\x3e\n\n> 压力测试工具\n\n```bash\nab -n 100 -c 100 http://127.0.0.1/ # 每次发送100并发的请求数，请求数总数为100。\n```\n"}}]);

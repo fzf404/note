@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[243],{871:function(n,i){n.exports='\x3c!--\ntitle: 04-Kotlin入门\nsort:\n--\x3e\n\n## 基础\n\n```kotlin\nval pi = 3.14\nvar age = 18\n\nwhen (x) {\n  1 -> print("x == 1")\n  2 -> print("x == 2")\n  else -> {\n    print("x 不是 1 ，也不是 2")\n  }\n}\n\n```\n'}}]);

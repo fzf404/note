@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[362],{990:function(n,t){n.exports='\x3c!--\ntitle: Prettier\nsort:\n--\x3e\n\n> 代码格式化工具\n\n## 配置\n\n```json\n// .prettierrc\n{\n  "tabWidth": 2,\n  "useTabs": false,\n  "printWidth": 100\n}\n```\n\n## 运行\n\n```bash\n# 格式化全部代码\nprettier --config .prettierrc --write *\n```\n'}}]);

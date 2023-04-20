@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[238],{866:function(n,t){n.exports='\x3c!--\ntitle: Rust\nsort:\n--\x3e\n\n> [中文文档](https://rustwiki.org/zh-CN/rust-by-example/)\n\n```rust\n// 打印结构体\n#[derive(Debug)]\nprintln!("{:#?}",a_user);\n```\n'}}]);

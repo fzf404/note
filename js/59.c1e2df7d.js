@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[59],{687:function(n,s){n.exports="\x3c!--\ntitle: Day.js\nsort:\n--\x3e\n\n```js\n$ yarn add dayjs\n\nimport dayjs from 'dayjs'\n\n// 格式化\ndayjs().format('YYYY-MM-DD HH:mm:ss');\n\n// 增加，减少时间\ndayjs().add(5, 'day');\ndayjs().subtract(1, 'month')\n```\n"}}]);

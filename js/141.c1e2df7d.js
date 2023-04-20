@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[141],{769:function(n,o){n.exports="\x3c!--\ntitle: 各种模块\nsort:\n--\x3e\n\n> 谁不想用硬件和手机通信呢？\n"}}]);

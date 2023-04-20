@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[365],{993:function(n,o){n.exports="\x3c!--\ntitle: Snap\nsort:\n--\x3e\n\n> 通用的软件包管理工具\n\n### 基础命令\n\n```bash\nsnap install code\t# 安装vscode\nsnap reomve code\t# 卸载vscode\nsnap find code \t\t# 搜索code\nsnap info code\t\t# 查看信息\nsnap list\t\t\t\t\t# 已安装的snap\n\nsnap logs docker\t# docker日志\n```\n"}}]);

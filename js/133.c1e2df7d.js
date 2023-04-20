@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[133],{761:function(n,o){n.exports="\x3c!--\ntitle: BIOS\nsort:\n--\x3e\n\n## 按键\n\n| 品牌     | BIOS/Boot |\n| -------- | --------- |\n| NUC      | F2/F10    |\n| 小米     | F2/F12    |\n| 联想小新 | F2/F12    |\n\n## 问题\n\n- NUC\n\nBIOS -> Boot -> Secure Boot\n\n启动盘 -> 右侧蓝色 USB 接口\n"}}]);

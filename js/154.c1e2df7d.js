@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[154],{782:function(n,s){n.exports="\x3c!--\ntitle: 01-Raspberry入门\nsort:\n--\x3e\n\n# 树莓派入门\n\n## 换源\n\n1. 修改软件更新源\n\n   `sudo nano /etc/apt/sources.list`\n\n2. 修改系统更新源\n\n   `sudo nano /etc/apt/sources.list.d/raspi.list`\n\n3. 同步\n\n   `sudo apt-get update`\n"}}]);

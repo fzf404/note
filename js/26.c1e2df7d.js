@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[26],{654:function(n,i){n.exports="\x3c!--\ntitle: 34-Manjaro网络配置\nsort:\n--\x3e\n\n```bash\n# 图形化配网\nnmtui\n\n# 网络信息\nnmcli device status\n\n# 连接wifi\nnmcli device wifi connect <ssid> password <password>\n# 7号错误\nnmcli con del <ssid>\n# 启用关闭连接\nnmcli connection up <ssid>\nnmcli connection down <ssid>\n```\n"}}]);

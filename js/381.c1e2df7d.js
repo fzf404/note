@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[381],{1009:function(n,e){n.exports="\x3c!--\ntitle: CloudFunc\nsort:\n--\x3e\n\n# 腾讯云函数\n\n## 安装依赖库\n\n1. 本地调试完成后，使用 **pip freeze > requirements.txt**\n2. 使用 **pip install -r requirements.txt -t ./** 在项目根目录下安装所有依赖\n3. 使用 **serverless --debug** 命令部署（上传）\n"}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[368],{996:function(n,t){n.exports="\x3c!--\ntitle: X11\nsort:\n--\x3e\n\n> 服务器图形化传输\n\n```bash\n# 时钟\napt install x11-apps\nxclock\n# 图形化编辑器\napt install nedit\nnedit\n# 3D齿轮\napt install mesa-utils\nglxgears\n```\n"}}]);

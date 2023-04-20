@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[72],{700:function(n,o){n.exports="\x3c!--\ntitle: 05-React通信\nsort:\n--\x3e\n\n```react\n// 父组件\n<QRcode showText='fzf404' close={this.handleQRClose.bind(this)} />\n// 子组件\n<Button\n    onClick={() => this.props.close()}\n    >\n    {this.props.showTe}\n</Button>\n```\n"}}]);
